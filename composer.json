@@ -1,0 +1,46 @@
+{
+    "name": "signpostmarv/daft-schema-org",
+    "description": "schema.org \u001b[Hdaft \u001b[F implementation",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "SignpostMarv",
+            "email": "me@signpostmarv.name"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SignpostMarv\\DaftObject\\SchemaOrg\\": "./src/"
+        }
+    },
+    "config": {
+        "classmap-authoritative": true,
+        "sort-packages": true
+    },
+    "scripts": {
+        "tests": [
+            "phpstan analyse -c ./phpstan.neon .php_cs.dist src",
+            "psalm",
+            "phpcpd ./src/",
+            "phpmnd ./ --exclude=./phpdoc/ --exclude=./phpunit/ --exclude=./vendor/ --non-zero-exit-on-violation --hint",
+            "composer-require-checker check ./composer.json",
+            "php-cs-fixer fix --verbose --allow-risky=yes --dry-run"
+        ]
+    },
+    "require": {
+        "php": "^7.1",
+        "ext-ctype": "*",
+        "ext-mbstring": "*",
+        "signpostmarv/daft-object": "^2.2"
+    },
+    "require-dev": {
+        "maglnet/composer-require-checker": "^1.1",
+        "phpstan/phpstan": "^0.11.2",
+        "phpstan/phpstan-strict-rules": "^0.11.0",
+        "povils/phpmnd": "^2.1",
+        "roave/security-advisories": "dev-master",
+        "sebastian/phpcpd": "^4.1",
+        "signpostmarv/php-cs-fixer-config": "^0.9.0",
+        "vimeo/psalm": "^3.1"
+    }
+}

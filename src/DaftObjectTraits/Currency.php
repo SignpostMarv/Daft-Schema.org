@@ -1,0 +1,43 @@
+<?php
+/**
+* @author SignpostMarv
+*/
+declare(strict_types=1);
+
+namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+
+use SignpostMarv\DaftObject\TypeUtilities;
+
+trait Currency
+{
+    use DaftObjectTrait;
+
+    /**
+    * @return array<int, string>
+    */
+    public function GetCurrency() : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'currency',
+            $this->RetrievePropertyValueFromData('currency'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, string> $value
+    */
+    public function SetCurrency(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+            'currency',
+            __METHOD__,
+            $value
+        );
+    }
+}

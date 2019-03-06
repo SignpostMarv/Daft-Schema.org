@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<files>
+  <file src="src\DataTypes\Duration.php">
+    <MixedAssignment occurrences="1">
+      <code>$seconds</code>
+    </MixedAssignment>
+    <MixedOperand occurrences="2">
+      <code>$this-&gt;f</code>
+      <code>$seconds</code>
+    </MixedOperand>
+    <UndefinedThisPropertyFetch occurrences="1">
+      <code>$this-&gt;f</code>
+    </UndefinedThisPropertyFetch>
+  </file>
+</files>

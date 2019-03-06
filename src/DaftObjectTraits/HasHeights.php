@@ -1,0 +1,47 @@
+<?php
+/**
+* @author SignpostMarv
+*/
+declare(strict_types=1);
+
+namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Distance;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\TypeUtilities;
+
+trait HasHeights
+{
+    use DaftObjectTrait;
+
+    /**
+    * @return array<int, Distance|QuantitativeValue>
+    */
+    public function GetHeight() : array
+    {
+        /**
+        * @var array<int, Distance|QuantitativeValue>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'height',
+            $this->RetrievePropertyValueFromData('height'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, Distance|QuantitativeValue> $value
+    */
+    public function SetHeight(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'height',
+            __METHOD__,
+            $value,
+            Distance::class,
+            QuantitativeValue::class
+        );
+    }
+}

@@ -6,9 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\EntryPoint;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ActionStatusType;
 use SignpostMarv\DaftObject\TypeUtilities;
 
 /**

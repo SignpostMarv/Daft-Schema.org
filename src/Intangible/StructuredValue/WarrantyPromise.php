@@ -6,8 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
-use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\WarrantyScope;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Product;

@@ -19,6 +19,91 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCounter;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, Thing> $aboutThing
+* @property array<int, string> $accessMode
+* @property array<int, string> $accessModeSufficient
+* @property array<int, string> $accessibilityAPI
+* @property array<int, string> $accessibilityControl
+* @property array<int, string> $accessibilityFeature
+* @property array<int, string> $accessibilityHazard
+* @property array<int, string> $accessibilitySummary
+* @property array<int, Person> $accountablePerson
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, string> $alternativeHeadline
+* @property array<int, MediaObject> $associatedMedia
+* @property array<int, Audience> $audience
+* @property array<int, AudioObject> $audio
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $author
+* @property array<int, string> $award
+* @property array<int, Person> $character
+* @property array<int, string|CreativeWork> $citation
+* @property array<int, Comment> $comment
+* @property array<int, int> $commentCount
+* @property array<int, Place> $contentLocation
+* @property array<int, Rating> $contentRating
+* @property array<int, DateTime> $contentReferenceTime
+* @property array<int, Organization|Person> $contributor
+* @property array<int, Organization|Person> $copyrightHolder
+* @property array<int, int> $copyrightYear
+* @property array<int, string|CorrectionComment> $correction
+* @property array<int, Organization|Person> $creator
+* @property array<int, Date|DateTime> $dateCreated
+* @property array<int, Date|DateTime> $dateModified
+* @property array<int, Date|DateTime> $datePublished
+* @property array<int, string> $discussionUrl
+* @property array<int, Person> $editor
+* @property array<int, string> $educationalUse
+* @property array<int, MediaObject> $encoding
+* @property array<int, string> $encodingFormat
+* @property array<int, CreativeWork> $exampleOfWork
+* @property array<int, Date> $expires
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $funder
+* @property array<int, string> $genre
+* @property array<int, CreativeWork|Trip> $hasPart
+* @property array<int, string> $headline
+* @property array<int, string|Language> $inLanguage
+* @property array<int, InteractionCounter> $interactionStatistic
+* @property array<int, string> $interactivityType
+* @property array<int, bool> $isAccessibleForFree
+* @property array<int, string|CreativeWork|Product> $isBasedOn
+* @property array<int, bool> $isFamilyFriendly
+* @property array<int, string> $keywords
+* @property array<int, string> $learningResourceType
+* @property array<int, string|CreativeWork> $license
+* @property array<int, string|Place|PostalAddress> $location
+* @property array<int, Place> $locationCreated
+* @property array<int, Thing> $mainEntity
+* @property array<int, Thing> $mentions
+* @property array<int, Offer> $offers
+* @property array<int, int|string> $position
+* @property array<int, Organization|Person> $producer
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $provider
+* @property array<int, PublicationEvent> $publication
+* @property array<int, Organization|Person> $publisher
+* @property array<int, Organization> $publisherImprint
+* @property array<int, string|CreativeWork> $publishingPrinciples
+* @property array<int, Event> $recordedAt
+* @property array<int, PublicationEvent> $releasedEvent
+* @property array<int, Review> $review
+* @property array<int, string> $schemaVersion
+* @property array<int, Date> $sdDatePublished
+* @property array<int, string|CreativeWork> $sdLicense
+* @property array<int, Organization|Person> $sdPublisher
+* @property array<int, Organization> $sourceOrganization
+* @property array<int, Place> $spatialCoverage
+* @property array<int, string|DateTime> $temporalCoverage
+* @property array<int, string> $text
+* @property array<int, string> $thumbnailUrl
+* @property array<int, Duration> $timeRequired
+* @property array<int, CreativeWork> $translationOfWork
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $translators
+* @property array<int, string> $typicalAgeRange
+* @property array<int, int|string> $version
+* @property array<int, VideoObject> $video
+* @property array<int, CreativeWork> $workExample
+* @property array<int, CreativeWork> $workTranslation
+*/
 class CreativeWork extends Thing
 {
     use DaftObjectTraits\HasAboutThing;

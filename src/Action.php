@@ -11,6 +11,19 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\EntryPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ActionStatusType;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, ActionStatusType> $actionStatus
+* @property array<int, Organization|Person> $agent
+* @property array<int, DateTime> $endTime
+* @property array<int, Thing> $error
+* @property array<int, Thing> $instrument
+* @property array<int, string|Place|PostalAddress> $location
+* @property array<int, Thing> $object
+* @property array<int, Organization|Person> $participant
+* @property array<int, Thing> $result
+* @property array<int, DateTime> $startTime
+* @property array<int, EntryPoint> $target
+*/
 class Action extends Thing
 {
     use DaftObjectTraits\HasLocation;

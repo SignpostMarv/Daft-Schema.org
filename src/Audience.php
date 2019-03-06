@@ -8,6 +8,10 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, string> $audienceType
+* @property array<int, Place\AdministrativeArea> $geographicArea
+*/
 class Audience extends Thing
 {
     const SCHEMA_ORG_TYPE = 'Audience';

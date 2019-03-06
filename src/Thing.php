@@ -419,10 +419,12 @@ class Thing extends AbstractArrayBackedDaftObject
         */
         $static = static::PROPERTIES;
 
-        return array_merge(
-            parent::DaftObjectProperties(),
+        $parent = get_parent_class(static::class)::DaftObjectProperties();
+
+        return array_unique(array_merge(
+            $parent,
             $static
-        );
+        ));
     }
 
     public static function DaftObjectNullableProperties() : array

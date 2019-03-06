@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
+use SignpostMarv\DaftObject\SchemaOrg\Placeq;
 use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\TypeUtilities;
@@ -26,6 +27,66 @@ trait IsOfferOrDemand
     use IncludesObject;
     use HasValidFromThrough;
     use HasSku;
+
+    /**
+    * @return array<int, Place>
+    */
+    public function GetAvailableAtOrFrom() : array
+    {
+        /**
+        * @var array<int, Place>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'availableAtOrFrom',
+            $this->RetrievePropertyValueFromData('availableAtOrFrom'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, Place> $value
+    */
+    public function SetAvailableAtOrFrom(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'availableAtOrFrom',
+            __METHOD__,
+            $value,
+            Place::class
+        );
+    }
+
+    /**
+    * @return array<int, DeliveryMethod>
+    */
+    public function GetAvailableDeliveryMethod() : array
+    {
+        /**
+        * @var array<int, DeliveryMethod>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'availableDeliveryMethod',
+            $this->RetrievePropertyValueFromData('availableDeliveryMethod'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, DeliveryMethod> $value
+    */
+    public function SetAvailableDeliveryMethod(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'availableDeliveryMethod',
+            __METHOD__,
+            $value,
+            DeliveryMethod::class
+        );
+    }
 
     /**
     * @return array<int, QuantitativeValue>

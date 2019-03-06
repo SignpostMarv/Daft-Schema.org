@@ -18,9 +18,11 @@ class Event extends Thing
     use DaftObjectTraits\HasAggregateRating;
     use DaftObjectTraits\HasAudience;
     use DaftObjectTraits\Composer;
+    use DaftObjectTraits\HasDirector;
     use DaftObjectTraits\Duration;
     use DaftObjectTraits\HasFunder;
     use DaftObjectTraits\HasInLanguage;
+    use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasLocation;
     use DaftObjectTraits\HasOffers;
     use DaftObjectTraits\HasReview;

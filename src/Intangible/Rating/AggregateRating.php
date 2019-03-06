@@ -6,11 +6,14 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating as Base;
 use SignpostMarv\DaftObject\TypeUtilities;
 
 class AggregateRating extends Base
 {
+    use DaftObjectTraits\HasItemReviewed;
+
     const SCHEMA_ORG_TYPE = 'AggregateRating';
 
     const PROPERTIES = [

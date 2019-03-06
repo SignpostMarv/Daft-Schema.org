@@ -173,14 +173,14 @@ class Service extends Base
     /**
     * @return array<int, string>
     */
-    public function GetServiceText() : array
+    public function GetServiceType() : array
     {
         /**
         * @var array<int, string>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'serviceText',
-            $this->RetrievePropertyValueFromData('serviceText'),
+            'serviceType',
+            $this->RetrievePropertyValueFromData('serviceType'),
             static::class
         );
 
@@ -190,10 +190,10 @@ class Service extends Base
     /**
     * @param array<int, string> $value
     */
-    public function SetServiceText(array $value) : void
+    public function SetServiceType(array $value) : void
     {
         $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
-            'serviceText',
+            'serviceType',
             __METHOD__,
             $value
         );

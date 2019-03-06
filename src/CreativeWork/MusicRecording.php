@@ -148,14 +148,14 @@ class MusicRecording extends Base
     /**
     * @return array<int, MusicComposition>
     */
-    public function GetIsRecordingOf() : array
+    public function GetRecordingOf() : array
     {
         /**
         * @var array<int, MusicComposition>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isRecordingOf',
-            $this->RetrievePropertyValueFromData('isRecordingOf'),
+            'recordingOf',
+            $this->RetrievePropertyValueFromData('recordingOf'),
             static::class
         );
 
@@ -165,10 +165,10 @@ class MusicRecording extends Base
     /**
     * @param array<int, MusicComposition> $value
     */
-    public function SetIsRecordingOf(array $value) : void
+    public function SetRecordingOf(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'isRecordingOf',
+            'recordingOf',
             __METHOD__,
             $value,
             MusicComposition::class

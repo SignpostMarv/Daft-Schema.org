@@ -13,7 +13,6 @@ use SignpostMarv\DaftObject\TypeUtilities;
 
 class Question extends Base
 {
-    use DaftObjectTraits\HasSpeakable;
     use DaftObjectTraits\UpDownVoteCount;
 
     const SCHEMA_ORG_TYPE = 'Question';

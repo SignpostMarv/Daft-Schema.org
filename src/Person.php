@@ -26,6 +26,7 @@ class Person extends Thing
     use DaftObjectTraits\HasEmail;
     use DaftObjectTraits\HasFaxNumber;
     use DaftObjectTraits\HasFunder;
+    use DaftObjectTraits\HasGlobalLocationNumber;
     use DaftObjectTraits\HasHasOfferCatalog;
     use DaftObjectTraits\HasHasPOS;
     use DaftObjectTraits\HasIsicV4;
@@ -319,6 +320,36 @@ class Person extends Thing
             'deathDate',
             __METHOD__,
             $value
+        );
+    }
+
+    /**
+    * @return array<int, Place>
+    */
+    public function GetDeathPlace() : array
+    {
+        /**
+        * @var array<int, Place>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'deathPlace',
+            $this->RetrievePropertyValueFromData('deathPlace'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, Place> $value
+    */
+    public function SetDeathPlace(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'deathPlace',
+            __METHOD__,
+            $value,
+            Place::class
         );
     }
 

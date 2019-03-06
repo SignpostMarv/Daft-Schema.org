@@ -31,6 +31,7 @@ class Thing extends AbstractArrayBackedDaftObject
         'disambiguatingDescription',
         'identifier',
         'image',
+        'mainEntityOfPage',
         'name',
         'potentialAction',
         'sameAs',

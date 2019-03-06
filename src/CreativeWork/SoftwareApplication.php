@@ -534,6 +534,36 @@ class SoftwareApplication extends Base
     }
 
     /**
+    * @return array<int, CreativeWork>
+    */
+    public function GetSoftwareHelp() : array
+    {
+        /**
+        * @var array<int, CreativeWork>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'softwareHelp',
+            $this->RetrievePropertyValueFromData('softwareHelp'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, CreativeWork> $value
+    */
+    public function SetSoftwareHelp(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+            'softwareHelp',
+            __METHOD__,
+            $value,
+            CreativeWork::class
+        );
+    }
+
+    /**
     * @return array<int, string>
     */
     public function GetSoftwareRequirements() : array

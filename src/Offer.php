@@ -95,66 +95,6 @@ class Offer extends Thing
     }
 
     /**
-    * @return array<int, Place>
-    */
-    public function GetAvailableAtOrFrom() : array
-    {
-        /**
-        * @var array<int, Place>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'availableAtOrFrom',
-            $this->RetrievePropertyValueFromData('availableAtOrFrom'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Place> $value
-    */
-    public function SetAvailableAtOrFrom(array $value) : void
-    {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            'availableAtOrFrom',
-            __METHOD__,
-            $value,
-            Place::class
-        );
-    }
-
-    /**
-    * @return array<int, DeliveryMethod>
-    */
-    public function GetAvailableDeliveryMethod() : array
-    {
-        /**
-        * @var array<int, DeliveryMethod>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'availableDeliveryMethod',
-            $this->RetrievePropertyValueFromData('availableDeliveryMethod'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, DeliveryMethod> $value
-    */
-    public function SetAvailableDeliveryMethod(array $value) : void
-    {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            'availableDeliveryMethod',
-            __METHOD__,
-            $value,
-            DeliveryMethod::class
-        );
-    }
-
-    /**
     * @return array<int, Organization|Person>
     */
     public function GetOfferedBy() : array

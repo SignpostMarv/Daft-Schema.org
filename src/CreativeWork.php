@@ -53,6 +53,7 @@ use SignpostMarv\DaftObject\TypeUtilities;
 * @property array<int, Date|DateTime> $datePublished
 * @property array<int, string> $discussionUrl
 * @property array<int, Person> $editor
+* @property array<int, AlignmentObject> $educationalAlignment
 * @property array<int, string> $educationalUse
 * @property array<int, MediaObject> $encoding
 * @property array<int, string> $encodingFormat
@@ -92,6 +93,7 @@ use SignpostMarv\DaftObject\TypeUtilities;
 * @property array<int, Organization|Person> $sdPublisher
 * @property array<int, Organization> $sourceOrganization
 * @property array<int, Place> $spatialCoverage
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $sponsor
 * @property array<int, string|DateTime> $temporalCoverage
 * @property array<int, string> $text
 * @property array<int, string> $thumbnailUrl
@@ -118,6 +120,7 @@ class CreativeWork extends Thing
     use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasMaterial;
     use DaftObjectTraits\HasOffers;
+    use DaftObjectTraits\HasSponsors;
     use DaftObjectTraits\HasProvider;
     use DaftObjectTraits\HasPublishingPrinciples;
     use DaftObjectTraits\HasReview;
@@ -983,6 +986,36 @@ class CreativeWork extends Thing
     public function SetEditor(array $value) : void
     {
         $this->NudgePropertyWithUniquePersons('editor', __METHOD__, $value);
+    }
+
+    /**
+    * @return array<int, AlignmentObject>
+    */
+    public function GetEducationalAlignment() : array
+    {
+        /**
+        * @var array<int, AlignmentObject>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'educationalAlignment',
+            $this->RetrievePropertyValueFromData('educationalAlignment'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, AlignmentObject> $value
+    */
+    public function SetEducationalAlignment(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'educationalAlignment',
+            __METHOD__,
+            $value,
+            AlignmentObject::class
+        );
     }
 
     /**

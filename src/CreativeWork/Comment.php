@@ -25,14 +25,14 @@ class Comment extends Base
     /**
     * @return array<int, Question>
     */
-    public function GetQuestion() : array
+    public function GetParentItem() : array
     {
         /**
         * @var array<int, Question>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'question',
-            $this->RetrievePropertyValueFromData('question'),
+            'parentItem',
+            $this->RetrievePropertyValueFromData('parentItem'),
             static::class
         );
 
@@ -42,10 +42,10 @@ class Comment extends Base
     /**
     * @param array<int, Question> $value
     */
-    public function SetQuestion(array $value) : void
+    public function SetParentItem(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'question',
+            'parentItem',
             __METHOD__,
             $value,
             Question::class

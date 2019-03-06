@@ -116,7 +116,7 @@ class PostalAddress extends Base
     /**
     * @return array<int, string>
     */
-    public function GetStreetAddresss() : array
+    public function GetStreetAddress() : array
     {
         /**
         * @var array<int, string>
@@ -133,7 +133,7 @@ class PostalAddress extends Base
     /**
     * @param array<int, string> $value
     */
-    public function SetStreetAddresss(array $value) : void
+    public function SetStreetAddress(array $value) : void
     {
         $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
             'streetAddress',

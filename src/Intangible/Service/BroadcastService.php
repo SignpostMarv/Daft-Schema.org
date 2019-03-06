@@ -58,6 +58,35 @@ class BroadcastService extends Base
     }
 
     /**
+    * @return array<int, string>
+    */
+    public function GetBroadcastDisplayName() : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'broadcastDisplayName',
+            $this->RetrievePropertyValueFromData('broadcastDisplayName'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, string> $value
+    */
+    public function SetBroadcastDisplayName(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+            'broadcastDisplayName',
+            __METHOD__,
+            $value
+        );
+    }
+
+    /**
     * @return array<int, string|BroadcastFrequencySpecification>
     */
     public function GetBroadcastFrequency() : array

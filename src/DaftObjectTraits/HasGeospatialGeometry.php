@@ -17,14 +17,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyContains() : array
+    public function GetGeospatiallyContains() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyContains',
-            $this->RetrievePropertyValueFromData('geoSpatiallyContains'),
+            'geospatiallyContains',
+            $this->RetrievePropertyValueFromData('geospatiallyContains'),
             static::class
         );
 
@@ -34,10 +34,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyContains(array $value) : void
+    public function SetGeospatiallyContains(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyContains',
+            'geospatiallyContains',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -48,14 +48,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyCoveredBy() : array
+    public function GetGeospatiallyCoveredBy() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyCoveredBy',
-            $this->RetrievePropertyValueFromData('geoSpatiallyCoveredBy'),
+            'geospatiallyCoveredBy',
+            $this->RetrievePropertyValueFromData('geospatiallyCoveredBy'),
             static::class
         );
 
@@ -65,10 +65,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyCoveredBy(array $value) : void
+    public function SetGeospatiallyCoveredBy(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyCoveredBy',
+            'geospatiallyCoveredBy',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -79,14 +79,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyCovers() : array
+    public function GetGeospatiallyCovers() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyCovers',
-            $this->RetrievePropertyValueFromData('geoSpatiallyCovers'),
+            'geospatiallyCovers',
+            $this->RetrievePropertyValueFromData('geospatiallyCovers'),
             static::class
         );
 
@@ -96,10 +96,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyCovers(array $value) : void
+    public function SetGeospatiallyCovers(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyCovers',
+            'geospatiallyCovers',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -110,14 +110,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyCrosses() : array
+    public function GetGeospatiallyCrosses() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyCrosses',
-            $this->RetrievePropertyValueFromData('geoSpatiallyCrosses'),
+            'geospatiallyCrosses',
+            $this->RetrievePropertyValueFromData('geospatiallyCrosses'),
             static::class
         );
 
@@ -127,10 +127,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyCrosses(array $value) : void
+    public function SetGeospatiallyCrosses(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyCrosses',
+            'geospatiallyCrosses',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -141,14 +141,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyDisjoint() : array
+    public function GetGeospatiallyDisjoint() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyDisjoint',
-            $this->RetrievePropertyValueFromData('geoSpatiallyDisjoint'),
+            'geospatiallyDisjoint',
+            $this->RetrievePropertyValueFromData('geospatiallyDisjoint'),
             static::class
         );
 
@@ -158,10 +158,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyDisjoint(array $value) : void
+    public function SetGeospatiallyDisjoint(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyDisjoint',
+            'geospatiallyDisjoint',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -172,14 +172,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyEquals() : array
+    public function GetGeospatiallyEquals() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyEquals',
-            $this->RetrievePropertyValueFromData('geoSpatiallyEquals'),
+            'geospatiallyEquals',
+            $this->RetrievePropertyValueFromData('geospatiallyEquals'),
             static::class
         );
 
@@ -189,10 +189,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyEquals(array $value) : void
+    public function SetGeospatiallyEquals(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyEquals',
+            'geospatiallyEquals',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -203,14 +203,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyIntersects() : array
+    public function GetGeospatiallyIntersects() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyIntersects',
-            $this->RetrievePropertyValueFromData('geoSpatiallyIntersects'),
+            'geospatiallyIntersects',
+            $this->RetrievePropertyValueFromData('geospatiallyIntersects'),
             static::class
         );
 
@@ -220,10 +220,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyIntersects(array $value) : void
+    public function SetGeospatiallyIntersects(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyIntersects',
+            'geospatiallyIntersects',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -234,14 +234,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyOverlaps() : array
+    public function GetGeospatiallyOverlaps() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyOverlaps',
-            $this->RetrievePropertyValueFromData('geoSpatiallyOverlaps'),
+            'geospatiallyOverlaps',
+            $this->RetrievePropertyValueFromData('geospatiallyOverlaps'),
             static::class
         );
 
@@ -251,10 +251,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyOverlaps(array $value) : void
+    public function SetGeospatiallyOverlaps(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyOverlaps',
+            'geospatiallyOverlaps',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -265,14 +265,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyTouches() : array
+    public function GetGeospatiallyTouches() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyTouches',
-            $this->RetrievePropertyValueFromData('geoSpatiallyTouches'),
+            'geospatiallyTouches',
+            $this->RetrievePropertyValueFromData('geospatiallyTouches'),
             static::class
         );
 
@@ -282,10 +282,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyTouches(array $value) : void
+    public function SetGeospatiallyTouches(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyTouches',
+            'geospatiallyTouches',
             __METHOD__,
             $value,
             GeospatialGeometry::class,
@@ -296,14 +296,14 @@ trait HasGeospatialGeometry
     /**
     * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
     */
-    public function GetGeoSpatiallyWithin() : array
+    public function GetGeospatiallyWithin() : array
     {
         /**
         * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geoSpatiallyWithin',
-            $this->RetrievePropertyValueFromData('geoSpatiallyWithin'),
+            'geospatiallyWithin',
+            $this->RetrievePropertyValueFromData('geospatiallyWithin'),
             static::class
         );
 
@@ -313,10 +313,10 @@ trait HasGeospatialGeometry
     /**
     * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
     */
-    public function SetGeoSpatiallyWithin(array $value) : void
+    public function SetGeospatiallyWithin(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'geoSpatiallyWithin',
+            'geospatiallyWithin',
             __METHOD__,
             $value,
             GeospatialGeometry::class,

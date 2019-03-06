@@ -53,7 +53,7 @@ class SpeakableSpecification extends Base
     /**
     * @return array<int, XPathType>
     */
-    public function GetXPath() : array
+    public function GetXpath() : array
     {
         /**
         * @var array<int, XPathType>
@@ -70,7 +70,7 @@ class SpeakableSpecification extends Base
     /**
     * @param array<int, XPathType> $value
     */
-    public function SetXPath(array $value) : void
+    public function SetXpath(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
             'xpath',

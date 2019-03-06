@@ -314,6 +314,66 @@ class Organization extends Thing
     /**
     * @return array<int, Person>
     */
+    public function GetEmployee() : array
+    {
+        /**
+        * @var array<int, Person>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'employee',
+            $this->RetrievePropertyValueFromData('employee'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, Person> $value
+    */
+    public function SetEmployee(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'employee',
+            __METHOD__,
+            $value,
+            Person::class
+        );
+    }
+
+    /**
+    * @return array<int, string|CreativeWork>
+    */
+    public function GetEthicsPolicy() : array
+    {
+        /**
+        * @var array<int, string|CreativeWork>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'ethicsPolicy',
+            $this->RetrievePropertyValueFromData('ethicsPolicy'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, string|CreativeWork> $value
+    */
+    public function SetEthicsPolicy(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+            'ethicsPolicy',
+            __METHOD__,
+            $value,
+            CreativeWork::class
+        );
+    }
+
+    /**
+    * @return array<int, Person>
+    */
     public function GetFounder() : array
     {
         /**
@@ -374,14 +434,14 @@ class Organization extends Thing
     /**
     * @return array<int, Place>
     */
-    public function GetFoundingPlace() : array
+    public function GetFoundingLocation() : array
     {
         /**
         * @var array<int, Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'foundingPlace',
-            $this->RetrievePropertyValueFromData('foundingPlace'),
+            'foundingLocation',
+            $this->RetrievePropertyValueFromData('foundingLocation'),
             static::class
         );
 
@@ -391,10 +451,10 @@ class Organization extends Thing
     /**
     * @param array<int, Place> $value
     */
-    public function SetFoundingPlace(array $value) : void
+    public function SetFoundingLocation(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'foundingPlace',
+            'foundingLocation',
             __METHOD__,
             $value,
             Place::class

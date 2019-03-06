@@ -15,14 +15,14 @@ trait HasIsicV4
     /**
     * @return array<int, string>
     */
-    public function GetIsicv4() : array
+    public function GetIsicV4() : array
     {
         /**
         * @var array<int, string>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isicv4',
-            $this->RetrievePropertyValueFromData('isicv4'),
+            'isicV4',
+            $this->RetrievePropertyValueFromData('isicV4'),
             static::class
         );
 
@@ -32,10 +32,10 @@ trait HasIsicV4
     /**
     * @param array<int, string> $value
     */
-    public function SetIsicv4(array $value) : void
+    public function SetIsicV4(array $value) : void
     {
         $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
-            'isicv4',
+            'isicV4',
             __METHOD__,
             $value
         );

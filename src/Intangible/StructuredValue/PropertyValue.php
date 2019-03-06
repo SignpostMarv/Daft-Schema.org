@@ -12,6 +12,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 class PropertyValue extends StructuredValue
 {
     use DaftObjectTraits\MeasurementTechnique;
+    use DaftObjectTraits\TraitMinMaxValueUnit;
     use DaftObjectTraits\TraitValueReference;
 
     const SCHEMA_ORG_TYPE = 'PropertyValue';
@@ -26,4 +27,33 @@ class PropertyValue extends StructuredValue
         'value',
         'valueReference',
     ];
+
+    /**
+    * @return array<int, string>
+    */
+    public function GetPropertyID() : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'propertyId',
+            $this->RetrievePropertyValueFromData('propertyId'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, string> $value
+    */
+    public function SetPropertyID(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+            'propertyId',
+            __METHOD__,
+            $value
+        );
+    }
 }

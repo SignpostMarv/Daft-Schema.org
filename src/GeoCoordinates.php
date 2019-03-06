@@ -20,11 +20,9 @@ class GeoCoordinates extends Thing
     const PROPERTIES = [
         'address',
         'addressCountry',
-        'box',
-        'circle',
         'elevation',
-        'line',
-        'polygon',
+        'latitude',
+        'longitude',
         'postalCode',
     ];
 

@@ -84,10 +84,40 @@ class RepaymentSpecification extends Base
     /**
     * @return array<int, MonetaryAmount>
     */
-    public function GetLoanPaymentFrequency() : array
+    public function GetLoanPaymentAmount() : array
     {
         /**
         * @var array<int, MonetaryAmount>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'loanPaymentAmount',
+            $this->RetrievePropertyValueFromData('loanPaymentAmount'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, MonetaryAmount> $value
+    */
+    public function SetLoanPaymentAmount(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'loanPaymentAmount',
+            __METHOD__,
+            $value,
+            MonetaryAmount::class
+        );
+    }
+
+    /**
+    * @return array<int, int|float>
+    */
+    public function GetLoanPaymentFrequency() : array
+    {
+        /**
+        * @var array<int, int|float>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'loanPaymentFrequency',
@@ -103,11 +133,10 @@ class RepaymentSpecification extends Base
     */
     public function SetLoanPaymentFrequency(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyWithUniqueIntegersOrFloats(
             'loanPaymentFrequency',
             __METHOD__,
-            $value,
-            MonetaryAmount::class
+            $value
         );
     }
 

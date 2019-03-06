@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
+use SignpostMarv\DaftObject\TypeUtilities;
 
 class PropertyValue extends StructuredValue
 {

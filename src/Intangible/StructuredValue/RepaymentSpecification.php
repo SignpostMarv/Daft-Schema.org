@@ -129,7 +129,7 @@ class RepaymentSpecification extends Base
     }
 
     /**
-    * @param array<int, MonetaryAmount> $value
+    * @param array<int, int|float|string> $value
     */
     public function SetLoanPaymentFrequency(array $value) : void
     {

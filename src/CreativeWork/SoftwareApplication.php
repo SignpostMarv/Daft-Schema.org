@@ -534,12 +534,12 @@ class SoftwareApplication extends Base
     }
 
     /**
-    * @return array<int, CreativeWork>
+    * @return array<int, Base>
     */
     public function GetSoftwareHelp() : array
     {
         /**
-        * @var array<int, CreativeWork>
+        * @var array<int, Base>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'softwareHelp',
@@ -551,7 +551,7 @@ class SoftwareApplication extends Base
     }
 
     /**
-    * @param array<int, CreativeWork> $value
+    * @param array<int, Base> $value
     */
     public function SetSoftwareHelp(array $value) : void
     {
@@ -559,7 +559,7 @@ class SoftwareApplication extends Base
             'softwareHelp',
             __METHOD__,
             $value,
-            CreativeWork::class
+            Base::class
         );
     }
 

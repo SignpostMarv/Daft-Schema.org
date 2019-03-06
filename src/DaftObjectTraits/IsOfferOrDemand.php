@@ -6,10 +6,11 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
-use SignpostMarv\DaftObject\SchemaOrg\Placeq;
+use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\TypeUtilities;
@@ -29,12 +30,12 @@ trait IsOfferOrDemand
     use HasSku;
 
     /**
-    * @return array<int, Place>
+    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Place>
     */
     public function GetAvailableAtOrFrom() : array
     {
         /**
-        * @var array<int, Place>
+        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'availableAtOrFrom',
@@ -46,7 +47,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @param array<int, Place> $value
+    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Place> $value
     */
     public function SetAvailableAtOrFrom(array $value) : void
     {
@@ -59,7 +60,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @return array<int, DeliveryMethod>
+    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod>
     */
     public function GetAvailableDeliveryMethod() : array
     {
@@ -76,7 +77,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @param array<int, DeliveryMethod> $value
+    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod> $value
     */
     public function SetAvailableDeliveryMethod(array $value) : void
     {

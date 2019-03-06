@@ -420,7 +420,14 @@ class Thing extends AbstractArrayBackedDaftObject
         */
         $static = static::PROPERTIES;
 
-        $parent = get_parent_class(static::class)::DaftObjectProperties();
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $parent = $static_parent::DaftObjectProperties();
 
         return array_unique(array_merge(
             $parent,

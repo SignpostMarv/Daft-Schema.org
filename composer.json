@@ -30,6 +30,10 @@
         "sort-packages": true
     },
     "scripts": {
+        "scrutinizer": [
+            "phpunit -vvvv --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky",
+            "@tests"
+        ],
         "tests": [
             "phpstan analyse -c ./phpstan.neon .php_cs.dist src",
             "psalm",

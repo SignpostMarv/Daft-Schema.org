@@ -45,12 +45,20 @@ class Thing extends AbstractArrayBackedDaftObject implements
     {
         $missing = array_diff(static::DaftObjectProperties(), array_keys($data));
 
+        /**
+        * @var array<int, string>
+        */
+        $missing = array_combine(
+            $missing,
+            array_fill(0, count($missing), [])
+        );
+
+        /**
+        * @var array<string, scalar|array|object|null>
+        */
         $data = array_merge(
             $data,
-            array_combine(
-                $missing,
-                array_fill(0, count($missing), [])
-            )
+            $missing
         );
 
         unset($data['@context'], $data['@type']);

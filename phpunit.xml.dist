@@ -8,6 +8,9 @@
     <testsuite name="Daft Schema > DaftObject">
       <directory>./Tests/DaftObject</directory>
     </testsuite>
+    <testsuite name="Daft Schema > DaftJson">
+      <directory>./Tests/DaftJson</directory>
+    </testsuite>
   </testsuites>
   <logging>
     <log

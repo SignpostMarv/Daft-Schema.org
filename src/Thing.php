@@ -467,31 +467,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         ));
     }
 
-    /**
-    * @return array<string, array<int, string>>
-    */
-    public static function DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() : array
-    {
-        /**
-        * @var array<int, string>
-        */
-        $static = static::PROPERTIES_WITH_MULTI_TYPED_ARRAYS;
-
-        /**
-        * @var string
-        *
-        * @psalm-var class-string<Thing>
-        */
-        $static_parent = get_parent_class(static::class);
-
-        $parent = $static_parent::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues();
-
-        return array_unique(array_merge(
-            $parent,
-            $static
-        ));
-    }
-
     public static function DaftObjectNullableProperties() : array
     {
         /**

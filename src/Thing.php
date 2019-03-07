@@ -1019,8 +1019,6 @@ class Thing extends AbstractArrayBackedDaftObject
     ) : void {
         $initialCount = count($validThings);
 
-        $validThings = static::EnsureIsIntKeyedArrayOfThingStrings(...$validThings);
-
         if (0 === $initialCount) {
             throw new BadMethodCallException(
                 'Argument 4 of ' .
@@ -1068,15 +1066,5 @@ class Thing extends AbstractArrayBackedDaftObject
         }
 
         $this->NudgePropertyWithUniqueValues($property, $method, $value);
-    }
-
-    /**
-    * @return array<int, string>
-    */
-    protected static function EnsureIsIntKeyedArrayOfThingStrings(string ...$validThings) : array
-    {
-        return array_unique(array_filter($validThings, function (string $maybe) : bool {
-            return is_a($maybe, Thing::class, true);
-        }));
     }
 }

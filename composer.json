@@ -1,6 +1,6 @@
 {
     "name": "signpostmarv/daft-schema-org",
-    "description": "schema.org \u001b[Hdaft \u001b[F implementation",
+    "description": "schema.org daft implementation",
     "license": "Apache-2.0",
     "authors": [
         {

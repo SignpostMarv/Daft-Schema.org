@@ -17,8 +17,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\TypeUtilities;
 
-class Thing extends AbstractArrayBackedDaftObject implements
-    DaftJson
+class Thing extends AbstractArrayBackedDaftObject implements DaftJson
 {
     const SCHEMA_ORG_CONTEXT = 'http://schema.org';
 

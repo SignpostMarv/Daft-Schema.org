@@ -38,8 +38,8 @@ class PropertyValue extends StructuredValue
         * @var array<int, string>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'propertyId',
-            $this->RetrievePropertyValueFromData('propertyId'),
+            'propertyID',
+            $this->RetrievePropertyValueFromData('propertyID'),
             static::class
         );
 
@@ -52,7 +52,7 @@ class PropertyValue extends StructuredValue
     public function SetPropertyID(array $value) : void
     {
         $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
-            'propertyId',
+            'propertyID',
             __METHOD__,
             $value
         );

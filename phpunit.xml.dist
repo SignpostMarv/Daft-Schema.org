@@ -5,6 +5,9 @@
   resolveDependencies="true"
 >
   <testsuites>
+    <testsuite name="Daft Schema">
+      <directory>./Tests/DaftObjectSchemaOrg</directory>
+    </testsuite>
     <testsuite name="Daft Schema > DaftObject">
       <directory>./Tests/DaftObject</directory>
     </testsuite>

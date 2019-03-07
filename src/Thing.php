@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 use BadMethodCallException;
 use InvalidArgumentException;
 use SignpostMarv\DaftObject\AbstractArrayBackedDaftObject;
+use SignpostMarv\DaftObject\DaftJson;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
@@ -16,7 +17,8 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\TypeUtilities;
 
-class Thing extends AbstractArrayBackedDaftObject
+class Thing extends AbstractArrayBackedDaftObject implements
+    DaftJson
 {
     const SCHEMA_ORG_CONTEXT = 'http://schema.org';
 
@@ -38,6 +40,23 @@ class Thing extends AbstractArrayBackedDaftObject
         'subjectOf',
         'url',
     ];
+
+    public function __construct(array $data = [], bool $writeAll = false)
+    {
+        $missing = array_diff(static::DaftObjectProperties(), array_keys($data));
+
+        $data = array_merge(
+            $data,
+            array_combine(
+                $missing,
+                array_fill(0, count($missing), [])
+            )
+        );
+
+        unset($data['@context'], $data['@type']);
+
+        parent::__construct($data, $writeAll);
+    }
 
     public function ObtainContext() : string
     {
@@ -413,6 +432,19 @@ class Thing extends AbstractArrayBackedDaftObject
         $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString('url', __METHOD__, $value);
     }
 
+    public function jsonSerialize() : array
+    {
+        return array_filter(
+            parent::jsonSerialize(),
+            /**
+            * @param scalar|array|object|null
+            */
+            function ($val) : bool {
+                return ! is_array($val) || count($val) > 0;
+            }
+        );
+    }
+
     public static function DaftObjectProperties() : array
     {
         /**
@@ -435,6 +467,31 @@ class Thing extends AbstractArrayBackedDaftObject
         ));
     }
 
+    /**
+    * @return array<string, array<int, string>>
+    */
+    public static function DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $static = static::PROPERTIES_WITH_MULTI_TYPED_ARRAYS;
+
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $parent = $static_parent::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues();
+
+        return array_unique(array_merge(
+            $parent,
+            $static
+        ));
+    }
+
     public static function DaftObjectNullableProperties() : array
     {
         /**
@@ -442,36 +499,92 @@ class Thing extends AbstractArrayBackedDaftObject
         */
         $static = static::NULLABLE_PROPERTIES;
 
-        return array_merge(
-            parent::DaftObjectNullableProperties(),
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $parent = $static_parent::DaftObjectNullableProperties();
+
+        return array_unique(array_merge(
+            $parent,
             $static
-        );
+        ));
     }
 
     public static function DaftObjectExportableProperties() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $static = static::EXPORTABLE_PROPERTIES;
-
-        return array_merge(
-            parent::DaftObjectExportableProperties(),
-            $static
-        );
+        return static::DaftObjectProperties();
     }
 
     public static function DaftObjectJsonProperties() : array
     {
-        /**
-        * @var string[]
-        */
-        $static = static::JSON_PROPERTIES;
+        return static::DaftObjectProperties();
+    }
 
-        return array_merge(
-            parent::DaftObjectJsonProperties(),
+    public static function DaftObjectPublicGetters() : array
+    {
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $static = TypeUtilities::DaftObjectPublicGetters(static::class);
+
+        if ($static_parent === get_parent_class(self::class)) {
+            return $static;
+        }
+
+        return array_unique(array_merge(
+            TypeUtilities::DaftObjectPublicGetters($static_parent),
             $static
-        );
+        ));
+    }
+
+    public static function DaftObjectPublicOrProtectedGetters() : array
+    {
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $static = TypeUtilities::DaftObjectPublicOrProtectedGetters(static::class);
+
+        if ($static_parent === get_parent_class(self::class)) {
+            return $static;
+        }
+
+        return array_unique(array_merge(
+            TypeUtilities::DaftObjectPublicOrProtectedGetters($static_parent),
+            $static
+        ));
+    }
+
+    public static function DaftObjectPublicSetters() : array
+    {
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        $static = TypeUtilities::DaftObjectPublicSetters(static::class);
+
+        if ($static_parent === get_parent_class(self::class)) {
+            return $static;
+        }
+
+        return array_unique(array_merge(
+            TypeUtilities::DaftObjectPublicSetters($static_parent),
+            $static
+        ));
     }
 
     /**

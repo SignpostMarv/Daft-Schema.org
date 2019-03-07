@@ -445,7 +445,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         return array_filter(
             parent::jsonSerialize(),
             /**
-            * @param scalar|array|object|null
+            * @param scalar|array|object|null $val
             */
             function ($val) : bool {
                 return ! is_array($val) || count($val) > 0;

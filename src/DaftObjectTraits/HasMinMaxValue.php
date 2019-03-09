@@ -65,7 +65,7 @@ trait HasMinMaxValue
     }
 
     /**
-    * @return array<int, string>
+    * @return array<int, bool|string|int|float|StructuredValue>
     */
     public function GetValue() : array
     {
@@ -82,7 +82,7 @@ trait HasMinMaxValue
     }
 
     /**
-    * @param array<int, string> $value
+    * @param array<int, bool|string|int|float|StructuredValue> $value
     */
     public function SetValue(array $value) : void
     {
@@ -116,6 +116,6 @@ trait HasMinMaxValue
             );
         }
 
-        $this->NudgePropertyWithUniqueValues('value', __METHOD__, $value);
+        $this->NudgePropertyValue('value', $value);
     }
 }

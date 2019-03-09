@@ -40,6 +40,19 @@ class DaftObjectImplementationTest extends Base
                     30,
                     40,
                 ],
+                'value' => [
+                    1,
+                    true,
+                    false,
+                    'foo',
+                    new SchemaOrg\Intangible\StructuredValue\QuantitativeValue([
+                        'minValue' => [1],
+                        'maxValue' => [10],
+                        'value' => [
+                            5,
+                        ],
+                    ]),
+                ],
             ],
         ];
     }

@@ -52,9 +52,10 @@ class PropertyValue extends Base
             'string',
         ],
         'value' => [
-            'bool',
+            'boolean',
             'integer',
             'double',
+            'string',
             Base::class,
         ],
         'valueReference' => [

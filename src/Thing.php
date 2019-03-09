@@ -263,11 +263,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetIdentifier(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'identifier',
-            __METHOD__,
             $value,
-            PropertyValue::class
+            true
         );
     }
 

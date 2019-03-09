@@ -88,10 +88,10 @@ class PropertyValue extends Base
     */
     public function SetPropertyID(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'propertyID',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

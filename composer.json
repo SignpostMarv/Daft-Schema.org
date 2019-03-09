@@ -46,8 +46,9 @@
     "require": {
         "php": "^7.1",
         "ext-ctype": "*",
+        "ext-json": "*",
         "ext-mbstring": "*",
-        "signpostmarv/daft-object": "^2.2,>=2.2.1"
+        "signpostmarv/daft-object": "^2.2,>=2.2.2"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.1",

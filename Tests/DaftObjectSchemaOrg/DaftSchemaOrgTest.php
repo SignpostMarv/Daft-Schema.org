@@ -46,6 +46,16 @@ class DaftSchemaOrgTest extends Base
             json_encode($thing, JSON_PRETTY_PRINT)
         );
 
+        $from_json = SchemaOrg\Thing::DaftObjectFromJsonString($json);
+
+        static::assertCount(3, $from_json->identifier);
+        static::assertSame('foo', $from_json->identifier[0]);
+        static::assertSame('bar', $from_json->identifier[1]);
+        static::assertInstanceOf(
+            SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
+            $from_json->identifier[2]
+        );
+
         $from_str = json_encode(
             SchemaOrg\Thing::DaftObjectFromJsonString($json),
             JSON_PRETTY_PRINT

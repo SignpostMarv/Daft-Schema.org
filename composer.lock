@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d493166200dfe44e41eb2c8ca7c4ffb",
+    "content-hash": "1bfb97cfdf4f14c3cd5fbaaf1f459785",
     "packages": [
         {
             "name": "signpostmarv/daft-magic-property-analysis",
@@ -58,16 +58,16 @@
         },
         {
             "name": "signpostmarv/daft-object",
-            "version": "v2.2.1",
+            "version": "v2.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SignpostMarv/daft-object.git",
-                "reference": "45cf8da3e93b5f7528eeb2246c0b6e6823f07bb7"
+                "reference": "9b9ee4ee2238e69e0355c32f25b15ea01335de72"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/45cf8da3e93b5f7528eeb2246c0b6e6823f07bb7",
-                "reference": "45cf8da3e93b5f7528eeb2246c0b6e6823f07bb7",
+                "url": "https://api.github.com/repos/SignpostMarv/daft-object/zipball/9b9ee4ee2238e69e0355c32f25b15ea01335de72",
+                "reference": "9b9ee4ee2238e69e0355c32f25b15ea01335de72",
                 "shasum": ""
             },
             "require": {
@@ -109,7 +109,7 @@
                 }
             ],
             "description": "Daft Object",
-            "time": "2019-03-07T19:48:59+00:00"
+            "time": "2019-03-09T16:38:42+00:00"
         },
         {
             "name": "signpostmarv/sprintf-exception-factory",
@@ -4765,6 +4765,7 @@
     "platform": {
         "php": "^7.1",
         "ext-ctype": "*",
+        "ext-json": "*",
         "ext-mbstring": "*"
     },
     "platform-dev": []

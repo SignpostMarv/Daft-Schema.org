@@ -7,10 +7,11 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\TypeUtilities;
 
-class PropertyValue extends StructuredValue
+class PropertyValue extends Base
 {
     use DaftObjectTraits\MeasurementTechnique;
     use DaftObjectTraits\TraitMinMaxValueUnit;
@@ -27,6 +28,42 @@ class PropertyValue extends StructuredValue
         'unitText',
         'value',
         'valueReference',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'maxValue' => [
+            'integer',
+            'double',
+        ],
+        'measurementTechnique' => [
+            'string',
+        ],
+        'minValue' => [
+            'integer',
+            'double',
+        ],
+        'propertyID' => [
+            'string',
+        ],
+        'unitCode' => [
+            'string',
+        ],
+        'unitText' => [
+            'string',
+        ],
+        'value' => [
+            'bool',
+            'integer',
+            'double',
+            Base::class,
+        ],
+        'valueReference' => [
+            Enumeration::class,
+            self::class,
+            Enumeration\QualitativeValue::class,
+            QuantitativeValue::class,
+            Base::class,
+        ],
     ];
 
     /**

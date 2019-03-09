@@ -10,6 +10,8 @@ use BadMethodCallException;
 use InvalidArgumentException;
 use SignpostMarv\DaftObject\AbstractArrayBackedDaftObject;
 use SignpostMarv\DaftObject\DaftJson;
+use SignpostMarv\DaftObject\DaftObjectHasPropertiesWithMultiTypedArraysOfUniqueValues;
+use SignpostMarv\DaftObject\JsonTypeUtilities;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
@@ -17,7 +19,12 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\TypeUtilities;
 
-class Thing extends AbstractArrayBackedDaftObject implements DaftJson
+/**
+* @template-implements DaftJson<Thing>
+*/
+class Thing extends AbstractArrayBackedDaftObject implements
+    DaftJson,
+    DaftObjectHasPropertiesWithMultiTypedArraysOfUniqueValues
 {
     const SCHEMA_ORG_CONTEXT = 'http://schema.org';
 
@@ -38,6 +45,49 @@ class Thing extends AbstractArrayBackedDaftObject implements DaftJson
         'sameAs',
         'subjectOf',
         'url',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'additionalType' => [
+            'string',
+        ],
+        'alternateName' => [
+            'string',
+        ],
+        'description' => [
+            'string',
+        ],
+        'disambiguatingDescription' => [
+            'string',
+        ],
+        'identifier' => [
+            'string',
+            PropertyValue::class,
+        ],
+        'image' => [
+            'string',
+            ImageObject::class,
+        ],
+        'mainEntityOfPage' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'name' => [
+            'string',
+        ],
+        'potentialAction' => [
+            Action::class,
+        ],
+        'sameAs' => [
+            'string',
+        ],
+        'subjectOf' => [
+            CreativeWork::class,
+            Event::class,
+        ],
+        'url' => [
+            'string',
+        ],
     ];
 
     public function __construct(array $data = [], bool $writeAll = false)
@@ -474,6 +524,35 @@ class Thing extends AbstractArrayBackedDaftObject implements DaftJson
         ));
     }
 
+    /**
+    * @return array<string, array<int, string>>
+    */
+    public static function DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() : array
+    {
+        /**
+        * @var array<string, array<int, string>>
+        */
+        $static = static::PROPERTIES_WITH_MULTI_TYPED_ARRAYS;
+
+        /**
+        * @var string
+        *
+        * @psalm-var class-string<Thing>
+        */
+        $static_parent = get_parent_class(static::class);
+
+        if ($static_parent === get_parent_class(self::class)) {
+            return $static;
+        }
+
+        $parent = $static_parent::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues();
+
+        return array_merge(
+            $parent,
+            $static
+        );
+    }
+
     public static function DaftObjectNullableProperties() : array
     {
         /**
@@ -567,6 +646,104 @@ class Thing extends AbstractArrayBackedDaftObject implements DaftJson
             TypeUtilities::DaftObjectPublicSetters($static_parent),
             $static
         ));
+    }
+
+    /**
+    * @return static
+    *
+    * @psalm-return Thing
+    */
+    public static function DaftObjectFromJsonString(
+        string $string,
+        bool $writeAll = self::BOOL_DEFAULT_WRITEALL
+    ) : DaftJson {
+        /**
+        * @var array<string, scalar|(scalar|array|object|null)[]|object|null>
+        */
+        $decoded = json_decode($string, true);
+
+        /**
+        * @var static
+        */
+        $out = static::DaftObjectFromJsonArray($decoded, $writeAll);
+
+        return $out;
+    }
+
+    /**
+    * @return static
+    *
+    * @psalm-return Thing
+    */
+    public static function DaftObjectFromJsonArray(
+        array $array,
+        bool $writeAll = self::BOOL_DEFAULT_WRITEALL
+    ) : DaftJson {
+        $type = JsonTypeUtilities::ThrowIfNotDaftJson(static::class);
+
+        $multi_type = static::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues();
+
+        $data = [];
+
+        $array_keys = array_keys($array);
+
+        $data = array_combine($array_keys, array_map(
+            /**
+            * @param int|string $k
+            *
+            * @return mixed
+            */
+            function ($k) use ($array, $multi_type) {
+                if ( ! is_string($k)) {
+                    throw new InvalidArgumentException(
+                        'Argument 1 passed to ' .
+                        __METHOD__ .
+                        '() must have all-string indices!'
+                    );
+                }
+
+                if (is_array($array[$k])) {
+                    return array_map(
+                        /**
+                        * @param mixed $val
+                        *
+                        * @return mixed
+                        */
+                        function ($val) use ($k, $multi_type) {
+                            if (
+                                is_array($val) &&
+                                isset($val['@context'], $val['@type'], $multi_type[$k])
+                            ) {
+                                foreach ($multi_type[$k] as $maybe) {
+                                    if (
+                                        is_a($maybe, Thing::class, true) &&
+                                        $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
+                                        $val['@type'] === $maybe::SCHEMA_ORG_TYPE
+                                    ) {
+                                        return $maybe::DaftObjectFromJsonArray($val);
+                                    }
+                                }
+                            }
+
+                            return $val;
+                        },
+                        $array[$k]
+                    );
+                }
+
+                return $array[$k];
+            },
+            $array_keys
+        ));
+
+        /**
+        * @psalm-var Thing
+        *
+        * @var Thing
+        */
+        $out = new $type($data, $writeAll);
+
+        return $out;
     }
 
     /**

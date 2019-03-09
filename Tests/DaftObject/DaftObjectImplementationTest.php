@@ -45,11 +45,32 @@ class DaftObjectImplementationTest extends Base
                     true,
                     false,
                     'foo',
+                ],
+                'valueReference' => [
                     new SchemaOrg\Intangible\StructuredValue\QuantitativeValue([
                         'minValue' => [1],
                         'maxValue' => [10],
                         'value' => [
                             5,
+                        ],
+                    ]),
+                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                        'identifier' => [
+                            'M',
+                        ],
+                        'greater' => [
+                            new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                                'identifier' => [
+                                    'S',
+                                ],
+                            ]),
+                        ],
+                        'lesser' => [
+                            new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                                'identifier' => [
+                                    'L',
+                                ],
+                            ]),
                         ],
                     ]),
                 ],

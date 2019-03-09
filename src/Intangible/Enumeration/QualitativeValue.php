@@ -8,10 +8,11 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitAdditionalProperty;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitValueReference;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
-class QualitativeValue extends Enumeration
+class QualitativeValue extends Base
 {
     use TraitAdditionalProperty;
     use TraitValueReference;
@@ -27,6 +28,29 @@ class QualitativeValue extends Enumeration
         'lesserOrEqual',
         'nonEqual',
         'valueReference',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'additionalProperty' => TypeUtilities::MULTI_TYPE_DICT__additionalProperty,
+        'equal' => [
+            QualitativeValue::class,
+        ],
+        'greater' => [
+            QualitativeValue::class,
+        ],
+        'greaterOrEqual' => [
+            QualitativeValue::class,
+        ],
+        'lesser' => [
+            QualitativeValue::class,
+        ],
+        'lesserOrEqual' => [
+            QualitativeValue::class,
+        ],
+        'nonEqual' => [
+            QualitativeValue::class,
+        ],
+        'valueReference' => TypeUtilities::MULTI_TYPE_DICT__valueReference,
     ];
 
     /**
@@ -51,7 +75,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetEqual(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue('equal', __METHOD__, $value);
+        $this->NudgePropertyValue('equal', $value, true);
     }
 
     /**
@@ -76,7 +100,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetGreater(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue('greater', __METHOD__, $value);
+        $this->NudgePropertyValue('greater', $value, true);
     }
 
     /**
@@ -101,11 +125,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetGreaterOrEqual(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue(
-            'greaterOrEqual',
-            __METHOD__,
-            $value
-        );
+        $this->NudgePropertyValue('greaterOrEqual', $value, true);
     }
 
     /**
@@ -130,7 +150,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetLesser(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue('lesser', __METHOD__, $value);
+        $this->NudgePropertyValue('lesser', $value, true);
     }
 
     /**
@@ -155,11 +175,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetLesserOrEqual(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue(
-            'lesserOrEqual',
-            __METHOD__,
-            $value
-        );
+        $this->NudgePropertyValue('lesserOrEqual', $value, true);
     }
 
     /**
@@ -184,7 +200,7 @@ class QualitativeValue extends Enumeration
     */
     public function SetNonEqual(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfQualitativeValue('nonEqual', __METHOD__, $value);
+        $this->NudgePropertyValue('nonEqual', $value, true);
     }
 
     /**

@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class PropertyValue extends Base
 {
@@ -58,13 +58,7 @@ class PropertyValue extends Base
             'string',
             Base::class,
         ],
-        'valueReference' => [
-            Enumeration::class,
-            self::class,
-            Enumeration\QualitativeValue::class,
-            QuantitativeValue::class,
-            Base::class,
-        ],
+        'valueReference' => TypeUtilities::MULTI_TYPE_DICT__valueReference,
     ];
 
     /**

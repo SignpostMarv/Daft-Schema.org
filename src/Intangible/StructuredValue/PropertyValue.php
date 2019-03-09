@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 

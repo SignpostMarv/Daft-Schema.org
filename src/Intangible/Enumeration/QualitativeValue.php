@@ -9,7 +9,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitAdditionalProperty;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitValueReference;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration as Base;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class QualitativeValue extends Base

@@ -10,6 +10,11 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, int> $downvoteCount
+* @property array<int, Question> $parentItem
+* @property array<int, int> $upvoteCount
+*/
 class Comment extends Base
 {
     use DaftObjectTraits\UpDownVoteCount;
@@ -44,11 +49,9 @@ class Comment extends Base
     */
     public function SetParentItem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'parentItem',
-            __METHOD__,
-            $value,
-            Question::class
+            $value
         );
     }
 }

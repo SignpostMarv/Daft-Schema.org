@@ -19,6 +19,10 @@ class TypeUtilities extends Base
         'string',
     ];
 
+    const MULTI_TYPE_COMMON__int_only = [
+        'integer',
+    ];
+
     const MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip = [
         CreativeWork::class,
         Intangible\Trip::class,
@@ -43,6 +47,8 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__author = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
     const MULTI_TYPE_DICT__award = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__downvoteCount = self::MULTI_TYPE_COMMON__int_only;
 
     const MULTI_TYPE_DICT__funder = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
@@ -79,6 +85,10 @@ class TypeUtilities extends Base
         Offer::class,
     ];
 
+    const MULTI_TYPE_DICT__parentItem = [
+        CreativeWork\Question::class,
+    ];
+
     const MULTI_TYPE_DICT__provider = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
     const MULTI_TYPE_DICT__publishingPrinciples = [
@@ -97,6 +107,8 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__translators = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
     const MULTI_TYPE_DICT__typicalAgeRange = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__upvoteCount = self::MULTI_TYPE_COMMON__int_only;
 
     const MULTI_TYPE_DICT__valueReference = [
         Intangible\Enumeration\QualitativeValue::class,

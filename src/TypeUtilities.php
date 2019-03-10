@@ -10,16 +10,16 @@ use SignpostMarv\DaftObject\TypeUtilities as Base;
 
 class TypeUtilities extends Base
 {
-    CONST MULTI_TYPE_COMMON__Organization__or__Person = [
+    const MULTI_TYPE_COMMON__Organization__or__Person = [
         Organization::class,
         Person::class,
     ];
 
-    CONST MULTI_TYPE_COMMON__string_only = [
+    const MULTI_TYPE_COMMON__string_only = [
         'string',
     ];
 
-    CONST MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip = [
+    const MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip = [
         CreativeWork::class,
         Intangible\Trip::class,
     ];

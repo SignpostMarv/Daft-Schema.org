@@ -17,7 +17,6 @@ use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Event\PublicationEvent;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCounter;
-use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, Thing> $aboutThing

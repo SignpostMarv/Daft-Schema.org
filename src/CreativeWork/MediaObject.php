@@ -60,7 +60,7 @@ class MediaObject extends Base
         'width',
     ];
 
-    CONST PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
         'associatedArticle' => [
             NewsArticle::class,
         ],

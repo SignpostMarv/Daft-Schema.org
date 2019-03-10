@@ -67,6 +67,8 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__isPartOf = self::MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip;
 
+    const MULTI_TYPE_DICT__issn = self::MULTI_TYPE_COMMON__string_only;
+
     const MULTI_TYPE_DICT__itemReviewed = [
         Thing::class,
     ];
@@ -80,6 +82,8 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__material = [
         Product::class,
     ];
+
+    const MULTI_TYPE_DICT__measurementTechnique = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__offers = [
         Offer::class,

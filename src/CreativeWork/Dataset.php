@@ -11,6 +11,13 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, MediaObject\DataDownload> $distribution
+* @property array<int, DataCatalog> $includedInDataCatalog
+* @property array<int, string> $issn
+* @property array<int, string> $measurementTechnique
+* @property array<int, string|PropertyValue> $variableMeasured
+*/
 class Dataset extends Base
 {
     use DaftObjectTraits\Issn;
@@ -24,6 +31,25 @@ class Dataset extends Base
         'issn',
         'measurementTechnique',
         'variableMeasured',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'distribution' => [
+            MediaObject\DataDownload::class,
+        ],
+        'includedInDataCatalog' => [
+            DataCatalog::class,
+        ],
+        'issn' => [
+            'string',
+        ],
+        'measurementTechnique' => [
+            'string',
+        ],
+        'variableMeasured' => [
+            'string',
+            PropertyValue::class,
+        ],
     ];
 
     /**
@@ -48,11 +74,9 @@ class Dataset extends Base
     */
     public function SetDistribution(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'distribution',
-            __METHOD__,
-            $value,
-            MediaObject\DataDownload::class
+            $value
         );
     }
 
@@ -78,11 +102,9 @@ class Dataset extends Base
     */
     public function SetIncludedInDataCatalog(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'includedInDataCatalog',
-            __METHOD__,
-            $value,
-            DataCatalog::class
+            $value
         );
     }
 
@@ -108,11 +130,10 @@ class Dataset extends Base
     */
     public function SetVariableMeasured(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'variableMeasured',
-            __METHOD__,
             $value,
-            PropertyValue::class
+            true
         );
     }
 }

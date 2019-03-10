@@ -11,12 +11,23 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\DataFeedItem;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, string|DataFeedItem|Thing> $dataFeedElement
+*/
 class DataFeed extends Base
 {
     const SCHEMA_ORG_TYPE = 'DataFeed';
 
     const PROPERTIES = [
         'dataFeedElement',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'dataFeedElement' => [
+            'string',
+            DataFeedItem::class,
+            Thing::class,
+        ],
     ];
 
     /**
@@ -41,12 +52,10 @@ class DataFeed extends Base
     */
     public function SetDataFeedElement(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'dataFeedElement',
-            __METHOD__,
             $value,
-            DataFeedItem::class,
-            Thing::class
+            true
         );
     }
 }

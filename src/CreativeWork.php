@@ -17,7 +17,7 @@ use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Event\PublicationEvent;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCounter;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, Thing> $aboutThing
@@ -61,7 +61,7 @@ use SignpostMarv\DaftObject\TypeUtilities;
 * @property array<int, Date> $expires
 * @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $funder
 * @property array<int, string> $genre
-* @property array<int, CreativeWork|Trip> $hasPart
+* @property array<int, CreativeWork|Intangible\Trip> $hasPart
 * @property array<int, string> $headline
 * @property array<int, string|Language> $inLanguage
 * @property array<int, InteractionCounter> $interactionStatistic
@@ -69,12 +69,14 @@ use SignpostMarv\DaftObject\TypeUtilities;
 * @property array<int, bool> $isAccessibleForFree
 * @property array<int, string|CreativeWork|Product> $isBasedOn
 * @property array<int, bool> $isFamilyFriendly
+* @property array<int, CreativeWork|Intangible\Trip> $isPartOf
 * @property array<int, string> $keywords
 * @property array<int, string> $learningResourceType
 * @property array<int, string|CreativeWork> $license
 * @property array<int, string|Place|PostalAddress> $location
 * @property array<int, Place> $locationCreated
 * @property array<int, Thing> $mainEntity
+* @property array<int, Product> $material
 * @property array<int, Thing> $mentions
 * @property array<int, Offer> $offers
 * @property array<int, int|string> $position
@@ -218,6 +220,253 @@ class CreativeWork extends Thing
         'workTranslation',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'aboutThing' => TypeUtilities::MULTI_TYPE_DICT__aboutThing,
+        'accessMode' => [
+            'string',
+        ],
+        'accessModeSufficient' => [
+            'string',
+        ],
+        'accessibilityAPI' => [
+            'string',
+        ],
+        'accessibilityControl' => [
+            'string',
+        ],
+        'accessibilityFeature' => [
+            'string',
+        ],
+        'accessibilityHazard' => [
+            'string',
+        ],
+        'accessibilitySummary' => [
+            'string',
+        ],
+        'accountablePerson' => [
+            Person::class,
+        ],
+        'aggregateRating' => TypeUtilities::MULTI_TYPE_DICT__aggregateRating,
+        'alternativeHeadline' => [
+            'string',
+        ],
+        'associatedMedia' => [
+            MediaObject::class,
+        ],
+        'audience' => TypeUtilities::MULTI_TYPE_DICT__audience,
+        'audio' => [
+            AudioObject::class,
+        ],
+        'author' => TypeUtilities::MULTI_TYPE_DICT__author,
+        'award' => TypeUtilities::MULTI_TYPE_DICT__award,
+        'character' => [
+            Person::class,
+        ],
+        'citation' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'comment' => [
+            Comment::class,
+        ],
+        'commentCount' => [
+            'integer',
+        ],
+        'contentLocation' => [
+            Place::class,
+        ],
+        'contentRating' => [
+            Rating::class,
+        ],
+        'contentReferenceTime' => [
+            DateTime::class,
+        ],
+        'contributor' => [
+            Organization::class,
+            Person::class,
+        ],
+        'copyrightHolder' => [
+            Organization::class,
+            Person::class,
+        ],
+        'copyrightYear' => [
+            'integer',
+        ],
+        'correction' => [
+            'string',
+            CorrectionComment::class,
+        ],
+        'creator' => [
+            Organization::class,
+            Person::class,
+        ],
+        'dateCreated' => [
+            Date::class,
+            DateTime::class,
+        ],
+        'dateModified' => [
+            Date::class,
+            DateTime::class,
+        ],
+        'datePublished' => [
+            Date::class,
+            DateTime::class,
+        ],
+        'discussionUrl' => [
+            'string',
+        ],
+        'editor' => [
+            Person::class,
+        ],
+        'educationalAlignment' => [
+            AlignmentObject::class,
+        ],
+        'educationalUse' => [
+            'string',
+        ],
+        'encoding' => [
+            MediaObject::class,
+        ],
+        'encodingFormat' => [
+            'string',
+        ],
+        'exampleOfWork' => [
+            CreativeWork::class,
+        ],
+        'expires' => [
+            Date::class,
+        ],
+        'funder' => TypeUtilities::MULTI_TYPE_DICT__funder,
+        'genre' => TypeUtilities::MULTI_TYPE_DICT__genre,
+        'hasPart' => TypeUtilities::MULTI_TYPE_DICT__hasPart,
+        'headline' => [
+            'string',
+        ],
+        'inLanguage' => [
+            'string',
+            Intangible\Language::class,
+        ],
+        'interactionStatistic' => [
+            InteractionCounter::class,
+        ],
+        'interactivityType' => [
+            'string',
+        ],
+        'isAccessibleForFree' => TypeUtilities::MULTI_TYPE_DICT__isAccessibleForFree,
+        'isBasedOn' => [
+            'string',
+            CreativeWork::class,
+            Product::class,
+        ],
+        'isFamilyFriendly' => [
+            'boolean',
+        ],
+        'keywords' => [
+            'string',
+        ],
+        'learningResourceType' => [
+            'string',
+        ],
+        'license' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'location' => TypeUtilities::MULTI_TYPE_DICT__location,
+        'locationCreated' => [
+            Place::class,
+        ],
+        'mainEntity' => [
+            Thing::class,
+        ],
+        'material' => TypeUtilities::MULTI_TYPE_DICT__material,
+        'mentions' => [
+            Thing::class,
+        ],
+        'offers' => TypeUtilities::MULTI_TYPE_DICT__offers,
+        'position' => [
+            'integer',
+            'string',
+        ],
+        'producer' => [
+            Organization::class,
+            Person::class,
+        ],
+        'provider' => TypeUtilities::MULTI_TYPE_DICT__provider,
+        'publication' => [
+            PublicationEvent::class,
+        ],
+        'publisher' => [
+            Organization::class,
+            Person::class,
+        ],
+        'publisherImprint' => [
+            Organization::class,
+        ],
+        'publishingPrinciples' => TypeUtilities::MULTI_TYPE_DICT__publishingPrinciples,
+        'recordedAt' => [
+            Event::class,
+        ],
+        'releasedEvent' => [
+            PublicationEvent::class,
+        ],
+        'review' => TypeUtilities::MULTI_TYPE_DICT__review,
+        'schemaVersion' => [
+            'string',
+        ],
+        'sdDatePublished' => [
+            Date::class,
+        ],
+        'sdLicense' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'sdPublisher' => [
+            Organization::class,
+            Person::class,
+        ],
+        'sourceOrganization' => [
+            Organization::class,
+        ],
+        'spatialCoverage' => [
+            Place::class,
+        ],
+        'sponsor' => TypeUtilities::MULTI_TYPE_DICT__sponsor,
+        'temporalCoverage' => [
+            'string',
+            DateTime::class,
+        ],
+        'text' => [
+            'string',
+        ],
+        'thumbnailUrl' => [
+            'string',
+        ],
+        'timeRequired' => [
+            Duration::class,
+        ],
+        'translationOfWork' => [
+            CreativeWork::class,
+        ],
+        'translators' => [
+            Organization::class,
+            Person::class,
+        ],
+        'typicalAgeRange' => TypeUtilities::MULTI_TYPE_DICT__typicalAgeRange,
+        'version' => [
+            'integer',
+            'string',
+        ],
+        'video' => [
+            VideoObject::class,
+        ],
+        'workExample' => [
+            CreativeWork::class,
+        ],
+        'workTranslation' => [
+            CreativeWork::class,
+        ],
+    ];
+
     /**
     * @return array<int, string>
     */
@@ -240,10 +489,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessMode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessMode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -269,10 +518,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessModeSufficient(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessModeSufficient',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -298,10 +547,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityAPI(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessibilityAPI',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -327,10 +576,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityControl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessibilityControl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -356,10 +605,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityFeature(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessibilityFeature',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -385,10 +634,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityHazard(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessibilityHazard',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -414,10 +663,10 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilitySummary(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'accessibilitySummary',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -443,7 +692,7 @@ class CreativeWork extends Thing
     */
     public function SetAccountablePerson(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('accountablePerson', __METHOD__, $value);
+        $this->NudgePropertyValue('accountablePerson', $value, true);
     }
 
     /**
@@ -468,10 +717,10 @@ class CreativeWork extends Thing
     */
     public function SetAlternativeHeadline(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'alternativeHeadline',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -497,11 +746,10 @@ class CreativeWork extends Thing
     */
     public function SetAssociatedMedia(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'associatedMedia',
-            __METHOD__,
             $value,
-            MediaObject::class
+            true
         );
     }
 
@@ -527,11 +775,10 @@ class CreativeWork extends Thing
     */
     public function SetAudio(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'audio',
-            __METHOD__,
             $value,
-            AudioObject::class
+            true
         );
     }
 
@@ -557,7 +804,7 @@ class CreativeWork extends Thing
     */
     public function SetCharacter(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('character', __METHOD__, $value);
+        $this->NudgePropertyValue('character', $value, true);
     }
 
     /**
@@ -582,11 +829,10 @@ class CreativeWork extends Thing
     */
     public function SetCitation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'citation',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -612,11 +858,10 @@ class CreativeWork extends Thing
     */
     public function SetComment(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'comment',
-            __METHOD__,
             $value,
-            Comment::class
+            true
         );
     }
 
@@ -667,7 +912,7 @@ class CreativeWork extends Thing
     */
     public function SetContentLocation(array $value) : void
     {
-        $this->NudgePropertyValueWithUniquePlaces('contentLocation', __METHOD__, $value);
+        $this->NudgePropertyValue('contentLocation', $value, true);
     }
 
     /**
@@ -692,11 +937,10 @@ class CreativeWork extends Thing
     */
     public function SetContentRating(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'contentRating',
-            __METHOD__,
             $value,
-            Rating::class
+            true
         );
     }
 
@@ -722,7 +966,7 @@ class CreativeWork extends Thing
     */
     public function SetContentReferenceTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDateTimes('contentReferenceTime', __METHOD__, $value);
+        $this->NudgePropertyValue('contentReferenceTime', $value, true);
     }
 
     /**
@@ -747,7 +991,7 @@ class CreativeWork extends Thing
     */
     public function SetContributor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('contributor', __METHOD__, $value);
+        $this->NudgePropertyValue('contributor', $value, true);
     }
 
     /**
@@ -772,10 +1016,10 @@ class CreativeWork extends Thing
     */
     public function SetCopyrightHolder(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'copyrightHolder',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -826,11 +1070,10 @@ class CreativeWork extends Thing
     */
     public function SetCorrection(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'correction',
-            __METHOD__,
             $value,
-            CorrectionComment::class
+            true
         );
     }
 
@@ -856,7 +1099,7 @@ class CreativeWork extends Thing
     */
     public function SetCreator(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('creator', __METHOD__, $value);
+        $this->NudgePropertyValue('creator', $value, true);
     }
 
     /**
@@ -881,7 +1124,7 @@ class CreativeWork extends Thing
     */
     public function SetDateCreated(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDatesOrDateTimes('dateCreated', __METHOD__, $value);
+        $this->NudgePropertyValue('dateCreated', $value, true);
     }
 
     /**
@@ -906,7 +1149,7 @@ class CreativeWork extends Thing
     */
     public function SetDateModified(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDatesOrDateTimes('dateModified', __METHOD__, $value);
+        $this->NudgePropertyValue('dateModified', $value, true);
     }
 
     /**
@@ -931,7 +1174,7 @@ class CreativeWork extends Thing
     */
     public function SetDatePublished(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDatesOrDateTimes('datePublished', __METHOD__, $value);
+        $this->NudgePropertyValue('datePublished', $value, true);
     }
 
     /**
@@ -956,10 +1199,10 @@ class CreativeWork extends Thing
     */
     public function SetDiscussionUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'discussionUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -985,7 +1228,7 @@ class CreativeWork extends Thing
     */
     public function SetEditor(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('editor', __METHOD__, $value);
+        $this->NudgePropertyValue('editor', $value, true);
     }
 
     /**
@@ -1010,11 +1253,10 @@ class CreativeWork extends Thing
     */
     public function SetEducationalAlignment(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'educationalAlignment',
-            __METHOD__,
             $value,
-            AlignmentObject::class
+            true
         );
     }
 
@@ -1040,10 +1282,10 @@ class CreativeWork extends Thing
     */
     public function SetEducationalUse(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'educationalUse',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1069,11 +1311,10 @@ class CreativeWork extends Thing
     */
     public function SetEncoding(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'encoding',
-            __METHOD__,
             $value,
-            MediaObject::class
+            true
         );
     }
 
@@ -1099,10 +1340,10 @@ class CreativeWork extends Thing
     */
     public function SetEncodingFormat(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'encodingFormat',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1128,11 +1369,10 @@ class CreativeWork extends Thing
     */
     public function SetExampleOfWork(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'exampleOfWork',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -1158,11 +1398,10 @@ class CreativeWork extends Thing
     */
     public function SetExpires(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'expires',
-            __METHOD__,
             $value,
-            Date::class
+            true
         );
     }
 
@@ -1188,10 +1427,10 @@ class CreativeWork extends Thing
     */
     public function SetHeadline(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'headline',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1217,11 +1456,10 @@ class CreativeWork extends Thing
     */
     public function SetInteractionStatistic(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'interactionStatistic',
-            __METHOD__,
             $value,
-            InteractionCounter::class
+            true
         );
     }
 
@@ -1247,10 +1485,10 @@ class CreativeWork extends Thing
     */
     public function SetInteractivityType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'interactivityType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1276,12 +1514,10 @@ class CreativeWork extends Thing
     */
     public function SetIsBasedOn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'isBasedOn',
-            __METHOD__,
             $value,
-            CreativeWork::class,
-            Product::class
+            true
         );
     }
 
@@ -1336,10 +1572,10 @@ class CreativeWork extends Thing
     */
     public function SetKeywords(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'keywords',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1365,10 +1601,10 @@ class CreativeWork extends Thing
     */
     public function SetLearningResourceType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'learningResourceType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1394,11 +1630,10 @@ class CreativeWork extends Thing
     */
     public function SetLicense(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'license',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -1424,7 +1659,7 @@ class CreativeWork extends Thing
     */
     public function SetLocationCreated(array $value) : void
     {
-        $this->NudgePropertyValueWithUniquePlaces('locationCreated', __METHOD__, $value);
+        $this->NudgePropertyValue('locationCreated', $value, true);
     }
 
     /**
@@ -1449,11 +1684,10 @@ class CreativeWork extends Thing
     */
     public function SetMainEntity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'mainEntity',
-            __METHOD__,
             $value,
-            Thing::class
+            true
         );
     }
 
@@ -1479,11 +1713,10 @@ class CreativeWork extends Thing
     */
     public function SetMentions(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'mentions',
-            __METHOD__,
             $value,
-            Thing::class
+            true
         );
     }
 
@@ -1509,10 +1742,10 @@ class CreativeWork extends Thing
     */
     public function SetPosition(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'position',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1538,7 +1771,7 @@ class CreativeWork extends Thing
     */
     public function SetProducer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('producer', __METHOD__, $value);
+        $this->NudgePropertyValue('producer', $value, true);
     }
 
     /**
@@ -1563,11 +1796,10 @@ class CreativeWork extends Thing
     */
     public function SetPublication(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'publication',
-            __METHOD__,
             $value,
-            PublicationEvent::class
+            true
         );
     }
 
@@ -1593,7 +1825,7 @@ class CreativeWork extends Thing
     */
     public function SetPublisher(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('publisher', __METHOD__, $value);
+        $this->NudgePropertyValue('publisher', $value, true);
     }
 
     /**
@@ -1618,11 +1850,10 @@ class CreativeWork extends Thing
     */
     public function SetPublisherImprint(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'publisherImprint',
-            __METHOD__,
             $value,
-            Organization::class
+            true
         );
     }
 
@@ -1648,11 +1879,10 @@ class CreativeWork extends Thing
     */
     public function SetRecordedAt(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'recordedAt',
-            __METHOD__,
             $value,
-            Event::class
+            true
         );
     }
 
@@ -1678,11 +1908,10 @@ class CreativeWork extends Thing
     */
     public function SetReleasedEvent(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'releasedEvent',
-            __METHOD__,
             $value,
-            PublicationEvent::class
+            true
         );
     }
 
@@ -1708,10 +1937,10 @@ class CreativeWork extends Thing
     */
     public function SetSchemaVersion(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'schemaVersion',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1737,11 +1966,10 @@ class CreativeWork extends Thing
     */
     public function SetSdDatePublished(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'sdDatePublished',
-            __METHOD__,
             $value,
-            Date::class
+            true
         );
     }
 
@@ -1767,11 +1995,10 @@ class CreativeWork extends Thing
     */
     public function SetSdLicense(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'sdLicense ',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -1797,7 +2024,7 @@ class CreativeWork extends Thing
     */
     public function SetSdPublisher(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('sdPublisher', __METHOD__, $value);
+        $this->NudgePropertyValue('sdPublisher', $value, true);
     }
 
     /**
@@ -1822,11 +2049,10 @@ class CreativeWork extends Thing
     */
     public function SetSourceOrganization(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'sourceOrganization',
-            __METHOD__,
             $value,
-            Organization::class
+            true
         );
     }
 
@@ -1852,7 +2078,7 @@ class CreativeWork extends Thing
     */
     public function SetSpatialCoverage(array $value) : void
     {
-        $this->NudgePropertyValueWithUniquePlaces('spatialCoverage', __METHOD__, $value);
+        $this->NudgePropertyValue('spatialCoverage', $value, true);
     }
 
     /**
@@ -1877,11 +2103,10 @@ class CreativeWork extends Thing
     */
     public function SetTemporalCoverage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'temporalCoverage',
-            __METHOD__,
             $value,
-            DateTime::class
+            true
         );
     }
 
@@ -1907,10 +2132,10 @@ class CreativeWork extends Thing
     */
     public function SetText(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'text',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1936,10 +2161,10 @@ class CreativeWork extends Thing
     */
     public function SetThumbnailUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'thumbnailUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -1965,11 +2190,10 @@ class CreativeWork extends Thing
     */
     public function SetTimeRequired(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'timeRequired',
-            __METHOD__,
             $value,
-            Duration::class
+            true
         );
     }
 
@@ -1995,11 +2219,10 @@ class CreativeWork extends Thing
     */
     public function SetTranslationOfWork(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'translationOfWork',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -2025,10 +2248,10 @@ class CreativeWork extends Thing
     */
     public function SetVersion(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'version',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -2054,11 +2277,10 @@ class CreativeWork extends Thing
     */
     public function SetVideo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'video',
-            __METHOD__,
             $value,
-            VideoObject::class
+            true
         );
     }
 
@@ -2084,11 +2306,10 @@ class CreativeWork extends Thing
     */
     public function SetWorkExample(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'workExample',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -2114,11 +2335,10 @@ class CreativeWork extends Thing
     */
     public function SetWorkTranslation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'workTranslation',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 }

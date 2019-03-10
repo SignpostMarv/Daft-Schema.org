@@ -61,6 +61,10 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__isPartOf = self::MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip;
 
+    const MULTI_TYPE_DICT__itemReviewed = [
+        Thing::class,
+    ];
+
     const MULTI_TYPE_DICT__location = [
         'string',
         Place::class,
@@ -85,6 +89,8 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__review = [
         CreativeWork\Review::class,
     ];
+
+    const MULTI_TYPE_DICT__reviewAspect = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__sponsor = self::MULTI_TYPE_COMMON__Organization__or__Person;
 

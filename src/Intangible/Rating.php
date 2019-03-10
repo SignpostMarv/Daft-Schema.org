@@ -8,8 +8,15 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $author
+* @property array<int, string|float|int> $bestRating
+* @property array<int, string|float|int> $ratingValue
+* @property array<int, string> $reviewAspect
+* @property array<int, string|float|int> $worstRating
+*/
 class Rating extends Base
 {
     use DaftObjectTraits\HasAuthor;
@@ -23,6 +30,26 @@ class Rating extends Base
         'ratingValue',
         'reviewAspect',
         'worstRating',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'author' => TypeUtilities::MULTI_TYPE_DICT__author,
+        'bestRating' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'ratingValue' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'reviewAspect' => TypeUtilities::MULTI_TYPE_DICT__reviewAspect,
+        'worstRating' => [
+            'string',
+            'double',
+            'integer',
+        ],
     ];
 
     /**

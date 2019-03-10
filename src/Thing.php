@@ -30,7 +30,8 @@ use SignpostMarv\DaftObject\TypeUtilities;
 * @property array<int, string> $name
 * @property array<int, Action> $potentialAction
 * @property array<int, string> $sameAs
-* @property array<int, CreativeWork|Event> $potentialAction
+* @property array<int, CreativeWork|Event> $subjectOf
+* @property array<int, Action> $potentialAction
 * @property array<int, string> $url
 *
 * @template-implements DaftJson<Thing>

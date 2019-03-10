@@ -8,8 +8,14 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Thing> $itemReviewed
+* @property array<int, int> $ratingCount
+* @property array<int, int> $reviewCount
+*/
 class AggregateRating extends Base
 {
     use DaftObjectTraits\HasItemReviewed;
@@ -20,6 +26,16 @@ class AggregateRating extends Base
         'itemReviewed',
         'ratingCount',
         'reviewCount',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'itemReviewed' => TypeUtilities::MULTI_TYPE_DICT__itemReviewed,
+        'ratingCount' => [
+            'integer',
+        ],
+        'reviewCount' => [
+            'integer',
+        ],
     ];
 
     /**

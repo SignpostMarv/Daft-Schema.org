@@ -7,9 +7,21 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\QualitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, int|float> $maxValue
+* @property array<int, string> $measurementTechnique
+* @property array<int, int|float> $minValue
+* @property array<int, string> $propertyID
+* @property array<int, string> $unitCode
+* @property array<int, string> $unitText
+* @property array<int, bool|int|float|string|PropertyValue> $value
+* @property array<int, QualitativeValue|Enumeration|PropertyValue|QuantitativeValue|Base> $valueReference
+*/
 class PropertyValue extends Base
 {
     use DaftObjectTraits\MeasurementTechnique;

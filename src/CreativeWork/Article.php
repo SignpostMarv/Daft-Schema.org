@@ -147,11 +147,10 @@ class Article extends Base
     */
     public function SetBackstory(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'backstory',
-            __METHOD__,
             $value,
-            Base::class
+            true
         );
     }
 

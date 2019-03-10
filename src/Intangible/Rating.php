@@ -74,10 +74,10 @@ class Rating extends Base
     */
     public function SetBestRating(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'bestRating',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -103,10 +103,10 @@ class Rating extends Base
     */
     public function SetRatingValue(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'ratingValue',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -132,10 +132,10 @@ class Rating extends Base
     */
     public function SetWorstRating(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'worstRating',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

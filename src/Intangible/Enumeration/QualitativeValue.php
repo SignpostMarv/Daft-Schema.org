@@ -214,20 +214,4 @@ class QualitativeValue extends Base
     {
         $this->NudgePropertyValue('nonEqual', $value, true);
     }
-
-    /**
-    * @param array<int, QualitativeValue> $value
-    */
-    protected function NudgePropertyWithUniqueValuesOfQualitativeValue(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            QualitativeValue::class
-        );
-    }
 }

@@ -103,7 +103,7 @@ class DaftObjectImplementationTest extends Base
             [
                 'numTracks' => [2],
                 'track' => [
-                    new SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording(
+                    new SchemaOrg\CreativeWork\MusicRecording(
                         [
                             'name' => ['Foo'],
                             'duration' => [
@@ -115,7 +115,7 @@ class DaftObjectImplementationTest extends Base
                             ],
                         ]
                     ),
-                    new SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording(
+                    new SchemaOrg\CreativeWork\MusicRecording(
                         [
                             'name' => ['Bar'],
                             'duration' => [

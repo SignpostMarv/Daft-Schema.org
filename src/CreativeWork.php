@@ -120,10 +120,10 @@ class CreativeWork extends Thing
     use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasMaterial;
     use DaftObjectTraits\HasOffers;
-    use DaftObjectTraits\HasSponsors;
     use DaftObjectTraits\HasProvider;
     use DaftObjectTraits\HasPublishingPrinciples;
     use DaftObjectTraits\HasReview;
+    use DaftObjectTraits\HasSponsors;
     use DaftObjectTraits\HasTranslators;
     use DaftObjectTraits\HasTypicalAgeRanges;
 

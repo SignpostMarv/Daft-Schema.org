@@ -10,8 +10,17 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicReleaseFormatType;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $catalogNumber
+* @property array<int, Organization|Person> $creditedTo
+* @property array<int, Duration> $duration
+* @property array<int, MusicReleaseFormatType> $musicReleaseFormat
+* @property array<int, Organization> $recordLabel
+* @property array<int, MusicAlbum> $releaseOf
+*/
 class MusicRelease extends Base
 {
     use DaftObjectTraits\Duration;
@@ -25,6 +34,26 @@ class MusicRelease extends Base
         'musicReleaseFormat',
         'recordLabel',
         'releaseOf',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'catalogNumber' => [
+            'string',
+        ],
+        'creditedTo' => [
+            Organization::class,
+            Person::class,
+        ],
+        'duration' => TypeUtilities::MULTI_TYPE_DICT__duration,
+        'musicReleaseFormat' => [
+            MusicReleaseFormatType::class,
+        ],
+        'recordLabel' => [
+            Organization::class,
+        ],
+        'releaseOf' => [
+            MusicAlbum::class,
+        ],
     ];
 
     /**
@@ -49,20 +78,20 @@ class MusicRelease extends Base
     */
     public function SetCatalogNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'catalogNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Organization|Person>
     */
     public function GetCreditedTo() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'creditedTo',
@@ -74,13 +103,12 @@ class MusicRelease extends Base
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Organization|Person> $value
     */
     public function SetCreditedTo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'creditedTo',
-            __METHOD__,
             $value
         );
     }
@@ -107,11 +135,9 @@ class MusicRelease extends Base
     */
     public function SetMusicReleaseFormat(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'musicReleaseFormat',
-            __METHOD__,
-            $value,
-            MusicReleaseFormatType::class
+            $value
         );
     }
 
@@ -137,11 +163,9 @@ class MusicRelease extends Base
     */
     public function SetRecordLabel(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'recordLabel',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -167,11 +191,9 @@ class MusicRelease extends Base
     */
     public function SetReleaseOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'releaseOf',
-            __METHOD__,
-            $value,
-            MusicAlbum::class
+            $value
         );
     }
 }

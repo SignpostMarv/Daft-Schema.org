@@ -10,6 +10,10 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, int> $numTracks
+* @property array<int, ItemList|MusicRecording> $track
+*/
 class MusicPlaylist extends Base
 {
     const SCHEMA_ORG_TYPE = 'MusicPlaylist';
@@ -17,6 +21,16 @@ class MusicPlaylist extends Base
     const PROPERTIES = [
         'numTracks',
         'track',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'numTracks' => [
+            'integer',
+        ],
+        'track' => [
+            ItemList::class,
+            MusicRecording::class,
+        ],
     ];
 
     /**
@@ -41,9 +55,8 @@ class MusicPlaylist extends Base
     */
     public function SetNumTracks(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'numTracks',
-            __METHOD__,
             $value
         );
     }
@@ -70,12 +83,9 @@ class MusicPlaylist extends Base
     */
     public function SetTrack(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'track',
-            __METHOD__,
-            $value,
-            ItemList::class,
-            MusicRecording::class
+            $value
         );
     }
 }

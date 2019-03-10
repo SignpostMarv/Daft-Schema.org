@@ -12,6 +12,12 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseTy
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup\MusicGroup;
 use SignpostMarv\DaftObject\TypeUtilities;
 
+/**
+* @property array<int, MusicAlbumProductionType> $albumProductionType
+* @property array<int, MusicRelease> $albumRelease
+* @property array<int, MusicAlbumReleaseType> $albumReleaseType
+* @property array<int, MusicGroup> $byArtist
+*/
 class MusicAlbum extends Base
 {
     const SCHEMA_ORG_TYPE = 'MusicAlbum';
@@ -21,6 +27,21 @@ class MusicAlbum extends Base
         'albumRelease',
         'albumReleaseType',
         'byArtist',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'albumProductionType' => [
+            MusicAlbumProductionType::class,
+        ],
+        'albumRelease' => [
+            MusicRelease::class,
+        ],
+        'albumReleaseType' => [
+            MusicAlbumReleaseType::class,
+        ],
+        'byArtist' => [
+            MusicGroup::class,
+        ],
     ];
 
     /**
@@ -45,11 +66,9 @@ class MusicAlbum extends Base
     */
     public function SetAlbumProductionType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'albumProductionType',
-            __METHOD__,
-            $value,
-            MusicAlbumProductionType::class
+            $value
         );
     }
 
@@ -75,11 +94,9 @@ class MusicAlbum extends Base
     */
     public function SetAlbumRelease(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'albumRelease',
-            __METHOD__,
-            $value,
-            MusicRelease::class
+            $value
         );
     }
 
@@ -105,11 +122,9 @@ class MusicAlbum extends Base
     */
     public function SetAlbumReleaseType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'albumReleaseType',
-            __METHOD__,
-            $value,
-            MusicAlbumReleaseType::class
+            $value
         );
     }
 
@@ -135,11 +150,9 @@ class MusicAlbum extends Base
     */
     public function SetByArtist(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'byArtist',
-            __METHOD__,
-            $value,
-            MusicGroup::class
+            $value
         );
     }
 }

@@ -9,8 +9,16 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup\MusicGroup;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, MusicGroup> $byArtist
+* @property array<int, Duration> $duration
+* @property array<int, MusicPlaylist\MusicAlbum> $inAlbum
+* @property array<int, MusicPlaylist> $inPlaylist
+* @property array<int, string> $isrcCode
+* @property array<int, MusicComposition> $recordingOf
+*/
 class MusicRecording extends Base
 {
     use DaftObjectTraits\Duration;
@@ -24,6 +32,25 @@ class MusicRecording extends Base
         'inPlaylist',
         'isrcCode',
         'recordingOf',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'byArtist' => [
+            MusicGroup::class,
+        ],
+        'duration' => TypeUtilities::MULTI_TYPE_DICT__duration,
+        'inAlbum' => [
+            MusicPlaylist\MusicAlbum::class,
+        ],
+        'inPlaylist' => [
+            MusicPlaylist::class,
+        ],
+        'isrcCode' => [
+            'string',
+        ],
+        'recordingOf' => [
+            MusicComposition::class,
+        ],
     ];
 
     /**
@@ -48,11 +75,9 @@ class MusicRecording extends Base
     */
     public function SetByArtist(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'byArtist',
-            __METHOD__,
-            $value,
-            MusicGroup::class
+            $value
         );
     }
 
@@ -78,11 +103,9 @@ class MusicRecording extends Base
     */
     public function SetInAlbum(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'inAlbum',
-            __METHOD__,
-            $value,
-            MusicPlaylist\MusicAlbum::class
+            $value
         );
     }
 
@@ -108,11 +131,9 @@ class MusicRecording extends Base
     */
     public function SetInPlaylist(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'inPlaylist',
-            __METHOD__,
-            $value,
-            MusicPlaylist::class
+            $value
         );
     }
 
@@ -138,9 +159,8 @@ class MusicRecording extends Base
     */
     public function SetIsrcCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'isrcCode',
-            __METHOD__,
             $value
         );
     }
@@ -167,11 +187,9 @@ class MusicRecording extends Base
     */
     public function SetRecordingOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'recordingOf',
-            __METHOD__,
-            $value,
-            MusicComposition::class
+            $value
         );
     }
 }

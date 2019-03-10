@@ -156,10 +156,10 @@ class MediaObject extends Base
     */
     public function SetBitrate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'bitrate',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -185,10 +185,10 @@ class MediaObject extends Base
     */
     public function SetContentSize(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'contentSize',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -214,10 +214,10 @@ class MediaObject extends Base
     */
     public function SetContentUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'contentUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -243,10 +243,10 @@ class MediaObject extends Base
     */
     public function SetEmbedUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'embedUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -272,11 +272,9 @@ class MediaObject extends Base
     */
     public function SetEncodesCreativeWork(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'encodesCreativeWork',
-            __METHOD__,
-            $value,
-            Base::class
+            $value
         );
     }
 
@@ -302,10 +300,10 @@ class MediaObject extends Base
     */
     public function SetEncodingFormat(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'encodingFormat',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -331,10 +329,10 @@ class MediaObject extends Base
     */
     public function SetPlayerType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'playerType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -360,11 +358,9 @@ class MediaObject extends Base
     */
     public function SetProductionCompany(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'productionCompany',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -390,11 +386,9 @@ class MediaObject extends Base
     */
     public function SetRegionsAllowed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'regionsAllowed',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -420,11 +414,9 @@ class MediaObject extends Base
     */
     public function SetRequiresSubscription(array $value) : void
     {
-        $this->NudgePropertyWithUniqueBooleansOrThings(
+        $this->NudgePropertyValue(
             'requiresSubscription',
-            __METHOD__,
-            $value,
-            MediaSubscription::class
+            $value
         );
     }
 
@@ -450,11 +442,9 @@ class MediaObject extends Base
     */
     public function SetUploadDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'uploadDate',
-            __METHOD__,
-            $value,
-            Date::class
+            $value
         );
     }
 
@@ -480,12 +470,9 @@ class MediaObject extends Base
     */
     public function SetWidth(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'width',
-            __METHOD__,
-            $value,
-            Distance::class,
-            QuantitativeValue::class
+            $value
         );
     }
 }

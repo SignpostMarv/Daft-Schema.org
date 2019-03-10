@@ -991,7 +991,15 @@ class Thing extends AbstractArrayBackedDaftObject implements
         string $method,
         array $value
     ) : void {
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
+        $replace = [];
+        if (in_array(true, $value, true)) {
+            $replace[] = true;
+        }
+        if (in_array(false, $value, true)) {
+            $replace[] = false;
+        }
+
+        $this->NudgePropertyValue($property, $replace);
     }
 
     /**

@@ -360,7 +360,6 @@ class Place extends Thing
     {
         $this->NudgePropertyWithUniqueBooleans(
             'publicAccess',
-            __METHOD__,
             $value
         );
     }
@@ -389,7 +388,6 @@ class Place extends Thing
     {
         $this->NudgePropertyWithUniqueBooleans(
             'smokingAllowed',
-            __METHOD__,
             $value
         );
     }

@@ -219,7 +219,6 @@ class PriceSpecification extends Thing
     {
         $this->NudgePropertyWithUniqueBooleans(
             'valueAddedTaxIncluded',
-            __METHOD__,
             $value
         );
     }

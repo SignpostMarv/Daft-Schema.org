@@ -205,7 +205,6 @@ class LoanOrCredit extends Base
     {
         $this->NudgePropertyWithUniqueBooleans(
             'recourseLoan',
-            __METHOD__,
             $value
         );
     }
@@ -234,7 +233,6 @@ class LoanOrCredit extends Base
     {
         $this->NudgePropertyWithUniqueBooleans(
             'renegotiableLoan',
-            __METHOD__,
             $value
         );
     }

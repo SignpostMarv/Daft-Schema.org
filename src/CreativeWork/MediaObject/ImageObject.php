@@ -79,7 +79,6 @@ class ImageObject extends MediaObject
     {
         $this->NudgePropertyWithUniqueBooleans(
             'representativeOfPage',
-            __METHOD__,
             $value
         );
     }

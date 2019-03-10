@@ -36,7 +36,6 @@ trait HasIsAccessibleForFree
     {
         $this->NudgePropertyWithUniqueBooleans(
             'isAccessibleForFree',
-            __METHOD__,
             $value
         );
     }

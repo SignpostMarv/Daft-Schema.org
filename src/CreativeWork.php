@@ -1544,7 +1544,6 @@ class CreativeWork extends Thing
     {
         $this->NudgePropertyWithUniqueBooleans(
             'isFamilyFriendly',
-            __METHOD__,
             $value
         );
     }

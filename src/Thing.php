@@ -1213,23 +1213,21 @@ class Thing extends AbstractArrayBackedDaftObject implements
     /**
     * @param array<int, Thing|DataTypes\DataType> $value
     *
+    * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> $validThing
     * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> ...$validThings
     */
     protected function NudgePropertyWithUniqueValuesOfThings(
         string $property,
         string $method,
         array $value,
+        string $validThing,
         string ...$validThings
     ) : void {
+        array_unshift($validThings, $validThing);
+
         $initialCount = count($validThings);
 
-        if (0 === $initialCount) {
-            throw new BadMethodCallException(
-                'Argument 4 of ' .
-                __METHOD__ .
-                ' is required!'
-            );
-        } elseif (count($validThings) !== $initialCount) {
+        if (count($validThings) !== $initialCount) {
             throw new InvalidArgumentException(
                 'Arguments 4+ passed to ' .
                 __METHOD__ .

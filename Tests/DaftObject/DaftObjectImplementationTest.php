@@ -110,12 +110,10 @@ class DaftObjectImplementationTest extends Base
                                 new SchemaOrg\Intangible\Quantity\Duration(
                                     [
                                         'identifier' => ['PT1M2S'],
-                                    ],
-                                    true
+                                    ]
                                 ),
                             ],
-                        ],
-                        true
+                        ]
                     ),
                     new SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording(
                         [
@@ -124,12 +122,10 @@ class DaftObjectImplementationTest extends Base
                                 new SchemaOrg\Intangible\Quantity\Duration(
                                     [
                                         'identifier' => ['PT3M4S'],
-                                    ],
-                                    true
+                                    ]
                                 ),
                             ],
-                        ],
-                        true
+                        ]
                     ),
                 ],
             ],

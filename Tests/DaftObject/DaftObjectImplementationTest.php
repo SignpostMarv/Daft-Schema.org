@@ -97,5 +97,42 @@ class DaftObjectImplementationTest extends Base
                 ],
             ],
         ];
+
+        yield [
+            SchemaOrg\CreativeWork\MusicPlaylist::class,
+            [
+                'numTracks' => [2],
+                'track' => [
+                    new SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording(
+                        [
+                            'name' => ['Foo'],
+                            'duration' => [
+                                new SchemaOrg\Intangible\Quantity\Duration(
+                                    [
+                                        'identifier' => ['PT1M2S'],
+                                    ],
+                                    true
+                                ),
+                            ],
+                        ],
+                        true
+                    ),
+                    new SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording(
+                        [
+                            'name' => ['Bar'],
+                            'duration' => [
+                                new SchemaOrg\Intangible\Quantity\Duration(
+                                    [
+                                        'identifier' => ['PT3M4S'],
+                                    ],
+                                    true
+                                ),
+                            ],
+                        ],
+                        true
+                    ),
+                ],
+            ],
+        ];
     }
 }

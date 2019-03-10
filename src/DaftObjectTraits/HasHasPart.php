@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Trip;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasHasPart
 {

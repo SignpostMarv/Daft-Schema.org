@@ -13,7 +13,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait IsOfferOrDemand
 {

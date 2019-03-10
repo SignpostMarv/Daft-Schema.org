@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasGeospatialGeometry
 {

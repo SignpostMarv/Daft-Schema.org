@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasBrand
 {

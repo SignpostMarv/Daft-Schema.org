@@ -6,8 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\TypeUtilities;
-
 class GeoShape extends Thing
 {
     use DaftObjectTraits\HasAddress;

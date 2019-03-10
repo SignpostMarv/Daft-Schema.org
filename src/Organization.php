@@ -10,7 +10,6 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Article;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebPage\AboutPage;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
-use SignpostMarv\DaftObject\TypeUtilities;
 
 class Organization extends Thing
 {

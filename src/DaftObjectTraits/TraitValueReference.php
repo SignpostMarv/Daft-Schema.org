@@ -11,7 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\QualitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait TraitValueReference
 {

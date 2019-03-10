@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DataType\Text\CssSelectorType;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DataType\Text\XPathType;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class SpeakableSpecification extends Base
 {

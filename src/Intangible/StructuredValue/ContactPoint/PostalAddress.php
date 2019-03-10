@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPo
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class PostalAddress extends Base
 {

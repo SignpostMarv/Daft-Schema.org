@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class FinancialProduct extends Base
 {

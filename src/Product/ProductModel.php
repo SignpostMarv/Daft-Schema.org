@@ -7,7 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Product;
 
 use SignpostMarv\DaftObject\SchemaOrg\Product as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class ProductModel extends Base
 {

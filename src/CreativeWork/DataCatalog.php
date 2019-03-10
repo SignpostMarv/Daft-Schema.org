@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class DataCatalog extends Base
 {

@@ -11,7 +11,6 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Photograph;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OpeningHoursSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification;
-use SignpostMarv\DaftObject\TypeUtilities;
 
 class Place extends Thing
 {

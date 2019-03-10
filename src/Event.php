@@ -9,7 +9,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\EventStatusType;
-use SignpostMarv\DaftObject\TypeUtilities;
 
 class Event extends Thing
 {

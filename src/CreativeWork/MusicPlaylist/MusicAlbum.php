@@ -10,7 +10,7 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicAlbumProductionType;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseType;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup\MusicGroup;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, MusicAlbumProductionType> $albumProductionType

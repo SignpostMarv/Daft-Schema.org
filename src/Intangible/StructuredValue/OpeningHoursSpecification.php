@@ -10,7 +10,7 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DayOfWeek;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class OpeningHoursSpecification extends Base
 {

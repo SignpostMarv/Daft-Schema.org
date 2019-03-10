@@ -11,7 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\BusinessFunction;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class TypeAndQuantityNode extends Base
 {

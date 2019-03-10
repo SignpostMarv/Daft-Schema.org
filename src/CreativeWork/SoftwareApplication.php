@@ -7,7 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class SoftwareApplication extends Base
 {

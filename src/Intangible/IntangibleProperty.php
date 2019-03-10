@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitSupersededBy;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class IntangibleProperty extends Intangible
 {

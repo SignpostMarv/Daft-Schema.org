@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MapCategoryType;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class Map extends Base
 {

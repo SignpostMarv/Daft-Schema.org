@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Dataset;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Dataset as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\DataFeedItem;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, string|DataFeedItem|Thing> $dataFeedElement

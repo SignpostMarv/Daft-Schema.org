@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\SoftwareApplication;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class EntryPoint extends Intangible
 {

@@ -6,8 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\TypeUtilities;
-
 class ItemList extends Thing
 {
     const SCHEMA_ORG_TYPE = 'ItemList';

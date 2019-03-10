@@ -8,7 +8,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Distance;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
-use SignpostMarv\DaftObject\TypeUtilities;
 
 class Product extends Thing
 {

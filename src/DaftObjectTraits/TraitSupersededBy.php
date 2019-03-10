@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\IntangibleClass;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\IntangibleProperty;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait TraitSupersededBy
 {

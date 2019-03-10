@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Event;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Event as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\BroadcastService;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class PublicationEvent extends Base
 {

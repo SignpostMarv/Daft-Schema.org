@@ -8,7 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use InvalidArgumentException;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasMinMaxValue
 {

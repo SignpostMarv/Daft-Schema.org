@@ -12,7 +12,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\FinancialProduct as Bas
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\MonetaryAmount;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\RepaymentSpecification;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class LoanOrCredit extends Base
 {

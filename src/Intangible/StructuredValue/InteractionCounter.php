@@ -11,7 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\SoftwareApplication;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebSite;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class InteractionCounter extends Base
 {

@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
-use SignpostMarv\DaftObject\TypeUtilities;
 
 class Offer extends Thing
 {

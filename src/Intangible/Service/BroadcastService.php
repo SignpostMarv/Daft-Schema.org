@@ -10,7 +10,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\BroadcastChannel;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\BroadcastFrequencySpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class BroadcastService extends Base
 {

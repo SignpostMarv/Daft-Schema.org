@@ -11,7 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicRecording;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class MusicGroup extends Base
 {

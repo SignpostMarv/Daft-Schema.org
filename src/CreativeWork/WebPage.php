@@ -13,7 +13,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\Specialty;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList\BreadcrumbList;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 class WebPage extends Base
 {

@@ -9,8 +9,14 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $caption
+* @property array<int, string|PropertyValue> $exifData
+* @property array<int, bool> $representativeOfPage
+* @property array<int, MediaObject\ImageObject> $thumbnail
+*/
 class ImageObject extends MediaObject
 {
     use DaftObjectTraits\HasCaption;
@@ -23,6 +29,22 @@ class ImageObject extends MediaObject
         'exifData',
         'representativeOfPage',
         'thumbnail',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'caption' => [
+            'string',
+        ],
+        'exifData' => [
+            'string',
+            PropertyValue::class,
+        ],
+        'representativeOfPage' => [
+            'boolean',
+        ],
+        'thumbnail' => [
+            MediaObject\ImageObject::class,
+        ],
     ];
 
     /**
@@ -47,11 +69,10 @@ class ImageObject extends MediaObject
     */
     public function SetExifData(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'exifData',
-            __METHOD__,
             $value,
-            PropertyValue::class
+            true
         );
     }
 

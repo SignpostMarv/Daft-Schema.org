@@ -12,11 +12,29 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\MediaSubscription;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Distance;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, NewsArticle> $associatedArticle
+* @property array<int, string> $bitrate
+* @property array<int, string> $contentSize
+* @property array<int, string> $contentUrl
+* @property array<int, Duration> $duration
+* @property array<int, string> $embedUrl
+* @property array<int, Base> $encodesCreativeWork
+* @property array<int, string> $encodingFormat
+* @property array<int, Distance|QuantitativeValue> $height
+* @property array<int, string> $playerType
+* @property array<int, Organization> $productionCompany
+* @property array<int, Place> $regionsAllowed
+* @property array<int, bool|MediaSubscription> $requiresSubscription
+* @property array<int, Date> $uploadDate
+* @property array<int, Distance|QuantitativeValue> $width
+*/
 class MediaObject extends Base
 {
     use DaftObjectTraits\Duration;
@@ -42,6 +60,52 @@ class MediaObject extends Base
         'width',
     ];
 
+    CONST PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'associatedArticle' => [
+            NewsArticle::class,
+        ],
+        'bitrate' => [
+            'string',
+        ],
+        'contentSize' => [
+            'string',
+        ],
+        'contentUrl' => [
+            'string',
+        ],
+        'duration' => TypeUtilities::MULTI_TYPE_DICT__duration,
+        'embedUrl' => [
+            'string',
+        ],
+        'encodesCreativeWork' => [
+            Base::class,
+        ],
+        'encodingFormat' => [
+            'string',
+        ],
+        'height' => TypeUtilities::MULTI_TYPE_DICT__height,
+        'playerType' => [
+            'string',
+        ],
+        'productionCompany' => [
+            Organization::class,
+        ],
+        'regionsAllowed' => [
+            Place::class,
+        ],
+        'requiresSubscription' => [
+            'boolean',
+            MediaSubscription::class,
+        ],
+        'uploadDate' => [
+            Date::class,
+        ],
+        'width' => [
+            Distance::class,
+            QuantitativeValue::class,
+        ],
+    ];
+
     /**
     * @return array<int, NewsArticle>
     */
@@ -64,11 +128,9 @@ class MediaObject extends Base
     */
     public function SetAssociatedArticle(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'associatedArticle',
-            __METHOD__,
-            $value,
-            NewsArticle::class
+            $value
         );
     }
 
@@ -215,6 +277,35 @@ class MediaObject extends Base
             __METHOD__,
             $value,
             Base::class
+        );
+    }
+
+    /**
+    * @return array<int, string>
+    */
+    public function GetEncodingFormat() : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'encodingFormat',
+            $this->RetrievePropertyValueFromData('encodingFormat'),
+            static::class
+        );
+
+        return $out;
+    }
+
+    /**
+    * @param array<int, string> $value
+    */
+    public function SetEncodingFormat(array $value) : void
+    {
+        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+            'encodingFormat',
+            __METHOD__,
+            $value
         );
     }
 

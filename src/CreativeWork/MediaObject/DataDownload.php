@@ -8,7 +8,11 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $measurementTechnique
+*/
 class DataDownload extends Base
 {
     use DaftObjectTraits\MeasurementTechnique;
@@ -17,5 +21,9 @@ class DataDownload extends Base
 
     const PROPERTIES = [
         'measurementTechnique',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'measurementTechnique' => TypeUtilities::MULTI_TYPE_DICT__measurementTechnique,
     ];
 }

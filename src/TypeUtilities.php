@@ -28,9 +28,15 @@ class TypeUtilities extends Base
         Intangible\Trip::class,
     ];
 
+    const MULTI_TYPE_COMMON__Person = [
+        Person::class,
+    ];
+
     const MULTI_TYPE_DICT__aboutThing = [
         Thing::class,
     ];
+
+    const MULTI_TYPE_DICT__actor = self::MULTI_TYPE_COMMON__Person;
 
     const MULTI_TYPE_DICT__additionalProperty = [
         Intangible\StructuredValue\PropertyValue::class,
@@ -48,13 +54,26 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__award = self::MULTI_TYPE_COMMON__string_only;
 
+    const MULTI_TYPE_DICT__caption = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__director = self::MULTI_TYPE_COMMON__Person;
+
     const MULTI_TYPE_DICT__downvoteCount = self::MULTI_TYPE_COMMON__int_only;
+
+    const MULTI_TYPE_DICT__duration = [
+        Intangible\Quantity\Duration::class,
+    ];
 
     const MULTI_TYPE_DICT__funder = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
     const MULTI_TYPE_DICT__genre = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__hasPart = self::MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip;
+
+    const MULTI_TYPE_DICT__height = [
+        Intangible\Quantity\Distance::class,
+        Intangible\StructuredValue\QuantitativeValue::class,
+    ];
 
     const MULTI_TYPE_DICT__inLanguage = [
         'string',
@@ -106,7 +125,18 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__reviewAspect = self::MULTI_TYPE_COMMON__string_only;
 
+    const MULTI_TYPE_DICT__speakable = [
+        'string',
+        Intangible\SpeakableSpecification::class,
+    ];
+
     const MULTI_TYPE_DICT__sponsor = self::MULTI_TYPE_COMMON__Organization__or__Person;
+
+    const MULTI_TYPE_DICT__thumbnail = [
+        CreativeWork\MediaObject\ImageObject::class,
+    ];
+
+    const MULTI_TYPE_DICT__transcript = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__translators = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
@@ -120,10 +150,5 @@ class TypeUtilities extends Base
         Intangible\StructuredValue\PropertyValue::class,
         Intangible\StructuredValue\QuantitativeValue::class,
         Intangible\StructuredValue::class,
-    ];
-
-    const MULTI_TYPE_DICT__speakable = [
-        'string',
-        Intangible\SpeakableSpecification::class,
     ];
 }

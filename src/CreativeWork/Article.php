@@ -177,10 +177,10 @@ class Article extends Base
     */
     public function SetPageEnd(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'pageEnd',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -206,10 +206,10 @@ class Article extends Base
     */
     public function SetPageStart(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'pageStart',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

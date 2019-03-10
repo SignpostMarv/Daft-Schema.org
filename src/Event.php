@@ -139,7 +139,12 @@ class Event extends Thing
     */
     public function SetDoorTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDateTimes('doorTime', __METHOD__, $value);
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'doorTime',
+            __METHOD__,
+            $value,
+            DateTime::class
+        );
     }
 
     /**

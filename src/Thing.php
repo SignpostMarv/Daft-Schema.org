@@ -160,10 +160,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAdditionalType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'additionalType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -189,10 +189,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAlternateName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'alternateName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -218,10 +218,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDescription(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'description',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -247,10 +247,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDisambiguatingDescription(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'disambiguatingDescription',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -445,35 +445,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetSubjectOf(array $value) : void
     {
-        $initialCount = count($value);
-
-        /**
-        * @var array<int, CreativeWork|Event>
-        */
-        $value = array_values(array_filter(
-            $value,
-            /**
-            * @param mixed $val
-            */
-            function ($val) : bool {
-                return
-                    ($val instanceof CreativeWork) ||
-                    ($val instanceof Event);
-            }
-        ));
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Arguments passed to ' .
-                __METHOD__ .
-                ' must be instances of ' .
-                CreativeWork::class .
-                ' or ' .
-                Event::class
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues('subjectOf', __METHOD__, $value);
+        $this->NudgePropertyValue('subjectOf', $value, true);
     }
 
     /**
@@ -892,7 +864,19 @@ class Thing extends AbstractArrayBackedDaftObject implements
             );
         }
 
-        $this->NudgePropertyWithUniqueTrimmedStrings($property, $method, ...$value);
+        $value = array_filter(array_map('trim', $value), function (string $maybe) : bool {
+            return '' !== $maybe;
+        });
+
+        if ($initialCount !== count($value)) {
+            throw new InvalidArgumentException(
+                'Arguments passed to ' .
+                $method .
+                ' must not have trailing whitespace!'
+            );
+        }
+
+        $this->NudgePropertyWithUniqueValues($property, $method, $value);
     }
 
     /**
@@ -958,27 +942,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         $this->NudgePropertyWithUniqueValues($property, $method, $value);
     }
 
-    protected function NudgePropertyWithUniqueTrimmedStrings(
-        string $property,
-        string $method,
-        string ...$value
-    ) : void {
-        $initialCount = count($value);
-        $value = array_filter(array_map('trim', $value), function (string $maybe) : bool {
-            return '' !== $maybe;
-        });
-
-        if ($initialCount !== count($value)) {
-            throw new InvalidArgumentException(
-                'Arguments passed to ' .
-                $method .
-                ' must not have trailing whitespace!'
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
-    }
-
     /**
     * @param array<int, int> $value
     */
@@ -1031,34 +994,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         }
 
         $this->NudgePropertyWithUniqueValues($property, $method, $value);
-    }
-
-    /**
-    * @param string|int|bool $maybe
-    *
-    * @psalm-param 'true'|'false'|'0'|'1'|0|1|bool $maybe
-    *
-    * @return string|int|bool
-    *
-    * @psalm-return 'true'|'false'|'0'|'1'|0|1|bool
-    */
-    protected function MapMaybeBoolean($maybe)
-    {
-        if (is_string($maybe)) {
-            $str = trim(mb_strtolower($maybe));
-
-            if ('true' === $str || 'false' === $str) {
-                return 'true' === $str;
-            } elseif ('0' === $str || '1' === $str) {
-                return '1' === $str;
-            }
-        } elseif (is_int($maybe)) {
-            if (0 === $maybe || 1 === $maybe) {
-                return 1 === $maybe;
-            }
-        }
-
-        return $maybe;
     }
 
     /**
@@ -1222,22 +1157,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
             $method,
             $value,
             Organization::class
-        );
-    }
-
-    /**
-    * @param array<int, Offer> $value
-    */
-    protected function NudgePropertyWithUniqueOffers(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Offer::class
         );
     }
 

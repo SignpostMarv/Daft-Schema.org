@@ -35,6 +35,11 @@ trait HasOffers
     */
     public function SetOffers(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOffers('offers', __METHOD__, $value);
+        $this->NudgePropertyWithUniqueValuesOfThings(
+            'offers',
+            __METHOD__,
+            $value,
+            Offer::class
+        );
     }
 }

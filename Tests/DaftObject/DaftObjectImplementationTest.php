@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObject;
 
 use Generator;
+use ReflectionClassConstant;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectImplementationTest as Base;
@@ -15,129 +16,10 @@ class DaftObjectImplementationTest extends Base
 {
     use DataProviderTrait;
 
-    const DONUT = [
-        SchemaOrg\Thing::class => [
-            'additionalType',
-            'alternateName',
-            'description',
-            'disambiguatingDescription',
-            'identifier',
-            'image',
-            'mainEntityOfPage',
-            'name',
-            'potentialAction',
-            'sameAs',
-            'potentialAction',
-            'url',
-        ],
-        SchemaOrg\CreativeWork::class => [
-            'aboutThing',
-            'accessMode',
-            'accessModeSufficient',
-            'accessibilityAPI',
-            'accessibilityControl',
-            'accessibilityFeature',
-            'accessibilityHazard',
-            'accessibilitySummary',
-            'accountablePerson',
-            'aggregateRating',
-            'alternativeHeadline',
-            'associatedMedia',
-            'audience',
-            'audio',
-            'author',
-            'award',
-            'character',
-            'citation',
-            'comment',
-            'commentCount',
-            'contentLocation',
-            'contentRating',
-            'contentReferenceTime',
-            'contributor',
-            'copyrightHolder',
-            'copyrightYear',
-            'correction',
-            'creator',
-            'dateCreated',
-            'dateModified',
-            'datePublished',
-            'discussionUrl',
-            'editor',
-            'educationalAlignment',
-            'educationalUse',
-            'encoding',
-            'encodingFormat',
-            'exampleOfWork',
-            'expires',
-            'funder',
-            'genre',
-            'hasPart',
-            'headline',
-            'inLanguage',
-            'interactionStatistic',
-            'interactivityType',
-            'isAccessibleForFree',
-            'isBasedOn',
-            'isFamilyFriendly',
-            'keywords',
-            'learningResourceType',
-            'license',
-            'location',
-            'locationCreated',
-            'mainEntity',
-            'mentions',
-            'offers',
-            'position',
-            'producer',
-            'provider',
-            'publication',
-            'publisher',
-            'publisherImprint',
-            'publishingPrinciples',
-            'recordedAt',
-            'releasedEvent',
-            'review',
-            'schemaVersion',
-            'sdDatePublished',
-            'sdLicense',
-            'sdPublisher',
-            'sourceOrganization',
-            'spatialCoverage',
-            'sponsor',
-            'temporalCoverage',
-            'text',
-            'thumbnailUrl',
-            'timeRequired',
-            'translationOfWork',
-            'translators',
-            'typicalAgeRange',
-            'version',
-            'video',
-            'workExample',
-            'workTranslation',
-        ],
-        SchemaOrg\CreativeWork\Article::class => [
-            'articleBody',
-            'articleSection',
-            'backstory',
-            'pageEnd',
-            'pageStart',
-            'pagination',
-            'speakable',
-            'wordCount',
-        ],
-        SchemaOrg\CreativeWork\Article\NewsArticle::class => [
-            'dateline',
-            'printColumn',
-            'printEdition',
-            'printPage',
-            'printSection',
-        ],
-    ];
-
     /**
     * {@inheritdoc}
+    *
+    * @psalm-param class-string<SchemaOrg\Thing> $className
     *
     * @dataProvider dataProvider_DaftObject__has_properties_each_defined_property
     */
@@ -146,7 +28,15 @@ class DaftObjectImplementationTest extends Base
         string $property,
         bool $maybe_mixed_case = false
     ) : void {
-        if (isset(static::DONUT[$className]) && in_array($property, static::DONUT[$className])) {
+        if (
+            isset($className::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[$property]) &&
+            $className === (
+                new ReflectionClassConstant(
+                    $className,
+                    'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
+                )
+            )->getDeclaringClass()->name
+        ) {
             parent::test_AbstractDaftObject__has_properties_each_property(
                 $className,
                 $property,

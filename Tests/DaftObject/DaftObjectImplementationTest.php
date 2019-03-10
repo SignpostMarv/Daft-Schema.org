@@ -54,6 +54,38 @@ class DaftObjectImplementationTest extends Base
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
         yield [
+            SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
+            [
+                'identifier' => [
+                    'L',
+                ],
+            ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
+            [
+                'identifier' => [
+                    'M',
+                ],
+                'greater' => [
+                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                        'identifier' => [
+                            'S',
+                        ],
+                    ]),
+                ],
+                'lesser' => [
+                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                        'identifier' => [
+                            'L',
+                        ],
+                    ]),
+                ],
+            ],
+        ];
+
+        yield [
             SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
             [
                 'maxValue' => [
@@ -96,6 +128,27 @@ class DaftObjectImplementationTest extends Base
                     ]),
                 ],
             ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\Quantity\Duration::class,
+            [
+                'identifier' => ['PT1M2S'],
+            ],
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork\MusicRecording::class,
+            [
+                'name' => ['Foo'],
+                'duration' => [
+                    new SchemaOrg\Intangible\Quantity\Duration(
+                        [
+                            'identifier' => ['PT1M2S'],
+                        ]
+                    ),
+                ],
+            ]
         ];
 
         yield [

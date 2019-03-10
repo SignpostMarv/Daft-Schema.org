@@ -852,19 +852,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
     ) : void {
         $initialCount = count($value);
 
-        /**
-        * @var array<int, string>
-        */
-        $value = array_filter($value, 'is_string');
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Argument 1 passed to ' .
-                $method .
-                ' must be an array of strings!'
-            );
-        }
-
         $value = array_filter(array_map('trim', $value), function (string $maybe) : bool {
             return '' !== $maybe;
         });

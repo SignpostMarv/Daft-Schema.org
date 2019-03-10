@@ -21,4 +21,9 @@ class TypeUtilities extends Base
         Intangible\StructuredValue\QuantitativeValue::class,
         Intangible\StructuredValue::class,
     ];
+
+    const MULTI_TYPE_DICT__speakable = [
+        'string',
+        Intangible\SpeakableSpecification::class,
+    ];
 }

@@ -20,6 +20,19 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\TypeUtilities;
 
 /**
+* @property array<int, string> $additionalType
+* @property array<int, string> $alternateName
+* @property array<int, string> $description
+* @property array<int, string> $disambiguatingDescription
+* @property array<int, string|PropertyValue> $identifier
+* @property array<int, string|ImageObject> $image
+* @property array<int, string|CreativeWork> $mainEntityOfPage
+* @property array<int, string> $name
+* @property array<int, Action> $potentialAction
+* @property array<int, string> $sameAs
+* @property array<int, CreativeWork|Event> $potentialAction
+* @property array<int, string> $url
+*
 * @template-implements DaftJson<Thing>
 */
 class Thing extends AbstractArrayBackedDaftObject implements

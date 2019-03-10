@@ -8,8 +8,19 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\SpeakableSpecification;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $articleBody
+* @property array<int, string> $articleSection
+* @property array<int, string|Base> $backstory
+* @property array<int, int|string> $pageEnd
+* @property array<int, int|string> $pageStart
+* @property array<int, string> $pagination
+* @property array<int, string|SpeakableSpecification> $speakable
+* @property array<int, int|string> $wordCount
+*/
 class Article extends Base
 {
     use DaftObjectTraits\HasSpeakable;
@@ -25,6 +36,35 @@ class Article extends Base
         'pagination',
         'speakable',
         'wordCount',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'articleBody' => [
+            'string',
+        ],
+        'articleSection' => [
+            'string',
+        ],
+        'backstory' => [
+            'string',
+            Base::class,
+        ],
+        'pageEnd' => [
+            'integer',
+            'string',
+        ],
+        'pageStart' => [
+            'integer',
+            'string',
+        ],
+        'pagination' => [
+            'string',
+        ],
+        'speakable' => TypeUtilities::MULTI_TYPE_DICT__speakable,
+        'wordCount' => [
+            'integer',
+            'string',
+        ],
     ];
 
     /**
@@ -49,10 +89,10 @@ class Article extends Base
     */
     public function SetArticleBody(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'articleBody',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -78,10 +118,10 @@ class Article extends Base
     */
     public function SetArticleSection(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'articleSection',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -195,10 +235,10 @@ class Article extends Base
     */
     public function SetPagination(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'pagination',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

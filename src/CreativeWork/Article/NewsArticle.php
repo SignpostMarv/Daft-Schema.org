@@ -7,8 +7,15 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Article;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Article as Base;
-use SignpostMarv\DaftObject\TypeUtilities;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $dateline
+* @property array<int, string> $printColumn
+* @property array<int, string> $printEdition
+* @property array<int, string> $printPage
+* @property array<int, string> $printSection
+*/
 class NewsArticle extends Base
 {
     const SCHEMA_ORG_TYPE = 'NewsArticle';
@@ -19,6 +26,24 @@ class NewsArticle extends Base
         'printEdition',
         'printPage',
         'printSection',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'dateline' => [
+            'string',
+        ],
+        'printColumn' => [
+            'string',
+        ],
+        'printEdition' => [
+            'string',
+        ],
+        'printPage' => [
+            'string',
+        ],
+        'printSection' => [
+            'string',
+        ],
     ];
 
     /**
@@ -43,10 +68,10 @@ class NewsArticle extends Base
     */
     public function SetDateline(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'dateline',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -72,10 +97,10 @@ class NewsArticle extends Base
     */
     public function SetPrintColumn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'printColumn',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -101,10 +126,10 @@ class NewsArticle extends Base
     */
     public function SetPrintEdition(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'printEdition',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -130,10 +155,10 @@ class NewsArticle extends Base
     */
     public function SetPrintPage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'printPage',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -159,10 +184,10 @@ class NewsArticle extends Base
     */
     public function SetPrintSection(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'printSection',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

@@ -9,7 +9,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\EntryPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ActionStatusType;
-use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, ActionStatusType> $actionStatus

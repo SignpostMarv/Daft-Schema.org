@@ -3,7 +3,6 @@
   cacheResult="true"
   cacheResultFile="./phpunit.cache"
   resolveDependencies="true"
-  executionOrder="random"
 >
   <testsuites>
     <testsuite name="Daft Schema">

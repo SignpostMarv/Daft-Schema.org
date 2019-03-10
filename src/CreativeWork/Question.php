@@ -11,6 +11,13 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Comment\Answer|ItemList> $acceptedAnswer
+* @property array<int, int> $answerCount
+* @property array<int, int> $downvoteCount
+* @property array<int, Comment\Answer|ItemList> $suggestedAnswer
+* @property array<int, int> $upvoteCount
+*/
 class Question extends Base
 {
     use DaftObjectTraits\UpDownVoteCount;
@@ -23,6 +30,26 @@ class Question extends Base
         'downvoteCount',
         'suggestedAnswer',
         'upvoteCount',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'acceptedAnswer' => [
+            Comment\Answer::class,
+            ItemList::class,
+        ],
+        'answerCount' => [
+            'integer',
+        ],
+        'downvoteCount' => [
+            'integer',
+        ],
+        'suggestedAnswer' => [
+            Comment\Answer::class,
+            ItemList::class,
+        ],
+        'upvoteCount' => [
+            'integer',
+        ],
     ];
 
     /**
@@ -47,12 +74,9 @@ class Question extends Base
     */
     public function SetAcceptedAnswer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'acceptedAnswer',
-            __METHOD__,
-            $value,
-            Comment\Answer::class,
-            ItemList::class
+            $value
         );
     }
 
@@ -107,12 +131,9 @@ class Question extends Base
     */
     public function SetSuggestedAnswer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'suggestedAnswer',
-            __METHOD__,
-            $value,
-            Comment\Answer::class,
-            ItemList::class
+            $value
         );
     }
 }

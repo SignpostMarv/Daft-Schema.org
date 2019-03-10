@@ -9,9 +9,22 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Event;
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Organization|Person> $composer
+* @property array<int, Event> $firstPerformance
+* @property array<int, MusicComposition> $includedComposition
+* @property array<int, string> $iswcCode
+* @property array<int, Person> $lyricist
+* @property array<int, Base> $lyrics
+* @property array<int, MusicComposition> $musicArrangement
+* @property array<int, string> $musicCompositionForm
+* @property array<int, string> $musicalKey
+* @property array<int, MusicRecording> $recordedAs
+*/
 class MusicComposition extends Base
 {
     use DaftObjectTraits\Composer;
@@ -29,6 +42,40 @@ class MusicComposition extends Base
         'musicCompositionForm',
         'musicalKey',
         'recordedAs',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'composer' => [
+            Organization::class,
+            Person::class,
+        ],
+        'firstPerformance' => [
+            Event::class,
+        ],
+        'includedComposition' => [
+            MusicComposition::class,
+        ],
+        'iswcCode' => [
+            'string',
+        ],
+        'lyricist' => [
+            Person::class,
+        ],
+        'lyrics' => [
+            Base::class,
+        ],
+        'musicArrangement' => [
+            MusicComposition::class,
+        ],
+        'musicCompositionForm' => [
+            'string',
+        ],
+        'musicalKey' => [
+            'string',
+        ],
+        'recordedAs' => [
+            MusicRecording::class,
+        ],
     ];
 
     /**
@@ -53,11 +100,9 @@ class MusicComposition extends Base
     */
     public function SetFirstPerformance(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'firstPerformance',
-            __METHOD__,
-            $value,
-            Event::class
+            $value
         );
     }
 
@@ -83,11 +128,9 @@ class MusicComposition extends Base
     */
     public function SetIncludedComposition(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'includedComposition',
-            __METHOD__,
-            $value,
-            MusicComposition::class
+            $value
         );
     }
 
@@ -113,10 +156,10 @@ class MusicComposition extends Base
     */
     public function SetIswcCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'iswcCode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -142,11 +185,9 @@ class MusicComposition extends Base
     */
     public function SetLyricist(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'lyricist',
-            __METHOD__,
-            $value,
-            Person::class
+            $value
         );
     }
 
@@ -172,11 +213,9 @@ class MusicComposition extends Base
     */
     public function SetLyrics(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'lyrics',
-            __METHOD__,
-            $value,
-            Base::class
+            $value
         );
     }
 
@@ -202,11 +241,9 @@ class MusicComposition extends Base
     */
     public function SetMusicArrangement(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'musicArrangement',
-            __METHOD__,
-            $value,
-            MusicComposition::class
+            $value
         );
     }
 
@@ -232,10 +269,10 @@ class MusicComposition extends Base
     */
     public function SetMusicCompositionForm(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'musicCompositionForm',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -261,10 +298,10 @@ class MusicComposition extends Base
     */
     public function SetMusicalKey(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'musicalKey',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -290,11 +327,9 @@ class MusicComposition extends Base
     */
     public function SetRecordedAs(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'recordedAs',
-            __METHOD__,
-            $value,
-            MusicRecording::class
+            $value
         );
     }
 }

@@ -11,10 +11,22 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\Specialty;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList\BreadcrumbList;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\SpeakableSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string|BreadcrumbList> $breadcrumb
+* @property array<int, Date> $lastReviewed
+* @property array<int, WebPageElement> $mainContentOf
+* @property array<int, MediaObject\ImageObject> $primaryImageOfPage
+* @property array<int, string> $relatedLink
+* @property array<int, Organization|Person> $reviewedBy
+* @property array<int, string> $significantLink
+* @property array<int, string|SpeakableSpecification> $speakable
+* @property array<int, Specialty> $specialty
+*/
 class WebPage extends Base
 {
     use DaftObjectTraits\HasSpeakable;
@@ -31,6 +43,36 @@ class WebPage extends Base
         'significantLink',
         'speakable',
         'specialty',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'breadcrumb' => [
+            'string',
+            BreadcrumbList::class,
+        ],
+        'lastReviewed' => [
+            Date::class,
+        ],
+        'mainContentOf' => [
+            WebPageElement::class,
+        ],
+        'primaryImageOfPage' => [
+            MediaObject\ImageObject::class,
+        ],
+        'relatedLink' => [
+            'string',
+        ],
+        'reviewedBy' => [
+            Organization::class,
+            Person::class,
+        ],
+        'significantLink' => [
+            'string',
+        ],
+        'speakable' => TypeUtilities::MULTI_TYPE_DICT__speakable,
+        'specialty' => [
+            Specialty::class,
+        ],
     ];
 
     /**
@@ -55,11 +97,10 @@ class WebPage extends Base
     */
     public function SetBreadcrumb(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'breadcrumb',
-            __METHOD__,
             $value,
-            BreadcrumbList::class
+            true
         );
     }
 
@@ -85,11 +126,9 @@ class WebPage extends Base
     */
     public function SetLastReviewed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'lastReviewed',
-            __METHOD__,
-            $value,
-            Date::class
+            $value
         );
     }
 
@@ -115,11 +154,9 @@ class WebPage extends Base
     */
     public function SetMainContentOfPage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'mainContentOf',
-            __METHOD__,
-            $value,
-            WebPageElement::class
+            $value
         );
     }
 
@@ -145,11 +182,9 @@ class WebPage extends Base
     */
     public function SetPrimaryImageOfPage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'primaryImageOfPage',
-            __METHOD__,
-            $value,
-            MediaObject\ImageObject::class
+            $value
         );
     }
 
@@ -175,10 +210,10 @@ class WebPage extends Base
     */
     public function SetRelatedLink(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'relatedLink',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -204,9 +239,8 @@ class WebPage extends Base
     */
     public function SetReviewedBy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'reviewedBy',
-            __METHOD__,
             $value
         );
     }
@@ -233,10 +267,10 @@ class WebPage extends Base
     */
     public function SetSignificantLink(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'significantLink',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -262,11 +296,9 @@ class WebPage extends Base
     */
     public function SetSpecialty(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'specialty',
-            __METHOD__,
-            $value,
-            Specialty::class
+            $value
         );
     }
 }

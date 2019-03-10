@@ -9,6 +9,30 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $applicationCategory
+* @property array<int, string> $applicationSubCategory
+* @property array<int, string> $applicationSuite
+* @property array<int, string> $availableOnDevice
+* @property array<int, string> $countriesNotSupported
+* @property array<int, string> $countriesSupported
+* @property array<int, string> $downloadUrl
+* @property array<int, string> $featureList
+* @property array<int, string> $fileSize
+* @property array<int, string> $installUrl
+* @property array<int, string> $memoryRequirements
+* @property array<int, string> $operatingSystem
+* @property array<int, string> $permissions
+* @property array<int, string> $processorRequirements
+* @property array<int, string> $releaseNotes
+* @property array<int, string|MediaObject\ImageObject> $screenshot
+* @property array<int, SoftwareApplication> $softwareAddOn
+* @property array<int, Base> $softwareHelp
+* @property array<int, string> $softwareRequirements
+* @property array<int, string> $softwareVersion
+* @property array<int, string> $storageRequirements
+* @property array<int, Dataset\DataFeed> $supportingData
+*/
 class SoftwareApplication extends Base
 {
     const SCHEMA_ORG_TYPE = 'SoftwareApplication';
@@ -38,6 +62,76 @@ class SoftwareApplication extends Base
         'supportingData',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'applicationCategory' => [
+            'string',
+        ],
+        'applicationSubCategory' => [
+            'string',
+        ],
+        'applicationSuite' => [
+            'string',
+        ],
+        'availableOnDevice' => [
+            'string',
+        ],
+        'countriesNotSupported' => [
+            'string',
+        ],
+        'countriesSupported' => [
+            'string',
+        ],
+        'downloadUrl' => [
+            'string',
+        ],
+        'featureList' => [
+            'string',
+        ],
+        'fileSize' => [
+            'string',
+        ],
+        'installUrl' => [
+            'string',
+        ],
+        'memoryRequirements' => [
+            'string',
+        ],
+        'operatingSystem' => [
+            'string',
+        ],
+        'permissions' => [
+            'string',
+        ],
+        'processorRequirements' => [
+            'string',
+        ],
+        'releaseNotes' => [
+            'string',
+        ],
+        'screenshot' => [
+            'string',
+            MediaObject\ImageObject::class,
+        ],
+        'softwareAddOn' => [
+            SoftwareApplication::class,
+        ],
+        'softwareHelp' => [
+            Base::class,
+        ],
+        'softwareRequirements' => [
+            'string',
+        ],
+        'softwareVersion' => [
+            'string',
+        ],
+        'storageRequirements' => [
+            'string',
+        ],
+        'supportingData' => [
+            Dataset\DataFeed::class,
+        ],
+    ];
+
     /**
     * @return array<int, string>
     */
@@ -60,10 +154,10 @@ class SoftwareApplication extends Base
     */
     public function SetApplicationCategory(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'applicationCategory',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -89,10 +183,10 @@ class SoftwareApplication extends Base
     */
     public function SetApplicationSubCategory(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'applicationSubCategory',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -118,10 +212,10 @@ class SoftwareApplication extends Base
     */
     public function SetApplicationSuite(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'applicationSuite',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -147,10 +241,10 @@ class SoftwareApplication extends Base
     */
     public function SetAvailableOnDevice(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'availableOnDevice',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -176,10 +270,10 @@ class SoftwareApplication extends Base
     */
     public function SetCountriesNotSupported(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'countriesNotSupported',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -205,10 +299,10 @@ class SoftwareApplication extends Base
     */
     public function SetCountriesSupported(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'countriesSupported',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -234,10 +328,10 @@ class SoftwareApplication extends Base
     */
     public function SetDownloadUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'downloadUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -263,10 +357,10 @@ class SoftwareApplication extends Base
     */
     public function SetFeatureList(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'featureList',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -292,10 +386,10 @@ class SoftwareApplication extends Base
     */
     public function SetFileSize(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'fileSize',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -321,10 +415,10 @@ class SoftwareApplication extends Base
     */
     public function SetInstallUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'installUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -350,10 +444,10 @@ class SoftwareApplication extends Base
     */
     public function SetMemoryRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'memoryRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -379,10 +473,10 @@ class SoftwareApplication extends Base
     */
     public function SetOperatingSystem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'operatingSystem',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -408,10 +502,10 @@ class SoftwareApplication extends Base
     */
     public function SetPermissions(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'permissions',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -437,10 +531,10 @@ class SoftwareApplication extends Base
     */
     public function SetProcessorRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'processorRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -466,10 +560,10 @@ class SoftwareApplication extends Base
     */
     public function SetReleaseNotes(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'releaseNotes',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -495,11 +589,10 @@ class SoftwareApplication extends Base
     */
     public function SetScreenshot(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'screenshot',
-            __METHOD__,
             $value,
-            MediaObject\ImageObject::class
+            true
         );
     }
 
@@ -525,11 +618,9 @@ class SoftwareApplication extends Base
     */
     public function SetSoftwareAddOn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'softwareAddOn',
-            __METHOD__,
-            $value,
-            SoftwareApplication::class
+            $value
         );
     }
 
@@ -555,11 +646,9 @@ class SoftwareApplication extends Base
     */
     public function SetSoftwareHelp(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'softwareHelp',
-            __METHOD__,
-            $value,
-            Base::class
+            $value
         );
     }
 
@@ -585,10 +674,10 @@ class SoftwareApplication extends Base
     */
     public function SetSoftwareRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'softwareRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -614,10 +703,10 @@ class SoftwareApplication extends Base
     */
     public function SetSoftwareVersion(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'softwareVersion',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -643,10 +732,10 @@ class SoftwareApplication extends Base
     */
     public function SetStorageRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'storageRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -672,11 +761,9 @@ class SoftwareApplication extends Base
     */
     public function SetSupportingData(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'supportingData',
-            __METHOD__,
-            $value,
-            Dataset\DataFeed::class
+            $value
         );
     }
 }

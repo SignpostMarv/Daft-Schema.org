@@ -56,6 +56,8 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__caption = self::MULTI_TYPE_COMMON__string_only;
 
+    const MULTI_TYPE_DICT__composer = self::MULTI_TYPE_COMMON__Organization__or__Person;
+
     const MULTI_TYPE_DICT__director = self::MULTI_TYPE_COMMON__Person;
 
     const MULTI_TYPE_DICT__downvoteCount = self::MULTI_TYPE_COMMON__int_only;

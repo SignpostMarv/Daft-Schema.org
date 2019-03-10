@@ -10,6 +10,10 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Dataset> $dataset
+* @property array<int, string> $measurementTechnique
+*/
 class DataCatalog extends Base
 {
     use DaftObjectTraits\MeasurementTechnique;
@@ -19,6 +23,13 @@ class DataCatalog extends Base
     const PROPERTIES = [
         'dataset',
         'measurementTechnique',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'dataset' => [
+            Dataset::class,
+        ],
+        'measurementTechnique' => TypeUtilities::MULTI_TYPE_DICT__measurementTechnique,
     ];
 
     /**
@@ -43,11 +54,9 @@ class DataCatalog extends Base
     */
     public function SetDataset(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dataset',
-            __METHOD__,
-            $value,
-            Dataset::class
+            $value
         );
     }
 }

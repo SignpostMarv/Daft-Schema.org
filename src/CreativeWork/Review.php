@@ -9,8 +9,15 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Thing> $itemReviewed
+* @property array<int, string> $reviewAspect
+* @property array<int, string> $reviewBody
+* @property array<int, Rating> $reviewRating
+*/
 class Review extends Base
 {
     use DaftObjectTraits\HasReviewAspect;
@@ -23,6 +30,17 @@ class Review extends Base
         'reviewAspect',
         'reviewBody',
         'reviewRating',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'itemReviewed' => TypeUtilities::MULTI_TYPE_DICT__itemReviewed,
+        'reviewAspect' => TypeUtilities::MULTI_TYPE_DICT__reviewAspect,
+        'reviewBody' => [
+            'string',
+        ],
+        'reviewRating' => [
+            Rating::class,
+        ],
     ];
 
     /**
@@ -47,10 +65,10 @@ class Review extends Base
     */
     public function SetReviewBody(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'reviewBody',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -76,11 +94,9 @@ class Review extends Base
     */
     public function SetReviewRating(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'reviewRating',
-            __METHOD__,
-            $value,
-            Rating::class
+            $value
         );
     }
 }

@@ -344,8 +344,8 @@ class Product extends Thing
         * @var array<int, DataTypes\Date>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'ReleaseDate',
-            $this->RetrievePropertyValueFromData('ReleaseDate'),
+            'releaseDate',
+            $this->RetrievePropertyValueFromData('releaseDate'),
             static::class
         );
 
@@ -358,7 +358,7 @@ class Product extends Thing
     public function SetReleaseDate(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'ReleaseDate',
+            'releaseDate',
             __METHOD__,
             $value,
             DataTypes\Date::class

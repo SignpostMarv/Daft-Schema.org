@@ -13,8 +13,9 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\AudioObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\VideoObject;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
-use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Event\PublicationEvent;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\AlignmentObject;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCounter;
 
@@ -1994,7 +1995,7 @@ class CreativeWork extends Thing
     public function SetSdLicense(array $value) : void
     {
         $this->NudgePropertyValue(
-            'sdLicense ',
+            'sdLicense',
             $value,
             true
         );

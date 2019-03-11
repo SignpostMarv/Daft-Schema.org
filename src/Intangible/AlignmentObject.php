@@ -4,7 +4,10 @@
 */
 declare(strict_types=1);
 
-namespace SignpostMarv\DaftObject\SchemaOrg;
+namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
+
+use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, string> $alignmentType
@@ -13,7 +16,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 * @property array<int, string> $targetName
 * @property array<int, string> $targetUrl
 */
-class AlignmentObject extends Thing
+class AlignmentObject extends Base
 {
     const SCHEMA_ORG_TYPE = 'AlignmentObject';
 

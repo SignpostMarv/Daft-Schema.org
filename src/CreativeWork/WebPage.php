@@ -19,7 +19,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 /**
 * @property array<int, string|BreadcrumbList> $breadcrumb
 * @property array<int, Date> $lastReviewed
-* @property array<int, WebPageElement> $mainContentOf
+* @property array<int, WebPageElement> $mainContentOfPage
 * @property array<int, MediaObject\ImageObject> $primaryImageOfPage
 * @property array<int, string> $relatedLink
 * @property array<int, Organization|Person> $reviewedBy
@@ -53,7 +53,7 @@ class WebPage extends Base
         'lastReviewed' => [
             Date::class,
         ],
-        'mainContentOf' => [
+        'mainContentOfPage' => [
             WebPageElement::class,
         ],
         'primaryImageOfPage' => [
@@ -141,8 +141,8 @@ class WebPage extends Base
         * @var array<int, WebPageElement>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'mainContentOf',
-            $this->RetrievePropertyValueFromData('mainContentOf'),
+            'mainContentOfPage',
+            $this->RetrievePropertyValueFromData('mainContentOfPage'),
             static::class
         );
 
@@ -155,7 +155,7 @@ class WebPage extends Base
     public function SetMainContentOfPage(array $value) : void
     {
         $this->NudgePropertyValue(
-            'mainContentOf',
+            'mainContentOfPage',
             $value
         );
     }

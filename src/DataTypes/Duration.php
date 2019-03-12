@@ -48,6 +48,11 @@ class Duration extends DateInterval implements DataType
             );
     }
 
+    public function jsonSerialize() : string
+    {
+        return $this->DataTypeAsString();
+    }
+
     public static function DataTypeFromString(string $value) : DataType
     {
         return static::DurationFromString($value);

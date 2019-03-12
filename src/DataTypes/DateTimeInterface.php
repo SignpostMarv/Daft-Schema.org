@@ -17,6 +17,11 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
         return $this->format(static::ObtainFormat());
     }
 
+    public function jsonSerialize() : string
+    {
+        return $this->DataTypeAsString();
+    }
+
     public static function DataTypeFromString(string $value) : DataType
     {
         return static::ObtainFromString($value);

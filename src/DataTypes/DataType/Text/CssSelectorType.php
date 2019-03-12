@@ -26,9 +26,19 @@ class CssSelectorType implements Base
         $this->text = $text;
     }
 
+    public function __toString() : string
+    {
+        return $this->text;
+    }
+
     public function DataTypeAsString() : string
     {
         return $this->text;
+    }
+
+    public function jsonSerialize() : string
+    {
+        return $this->DataTypeAsString();
     }
 
     public static function DataTypeFromString(string $value) : Upstream

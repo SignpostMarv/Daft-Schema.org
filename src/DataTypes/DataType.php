@@ -6,10 +6,12 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DataTypes;
 
+use JsonSerializable;
+
 /**
 * @template T as DataType
 */
-interface DataType
+interface DataType extends JsonSerializable
 {
     public function DataTypeAsString() : string;
 

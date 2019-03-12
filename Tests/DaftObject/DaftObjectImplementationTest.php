@@ -53,13 +53,15 @@ class DaftObjectImplementationTest extends Base
 
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
-        yield [
-            SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
-            [
+        $qualitive_args__L = [
                 'identifier' => [
                     'L',
                 ],
-            ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
+            $qualitive_args__L,
         ];
 
         yield [
@@ -85,9 +87,7 @@ class DaftObjectImplementationTest extends Base
             ],
         ];
 
-        yield [
-            SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
-            [
+        $propertyvalue_args = [
                 'maxValue' => [
                     20,
                     30,
@@ -127,7 +127,11 @@ class DaftObjectImplementationTest extends Base
                         ],
                     ]),
                 ],
-            ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
+            $propertyvalue_args,
         ];
 
         $duration_args = [
@@ -558,6 +562,93 @@ class DaftObjectImplementationTest extends Base
         yield [
             SchemaOrg\CreativeWork\Article\NewsArticle::class,
             $newsarticle_args,
+        ];
+
+        $datadownload_args = array_merge(
+            $music_recording_args,
+            [
+                'measurementTechnique' => ['Foo'],
+            ]
+        );
+
+        yield [
+            SchemaOrg\CreativeWork\MediaObject\DataDownload::class,
+            $datadownload_args,
+        ];
+
+        $dataset_args = [
+            'distribution' => [
+                new SchemaOrg\CreativeWork\MediaObject\DataDownload($datadownload_args),
+            ],
+            'issn' => [
+                'Foo',
+            ],
+            'measurementTechnique' => [
+                'Bar',
+            ],
+            'variableMeasured' => [
+                'Baz',
+                new SchemaOrg\Intangible\StructuredValue\PropertyValue($propertyvalue_args),
+            ],
+        ];
+
+        $datacatalog_args = [
+            'dataset' => [
+                new SchemaOrg\CreativeWork\Dataset($dataset_args),
+            ],
+            'measurementTechnique' => [
+                'Bag',
+            ],
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork\DataCatalog::class,
+            $datacatalog_args,
+        ];
+
+        $dataset_args['includedInDataCatalog'] = [
+            new SchemaOrg\CreativeWork\DataCatalog($datacatalog_args),
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork\Dataset::class,
+            $dataset_args,
+        ];
+
+        $datafeeditem_args = [
+            'dateCreated' => [
+                new SchemaOrg\DataTypes\Date('January 1st 1970'),
+                new SchemaOrg\DataTypes\Date('January 1st 1970 01:02:03'),
+            ],
+            'dateDeleted' => [
+                new SchemaOrg\DataTypes\Date('January 1st 1970'),
+                new SchemaOrg\DataTypes\Date('January 1st 1970 01:02:03'),
+            ],
+            'dateModified' => [
+                new SchemaOrg\DataTypes\Date('January 1st 1970'),
+                new SchemaOrg\DataTypes\Date('January 1st 1970 01:02:03'),
+            ],
+            'item' => [
+                new SchemaOrg\Intangible\Enumeration\QualitativeValue($qualitive_args__L),
+            ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\DataFeedItem::class,
+            $datafeeditem_args,
+        ];
+
+        $datafeed_args = [
+            'dataFeedElement' => [
+                'Foo',
+                new SchemaOrg\Intangible\DataFeedItem($datafeeditem_args),
+                new SchemaOrg\Intangible\Enumeration\QualitativeValue($qualitive_args__L),
+            ],
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork\Dataset\DataFeed::class,
+            $datafeed_args,
         ];
     }
 }

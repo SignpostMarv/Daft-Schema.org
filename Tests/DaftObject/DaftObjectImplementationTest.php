@@ -508,5 +508,56 @@ class DaftObjectImplementationTest extends Base
                 ],
             ],
         ];
+
+        $speakable_args = [
+            'cssSelector' => [
+                SchemaOrg\DataTypes\DataType\Text\CssSelectorType::DataTypeFromString('.foo'),
+            ],
+            'xpath' => [
+                SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo'),
+            ],
+        ];
+
+        yield [
+            SchemaOrg\Intangible\SpeakableSpecification::class,
+            $speakable_args,
+        ];
+
+        $newsarticle_args = [
+            'dateline' => ['Foo, Bar, January 1st 1970'],
+            'printColumn' => ['Foo'],
+            'printEdition' => ['Bar'],
+            'printPage' => ['Baz'],
+            'printSection' => ['Bat'],
+            'articleBody' => ['Bag'],
+            'articleSection' => ['Foo Bar'],
+            'backstory' => [
+                'Bar Baz',
+                new SchemaOrg\CreativeWork\MediaObject\VideoObject($music_recording_args),
+            ],
+            'pageEnd' => [
+                2,
+                'ii',
+            ],
+            'pageStart' => [
+                1,
+                'i',
+            ],
+            'pagination' => [
+                '1-2',
+                'i-ii',
+            ],
+            'speakable' => [
+                new SchemaOrg\Intangible\SpeakableSpecification($speakable_args),
+            ],
+            'wordCount' => [
+                0,
+            ],
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork\Article\NewsArticle::class,
+            $newsarticle_args,
+        ];
     }
 }

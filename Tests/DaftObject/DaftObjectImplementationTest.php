@@ -55,148 +55,148 @@ class DaftObjectImplementationTest extends Base
     const DAFT_SCHEMA_FUZZING_VIA_GENERATOR = [
         SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
             [
-            'identifier' => [
-                'L',
-            ],
+                'identifier' => [
+                    'L',
+                ],
             ],
         ],
         SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class => [
             [
-            'minValue' => [1],
-            'maxValue' => [10],
-            'value' => [
-                5,
-            ],
+                'minValue' => [1],
+                'maxValue' => [10],
+                'value' => [
+                    5,
+                ],
             ],
         ],
         SchemaOrg\Intangible\StructuredValue\PropertyValue::class => [
             [
-            'maxValue' => [
-                20,
-                30,
-                40,
-            ],
-            'value' => [
-                1,
-                true,
-                false,
-                'foo',
-            ],
+                'maxValue' => [
+                    20,
+                    30,
+                    40,
+                ],
+                'value' => [
+                    1,
+                    true,
+                    false,
+                    'foo',
+                ],
             ],
         ],
         SchemaOrg\Intangible\Quantity\Duration::class => [
             [
-            'identifier' => ['PT1M2S'],
+                'identifier' => ['PT1M2S'],
             ],
         ],
         SchemaOrg\CreativeWork\MusicRecording::class => [
             [
-            'name' => ['Foo'],
+                'name' => ['Foo'],
             ],
         ],
         SchemaOrg\Person::class => [
             [
-            'name' => ['Foo Bar'],
+                'name' => ['Foo Bar'],
             ],
         ],
         SchemaOrg\CreativeWork::class => [
-        'accessMode' => ['Foo'],
-        'accessModeSufficient' => ['Bar'],
-        'accessibilityAPI' => ['Baz'],
-        'accessibilityControl' => ['Bat'],
-        'accessibilityFeature' => ['Bag'],
-        'accessibilityHazard' => ['Foo Bar'],
-        'accessibilitySummary' => ['Bar Baz'],
-        'alternativeHeadline' => ['Baz Bat'],
-        'citation' => [
-            'Foo',
-        ],
-        'commentCount' => [3],
-        'copyrightYear' => [
-            1970,
-        ],
-        'correction' => [
-            'Baz',
-        ],
-        'discussionUrl' => [
-            'https://example.com/',
-        ],
-        'educationalUse' => [
-            'Baz',
-        ],
-        'encodingFormat' => [
-            'Bat',
-        ],
-        'headline' => [
-            'Bag',
-        ],
-        'interactivityType' => [
-            'Foo Bar',
-        ],
-        'isBasedOn' => [
-            'Bar Baz',
-        ],
-        'isFamilyFriendly' => [
-            true,
-        ],
-        'keywords' => [
-            'Bar Baz',
-        ],
-        'learningResourceType' => [
-            'Baz Bat',
-        ],
-        'license' => [
-            'Bat Bag',
-        ],
-        'position' => [
-            1,
-            'ii',
-            3,
-            'iv',
-            5,
-            'vi',
-        ],
-        'schemaVersion' => [
-            '0.0.0',
-        ],
-        'sdLicense' => [
-            'Bat Bag',
-        ],
-        'temporalCoverage' => [
-            'January 1st 1970 01:02:03',
-        ],
-        'text' => [
-            'Foo Bar Baz',
-        ],
-        'thumbnailUrl' => [
-            'https://example.com/',
-        ],
-        'version' => [
-            0,
-            '0.0.0',
-        ],
+            'accessMode' => ['Foo'],
+            'accessModeSufficient' => ['Bar'],
+            'accessibilityAPI' => ['Baz'],
+            'accessibilityControl' => ['Bat'],
+            'accessibilityFeature' => ['Bag'],
+            'accessibilityHazard' => ['Foo Bar'],
+            'accessibilitySummary' => ['Bar Baz'],
+            'alternativeHeadline' => ['Baz Bat'],
+            'citation' => [
+                'Foo',
+            ],
+            'commentCount' => [3],
+            'copyrightYear' => [
+                1970,
+            ],
+            'correction' => [
+                'Baz',
+            ],
+            'discussionUrl' => [
+                'https://example.com/',
+            ],
+            'educationalUse' => [
+                'Baz',
+            ],
+            'encodingFormat' => [
+                'Bat',
+            ],
+            'headline' => [
+                'Bag',
+            ],
+            'interactivityType' => [
+                'Foo Bar',
+            ],
+            'isBasedOn' => [
+                'Bar Baz',
+            ],
+            'isFamilyFriendly' => [
+                true,
+            ],
+            'keywords' => [
+                'Bar Baz',
+            ],
+            'learningResourceType' => [
+                'Baz Bat',
+            ],
+            'license' => [
+                'Bat Bag',
+            ],
+            'position' => [
+                1,
+                'ii',
+                3,
+                'iv',
+                5,
+                'vi',
+            ],
+            'schemaVersion' => [
+                '0.0.0',
+            ],
+            'sdLicense' => [
+                'Bat Bag',
+            ],
+            'temporalCoverage' => [
+                'January 1st 1970 01:02:03',
+            ],
+            'text' => [
+                'Foo Bar Baz',
+            ],
+            'thumbnailUrl' => [
+                'https://example.com/',
+            ],
+            'version' => [
+                0,
+                '0.0.0',
+            ],
         ],
         SchemaOrg\CreativeWork\Question::class => [
             [
-            'downvoteCount' => [1],
-            'upvoteCount' => [2],
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
             ],
         ],
         SchemaOrg\CreativeWork\Comment::class => [
             [
-            'downvoteCount' => [1],
-            'upvoteCount' => [2],
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
             ],
         ],
         SchemaOrg\CreativeWork\Comment\CorrectionComment::class => [
             [
-            'downvoteCount' => [1],
-            'upvoteCount' => [2],
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
             ],
         ],
         SchemaOrg\Place::class => [
             [
-            'name' => ['Bar Baz'],
+                'name' => ['Bar Baz'],
             ],
         ],
         SchemaOrg\Intangible\Rating::class => [
@@ -209,14 +209,14 @@ class DaftObjectImplementationTest extends Base
         ],
         SchemaOrg\Intangible\AlignmentObject::class => [
             [
-            'targetUrl' => [
-                'https://example.com/',
-            ],
+                'targetUrl' => [
+                    'https://example.com/',
+                ],
             ],
         ],
         SchemaOrg\Intangible\StructuredValue\InteractionCounter::class => [
             [
-            'userInteractionCount' => [3],
+                'userInteractionCount' => [3],
             ],
         ],
         SchemaOrg\Event\PublicationEvent::class => [
@@ -224,12 +224,12 @@ class DaftObjectImplementationTest extends Base
         ],
         SchemaOrg\Product::class => [
             [
-            'name' => ['Product']
+                'name' => ['Product']
             ],
         ],
         SchemaOrg\CreativeWork\MusicPlaylist::class => [
             [
-            'numTracks' => [2],
+                'numTracks' => [2],
             ],
         ],
         SchemaOrg\Intangible\SpeakableSpecification::class => [
@@ -237,57 +237,57 @@ class DaftObjectImplementationTest extends Base
         ],
         SchemaOrg\CreativeWork\Article\NewsArticle::class => [
             [
-            'dateline' => ['Foo, Bar, January 1st 1970'],
-            'printColumn' => ['Foo'],
-            'printEdition' => ['Bar'],
-            'printPage' => ['Baz'],
-            'printSection' => ['Bat'],
-            'articleBody' => ['Bag'],
-            'articleSection' => ['Foo Bar'],
-            'backstory' => [
-                'Bar Baz',
-            ],
-            'pageEnd' => [
-                2,
-                'ii',
-            ],
-            'pageStart' => [
-                1,
-                'i',
-            ],
-            'pagination' => [
-                '1-2',
-                'i-ii',
-            ],
-            'wordCount' => [
-                0,
-            ],
+                'dateline' => ['Foo, Bar, January 1st 1970'],
+                'printColumn' => ['Foo'],
+                'printEdition' => ['Bar'],
+                'printPage' => ['Baz'],
+                'printSection' => ['Bat'],
+                'articleBody' => ['Bag'],
+                'articleSection' => ['Foo Bar'],
+                'backstory' => [
+                    'Bar Baz',
+                ],
+                'pageEnd' => [
+                    2,
+                    'ii',
+                ],
+                'pageStart' => [
+                    1,
+                    'i',
+                ],
+                'pagination' => [
+                    '1-2',
+                    'i-ii',
+                ],
+                'wordCount' => [
+                    0,
+                ],
             ],
         ],
         SchemaOrg\CreativeWork\MediaObject\DataDownload::class => [
             [
                 'name' => ['Foo'],
-            'measurementTechnique' => ['Foo'],
+                'measurementTechnique' => ['Foo'],
             ],
         ],
         SchemaOrg\CreativeWork\Dataset::class => [
             [
-            'issn' => [
-                'Foo',
-            ],
-            'measurementTechnique' => [
-                'Bar',
-            ],
-            'variableMeasured' => [
-                'Baz',
-            ],
+                'issn' => [
+                    'Foo',
+                ],
+                'measurementTechnique' => [
+                    'Bar',
+                ],
+                'variableMeasured' => [
+                    'Baz',
+                ],
             ],
         ],
         SchemaOrg\CreativeWork\DataCatalog::class => [
             [
-            'measurementTechnique' => [
-                'Bag',
-            ],
+                'measurementTechnique' => [
+                    'Bag',
+                ],
             ],
         ],
         SchemaOrg\Intangible\DataFeedItem::class => [
@@ -295,9 +295,9 @@ class DaftObjectImplementationTest extends Base
         ],
         SchemaOrg\CreativeWork\Dataset\DataFeed::class => [
             [
-            'dataFeedElement' => [
-                'Foo',
-            ],
+                'dataFeedElement' => [
+                    'Foo',
+                ],
             ],
         ],
     ];

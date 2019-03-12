@@ -54,9 +54,9 @@ class DaftObjectImplementationTest extends Base
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
         $qualitive_args__L = [
-                'identifier' => [
-                    'L',
-                ],
+            'identifier' => [
+                'L',
+            ],
         ];
 
         yield [
@@ -88,45 +88,45 @@ class DaftObjectImplementationTest extends Base
         ];
 
         $propertyvalue_args = [
-                'maxValue' => [
-                    20,
-                    30,
-                    40,
-                ],
-                'value' => [
-                    1,
-                    true,
-                    false,
-                    'foo',
-                ],
-                'valueReference' => [
-                    new SchemaOrg\Intangible\StructuredValue\QuantitativeValue([
-                        'minValue' => [1],
-                        'maxValue' => [10],
-                        'value' => [
-                            5,
-                        ],
-                    ]),
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'M',
-                        ],
-                        'greater' => [
-                            new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                                'identifier' => [
-                                    'S',
-                                ],
-                            ]),
-                        ],
-                        'lesser' => [
-                            new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                                'identifier' => [
-                                    'L',
-                                ],
-                            ]),
-                        ],
-                    ]),
-                ],
+            'maxValue' => [
+                20,
+                30,
+                40,
+            ],
+            'value' => [
+                1,
+                true,
+                false,
+                'foo',
+            ],
+            'valueReference' => [
+                new SchemaOrg\Intangible\StructuredValue\QuantitativeValue([
+                    'minValue' => [1],
+                    'maxValue' => [10],
+                    'value' => [
+                        5,
+                    ],
+                ]),
+                new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                    'identifier' => [
+                        'M',
+                    ],
+                    'greater' => [
+                        new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                            'identifier' => [
+                                'S',
+                            ],
+                        ]),
+                    ],
+                    'lesser' => [
+                        new SchemaOrg\Intangible\Enumeration\QualitativeValue([
+                            'identifier' => [
+                                'L',
+                            ],
+                        ]),
+                    ],
+                ]),
+            ],
         ];
 
         yield [
@@ -144,12 +144,12 @@ class DaftObjectImplementationTest extends Base
         ];
 
         $music_recording_args = [
-                'name' => ['Foo'],
-                'duration' => [
-                    new SchemaOrg\Intangible\Quantity\Duration(
-                        $duration_args
-                    ),
-                ],
+            'name' => ['Foo'],
+            'duration' => [
+                new SchemaOrg\Intangible\Quantity\Duration(
+                    $duration_args
+                ),
+            ],
         ];
 
         yield [

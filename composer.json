@@ -31,7 +31,7 @@
     },
     "scripts": {
         "scrutinizer": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --prepend ./phpunit.xdebug.filter.php",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky",
             "@tests"
         ],
         "tests": [

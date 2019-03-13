@@ -302,283 +302,6 @@ abstract class DaftObjectFuzzingTest extends Base
         ],
     ];
 
-    const DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY = [
-        SchemaOrg\Intangible\StructuredValue\PropertyValue::class => [
-            'valueReference' => [
-                SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
-                SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork::class => [
-            'accountablePerson' => [
-                SchemaOrg\Person::class,
-            ],
-            'associatedMedia' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'audio' => [
-                SchemaOrg\CreativeWork\MediaObject\AudioObject::class,
-            ],
-            'character' => [
-                SchemaOrg\Person::class,
-            ],
-            'citation' => [
-                SchemaOrg\CreativeWork::class,
-            ],
-            'comment' => [
-                SchemaOrg\CreativeWork\Comment::class,
-            ],
-            'contentLocation' => [
-                SchemaOrg\Place::class,
-            ],
-            'contentRating' => [
-                SchemaOrg\Intangible\Rating::class,
-            ],
-            'contentReferenceTime' => [
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'contributor' => [
-                SchemaOrg\Person::class,
-            ],
-            'copyrightHolder' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'correction' => [
-                SchemaOrg\CreativeWork\Comment\CorrectionComment::class,
-            ],
-            'creator' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'dateCreated' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'dateModified' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'datePublished' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'editor' => [
-                SchemaOrg\Person::class,
-            ],
-            'educationalAlignment' => [
-                SchemaOrg\Intangible\AlignmentObject::class,
-            ],
-            'encoding' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'exampleOfWork' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'expires' => [
-                SchemaOrg\DataTypes\Date::class,
-            ],
-            'interactionStatistic' => [
-                SchemaOrg\Intangible\StructuredValue\InteractionCounter::class,
-            ],
-            'isBasedOn' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-                SchemaOrg\Product::class,
-            ],
-            'license' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'locationCreated' => [
-                SchemaOrg\Place::class,
-            ],
-            'mainEntity' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'mentions' => [
-                SchemaOrg\Person::class,
-            ],
-            'producer' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'publication' => [
-                SchemaOrg\Event\PublicationEvent::class,
-            ],
-            'publisher' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'publisherImprint' => [
-                SchemaOrg\Organization::class,
-            ],
-            'recordedAt' => [
-                SchemaOrg\Event\PublicationEvent::class,
-            ],
-            'releasedEvent' => [
-                SchemaOrg\Event\PublicationEvent::class,
-            ],
-            'sdDatePublished' => [
-                SchemaOrg\DataTypes\Date::class,
-            ],
-            'sdLicense' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'sdPublisher' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'sourceOrganization' => [
-                SchemaOrg\Organization::class,
-            ],
-            'spatialCoverage' => [
-                SchemaOrg\Place::class,
-            ],
-            'temporalCoverage' => [
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'timeRequired' => [
-                SchemaOrg\Intangible\Quantity\Duration::class,
-            ],
-            'translationOfWork' => [
-                SchemaOrg\CreativeWork\MediaObject::class,
-            ],
-            'video' => [
-                SchemaOrg\CreativeWork\MediaObject\VideoObject::class,
-            ],
-            'workExample' => [
-                SchemaOrg\CreativeWork\MediaObject\VideoObject::class,
-            ],
-            'workTranslation' => [
-                SchemaOrg\CreativeWork\MediaObject\VideoObject::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject::class => [
-            'associatedArticle' => [
-                SchemaOrg\CreativeWork\Article\NewsArticle::class,
-            ],
-            'duration' => [
-                SchemaOrg\Intangible\Quantity\Duration::class,
-            ],
-            'encodesCreativeWork' => [
-                SchemaOrg\CreativeWork::class,
-            ],
-            'height' => [
-                SchemaOrg\Intangible\Quantity\Distance::class,
-                SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
-            ],
-            'productionCompany' => [
-                SchemaOrg\Organization::class,
-            ],
-            'regionsAllowed' => [
-                SchemaOrg\Place::class,
-            ],
-            'requiresSubscription' => [
-                SchemaOrg\Intangible\MediaSubscription::class,
-            ],
-            'uploadDate' => [
-                SchemaOrg\DataTypes\Date::class,
-            ],
-            'width' => [
-                SchemaOrg\Intangible\Quantity\Distance::class,
-                SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicRecording::class => [
-            'duration' => [
-                SchemaOrg\Intangible\Quantity\Duration::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\Comment::class => [
-            'parentItem' => [
-                SchemaOrg\CreativeWork\Question::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\CorrectionComment::class => [
-            'parentItem' => [
-                SchemaOrg\CreativeWork\Question::class,
-            ],
-        ],
-        SchemaOrg\Intangible\Rating::class => [
-            'author' => [
-                SchemaOrg\Person::class,
-            ],
-        ],
-        SchemaOrg\Event\PublicationEvent::class => [
-            'publishedBy' => [
-                SchemaOrg\Person::class,
-                SchemaOrg\Organization::class,
-            ],
-            'publishedOn' => [
-                SchemaOrg\Intangible\Service\BroadcastService::class,
-            ],
-        ],
-        SchemaOrg\Product::class => [
-            'releaseDate' => [
-                SchemaOrg\DataTypes\Date::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicPlaylist::class => [
-            'track' => [
-                SchemaOrg\CreativeWork\MusicRecording::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\Article\NewsArticle::class => [
-            'backstory' => [
-                SchemaOrg\CreativeWork\MediaObject\VideoObject::class,
-            ],
-            'speakable' => [
-                SchemaOrg\Intangible\SpeakableSpecification::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\Dataset::class => [
-            'distribution' => [
-                SchemaOrg\CreativeWork\MediaObject\DataDownload::class,
-            ],
-            'variableMeasured' => [
-                SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
-            ],
-            'includedInDataCatalog' => [
-                SchemaOrg\CreativeWork\DataCatalog::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\DataCatalog::class => [
-            'dataset' => [
-                SchemaOrg\CreativeWork\Dataset::class,
-            ],
-        ],
-        SchemaOrg\Intangible\DataFeedItem::class => [
-            'dateCreated' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'dateDeleted' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'dateModified' => [
-                SchemaOrg\DataTypes\Date::class,
-                SchemaOrg\DataTypes\DateTime::class,
-            ],
-            'item' => [
-                SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
-            ],
-        ],
-        SchemaOrg\CreativeWork\Dataset\DataFeed::class => [
-            'dataFeedElement' => [
-                SchemaOrg\Intangible\DataFeedItem::class,
-                SchemaOrg\Intangible\Enumeration\QualitativeValue::class,
-            ],
-        ],
-        SchemaOrg\Intangible\SpeakableSpecification::class => [
-            'cssSelector' => [
-                SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class,
-            ],
-            'xpath' => [
-                SchemaOrg\DataTypes\DataType\Text\XPathType::class,
-            ],
-        ],
-    ];
-
     /**
     * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
     *
@@ -599,8 +322,33 @@ abstract class DaftObjectFuzzingTest extends Base
         }
 
         if ($deep) {
-            foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
-                foreach ($of_type as $property => $types) {
+            $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
+            if ($type === $const->getDeclaringClass()->name) {
+                foreach ($type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
+                    static::assertIsArray(
+                        $types,
+                        (
+                            $type .
+                            '::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[' .
+                            $property .
+                            '] was not an array, ' .
+                            gettype($types) .
+                            ' given!'
+                        )
+                    );
+                }
+                foreach (
+                    array_map(
+                        function (array $in) : array {
+                            return array_filter($in, function (string $maybe) : bool {
+                                return
+                                    is_a($maybe, SchemaOrg\Thing::class, true) ||
+                                    is_a($maybe, SchemaOrg\DataTypes\DataType::class, true);
+                            });
+                        },
+                        $type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS
+                    ) as $property => $types
+                ) {
                     if ( ! isset($args[$property])) {
                         $args[$property] = [];
                     }

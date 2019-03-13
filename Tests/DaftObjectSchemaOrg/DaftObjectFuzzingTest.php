@@ -528,21 +528,21 @@ abstract class DaftObjectFuzzingTest extends Base
         }
 
         if ($deep) {
-        foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
-            if ($gimme !== $type) {
-                foreach ($of_type as $property => $types) {
-                    if ( ! isset($args[$property])) {
-                        $args[$property] = [];
-                    }
+            foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
+                if ($gimme !== $type) {
+                    foreach ($of_type as $property => $types) {
+                        if ( ! isset($args[$property])) {
+                            $args[$property] = [];
+                        }
 
-                    foreach (
-                        static::YieldObjectsOfTypeForFuzzing($types) as $obj
-                    ) {
-                        $args[$property][] = $obj;
+                        foreach (
+                            static::YieldObjectsOfTypeForFuzzing($types) as $obj
+                        ) {
+                            $args[$property][] = $obj;
+                        }
                     }
                 }
             }
-        }
         }
 
         yield $args;
@@ -643,9 +643,9 @@ abstract class DaftObjectFuzzingTest extends Base
     {
         $type = static::FuzzingImplementationsViaGeneratorRootType();
 
-            foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
-                yield [$type, $args];
-            }
+        foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
+            yield [$type, $args];
+        }
     }
 
     abstract protected static function FuzzingImplementationsViaGeneratorRootType() : string;

@@ -529,9 +529,6 @@ abstract class DaftObjectFuzzingTest extends Base
 
         if ($deep) {
         foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
-            /*
-            if (is_a($type, $gimme, true)) {
-                */
             if ($gimme !== $type) {
                 foreach ($of_type as $property => $types) {
                     if ( ! isset($args[$property])) {
@@ -545,9 +542,6 @@ abstract class DaftObjectFuzzingTest extends Base
                     }
                 }
             }
-                /*
-            }
-            */
         }
         }
 
@@ -641,48 +635,6 @@ abstract class DaftObjectFuzzingTest extends Base
                 );
             } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\XPathType::class) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
-            } else {
-                /*
-                foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
-                    if (isset(self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY[$gimme])) {
-                        foreach (
-                            self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY[$gimme] as $prop => $types
-                        ) {
-                            if ( ! isset($args[$prop])) {
-                                $args[$prop] = [];
-                            }
-
-                            foreach (
-                                static::YieldObjectsOfTypeForFuzzing(
-                                    $types
-                                ) as $supplementory_value
-                            ) {
-                                $args[$prop][] = $supplementory_value;
-                            }
-                        }
-                    }
-                }
-                */
-
-                $args = [];
-
-                /*
-                foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $upstream => $some_more_args) {
-                    if (is_a($gimme, $upstream, true)) {
-                    if ($upstream !== $gimme) {
-                        foreach ($some_more_args as $prop => $supplementory_values) {
-                            if ( ! isset($args[$prop])) {
-                                $args[$prop] = [];
-                            }
-
-                            $args[$prop] = array_merge($args[$prop], $supplementory_values);
-                        }
-                    }
-                    }
-                }
-                */
-
-                yield new $gimme($args);
             }
         }
     }

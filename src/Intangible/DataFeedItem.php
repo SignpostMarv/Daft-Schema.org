@@ -11,6 +11,12 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, DataTypes\Date|DataTypes\DateTime> $dateCreated
+* @property array<int, DataTypes\Date|DataTypes\DateTime> $dateDeleted
+* @property array<int, DataTypes\Date|DataTypes\DateTime> $dateModified
+* @property array<int, Thing> $item
+*/
 class DataFeedItem extends Base
 {
     const SCHEMA_ORG_TYPE = 'DataFeedItem';
@@ -20,6 +26,24 @@ class DataFeedItem extends Base
         'dateDeleted',
         'dateModified',
         'item',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'dateCreated' => [
+            DataTypes\Date::class,
+            DataTypes\DateTime::class,
+        ],
+        'dateDeleted' => [
+            DataTypes\Date::class,
+            DataTypes\DateTime::class,
+        ],
+        'dateModified' => [
+            DataTypes\Date::class,
+            DataTypes\DateTime::class,
+        ],
+        'item' => [
+            Thing::class,
+        ],
     ];
 
     /**
@@ -44,12 +68,9 @@ class DataFeedItem extends Base
     */
     public function SetDateCreated(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dateCreated',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class,
-            DataTypes\DateTime::class
+            $value
         );
     }
 
@@ -75,12 +96,9 @@ class DataFeedItem extends Base
     */
     public function SetDateDeleted(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dateDeleted',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class,
-            DataTypes\DateTime::class
+            $value
         );
     }
 
@@ -106,12 +124,9 @@ class DataFeedItem extends Base
     */
     public function SetDateModified(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dateModified',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class,
-            DataTypes\DateTime::class
+            $value
         );
     }
 
@@ -137,11 +152,9 @@ class DataFeedItem extends Base
     */
     public function SetItem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'item',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 }

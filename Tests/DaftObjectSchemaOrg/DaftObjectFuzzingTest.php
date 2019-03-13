@@ -517,11 +517,15 @@ abstract class DaftObjectFuzzingTest extends Base
     */
     protected static function YieldArgsForTypeForFuzzing(string $type, bool $deep = false) : Generator
     {
+        $args = [];
+
         foreach ((self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR[$type] ?? []) as $args) {
             foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $gimme => $some_more_args) {
                 if ($type !== $gimme && is_a($type, $gimme, true)) {
                     foreach ($some_more_args as $prop => $val) {
+                        if (count($val) > 0) {
                         $args[$prop] = $val;
+                        }
                     }
                 }
             }
@@ -540,12 +544,19 @@ abstract class DaftObjectFuzzingTest extends Base
                         ) {
                             $args[$property][] = $obj;
                         }
+
+                        if (count($args[$property]) < 1) {
+                            unset($args[$property]);
+                        }
                     }
                 }
             }
         }
 
+        if (count($args) > 0) {
         yield $args;
+        }
+
 
         if ($type === SchemaOrg\Intangible\Enumeration\QualitativeValue::class) {
             yield [

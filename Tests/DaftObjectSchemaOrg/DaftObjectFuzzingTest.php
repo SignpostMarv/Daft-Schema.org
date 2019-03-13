@@ -554,7 +554,7 @@ abstract class DaftObjectFuzzingTest extends Base
         }
 
         if (count($args) > 0) {
-        yield $args;
+            yield $args;
         }
 
 

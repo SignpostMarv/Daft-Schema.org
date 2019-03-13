@@ -141,6 +141,34 @@ abstract class DaftObjectFuzzingTest extends Base
                 '0.0.0',
             ],
         ],
+        SchemaOrg\CreativeWork\MediaObject::class => [
+            [
+                'associatedArticle' => [],
+                'bitrate' => ['1kbps'],
+                'contentSize' => ['2kb'],
+                'contentUrl' => ['https://example.com/'],
+                'duration' => [],
+                'embedUrl' => ['https://example.com/'],
+                'encodingFormat' => ['lol/whut'],
+                'height' => [],
+                'playerType' => ['vlc'],
+                'productionCompany' => [],
+                'regionsAllowed' => [],
+                'requiresSubscription' => [true],
+                'uploadDate' => [],
+                'width' => [],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\AudioObject::class => [
+            [
+                'name' => ['audio'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\VideoObject::class => [
+            [
+                'name' => ['video'],
+            ],
+        ],
         SchemaOrg\CreativeWork\Question::class => [
             [
                 'downvoteCount' => [1],
@@ -165,7 +193,12 @@ abstract class DaftObjectFuzzingTest extends Base
             ],
         ],
         SchemaOrg\Intangible\Rating::class => [
-            [],
+            [
+                'bestRating' => [4, '4/5', 0.8],
+                'ratingValue' => [2.5],
+                'reviewAspect' => ['Foo'],
+                'wostRating' => [1, '1/5', 0.2],
+            ],
         ],
         SchemaOrg\Organization::class => [
             [
@@ -185,7 +218,9 @@ abstract class DaftObjectFuzzingTest extends Base
             ],
         ],
         SchemaOrg\Event\PublicationEvent::class => [
-            [],
+            [
+                'name' => ['Foo'],
+            ],
         ],
         SchemaOrg\Product::class => [
             [
@@ -417,6 +452,37 @@ abstract class DaftObjectFuzzingTest extends Base
                 SchemaOrg\CreativeWork\MediaObject\VideoObject::class,
             ],
         ],
+        SchemaOrg\CreativeWork\MediaObject::class => [
+            'associatedArticle' => [
+                SchemaOrg\CreativeWork\Article\NewsArticle::class,
+            ],
+            'duration' => [
+                SchemaOrg\Intangible\Quantity\Duration::class,
+            ],
+            'encodesCreativeWork' => [
+                SchemaOrg\CreativeWork::class,
+            ],
+            'height' => [
+                SchemaOrg\Intangible\Quantity\Distance::class,
+                SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
+            ],
+            'productionCompany' => [
+                SchemaOrg\Organization::class,
+            ],
+            'regionsAllowed' => [
+                SchemaOrg\Place::class,
+            ],
+            'requiresSubscription' => [
+                SchemaOrg\Intangible\MediaSubscription::class,
+            ],
+            'uploadDate' => [
+                SchemaOrg\DataTypes\Date::class,
+            ],
+            'width' => [
+                SchemaOrg\Intangible\Quantity\Distance::class,
+                SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
+            ],
+        ],
         SchemaOrg\CreativeWork\MusicRecording::class => [
             'duration' => [
                 SchemaOrg\Intangible\Quantity\Duration::class,
@@ -441,6 +507,9 @@ abstract class DaftObjectFuzzingTest extends Base
             'publishedBy' => [
                 SchemaOrg\Person::class,
                 SchemaOrg\Organization::class,
+            ],
+            'publishedOn' => [
+                SchemaOrg\Intangible\Service\BroadcastService::class,
             ],
         ],
         SchemaOrg\Product::class => [

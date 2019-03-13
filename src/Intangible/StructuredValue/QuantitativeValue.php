@@ -38,7 +38,7 @@ class QuantitativeValue extends Base
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'additionalProperty', [
+        'additionalProperty' => [
             PropertyValue::class,
         ],
         'maxValue' => [

@@ -18,6 +18,11 @@ abstract class DaftObjectFuzzingTest extends Base
     use DataProviderTrait;
 
     const DAFT_SCHEMA_FUZZING_VIA_GENERATOR = [
+        SchemaOrg\Thing::class => [
+            [
+                'name' => ['Foo'],
+            ],
+        ],
         SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
             [
                 'identifier' => [
@@ -215,6 +220,12 @@ abstract class DaftObjectFuzzingTest extends Base
         SchemaOrg\Intangible\StructuredValue\InteractionCounter::class => [
             [
                 'userInteractionCount' => [3],
+            ],
+        ],
+        SchemaOrg\Event::class => [
+            [
+                'name' => ['Foo'],
+                'remainingAttendeeCapacity' => [1],
             ],
         ],
         SchemaOrg\Event\PublicationEvent::class => [

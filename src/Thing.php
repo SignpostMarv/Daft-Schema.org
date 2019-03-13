@@ -1052,7 +1052,15 @@ class Thing extends AbstractArrayBackedDaftObject implements
     ) : void {
         $initialCount = count($value);
 
-        $value = array_values(array_unique($value, $sort_flags));
+        $out = [];
+
+        foreach ($value as $val) {
+            if ( ! in_array($val, $out, true)) {
+                $out[] = $val;
+            }
+        }
+
+        $value = $out;
 
         if ($initialCount !== count($value)) {
             throw new InvalidArgumentException(

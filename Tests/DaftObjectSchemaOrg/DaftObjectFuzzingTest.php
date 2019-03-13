@@ -600,17 +600,17 @@ abstract class DaftObjectFuzzingTest extends Base
 
         if ($deep) {
             foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
-                    foreach ($of_type as $property => $types) {
-                        if ( ! isset($args[$property])) {
-                            $args[$property] = [];
-                        }
-
-                        foreach (
-                            static::YieldObjectsOfTypeForFuzzing($types) as $obj
-                        ) {
-                            $args[$property][] = $obj;
-                        }
+                foreach ($of_type as $property => $types) {
+                    if ( ! isset($args[$property])) {
+                        $args[$property] = [];
                     }
+
+                    foreach (
+                        static::YieldObjectsOfTypeForFuzzing($types) as $obj
+                    ) {
+                        $args[$property][] = $obj;
+                    }
+                }
             }
         }
 

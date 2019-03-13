@@ -14,7 +14,7 @@ build:
     tests:
         override:
             -
-                command: 'composer run scrutinizer'
+                command: 'composer run scrutinizer --timeout=0'
                 coverage:
                     file: 'phpunit.clover'
                     format: 'clover'

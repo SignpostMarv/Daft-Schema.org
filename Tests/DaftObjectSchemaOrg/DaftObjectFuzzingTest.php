@@ -531,7 +531,6 @@ abstract class DaftObjectFuzzingTest extends Base
 
         if ($deep) {
             foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
-                if ($gimme !== $type) {
                     foreach ($of_type as $property => $types) {
                         if ( ! isset($args[$property])) {
                             $args[$property] = [];
@@ -543,7 +542,6 @@ abstract class DaftObjectFuzzingTest extends Base
                             $args[$property][] = $obj;
                         }
                     }
-                }
             }
         }
 
@@ -646,6 +644,10 @@ abstract class DaftObjectFuzzingTest extends Base
                 );
             } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\XPathType::class) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
+            } else {
+                foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
+                    yield new $gimme($args);
+                }
             }
         }
     }

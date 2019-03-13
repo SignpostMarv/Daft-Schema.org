@@ -31,7 +31,7 @@
     },
     "scripts": {
         "scrutinizer": [
-            "phpunit -vvvv --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --prepend ./phpunit.xdebug.filter.php",
             "@tests"
         ],
         "tests": [
@@ -48,7 +48,7 @@
         "ext-ctype": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "signpostmarv/daft-object": "^2.3"
+        "signpostmarv/daft-object": "^2.3,>=2.3.1"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.1",

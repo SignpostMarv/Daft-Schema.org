@@ -3,6 +3,7 @@
   cacheResult="true"
   cacheResultFile="./phpunit.cache"
   resolveDependencies="true"
+  backupGlobals="false"
 >
   <testsuites>
     <testsuite name="Daft Schema">

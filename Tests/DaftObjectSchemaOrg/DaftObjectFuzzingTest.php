@@ -512,11 +512,10 @@ abstract class DaftObjectFuzzingTest extends Base
 
     /**
     * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
-    * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>> $skip_these_types
     *
     * @psalm-return Generator<int, array<string, scalar|array|object|null>, mixed, void>
     */
-    protected static function YieldArgsForTypeForFuzzing(string $type, array $skip_these_types = []) : Generator
+    protected static function YieldArgsForTypeForFuzzing(string $type, bool $deep = false) : Generator
     {
         foreach ((self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR[$type] ?? []) as $args) {
             foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $gimme => $some_more_args) {
@@ -526,12 +525,9 @@ abstract class DaftObjectFuzzingTest extends Base
                     }
                 }
             }
-
-            yield $args;
         }
 
-        $args = [];
-
+        if ($deep) {
         foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR_SUPPLEMENTORY as $gimme => $of_type) {
             /*
             if (is_a($type, $gimme, true)) {
@@ -552,6 +548,7 @@ abstract class DaftObjectFuzzingTest extends Base
                 /*
             }
             */
+        }
         }
 
         yield $args;
@@ -624,26 +621,16 @@ abstract class DaftObjectFuzzingTest extends Base
 
     /**
     * @param array<int, string> $types
-    * @param array<int, string> $skip_these_types
     *
     * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>> $types
-    * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>> $skip_these_types
     *
     * @psalm-return Generator<int, SchemaOrg\Thing|SchemaOrg\DataTypes\DataType, mixed, void>
     */
     protected static function YieldObjectsOfTypeForFuzzing(
         array $types,
-        array $skip_these_types = []
+        bool $deep = false
     ) : Generator {
-        $types = array_filter($types, function (string $maybe) use ($skip_these_types) : bool {
-            return ! in_array($maybe, $skip_these_types, true);
-        });
-
         foreach ($types as $gimme) {
-            $skip_these_types[] = $gimme;
-
-
-
             if ($gimme === SchemaOrg\DataTypes\Date::class) {
                 yield new SchemaOrg\DataTypes\Date('January 1st 1970');
             } elseif ($gimme === SchemaOrg\DataTypes\DateTime::class) {
@@ -667,8 +654,7 @@ abstract class DaftObjectFuzzingTest extends Base
 
                             foreach (
                                 static::YieldObjectsOfTypeForFuzzing(
-                                    $types,
-                                    $skip_these_types
+                                    $types
                                 ) as $supplementory_value
                             ) {
                                 $args[$prop][] = $supplementory_value;
@@ -680,10 +666,9 @@ abstract class DaftObjectFuzzingTest extends Base
 
                 $args = [];
 
+                /*
                 foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $upstream => $some_more_args) {
-                    /*
                     if (is_a($gimme, $upstream, true)) {
-                        */
                     if ($upstream !== $gimme) {
                         foreach ($some_more_args as $prop => $supplementory_values) {
                             if ( ! isset($args[$prop])) {
@@ -693,10 +678,9 @@ abstract class DaftObjectFuzzingTest extends Base
                             $args[$prop] = array_merge($args[$prop], $supplementory_values);
                         }
                     }
-                        /*
                     }
-                    */
                 }
+                */
 
                 yield new $gimme($args);
             }
@@ -707,7 +691,7 @@ abstract class DaftObjectFuzzingTest extends Base
     {
         $type = static::FuzzingImplementationsViaGeneratorRootType();
 
-            foreach (static::YieldArgsForTypeForFuzzing($type) as $args) {
+            foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
                 yield [$type, $args];
             }
     }

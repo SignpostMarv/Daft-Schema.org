@@ -523,9 +523,7 @@ abstract class DaftObjectFuzzingTest extends Base
             foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $gimme => $some_more_args) {
                 if ($type !== $gimme && is_a($type, $gimme, true)) {
                     foreach ($some_more_args as $prop => $val) {
-                        if (count($val) > 0) {
                         $args[$prop] = $val;
-                        }
                     }
                 }
             }
@@ -544,12 +542,14 @@ abstract class DaftObjectFuzzingTest extends Base
                         ) {
                             $args[$property][] = $obj;
                         }
-
-                        if (count($args[$property]) < 1) {
-                            unset($args[$property]);
-                        }
                     }
                 }
+            }
+        }
+
+        foreach (array_keys($args) as $property) {
+            if (count($args[$property]) < 1) {
+                unset($args[$property]);
             }
         }
 

@@ -169,9 +169,18 @@ abstract class DaftObjectFuzzingTest extends Base
                 'name' => ['audio'],
             ],
         ],
+        SchemaOrg\CreativeWork\MediaObject\ImageObject::class => [
+            [
+                'caption' => ['Foo'],
+                'exifData' => ['Bar'],
+                'representativeOfPage' => [true],
+            ],
+        ],
         SchemaOrg\CreativeWork\MediaObject\VideoObject::class => [
             [
                 'name' => ['video'],
+                'videoFrameSize' => ['1920x1080'],
+                'videoQuality' => ['Foo'],
             ],
         ],
         SchemaOrg\CreativeWork\Question::class => [

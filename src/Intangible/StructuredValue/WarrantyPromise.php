@@ -59,8 +59,8 @@ class WarrantyPromise extends Base
         * @var array<int, Product|Service>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'typeOfGood',
-            $this->RetrievePropertyValueFromData('typeOfGood'),
+            'warrantyScope',
+            $this->RetrievePropertyValueFromData('warrantyScope'),
             static::class
         );
 
@@ -73,7 +73,7 @@ class WarrantyPromise extends Base
     public function SetWarrantyScope(array $value) : void
     {
         $this->NudgePropertyWithUniqueValuesOfThings(
-            'typeOfGood',
+            'warrantyScope',
             __METHOD__,
             $value,
             Product::class,

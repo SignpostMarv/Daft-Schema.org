@@ -101,8 +101,8 @@ class Offer extends Thing
         * @var array<int, Organization|Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'oferredBy',
-            $this->RetrievePropertyValueFromData('oferredBy'),
+            'offeredBy',
+            $this->RetrievePropertyValueFromData('offeredBy'),
             static::class
         );
 
@@ -115,7 +115,7 @@ class Offer extends Thing
     public function SetOfferedBy(array $value) : void
     {
         $this->NudgePropertyWithUniqueOrganizationsOrPersons(
-            'oferredBy',
+            'offeredBy',
             __METHOD__,
             $value
         );

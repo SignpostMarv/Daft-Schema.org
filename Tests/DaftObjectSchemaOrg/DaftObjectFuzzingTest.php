@@ -23,52 +23,6 @@ class DaftObjectFuzzingTest extends Base
                 'name' => ['Foo'],
             ],
         ],
-        SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
-            [
-                'identifier' => [
-                    'L',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class => [
-            [
-                'minValue' => [1],
-                'maxValue' => [10],
-                'value' => [
-                    5,
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\StructuredValue\PropertyValue::class => [
-            [
-                'maxValue' => [
-                    20,
-                    30,
-                    40,
-                ],
-                'value' => [
-                    1,
-                    true,
-                    false,
-                    'foo',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\Quantity\Duration::class => [
-            [
-                'identifier' => ['PT1M2S'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicRecording::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Person::class => [
-            [
-                'name' => ['Foo Bar'],
-            ],
-        ],
         SchemaOrg\CreativeWork::class => [
             'accessMode' => ['Foo'],
             'accessModeSufficient' => ['Bar'],
@@ -146,115 +100,6 @@ class DaftObjectFuzzingTest extends Base
                 '0.0.0',
             ],
         ],
-        SchemaOrg\CreativeWork\MediaObject::class => [
-            [
-                'associatedArticle' => [],
-                'bitrate' => ['1kbps'],
-                'contentSize' => ['2kb'],
-                'contentUrl' => ['https://example.com/'],
-                'duration' => [],
-                'embedUrl' => ['https://example.com/'],
-                'encodingFormat' => ['lol/whut'],
-                'height' => [],
-                'playerType' => ['vlc'],
-                'productionCompany' => [],
-                'regionsAllowed' => [],
-                'requiresSubscription' => [true],
-                'uploadDate' => [],
-                'width' => [],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\AudioObject::class => [
-            [
-                'name' => ['audio'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\ImageObject::class => [
-            [
-                'caption' => ['Foo'],
-                'exifData' => ['Bar'],
-                'representativeOfPage' => [true],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\VideoObject::class => [
-            [
-                'name' => ['video'],
-                'videoFrameSize' => ['1920x1080'],
-                'videoQuality' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Question::class => [
-            [
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Comment::class => [
-            [
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Comment\CorrectionComment::class => [
-            [
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\Place::class => [
-            [
-                'name' => ['Bar Baz'],
-            ],
-        ],
-        SchemaOrg\Intangible\Rating::class => [
-            [
-                'bestRating' => [4, '4/5', 0.8],
-                'ratingValue' => [2.5],
-                'reviewAspect' => ['Foo'],
-                'wostRating' => [1, '1/5', 0.2],
-            ],
-        ],
-        SchemaOrg\Organization::class => [
-            [
-            'name' => ['Baz Bat'],
-            ],
-        ],
-        SchemaOrg\Intangible\AlignmentObject::class => [
-            [
-                'targetUrl' => [
-                    'https://example.com/',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\StructuredValue\InteractionCounter::class => [
-            [
-                'userInteractionCount' => [3],
-            ],
-        ],
-        SchemaOrg\Event::class => [
-            [
-                'name' => ['Foo'],
-                'remainingAttendeeCapacity' => [1],
-            ],
-        ],
-        SchemaOrg\Event\PublicationEvent::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Product::class => [
-            [
-                'name' => ['Product']
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicPlaylist::class => [
-            [
-                'numTracks' => [2],
-            ],
-        ],
-        SchemaOrg\Intangible\SpeakableSpecification::class => [
-            [],
-        ],
         SchemaOrg\CreativeWork\Article\NewsArticle::class => [
             [
                 'dateline' => ['Foo, Bar, January 1st 1970'],
@@ -284,10 +129,23 @@ class DaftObjectFuzzingTest extends Base
                 ],
             ],
         ],
-        SchemaOrg\CreativeWork\MediaObject\DataDownload::class => [
+        SchemaOrg\CreativeWork\Comment::class => [
             [
-                'name' => ['Foo'],
-                'measurementTechnique' => ['Foo'],
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
+            ],
+        ],
+        SchemaOrg\CreativeWork\Comment\CorrectionComment::class => [
+            [
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
+            ],
+        ],
+        SchemaOrg\CreativeWork\DataCatalog::class => [
+            [
+                'measurementTechnique' => [
+                    'Bag',
+                ],
             ],
         ],
         SchemaOrg\CreativeWork\Dataset::class => [
@@ -303,21 +161,163 @@ class DaftObjectFuzzingTest extends Base
                 ],
             ],
         ],
-        SchemaOrg\CreativeWork\DataCatalog::class => [
+        SchemaOrg\CreativeWork\Dataset\DataFeed::class => [
             [
-                'measurementTechnique' => [
-                    'Bag',
+                'dataFeedElement' => [
+                    'Foo',
+                ],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject::class => [
+            [
+                'associatedArticle' => [],
+                'bitrate' => ['1kbps'],
+                'contentSize' => ['2kb'],
+                'contentUrl' => ['https://example.com/'],
+                'duration' => [],
+                'embedUrl' => ['https://example.com/'],
+                'encodingFormat' => ['lol/whut'],
+                'height' => [],
+                'playerType' => ['vlc'],
+                'productionCompany' => [],
+                'regionsAllowed' => [],
+                'requiresSubscription' => [true],
+                'uploadDate' => [],
+                'width' => [],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\AudioObject::class => [
+            [
+                'name' => ['audio'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\DataDownload::class => [
+            [
+                'name' => ['Foo'],
+                'measurementTechnique' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\ImageObject::class => [
+            [
+                'caption' => ['Foo'],
+                'exifData' => ['Bar'],
+                'representativeOfPage' => [true],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MediaObject\VideoObject::class => [
+            [
+                'name' => ['video'],
+                'videoFrameSize' => ['1920x1080'],
+                'videoQuality' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MusicPlaylist::class => [
+            [
+                'numTracks' => [2],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MusicRecording::class => [
+            [
+                'name' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\Question::class => [
+            [
+                'downvoteCount' => [1],
+                'upvoteCount' => [2],
+            ],
+        ],
+        SchemaOrg\Event::class => [
+            [
+                'name' => ['Foo'],
+                'remainingAttendeeCapacity' => [1],
+            ],
+        ],
+        SchemaOrg\Event\PublicationEvent::class => [
+            [
+                'name' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\Intangible\AlignmentObject::class => [
+            [
+                'targetUrl' => [
+                    'https://example.com/',
                 ],
             ],
         ],
         SchemaOrg\Intangible\DataFeedItem::class => [
             [],
         ],
-        SchemaOrg\CreativeWork\Dataset\DataFeed::class => [
+        SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
             [
-                'dataFeedElement' => [
-                    'Foo',
+                'identifier' => [
+                    'L',
                 ],
+            ],
+        ],
+        SchemaOrg\Intangible\Quantity\Duration::class => [
+            [
+                'identifier' => ['PT1M2S'],
+            ],
+        ],
+        SchemaOrg\Intangible\Rating::class => [
+            [
+                'bestRating' => [4, '4/5', 0.8],
+                'ratingValue' => [2.5],
+                'reviewAspect' => ['Foo'],
+                'wostRating' => [1, '1/5', 0.2],
+            ],
+        ],
+        SchemaOrg\Intangible\SpeakableSpecification::class => [
+            [],
+        ],
+        SchemaOrg\Intangible\StructuredValue\InteractionCounter::class => [
+            [
+                'userInteractionCount' => [3],
+            ],
+        ],
+        SchemaOrg\Intangible\StructuredValue\PropertyValue::class => [
+            [
+                'maxValue' => [
+                    20,
+                    30,
+                    40,
+                ],
+                'value' => [
+                    1,
+                    true,
+                    false,
+                    'foo',
+                ],
+            ],
+        ],
+        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class => [
+            [
+                'minValue' => [1],
+                'maxValue' => [10],
+                'value' => [
+                    5,
+                ],
+            ],
+        ],
+        SchemaOrg\Organization::class => [
+            [
+            'name' => ['Baz Bat'],
+            ],
+        ],
+        SchemaOrg\Person::class => [
+            [
+                'name' => ['Foo Bar'],
+            ],
+        ],
+        SchemaOrg\Place::class => [
+            [
+                'name' => ['Bar Baz'],
+            ],
+        ],
+        SchemaOrg\Product::class => [
+            [
+                'name' => ['Product']
             ],
         ],
     ];

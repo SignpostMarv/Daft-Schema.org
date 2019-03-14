@@ -27,6 +27,12 @@ class Comment extends Base
         'upvoteCount',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'parentItem' => [
+            Question::class,
+        ],
+    ];
+
     /**
     * @return array<int, Question>
     */

@@ -13,7 +13,7 @@ use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
 
-abstract class DaftObjectFuzzingTest extends Base
+class DaftObjectFuzzingTest extends Base
 {
     use DataProviderTrait;
 
@@ -491,12 +491,10 @@ abstract class DaftObjectFuzzingTest extends Base
 
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
-        $type = static::FuzzingImplementationsViaGeneratorRootType();
-
+        foreach (array_keys(self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR) as $type) {
         foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
             yield [$type, $args];
         }
+        }
     }
-
-    abstract protected static function FuzzingImplementationsViaGeneratorRootType() : string;
 }

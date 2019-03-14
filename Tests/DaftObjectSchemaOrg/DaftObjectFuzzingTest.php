@@ -171,6 +171,11 @@ class DaftObjectFuzzingTest extends Base
                 ],
             ],
         ],
+        SchemaOrg\CreativeWork\Map::class => [
+            [
+                'name' => ['Foo'],
+            ],
+        ],
         SchemaOrg\CreativeWork\MediaObject::class => [
             [
                 'associatedArticle' => [],
@@ -288,6 +293,11 @@ class DaftObjectFuzzingTest extends Base
                 'speakable' => ['Foo'],
             ],
         ],
+        SchemaOrg\CreativeWork\WebPageElement::class => [
+            [
+                'identifier' => ['#foo'],
+            ],
+        ],
         SchemaOrg\Event::class => [
             [
                 'name' => ['Foo'],
@@ -334,6 +344,11 @@ class DaftObjectFuzzingTest extends Base
                 'identifier' => [
                     'L',
                 ],
+            ],
+        ],
+        SchemaOrg\Intangible\Enumeration\Specialty::class => [
+            [
+                'name' => ['php'],
             ],
         ],
         SchemaOrg\Intangible\Quantity\Duration::class => [

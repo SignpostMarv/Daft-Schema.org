@@ -216,6 +216,11 @@ class DaftObjectFuzzingTest extends Base
                 'numTracks' => [2],
             ],
         ],
+        SchemaOrg\CreativeWork\MusicPlaylist\MusicRelease::class => [
+            [
+                'catalogNumber' => ['Foo'],
+            ],
+        ],
         SchemaOrg\CreativeWork\MusicRecording::class => [
             [
                 'name' => ['Foo'],
@@ -247,6 +252,16 @@ class DaftObjectFuzzingTest extends Base
         ],
         SchemaOrg\Intangible\DataFeedItem::class => [
             [],
+        ],
+        SchemaOrg\Intangible\Enumeration\MusicAlbumProductionType::class => [
+            [
+                'identifier' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseType::class => [
+            [
+                'identifier' => ['Foo'],
+            ],
         ],
         SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
             [
@@ -303,6 +318,11 @@ class DaftObjectFuzzingTest extends Base
         SchemaOrg\Organization::class => [
             [
             'name' => ['Baz Bat'],
+            ],
+        ],
+        SchemaOrg\Organization\PerformingGroup\MusicGroup::class => [
+            [
+                'genre' => ['Foo'],
             ],
         ],
         SchemaOrg\Person::class => [

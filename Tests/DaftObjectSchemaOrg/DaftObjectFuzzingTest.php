@@ -135,6 +135,9 @@ class DaftObjectFuzzingTest extends Base
                 'upvoteCount' => [2],
             ],
         ],
+        SchemaOrg\CreativeWork\Comment\Answer::class => [
+            [],
+        ],
         SchemaOrg\CreativeWork\Comment\CorrectionComment::class => [
             [
                 'downvoteCount' => [1],
@@ -211,10 +214,25 @@ class DaftObjectFuzzingTest extends Base
                 'videoQuality' => ['Foo'],
             ],
         ],
+        SchemaOrg\CreativeWork\MusicComposition::class => [
+            [
+                'iswcCode' => ['Foo'],
+                'musicCompositionForm' => ['Bar'],
+                'musicalKey' => ['C#'],
+            ],
+        ],
         SchemaOrg\CreativeWork\MusicPlaylist::class => [
             [
                 'numTracks' => [2],
             ],
+        ],
+        SchemaOrg\CreativeWork\MusicRecording::class => [
+            [
+                'isrcCode' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\MusicPlaylist\MusicAlbum::class => [
+            [],
         ],
         SchemaOrg\CreativeWork\MusicPlaylist\MusicRelease::class => [
             [
@@ -228,8 +246,46 @@ class DaftObjectFuzzingTest extends Base
         ],
         SchemaOrg\CreativeWork\Question::class => [
             [
+                'answerCount' => [0],
                 'downvoteCount' => [1],
                 'upvoteCount' => [2],
+            ],
+        ],
+        SchemaOrg\CreativeWork\Review::class => [
+            [
+                'reviewAspect' => ['Foo'],
+                'reviewBody' => ['Bar'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\SoftwareApplication::class => [
+            [
+                'applicationCategory' => ['Foo'],
+                'applicationSubCategory' => ['Foo'],
+                'applicationSuite' => ['Foo'],
+                'availableOnDevice' => ['Foo'],
+                'countriesNotSupported' => ['Foo'],
+                'countriesSupported' => ['Foo'],
+                'downloadUrl' => ['Foo'],
+                'featureList' => ['Foo'],
+                'fileSize' => ['Foo'],
+                'installUrl' => ['Foo'],
+                'memoryRequirements' => ['Foo'],
+                'operatingSystem' => ['Foo'],
+                'permissions' => ['Foo'],
+                'processorRequirements' => ['Foo'],
+                'releaseNotes' => ['Foo'],
+                'screenshot' => ['Foo'],
+                'softwareRequirements' => ['Foo'],
+                'softwareVersion' => ['Foo'],
+                'storageRequirements' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\CreativeWork\WebPage::class => [
+            [
+                'breadcrumb' => ['Foo'],
+                'relatedLink' => ['Foo'],
+                'significantLink' => ['Foo'],
+                'speakable' => ['Foo'],
             ],
         ],
         SchemaOrg\Event::class => [
@@ -253,12 +309,22 @@ class DaftObjectFuzzingTest extends Base
         SchemaOrg\Intangible\DataFeedItem::class => [
             [],
         ],
+        SchemaOrg\Intangible\Enumeration\MapCategoryType::class => [
+            [
+                'identifier' => ['Foo'],
+            ],
+        ],
         SchemaOrg\Intangible\Enumeration\MusicAlbumProductionType::class => [
             [
                 'identifier' => ['Foo'],
             ],
         ],
         SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseType::class => [
+            [
+                'identifier' => ['Foo'],
+            ],
+        ],
+        SchemaOrg\Intangible\Enumeration\MusicReleaseFormatType::class => [
             [
                 'identifier' => ['Foo'],
             ],

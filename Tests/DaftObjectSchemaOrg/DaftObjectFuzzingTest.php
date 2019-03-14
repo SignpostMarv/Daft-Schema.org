@@ -492,9 +492,9 @@ class DaftObjectFuzzingTest extends Base
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
         foreach (array_keys(self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR) as $type) {
-        foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
-            yield [$type, $args];
-        }
+            foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
+                yield [$type, $args];
+            }
         }
     }
 }

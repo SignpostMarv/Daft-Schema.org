@@ -6,8 +6,12 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
+use CallbackFilterIterator;
 use InvalidArgumentException;
 use Generator;
+use RecursiveIteratorIterator;
+use RecursiveDirectoryIterator;
+use RecursiveCallbackFilterIterator;
 use ReflectionClassConstant;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
@@ -16,412 +20,6 @@ use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
 class DaftObjectFuzzingTest extends Base
 {
     use DataProviderTrait;
-
-    const DAFT_SCHEMA_FUZZING_VIA_GENERATOR = [
-        SchemaOrg\Thing::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork::class => [
-            'accessMode' => ['Foo'],
-            'accessModeSufficient' => ['Bar'],
-            'accessibilityAPI' => ['Baz'],
-            'accessibilityControl' => ['Bat'],
-            'accessibilityFeature' => ['Bag'],
-            'accessibilityHazard' => ['Foo Bar'],
-            'accessibilitySummary' => ['Bar Baz'],
-            'alternativeHeadline' => ['Baz Bat'],
-            'citation' => [
-                'Foo',
-            ],
-            'commentCount' => [3],
-            'copyrightYear' => [
-                1970,
-            ],
-            'correction' => [
-                'Baz',
-            ],
-            'discussionUrl' => [
-                'https://example.com/',
-            ],
-            'educationalUse' => [
-                'Baz',
-            ],
-            'encodingFormat' => [
-                'Bat',
-            ],
-            'headline' => [
-                'Bag',
-            ],
-            'interactivityType' => [
-                'Foo Bar',
-            ],
-            'isBasedOn' => [
-                'Bar Baz',
-            ],
-            'isFamilyFriendly' => [
-                true,
-            ],
-            'keywords' => [
-                'Bar Baz',
-            ],
-            'learningResourceType' => [
-                'Baz Bat',
-            ],
-            'license' => [
-                'Bat Bag',
-            ],
-            'position' => [
-                1,
-                'ii',
-                3,
-                'iv',
-                5,
-                'vi',
-            ],
-            'schemaVersion' => [
-                '0.0.0',
-            ],
-            'sdLicense' => [
-                'Bat Bag',
-            ],
-            'temporalCoverage' => [
-                'January 1st 1970 01:02:03',
-            ],
-            'text' => [
-                'Foo Bar Baz',
-            ],
-            'thumbnailUrl' => [
-                'https://example.com/',
-            ],
-            'version' => [
-                0,
-                '0.0.0',
-            ],
-        ],
-        SchemaOrg\CreativeWork\Article\NewsArticle::class => [
-            [
-                'dateline' => ['Foo, Bar, January 1st 1970'],
-                'printColumn' => ['Foo'],
-                'printEdition' => ['Bar'],
-                'printPage' => ['Baz'],
-                'printSection' => ['Bat'],
-                'articleBody' => ['Bag'],
-                'articleSection' => ['Foo Bar'],
-                'backstory' => [
-                    'Bar Baz',
-                ],
-                'pageEnd' => [
-                    2,
-                    'ii',
-                ],
-                'pageStart' => [
-                    1,
-                    'i',
-                ],
-                'pagination' => [
-                    '1-2',
-                    'i-ii',
-                ],
-                'wordCount' => [
-                    0,
-                ],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Comment::class => [
-            [
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Comment\Answer::class => [
-            [],
-        ],
-        SchemaOrg\CreativeWork\Comment\CorrectionComment::class => [
-            [
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\DataCatalog::class => [
-            [
-                'measurementTechnique' => [
-                    'Bag',
-                ],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Dataset::class => [
-            [
-                'issn' => [
-                    'Foo',
-                ],
-                'measurementTechnique' => [
-                    'Bar',
-                ],
-                'variableMeasured' => [
-                    'Baz',
-                ],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Dataset\DataFeed::class => [
-            [
-                'dataFeedElement' => [
-                    'Foo',
-                ],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Map::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject::class => [
-            [
-                'associatedArticle' => [],
-                'bitrate' => ['1kbps'],
-                'contentSize' => ['2kb'],
-                'contentUrl' => ['https://example.com/'],
-                'duration' => [],
-                'embedUrl' => ['https://example.com/'],
-                'encodingFormat' => ['lol/whut'],
-                'height' => [],
-                'playerType' => ['vlc'],
-                'productionCompany' => [],
-                'regionsAllowed' => [],
-                'requiresSubscription' => [true],
-                'uploadDate' => [],
-                'width' => [],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\AudioObject::class => [
-            [
-                'name' => ['audio'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\DataDownload::class => [
-            [
-                'name' => ['Foo'],
-                'measurementTechnique' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\ImageObject::class => [
-            [
-                'caption' => ['Foo'],
-                'exifData' => ['Bar'],
-                'representativeOfPage' => [true],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MediaObject\VideoObject::class => [
-            [
-                'name' => ['video'],
-                'videoFrameSize' => ['1920x1080'],
-                'videoQuality' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicComposition::class => [
-            [
-                'iswcCode' => ['Foo'],
-                'musicCompositionForm' => ['Bar'],
-                'musicalKey' => ['C#'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicPlaylist::class => [
-            [
-                'numTracks' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicRecording::class => [
-            [
-                'isrcCode' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicPlaylist\MusicAlbum::class => [
-            [],
-        ],
-        SchemaOrg\CreativeWork\MusicPlaylist\MusicRelease::class => [
-            [
-                'catalogNumber' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\MusicRecording::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Question::class => [
-            [
-                'answerCount' => [0],
-                'downvoteCount' => [1],
-                'upvoteCount' => [2],
-            ],
-        ],
-        SchemaOrg\CreativeWork\Review::class => [
-            [
-                'reviewAspect' => ['Foo'],
-                'reviewBody' => ['Bar'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\SoftwareApplication::class => [
-            [
-                'applicationCategory' => ['Foo'],
-                'applicationSubCategory' => ['Foo'],
-                'applicationSuite' => ['Foo'],
-                'availableOnDevice' => ['Foo'],
-                'countriesNotSupported' => ['Foo'],
-                'countriesSupported' => ['Foo'],
-                'downloadUrl' => ['Foo'],
-                'featureList' => ['Foo'],
-                'fileSize' => ['Foo'],
-                'installUrl' => ['Foo'],
-                'memoryRequirements' => ['Foo'],
-                'operatingSystem' => ['Foo'],
-                'permissions' => ['Foo'],
-                'processorRequirements' => ['Foo'],
-                'releaseNotes' => ['Foo'],
-                'screenshot' => ['Foo'],
-                'softwareRequirements' => ['Foo'],
-                'softwareVersion' => ['Foo'],
-                'storageRequirements' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\WebPage::class => [
-            [
-                'breadcrumb' => ['Foo'],
-                'relatedLink' => ['Foo'],
-                'significantLink' => ['Foo'],
-                'speakable' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\CreativeWork\WebPageElement::class => [
-            [
-                'identifier' => ['#foo'],
-            ],
-        ],
-        SchemaOrg\Event::class => [
-            [
-                'name' => ['Foo'],
-                'remainingAttendeeCapacity' => [1],
-            ],
-        ],
-        SchemaOrg\Event\PublicationEvent::class => [
-            [
-                'name' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Intangible\AlignmentObject::class => [
-            [
-                'targetUrl' => [
-                    'https://example.com/',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\DataFeedItem::class => [
-            [],
-        ],
-        SchemaOrg\Intangible\Enumeration\MapCategoryType::class => [
-            [
-                'identifier' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Intangible\Enumeration\MusicAlbumProductionType::class => [
-            [
-                'identifier' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseType::class => [
-            [
-                'identifier' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Intangible\Enumeration\MusicReleaseFormatType::class => [
-            [
-                'identifier' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Intangible\Enumeration\QualitativeValue::class => [
-            [
-                'identifier' => [
-                    'L',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\Enumeration\Specialty::class => [
-            [
-                'name' => ['php'],
-            ],
-        ],
-        SchemaOrg\Intangible\Quantity\Duration::class => [
-            [
-                'identifier' => ['PT1M2S'],
-            ],
-        ],
-        SchemaOrg\Intangible\Rating::class => [
-            [
-                'bestRating' => [4, '4/5', 0.8],
-                'ratingValue' => [2.5],
-                'reviewAspect' => ['Foo'],
-                'wostRating' => [1, '1/5', 0.2],
-            ],
-        ],
-        SchemaOrg\Intangible\SpeakableSpecification::class => [
-            [],
-        ],
-        SchemaOrg\Intangible\StructuredValue\InteractionCounter::class => [
-            [
-                'userInteractionCount' => [3],
-            ],
-        ],
-        SchemaOrg\Intangible\StructuredValue\PropertyValue::class => [
-            [
-                'maxValue' => [
-                    20,
-                    30,
-                    40,
-                ],
-                'value' => [
-                    1,
-                    true,
-                    false,
-                    'foo',
-                ],
-            ],
-        ],
-        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class => [
-            [
-                'minValue' => [1],
-                'maxValue' => [10],
-                'value' => [
-                    5,
-                ],
-            ],
-        ],
-        SchemaOrg\Organization::class => [
-            [
-            'name' => ['Baz Bat'],
-            ],
-        ],
-        SchemaOrg\Organization\PerformingGroup\MusicGroup::class => [
-            [
-                'genre' => ['Foo'],
-            ],
-        ],
-        SchemaOrg\Person::class => [
-            [
-                'name' => ['Foo Bar'],
-            ],
-        ],
-        SchemaOrg\Place::class => [
-            [
-                'name' => ['Bar Baz'],
-            ],
-        ],
-        SchemaOrg\Product::class => [
-            [
-                'name' => ['Product']
-            ],
-        ],
-    ];
 
     /**
     * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
@@ -432,11 +30,29 @@ class DaftObjectFuzzingTest extends Base
     {
         $args = [];
 
-        foreach ((self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR[$type] ?? []) as $args) {
-            foreach (self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR as $gimme => $some_more_args) {
-                if ($type !== $gimme && is_a($type, $gimme, true)) {
-                    foreach ($some_more_args as $prop => $val) {
-                        $args[$prop] = $val;
+        foreach ($type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
+            if ( ! isset($args[$property])) {
+                $args[$property] = [];
+            }
+
+            foreach ($types as $sub_type) {
+                if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
+                    switch ($sub_type) {
+                        case 'string':
+                            $args[$property][] = 'Foo';
+                            break;
+                        case 'double':
+                            $args[$property][] = 1.2;
+                            break;
+                        case 'integer':
+                            $args[$property][] = 3;
+                            break;
+                        case 'boolean':
+                            $args[$property][] = true;
+                            break;
+                        default:
+                            var_dump($sub_type);exit(1);
+                            break;
                     }
                 }
             }
@@ -590,9 +206,57 @@ class DaftObjectFuzzingTest extends Base
         }
     }
 
+    protected static function YieldTypeForFuzzing() : Generator
+    {
+        $iterator = new CallbackFilterIterator(
+            new RecursiveIteratorIterator(
+                new RecursiveCallbackFilterIterator(
+                    new RecursiveDirectoryIterator(
+                        (__DIR__ . '/../../src/'),
+                        (
+                            RecursiveDirectoryIterator::CURRENT_AS_PATHNAME |
+                            RecursiveDirectoryIterator::SKIP_DOTS |
+                            RecursiveDirectoryIterator::UNIX_PATHS
+                        )
+                    ),
+                    function (string $path_name) : bool {
+                        return
+                            is_dir($path_name) ||
+                            (
+                                is_file($path_name) &&
+                                '.php' === mb_substr($path_name, -4)
+                            );
+                    }
+                )
+            ),
+            function (string $path_name) : bool {
+                return is_file($path_name);
+            }
+        );
+
+        $root_length = mb_strlen(__DIR__ . '/../../src/');
+
+        foreach ($iterator as $pathname) {
+            $class_name =
+                '\\SignpostMarv\\DaftObject\\SchemaOrg\\' .
+                str_replace('/', '\\', mb_substr($pathname, $root_length, -4));
+
+            if (is_a($class_name, SchemaOrg\Thing::class, true)) {
+                $reflector = new ReflectionClassConstant(
+                    $class_name,
+                    'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
+                );
+
+                if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
+                    yield $class_name;
+                }
+            }
+        }
+    }
+
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
-        foreach (array_keys(self::DAFT_SCHEMA_FUZZING_VIA_GENERATOR) as $type) {
+        foreach (static::YieldTypeForFuzzing() as $type) {
             foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
                 yield [$type, $args];
             }

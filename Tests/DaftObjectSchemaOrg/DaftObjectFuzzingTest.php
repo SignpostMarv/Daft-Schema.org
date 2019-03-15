@@ -13,6 +13,7 @@ use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 use RecursiveCallbackFilterIterator;
 use ReflectionClassConstant;
+use RuntimeException;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
@@ -30,50 +31,66 @@ class DaftObjectFuzzingTest extends Base
     {
         $args = [];
 
-        foreach ($type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
+        $checking_types = [$type];
+
+        $checking = get_parent_class($type);
+
+        while(is_a($checking, SchemaOrg\Thing::class, true)) {
+            if (
+                $checking === (
+                    new ReflectionClassConstant($checking, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS')
+                )->getDeclaringClass()->name
+            ) {
+                $checking_types[] = $checking;
+            }
+
+            $checking = get_parent_class($checking);
+        }
+
+        foreach ($checking_types as $checking) {
+            foreach ($checking::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
             if ( ! isset($args[$property])) {
                 $args[$property] = [];
             }
+                static::assertIsArray(
+                    $types,
+                    (
+                        $checking .
+                        '::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[' .
+                        $property .
+                        '] was not an array, ' .
+                        gettype($types) .
+                        ' given!'
+                    )
+                );
 
             foreach ($types as $sub_type) {
                 if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
                     switch ($sub_type) {
                         case 'string':
-                            $args[$property][] = 'Foo';
+                            $args[$property][] = 'Foo' . count($args[$property]);
                             break;
                         case 'double':
-                            $args[$property][] = 1.2;
+                            $args[$property][] = (float) count($args[$property]);
                             break;
                         case 'integer':
-                            $args[$property][] = 3;
+                            $args[$property][] = count($args[$property]);
                             break;
                         case 'boolean':
                             $args[$property][] = true;
                             break;
                         default:
-                            var_dump($sub_type);exit(1);
+                            throw new RuntimeException('Unsupported type: ' . $sub_type);
                             break;
                     }
                 }
             }
         }
+        }
 
         if ($deep) {
             $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
             if ($type === $const->getDeclaringClass()->name) {
-                foreach ($type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
-                    static::assertIsArray(
-                        $types,
-                        (
-                            $type .
-                            '::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[' .
-                            $property .
-                            '] was not an array, ' .
-                            gettype($types) .
-                            ' given!'
-                        )
-                    );
-                }
                 foreach (
                     array_map(
                         function (array $in) : array {
@@ -86,10 +103,6 @@ class DaftObjectFuzzingTest extends Base
                         $type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS
                     ) as $property => $types
                 ) {
-                    if ( ! isset($args[$property])) {
-                        $args[$property] = [];
-                    }
-
                     foreach (
                         static::YieldObjectsOfTypeForFuzzing($types) as $obj
                     ) {
@@ -100,14 +113,23 @@ class DaftObjectFuzzingTest extends Base
         }
 
         foreach (array_keys($args) as $property) {
-            if (count($args[$property]) < 1) {
+            if ($type === $const->getDeclaringClass()->name) {
+                static::assertGreaterThan(
+                    0,
+                    count($args[$property]),
+                    (
+                        $type .
+                        '[' .
+                        $property .
+                        '] did not have any values when generated data passes were done!'
+                    )
+                );
+            } elseif (count($args[$property]) < 1) {
                 unset($args[$property]);
             }
         }
 
-        if (count($args) > 0) {
             yield $args;
-        }
 
 
         if ($type === SchemaOrg\Intangible\Enumeration\QualitativeValue::class) {

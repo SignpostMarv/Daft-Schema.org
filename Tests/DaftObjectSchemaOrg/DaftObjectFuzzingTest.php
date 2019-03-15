@@ -49,9 +49,9 @@ class DaftObjectFuzzingTest extends Base
 
         foreach ($checking_types as $checking) {
             foreach ($checking::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
-            if ( ! isset($args[$property])) {
-                $args[$property] = [];
-            }
+                if ( ! isset($args[$property])) {
+                    $args[$property] = [];
+                }
                 static::assertIsArray(
                     $types,
                     (
@@ -64,28 +64,28 @@ class DaftObjectFuzzingTest extends Base
                     )
                 );
 
-            foreach ($types as $sub_type) {
-                if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
-                    switch ($sub_type) {
-                        case 'string':
-                            $args[$property][] = 'Foo' . count($args[$property]);
-                            break;
-                        case 'double':
-                            $args[$property][] = (float) count($args[$property]);
-                            break;
-                        case 'integer':
-                            $args[$property][] = count($args[$property]);
-                            break;
-                        case 'boolean':
-                            $args[$property][] = true;
-                            break;
-                        default:
-                            throw new RuntimeException('Unsupported type: ' . $sub_type);
-                            break;
+                foreach ($types as $sub_type) {
+                    if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
+                        switch ($sub_type) {
+                            case 'string':
+                                $args[$property][] = 'Foo' . count($args[$property]);
+                                break;
+                            case 'double':
+                                $args[$property][] = (float) count($args[$property]);
+                                break;
+                            case 'integer':
+                                $args[$property][] = count($args[$property]);
+                                break;
+                            case 'boolean':
+                                $args[$property][] = true;
+                                break;
+                            default:
+                                throw new RuntimeException('Unsupported type: ' . $sub_type);
+                                break;
+                        }
                     }
                 }
             }
-        }
         }
 
         if ($deep) {
@@ -129,8 +129,7 @@ class DaftObjectFuzzingTest extends Base
             }
         }
 
-            yield $args;
-
+        yield $args;
 
         if ($type === SchemaOrg\Intangible\Enumeration\QualitativeValue::class) {
             yield [

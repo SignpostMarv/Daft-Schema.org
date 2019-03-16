@@ -6,6 +6,17 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
+
+/**
+* @property array<int, string|PostalAddress> $address
+* @property array<int, string|Country> $addressCountry
+* @property array<int, string|float|int> $elevation
+* @property array<int, string|float|int> $latitude
+* @property array<int, string|float|int> $longitude
+* @property array<int, string> $postalCode
+*/
 class GeoCoordinates extends Thing
 {
     use DaftObjectTraits\HasAddress;
@@ -22,6 +33,35 @@ class GeoCoordinates extends Thing
         'latitude',
         'longitude',
         'postalCode',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'address' => [
+            'string',
+            PostalAddress::class,
+        ],
+        'addressCountry' => [
+            'string',
+            Country::class,
+        ],
+        'elevation' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'latitude' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'longitude' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'postalCode' => [
+            'string',
+        ],
     ];
 
     /**

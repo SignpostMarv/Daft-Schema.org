@@ -14,12 +14,12 @@ trait HasAddressCountry
     use DaftObjectTrait;
 
     /**
-    * @return array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country>
+    * @return array<int, string|Country>
     */
     public function GetAddressCountry() : array
     {
         /**
-        * @var array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country>
+        * @var array<int, string|Country>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'addressCountry',
@@ -31,7 +31,7 @@ trait HasAddressCountry
     }
 
     /**
-    * @param array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country> $value
+    * @param array<int, string|Country> $value
     */
     public function SetAddressCountry(array $value) : void
     {

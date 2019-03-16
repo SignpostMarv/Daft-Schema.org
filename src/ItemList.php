@@ -6,6 +6,11 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+/**
+* @property array<int, string|Intangible\ListItem|Thing> $itemListElement
+* @property array<int, string|Intangible\Enumeration\ItemListOrderType> $itemListOrder
+* @property array<int, int> $numberOfItems
+*/
 class ItemList extends Thing
 {
     const SCHEMA_ORG_TYPE = 'ItemList';
@@ -14,6 +19,21 @@ class ItemList extends Thing
         'itemListElement',
         'itemListOrder',
         'numberOfItems',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'itemListElement' => [
+            'string',
+            Intangible\ListItem::class,
+            Thing::class,
+        ],
+        'itemListOrder' => [
+            'string',
+            Intangible\Enumeration\ItemListOrderType::class,
+        ],
+        'numberOfItems' => [
+            'integer',
+        ],
     ];
 
     /**

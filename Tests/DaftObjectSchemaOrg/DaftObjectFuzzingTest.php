@@ -42,9 +42,9 @@ class DaftObjectFuzzingTest extends Base
 
         if ($deep && ! isset(self::$deep_cache[$type])) {
             $args = [];
-        foreach (
-            $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
-        ) {
+            foreach (
+                $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
+            ) {
                 if ( ! isset($args[$property])) {
                     $args[$property] = [];
                 }
@@ -85,34 +85,34 @@ class DaftObjectFuzzingTest extends Base
                     ) {
                         foreach (static::YieldCachedObjectsOfTypeForFuzzing([$sub_type]) as $obj) {
                             if ( ! in_array($obj, $args[$property], true)) {
-                        $args[$property][] = $obj;
+                                $args[$property][] = $obj;
                             }
                         }
                     }
                 }
             }
 
-        $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
+            $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
 
-        foreach (array_keys($args) as $property) {
-            if (
-                $type === $const->getDeclaringClass()->name &&
-                $deep
-            ) {
-                static::assertGreaterThan(
-                    0,
-                    count($args[$property]),
-                    (
-                        $type .
-                        '[' .
-                        $property .
-                        '] did not have any values when generated data passes were done!'
-                    )
-                );
-            } elseif (count($args[$property]) < 1) {
-                unset($args[$property]);
+            foreach (array_keys($args) as $property) {
+                if (
+                    $type === $const->getDeclaringClass()->name &&
+                    $deep
+                ) {
+                    static::assertGreaterThan(
+                        0,
+                        count($args[$property]),
+                        (
+                            $type .
+                            '[' .
+                            $property .
+                            '] did not have any values when generated data passes were done!'
+                        )
+                    );
+                } elseif (count($args[$property]) < 1) {
+                    unset($args[$property]);
+                }
             }
-        }
 
             self::$deep_cache[$type] = $args;
         } elseif ( ! $deep && ! isset(self::$cache[$type])) {

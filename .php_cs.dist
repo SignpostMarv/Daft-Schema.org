@@ -8,7 +8,8 @@ declare(strict_types=1);
 
 namespace SignpostMarv\CS;
 
-return ConfigUsedWithStaticAnalysisWithoutNullableReturn::createWithPaths(
+return ConfigUsedWithStaticAnalysisWithoutNullableReturn::createWithPaths(...[
     __FILE__,
-    (__DIR__ . '/src/')
-);
+    (__DIR__ . '/src/'),
+    (__DIR__ . '/Tests/'),
+]);

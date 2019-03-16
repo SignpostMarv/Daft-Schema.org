@@ -40,14 +40,6 @@ class DaftObjectFuzzingTest extends Base
     {
         $args = $deep ? (self::$deep_cache[$type] ?? []) : (self::$cache[$type] ?? []);
 
-        /*
-        if (
-            ! isset(
-                self::$cache['YieldArgsForTypeForFuzzing'],
-                self::$cache['YieldArgsForTypeForFuzzing'][$type]
-            )
-        ) {
-        */
         if ($deep && ! isset(self::$deep_cache[$type])) {
             $args = [];
         foreach (
@@ -128,34 +120,6 @@ class DaftObjectFuzzingTest extends Base
 
             $args = self::$cache[$type];
         }
-            /*
-            self::$cache['YieldArgsForTypeForFuzzing'][$type] = array_map(
-                function (array $in) : array {
-                    return array_filter($in, 'is_scalar');
-                },
-                $args
-            );
-        } else {
-            $args = self::$cache['YieldArgsForTypeForFuzzing'][$type];
-
-            if ($deep) {
-                foreach (
-                    $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
-                ) {
-                    foreach ($types as $sub_type) {
-                        if (
-                            is_a($sub_type, SchemaOrg\Thing::class, true) ||
-                            is_a($sub_type, SchemaOrg\DataTypes\DataType::class, true)
-                        ) {
-                            foreach (static::YieldCachedObjectsOfTypeForFuzzing([$sub_type]) as $obj) {
-                            $args[$property][] = $obj;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-        */
 
         yield $args;
 
@@ -284,12 +248,6 @@ class DaftObjectFuzzingTest extends Base
 
     protected static function YieldTypeForFuzzing() : Generator
     {
-        /*
-        $cache_file = __DIR__ . '/YieldTypeForFuzzing.cache.json';
-
-        if ( ! is_file($cache_file)) {
-            $cache = ['YieldTypeForFuzzing' => []];
-            */
         $iterator = new CallbackFilterIterator(
             new RecursiveIteratorIterator(
                 new RecursiveCallbackFilterIterator(
@@ -333,34 +291,11 @@ class DaftObjectFuzzingTest extends Base
                     $reflector = new ReflectionClass($class_name);
 
                     if ( ! $reflector->isAbstract()) {
-                        /*
-                        $cache['YieldTypeForFuzzing'][] = $reflector->name;
-                        */
-
                         yield $reflector->name;
                     }
                 }
             }
         }
-        /*
-            self::$cache = $cache;
-        } else {
-            $cache = json_decode(file_get_contents($cache_file), true);
-
-            static::assertIsArray($cache);
-
-            self::$cache = $cache;
-
-            yield from array_filter(
-                array_filter(self::$cache['YieldTypeForFuzzing'], 'is_string'),
-                function (string $maybe) : bool {
-                    return
-                        is_a($maybe, SchemaOrg\Thing::class, true) &&
-                        ! (new ReflectionClass($maybe))->isAbstract();
-                }
-            );
-        }
-        */
     }
 
     protected function FuzzingImplementationsViaGenerator() : Generator
@@ -370,11 +305,5 @@ class DaftObjectFuzzingTest extends Base
                 yield [$type, $args];
             }
         }
-
-        /*
-        $cache_file = __DIR__ . '/YieldTypeForFuzzing.cache.json';
-
-        file_put_contents($cache_file, json_encode(self::$cache, JSON_PRETTY_PRINT));
-        */
     }
 }

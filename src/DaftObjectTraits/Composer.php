@@ -6,6 +6,8 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait Composer
@@ -13,12 +15,12 @@ trait Composer
     use DaftObjectTrait;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Organization|Person>
     */
     public function GetComposer() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Organization|Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'composer',
@@ -30,7 +32,7 @@ trait Composer
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Organization|Person> $value
     */
     public function SetComposer(array $value) : void
     {

@@ -9,8 +9,15 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Event;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Event as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\BroadcastService;
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, bool> $isAccessibleForFree
+* @property array<int, Organization|Person> $publishedBy
+* @property array<int, BroadcastService> $publishedOn
+*/
 class PublicationEvent extends Base
 {
     use DaftObjectTraits\HasIsAccessibleForFree;
@@ -23,13 +30,26 @@ class PublicationEvent extends Base
         'publishedOn',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'isAccessibleForFree' => [
+            'boolean',
+        ],
+        'publishedBy' => [
+            Organization::class,
+            Person::class,
+        ],
+        'publishedOn' => [
+            BroadcastService::class,
+        ],
+    ];
+
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Organization|Person>
     */
     public function GetPublishedBy() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Organization|Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'publishedBy',
@@ -41,7 +61,7 @@ class PublicationEvent extends Base
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Organization|Person> $value
     */
     public function SetPublishedBy(array $value) : void
     {

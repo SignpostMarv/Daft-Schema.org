@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasActor
@@ -13,12 +14,12 @@ trait HasActor
     use DaftObjectTrait;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Person>
     */
     public function GetActor() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'actor',
@@ -30,7 +31,7 @@ trait HasActor
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Person> $value
     */
     public function SetActor(array $value) : void
     {

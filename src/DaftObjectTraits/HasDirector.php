@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasDirector
@@ -13,12 +14,12 @@ trait HasDirector
     use DaftObjectTrait;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Person>
     */
     public function GetDirector() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'director',
@@ -30,7 +31,7 @@ trait HasDirector
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Person> $value
     */
     public function SetDirector(array $value) : void
     {

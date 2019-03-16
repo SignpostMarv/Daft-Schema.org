@@ -6,10 +6,49 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\EventStatusType;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Language;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 
+/**
+* @property array<int, Thing> $about
+* @property array<int, Person> $actor
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, Organization|Person> $attendee
+* @property array<int, Audience> $audience
+* @property array<int, Organization|Person> $composer
+* @property array<int, Organization|Person> $contributor
+* @property array<int, Person> $director
+* @property array<int, DateTime> $doorTime
+* @property array<int, Duration> $duration
+* @property array<int, Date|DateTime> $endDate
+* @property array<int, EventStatusType> $eventStatus
+* @property array<int, Organization|Person> $funder
+* @property array<int, string|Language> $inLanguage
+* @property array<int, bool> $isAccessibleForFree
+* @property array<int, string|Place|PostalAddress> $location
+* @property array<int, Organization|Person> $maximumAttendeeCapacity
+* @property array<int, Offer> $offers
+* @property array<int, Organization|Person> $organizer
+* @property array<int, Organization|Person> $performer
+* @property array<int, Date> $previousStartDate
+* @property array<int, CreativeWork> $recordedIn
+* @property array<int, int> $remainingAttendeeCapacity
+* @property array<int, Review> $review
+* @property array<int, Organization|Person> $sponsor
+* @property array<int, Date> $startDate
+* @property array<int, Event> $subEvent
+* @property array<int, Event> $superEvent
+* @property array<int, Organization|Person> $translator
+* @property array<int, string> $typicalAgeRange
+* @property array<int, CreativeWork> $workFeatured
+* @property array<int, CreativeWork> $workPerformed
+*/
 class Event extends Thing
 {
     use DaftObjectTraits\HasAboutThing;
@@ -64,6 +103,118 @@ class Event extends Thing
         'typicalAgeRange',
         'workFeatured',
         'workPerformed',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'about' => [
+            Thing::class,
+        ],
+        'actor' => [
+            Person::class,
+        ],
+        'aggregateRating' => [
+            AggregateRating::class,
+        ],
+        'attendee' => [
+            Organization::class,
+            Person::class,
+        ],
+        'audience' => [
+            Audience::class,
+        ],
+        'composer' => [
+            Organization::class,
+            Person::class,
+        ],
+        'contributor' => [
+            Organization::class,
+            Person::class,
+        ],
+        'director' => [
+            Person::class,
+        ],
+        'doorTime' => [
+            DateTime::class,
+        ],
+        'duration' => [
+            Duration::class,
+        ],
+        'endDate' => [
+            Date::class,
+            DateTime::class,
+        ],
+        'eventStatus' => [
+            EventStatusType::class,
+        ],
+        'funder' => [
+            Organization::class,
+            Person::class,
+        ],
+        'inLanguage' => [
+            'string',
+            Language::class,
+        ],
+        'isAccessibleForFree' => [
+            'boolean',
+        ],
+        'location' => [
+            'string',
+            Place::class,
+            PostalAddress::class,
+        ],
+        'maximumAttendeeCapacity' => [
+            Organization::class,
+            Person::class,
+        ],
+        'offers' => [
+            Offer::class,
+        ],
+        'organizer' => [
+            Organization::class,
+            Person::class,
+        ],
+        'performer' => [
+            Organization::class,
+            Person::class,
+        ],
+        'previousStartDate' => [
+            Date::class,
+        ],
+        'recordedIn' => [
+            CreativeWork::class,
+        ],
+        'remainingAttendeeCapacity' => [
+            'integer',
+        ],
+        'review' => [
+            Review::class,
+        ],
+        'sponsor' => [
+            Organization::class,
+            Person::class,
+        ],
+        'startDate' => [
+            Date::class,
+        ],
+        'subEvent' => [
+            Event::class,
+        ],
+        'superEvent' => [
+            Event::class,
+        ],
+        'translator' => [
+            Organization::class,
+            Person::class,
+        ],
+        'typicalAgeRange' => [
+            'string',
+        ],
+        'workFeatured' => [
+            CreativeWork::class,
+        ],
+        'workPerformed' => [
+            CreativeWork::class,
+        ],
     ];
 
     /**

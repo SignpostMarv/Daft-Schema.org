@@ -6,8 +6,20 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 
+/**
+* @property array<int, QuantitativeValue> $eligibleQuantity
+* @property array<int, PriceSpecification> $eligibleTransactionVolume
+* @property array<int, int> $maxPrice
+* @property array<int, int> $minPrice
+* @property array<int, int|string> $price
+* @property array<int, string> $priceCurrency
+* @property array<int, bool> $valueAddedTaxIncluded
+* @property array<int, DateTime> $validFrom
+* @property array<int, DateTime> $validThrough
+*/
 class PriceSpecification extends Thing
 {
     use DaftObjectTraits\HasValidFromThrough;
@@ -24,6 +36,37 @@ class PriceSpecification extends Thing
         'validFrom',
         'validThrough',
         'valueAddedTaxIncluded',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'eligibleQuantity' => [
+            QuantitativeValue::class,
+        ],
+        'eligibleTransactionVolume' => [
+            PriceSpecification::class,
+        ],
+        'maxPrice' => [
+            'integer',
+        ],
+        'minPrice' => [
+            'integer',
+        ],
+        'price' => [
+            'integer',
+            'string',
+        ],
+        'priceCurrency' => [
+            'string',
+        ],
+        'valueAddedTaxIncluded' => [
+            'boolean',
+        ],
+        'validFrom' => [
+            DateTime::class,
+        ],
+        'validThrough' => [
+            DateTime::class,
+        ],
     ];
 
     /**
@@ -48,11 +91,9 @@ class PriceSpecification extends Thing
     */
     public function SetEligibleQuantity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleQuantity',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -78,11 +119,9 @@ class PriceSpecification extends Thing
     */
     public function SetEligibleTransactionVolume(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleTransactionVolume',
-            __METHOD__,
-            $value,
-            PriceSpecification::class
+            $value
         );
     }
 
@@ -187,9 +226,8 @@ class PriceSpecification extends Thing
     */
     public function SetPriceCurrency(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'priceCurrency',
-            __METHOD__,
             $value
         );
     }

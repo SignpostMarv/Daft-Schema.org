@@ -7,8 +7,8 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Article;
-use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebPage\AboutPage;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;

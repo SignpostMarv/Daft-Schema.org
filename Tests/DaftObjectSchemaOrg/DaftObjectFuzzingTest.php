@@ -12,6 +12,7 @@ use Generator;
 use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
 use RecursiveCallbackFilterIterator;
+use ReflectionClass;
 use ReflectionClassConstant;
 use RuntimeException;
 use SignpostMarv\DaftObject\SchemaOrg;
@@ -22,6 +23,14 @@ class DaftObjectFuzzingTest extends Base
 {
     use DataProviderTrait;
 
+    private static $cache = [];
+
+    private static $deep_cache = [];
+
+    private static $obj_cache = [];
+
+    private static $obj_deep_cache = [];
+
     /**
     * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
     *
@@ -29,33 +38,28 @@ class DaftObjectFuzzingTest extends Base
     */
     protected static function YieldArgsForTypeForFuzzing(string $type, bool $deep = false) : Generator
     {
-        $args = [];
+        $args = $deep ? (self::$deep_cache[$type] ?? []) : (self::$cache[$type] ?? []);
 
-        $checking_types = [$type];
-
-        $checking = get_parent_class($type);
-
-        while(is_a($checking, SchemaOrg\Thing::class, true)) {
-            if (
-                $checking === (
-                    new ReflectionClassConstant($checking, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS')
-                )->getDeclaringClass()->name
-            ) {
-                $checking_types[] = $checking;
-            }
-
-            $checking = get_parent_class($checking);
-        }
-
-        foreach ($checking_types as $checking) {
-            foreach ($checking::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $property => $types) {
+        /*
+        if (
+            ! isset(
+                self::$cache['YieldArgsForTypeForFuzzing'],
+                self::$cache['YieldArgsForTypeForFuzzing'][$type]
+            )
+        ) {
+        */
+        if ($deep && ! isset(self::$deep_cache[$type])) {
+            $args = [];
+        foreach (
+            $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
+        ) {
                 if ( ! isset($args[$property])) {
                     $args[$property] = [];
                 }
                 static::assertIsArray(
                     $types,
                     (
-                        $checking .
+                        $type .
                         '::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[' .
                         $property .
                         '] was not an array, ' .
@@ -83,37 +87,26 @@ class DaftObjectFuzzingTest extends Base
                                 throw new RuntimeException('Unsupported type: ' . $sub_type);
                                 break;
                         }
-                    }
-                }
-            }
-        }
-
-        if ($deep) {
-            $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
-            if ($type === $const->getDeclaringClass()->name) {
-                foreach (
-                    array_map(
-                        function (array $in) : array {
-                            return array_filter($in, function (string $maybe) : bool {
-                                return
-                                    is_a($maybe, SchemaOrg\Thing::class, true) ||
-                                    is_a($maybe, SchemaOrg\DataTypes\DataType::class, true);
-                            });
-                        },
-                        $type::PROPERTIES_WITH_MULTI_TYPED_ARRAYS
-                    ) as $property => $types
-                ) {
-                    foreach (
-                        static::YieldObjectsOfTypeForFuzzing($types) as $obj
+                    } elseif (
+                        is_a($sub_type, SchemaOrg\Thing::class, true) ||
+                        is_a($sub_type, SchemaOrg\DataTypes\DataType::class, true)
                     ) {
+                        foreach (static::YieldCachedObjectsOfTypeForFuzzing([$sub_type]) as $obj) {
+                            if ( ! in_array($obj, $args[$property], true)) {
                         $args[$property][] = $obj;
+                            }
+                        }
                     }
                 }
             }
-        }
+
+        $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
 
         foreach (array_keys($args) as $property) {
-            if ($type === $const->getDeclaringClass()->name) {
+            if (
+                $type === $const->getDeclaringClass()->name &&
+                $deep
+            ) {
                 static::assertGreaterThan(
                     0,
                     count($args[$property]),
@@ -128,6 +121,41 @@ class DaftObjectFuzzingTest extends Base
                 unset($args[$property]);
             }
         }
+
+            self::$deep_cache[$type] = $args;
+        } elseif ( ! $deep && ! isset(self::$cache[$type])) {
+            self::$cache[$type] = ['name' => ['Foo']];
+
+            $args = self::$cache[$type];
+        }
+            /*
+            self::$cache['YieldArgsForTypeForFuzzing'][$type] = array_map(
+                function (array $in) : array {
+                    return array_filter($in, 'is_scalar');
+                },
+                $args
+            );
+        } else {
+            $args = self::$cache['YieldArgsForTypeForFuzzing'][$type];
+
+            if ($deep) {
+                foreach (
+                    $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
+                ) {
+                    foreach ($types as $sub_type) {
+                        if (
+                            is_a($sub_type, SchemaOrg\Thing::class, true) ||
+                            is_a($sub_type, SchemaOrg\DataTypes\DataType::class, true)
+                        ) {
+                            foreach (static::YieldCachedObjectsOfTypeForFuzzing([$sub_type]) as $obj) {
+                            $args[$property][] = $obj;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        */
 
         yield $args;
 
@@ -219,7 +247,7 @@ class DaftObjectFuzzingTest extends Base
                 );
             } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\XPathType::class) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
-            } else {
+            } elseif ( ! (new ReflectionClass($gimme))->isAbstract()) {
                 foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
                     yield new $gimme($args);
                 }
@@ -227,8 +255,41 @@ class DaftObjectFuzzingTest extends Base
         }
     }
 
+    protected static function YieldCachedObjectsOfTypeForFuzzing(
+        array $types,
+        bool $deep = false
+    ) : Generator {
+        if ($deep) {
+            foreach ($types as $gimme) {
+                if ( ! isset(self::$obj_deep_cache[$gimme])) {
+                    self::$obj_deep_cache[$gimme] = iterator_to_array(
+                        static::YieldObjectsOfTypeForFuzzing([$gimme], $deep)
+                    );
+                }
+
+                yield from self::$obj_deep_cache[$gimme];
+            }
+        } else {
+            foreach ($types as $gimme) {
+                if ( ! isset(self::$obj_cache[$gimme])) {
+                    self::$obj_cache[$gimme] = iterator_to_array(
+                        static::YieldObjectsOfTypeForFuzzing([$gimme], $deep)
+                    );
+                }
+
+                yield from self::$obj_cache[$gimme];
+            }
+        }
+    }
+
     protected static function YieldTypeForFuzzing() : Generator
     {
+        /*
+        $cache_file = __DIR__ . '/YieldTypeForFuzzing.cache.json';
+
+        if ( ! is_file($cache_file)) {
+            $cache = ['YieldTypeForFuzzing' => []];
+            */
         $iterator = new CallbackFilterIterator(
             new RecursiveIteratorIterator(
                 new RecursiveCallbackFilterIterator(
@@ -269,10 +330,37 @@ class DaftObjectFuzzingTest extends Base
                 );
 
                 if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
-                    yield $class_name;
+                    $reflector = new ReflectionClass($class_name);
+
+                    if ( ! $reflector->isAbstract()) {
+                        /*
+                        $cache['YieldTypeForFuzzing'][] = $reflector->name;
+                        */
+
+                        yield $reflector->name;
+                    }
                 }
             }
         }
+        /*
+            self::$cache = $cache;
+        } else {
+            $cache = json_decode(file_get_contents($cache_file), true);
+
+            static::assertIsArray($cache);
+
+            self::$cache = $cache;
+
+            yield from array_filter(
+                array_filter(self::$cache['YieldTypeForFuzzing'], 'is_string'),
+                function (string $maybe) : bool {
+                    return
+                        is_a($maybe, SchemaOrg\Thing::class, true) &&
+                        ! (new ReflectionClass($maybe))->isAbstract();
+                }
+            );
+        }
+        */
     }
 
     protected function FuzzingImplementationsViaGenerator() : Generator
@@ -282,5 +370,11 @@ class DaftObjectFuzzingTest extends Base
                 yield [$type, $args];
             }
         }
+
+        /*
+        $cache_file = __DIR__ . '/YieldTypeForFuzzing.cache.json';
+
+        file_put_contents($cache_file, json_encode(self::$cache, JSON_PRETTY_PRINT));
+        */
     }
 }

@@ -31,8 +31,11 @@
     },
     "scripts": {
         "scrutinizer": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover",
             "@tests"
+        ],
+        "coverage-html": [
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-html ./phpunit/"
         ],
         "tests": [
             "phpstan analyse -c ./phpstan.neon .php_cs.dist src",

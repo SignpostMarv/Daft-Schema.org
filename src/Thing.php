@@ -1057,6 +1057,14 @@ class Thing extends AbstractArrayBackedDaftObject implements
         foreach ($value as $val) {
             if ( ! in_array($val, $out, true)) {
                 $out[] = $val;
+            } else {
+                throw new InvalidArgumentException(
+                    'Arguments passed to ' .
+                    $method .
+                    ' must be unique, ' .
+                    var_export($val, true) .
+                    ' already found!'
+                );
             }
         }
 

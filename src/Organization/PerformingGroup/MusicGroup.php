@@ -13,6 +13,11 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, MusicAlbum> $album
+* @property array<int, string> $genre
+* @property array<int, ItemList|MusicRecording> $track
+*/
 class MusicGroup extends Base
 {
     use DaftObjectTraits\Genre;
@@ -23,6 +28,19 @@ class MusicGroup extends Base
         'album',
         'genre',
         'track',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'album' => [
+            MusicAlbum::class,
+        ],
+        'genre' => [
+            'string',
+        ],
+        'track' => [
+            ItemList::class,
+            MusicRecording::class,
+        ],
     ];
 
     /**

@@ -7,10 +7,51 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Article;
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebPage\AboutPage;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Demand;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList\OfferCatalog;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Language;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\ProgramMembership;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OwnershipInfo;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 
+/**
+* @property array<int, string|PostalAddress> $address
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, string> $award
+* @property array<int, Brand|Organization> $brand
+* @property array<int, ContactPoint> $contactPoint
+* @property array<int, string> $duns
+* @property array<int, string> $email
+* @property array<int, string> $faxNumber
+* @property array<int, Organization|Person> $funder
+* @property array<int, string> $globalLocationNumber
+* @property array<int, OfferCatalog> $hasOfferCatalog
+* @property array<int, Place> $hasPOS
+* @property array<int, string|Thing> $knowsAbout
+* @property array<int, string|Language> $knowsLanguage
+* @property array<int, string|Place|PostalAddress> $location
+* @property array<int, ImageObject> $logo
+* @property array<int, Offer> $makesOffer
+* @property array<int, Organization|Person> $member
+* @property array<int, Organization|ProgramMembership> $memberOf
+* @property array<int, string> $naics
+* @property array<int, OwnershipInfo|Product> $owns
+* @property array<int, string|CreativeWork> $publishingPrinciples
+* @property array<int, Review> $review
+* @property array<int, Demand> $seeks
+* @property array<int, Organization|Person> $sponsor
+* @property array<int, string> $taxID
+* @property array<int, string> $telephone
+* @property array<int, string> $vatID
+*/
 class Organization extends Thing
 {
     use DaftObjectTraits\HasAddress;
@@ -98,6 +139,105 @@ class Organization extends Thing
         'telephone',
         'unnamedSourcesPolicy',
         'vatID',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'address' => [
+            'string',
+            PostalAddress::class,
+        ],
+        'aggregateRating' => [
+            AggregateRating::class,
+        ],
+        'award' => [
+            'string',
+        ],
+        'brand' => [
+            Brand::class,
+            Organization::class,
+        ],
+        'contactPoint' => [
+            ContactPoint::class,
+        ],
+        'duns' => [
+            'string',
+        ],
+        'email' => [
+            'string',
+        ],
+        'faxNumber' => [
+            'string',
+        ],
+        'funder' => [
+            Organization::class,
+            Person::class,
+        ],
+        'globalLocationNumber' => [
+            'string',
+        ],
+        'hasOfferCatalog' => [
+            OfferCatalog::class,
+        ],
+        'hasPOS' => [
+            Place::class,
+        ],
+        'knowsAbout' => [
+            'string',
+            Thing::class,
+        ],
+        'knowsLanguage' => [
+            'string',
+            Language::class,
+        ],
+        'location' => [
+            'string',
+            Place::class,
+            PostalAddress::class,
+        ],
+        'logo' => [
+            ImageObject::class,
+        ],
+        'makesOffer' => [
+            Offer::class,
+        ],
+        'member' => [
+            Organization::class,
+            Person::class,
+        ],
+        'memberOf' => [
+            Organization::class,
+            ProgramMembership::class,
+        ],
+        'naics' => [
+            'string',
+        ],
+        'owns' => [
+            OwnershipInfo::class,
+            Product::class,
+        ],
+        'publishingPrinciples' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'review' => [
+            Review::class,
+        ],
+        'seeks' => [
+            Demand::class,
+        ],
+        'sponsor' => [
+            Organization::class,
+            Person::class,
+        ],
+        'taxID' => [
+            'string',
+        ],
+        'telephone' => [
+            'string',
+        ],
+        'vatID' => [
+            'string',
+        ],
     ];
 
     /**

@@ -33,13 +33,14 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
     ) : DateTimeInterface {
         $out = static::createFromFormat($value, static::ObtainFormat(), $tz);
 
-        if ( ! is_object($out) || ! is_a($out, static::class)) {
+        if ( ! is_object($out)) {
             throw new RuntimeException(
                 static::class .
                 '::createFromFormat() did not return an instance of ' .
                 static::class .
                 ', ' .
-                (is_object($out) ? get_class($out) : gettype($out))
+                gettype($out) .
+                ' given!'
             );
         }
 

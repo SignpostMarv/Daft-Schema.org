@@ -33,12 +33,12 @@ class DaftObjectFuzzingTest extends Base
     private static $deep_cache = [];
 
     /**
-    * @var array
+    * @var array<string, (SchemaOrg\Thing|SchemaOrg\DataTypes\DataType)[]>
     */
     private static $obj_cache = [];
 
     /**
-    * @var array
+    * @var array<string, (SchemaOrg\Thing|SchemaOrg\DataTypes\DataType)[]>
     */
     private static $obj_deep_cache = [];
 

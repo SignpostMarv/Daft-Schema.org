@@ -23,18 +23,33 @@ class DaftObjectFuzzingTest extends Base
 {
     use DataProviderTrait;
 
+    /**
+    * @var array
+    */
     private static $cache = [];
 
+    /**
+    * @var array
+    */
     private static $deep_cache = [];
 
+    /**
+    * @var array
+    */
     private static $obj_cache = [];
 
+    /**
+    * @var array
+    */
     private static $obj_deep_cache = [];
 
+    /**
+    * @var array
+    */
     private static $fuzzing_cache = [];
 
     /**
-    * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
+    * @psalm-param class-string<SchemaOrg\Thing> $type
     *
     * @psalm-return Generator<int, array<string, scalar|array|object|null>, mixed, void>
     */
@@ -62,6 +77,13 @@ class DaftObjectFuzzingTest extends Base
                     )
                 );
 
+                /**
+                * @var string[]
+                *
+                * @psalm-var array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>>
+                */
+                $sub_types = [];
+
                 foreach ($types as $sub_type) {
                     if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
                         switch ($sub_type) {
@@ -85,21 +107,29 @@ class DaftObjectFuzzingTest extends Base
                         is_a($sub_type, SchemaOrg\Thing::class, true) ||
                         is_a($sub_type, SchemaOrg\DataTypes\DataType::class, true)
                     ) {
-                        foreach (static::YieldCachedObjectsOfTypeForFuzzing([$sub_type]) as $obj) {
+                        /**
+                        * @var string
+                        *
+                        * @psalm-var class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>
+                        */
+                        $sub_type = $sub_type;
+
+                        $sub_types[] = $sub_type;
+                    }
+                }
+
+                foreach (static::YieldCachedObjectsOfTypeForFuzzing($sub_types) as $obj) {
                             if ( ! in_array($obj, $args[$property], true)) {
                                 $args[$property][] = $obj;
                             }
                         }
-                    }
-                }
             }
 
             $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
 
             foreach (array_keys($args) as $property) {
                 if (
-                    $type === $const->getDeclaringClass()->name &&
-                    $deep
+                    $type === $const->getDeclaringClass()->name
                 ) {
                     static::assertGreaterThan(
                         0,
@@ -213,14 +243,27 @@ class DaftObjectFuzzingTest extends Base
                 );
             } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\XPathType::class) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
-            } elseif ( ! (new ReflectionClass($gimme))->isAbstract()) {
+            } elseif (
+                is_a($gimme, SchemaOrg\Thing::class, true) &&
+                ! ($reflector = new ReflectionClass($gimme))->isAbstract()
+            ) {
                 foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
-                    yield new $gimme($args);
+                    /**
+                    * @var SchemaOrg\Thing
+                    */
+                    $obj = $reflector->newInstance($args);
+
+                    yield $obj;
                 }
             }
         }
     }
 
+    /**
+    * @param string[] $types
+    *
+    * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>, mixed, void> $types
+    */
     protected static function YieldCachedObjectsOfTypeForFuzzing(
         array $types,
         bool $deep = false
@@ -248,8 +291,14 @@ class DaftObjectFuzzingTest extends Base
         }
     }
 
+    /**
+    * @psalm-return Generator<int, class-string<SchemaOrg\Thing>, mixed, void>
+    */
     protected static function YieldTypeForFuzzing() : Generator
     {
+        /**
+        * @var iterable<string>
+        */
         $iterator = new CallbackFilterIterator(
             new RecursiveIteratorIterator(
                 new RecursiveCallbackFilterIterator(
@@ -293,7 +342,12 @@ class DaftObjectFuzzingTest extends Base
                     $reflector = new ReflectionClass($class_name);
 
                     if ( ! $reflector->isAbstract()) {
-                        yield $reflector->name;
+                        /**
+                        * @psalm-var class-string<SchemaOrg\Thing>
+                        */
+                        $out = $reflector->name;
+
+                        yield $out;
                     }
                 }
             }

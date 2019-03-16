@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObject;
 use InvalidArgumentException;
 use Generator;
 use ReflectionClassConstant;
+use SignpostMarv\DaftObject\AbstractDaftObject;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectImplementationTest as Base;
@@ -18,8 +19,6 @@ class DaftObjectImplementationTest extends Base
     use DataProviderTrait;
 
     /**
-    * {@inheritdoc}
-    *
     * @psalm-param class-string<SchemaOrg\Thing> $className
     *
     * @dataProvider dataProvider_DaftObject__has_properties_each_defined_property

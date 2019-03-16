@@ -36,6 +36,11 @@ trait DataProviderTrait
         );
         $iterator->replacement = '$1';
 
+        /**
+        * @var iterable<string>
+        */
+        $iterator = $iterator;
+
         foreach ($iterator as $current) {
             $current = $root_ns . str_replace('/', '\\', $current);
 

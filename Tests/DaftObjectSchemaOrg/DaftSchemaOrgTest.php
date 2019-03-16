@@ -41,10 +41,17 @@ class DaftSchemaOrgTest extends Base
 
         $json = json_encode(json_decode($json), JSON_PRETTY_PRINT);
 
+        static::assertIsString($json);
+
         static::assertSame(
             $json,
             json_encode($thing, JSON_PRETTY_PRINT)
         );
+
+        /**
+        * @var string
+        */
+        $json = $json;
 
         $from_json = SchemaOrg\Thing::DaftObjectFromJsonString($json);
 
@@ -60,8 +67,21 @@ class DaftSchemaOrgTest extends Base
             SchemaOrg\Thing::DaftObjectFromJsonString($json),
             JSON_PRETTY_PRINT
         );
+
+        /**
+        * @var array|false
+        */
+        $decoded = json_decode($json, true);
+
+        static::assertIsArray($decoded);
+
+        /**
+        * @var array
+        */
+        $decoded = $decoded;
+
         $from_arr = json_encode(
-            SchemaOrg\Thing::DaftObjectFromJsonArray(json_decode($json, true)),
+            SchemaOrg\Thing::DaftObjectFromJsonArray($decoded),
             JSON_PRETTY_PRINT
         );
 

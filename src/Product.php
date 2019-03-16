@@ -6,9 +6,50 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\Audience;
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\OfferItemCondition;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Distance;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\SchemaOrg\Offer;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 
+/**
+* @property array<int, PropertyValue> $additionalProperty
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, Audience> $audience
+* @property array<int, string> $award
+* @property array<int, string|Thing|PhysicalActivityCategory> $category
+* @property array<int, string> $color
+* @property array<int, Distance|QuantitativeValue> $depth
+* @property array<int, string> $gtin12
+* @property array<int, string> $gtin13
+* @property array<int, string> $gtin14
+* @property array<int, string> $gtin8
+* @property array<int, Distance|QuantitativeValue> $height
+* @property array<int, Product> $isAccessoryOrSparePartFor
+* @property array<int, Product> $isConsumableFor
+* @property array<int, Product|Service> $isRelatedTo
+* @property array<int, Product|Service> $isSimilarTo
+* @property array<int, OfferItemCondition> $itemCondition
+* @property array<int, Organization> $manufacturer
+* @property array<int, string|Product> $material
+* @property array<int, string|Product\ProductModel> $model
+* @property array<int, string> $mpn
+* @property array<int, Offer> $offers
+* @property array<int, string> $productID
+* @property array<int, DataTypes\Date> $productionDate
+* @property array<int, DataTypes\Date> $purchaseDate
+* @property array<int, DataTypes\Date> $releaseDate
+* @property array<int, Review> $review
+* @property array<int, string> $sku
+* @property array<int, QuantitativeValue> $weight
+* @property array<int, Distance|QuantitativeValue> $width
+*/
 class Product extends Thing
 {
     use DaftObjectTraits\TraitAdditionalProperty;
@@ -66,6 +107,108 @@ class Product extends Thing
         'width',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'additionalProperty' => [
+            PropertyValue::class,
+        ],
+        'aggregateRating' => [
+            AggregateRating::class,
+        ],
+        'audience' => [
+            Audience::class,
+        ],
+        'award' => [
+            'string',
+        ],
+        'category' => [
+            'string',
+            Thing::class,
+            PhysicalActivityCategory::class,
+        ],
+        'color' => [
+            'string',
+        ],
+        'depth' => [
+            Distance::class,
+            QuantitativeValue::class,
+        ],
+        'gtin12' => [
+            'string',
+        ],
+        'gtin13' => [
+            'string',
+        ],
+        'gtin14' => [
+            'string',
+        ],
+        'gtin8' => [
+            'string',
+        ],
+        'height' => [
+            Distance::class,
+            QuantitativeValue::class,
+        ],
+        'isAccessoryOrSparePartFor' => [
+            Product::class,
+        ],
+        'isConsumableFor' => [
+            Product::class,
+        ],
+        'isRelatedTo' => [
+            Product::class,
+            Service::class,
+        ],
+        'isSimilarTo' => [
+            Product::class,
+            Service::class,
+        ],
+        'itemCondition' => [
+            OfferItemCondition::class,
+        ],
+        'manufacturer' => [
+            Organization::class,
+        ],
+        'material' => [
+            'string',
+            Product::class,
+        ],
+        'model' => [
+            'string',
+            Product\ProductModel::class,
+        ],
+        'mpn' => [
+            'string',
+        ],
+        'offers' => [
+            Offer::class,
+        ],
+        'productID' => [
+            'string',
+        ],
+        'productionDate' => [
+            DataTypes\Date::class,
+        ],
+        'purchaseDate' => [
+            DataTypes\Date::class,
+        ],
+        'releaseDate' => [
+            DataTypes\Date::class,
+        ],
+        'review' => [
+            Review::class,
+        ],
+        'sku' => [
+            'string',
+        ],
+        'weight' => [
+            QuantitativeValue::class,
+        ],
+        'width' => [
+            Distance::class,
+            QuantitativeValue::class,
+        ],
+    ];
+
     /**
     * @return array<int, string>
     */
@@ -88,10 +231,10 @@ class Product extends Thing
     */
     public function SetColor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'color',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -117,12 +260,9 @@ class Product extends Thing
     */
     public function SetDepth(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'depth',
-            __METHOD__,
-            $value,
-            Distance::class,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -148,11 +288,9 @@ class Product extends Thing
     */
     public function SetIsAccessoryOrSparePartFor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isAccessoryOrSparePartFor',
-            __METHOD__,
-            $value,
-            Product::class
+            $value
         );
     }
 
@@ -178,11 +316,9 @@ class Product extends Thing
     */
     public function SetIsConsumableFor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isConsumableFor',
-            __METHOD__,
-            $value,
-            Product::class
+            $value
         );
     }
 
@@ -208,11 +344,9 @@ class Product extends Thing
     */
     public function SetManufacturer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'manufacturer',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -234,15 +368,14 @@ class Product extends Thing
     }
 
     /**
-    * @param array<int, Product\ProductModel> $value
+    * @param array<int, string|Product\ProductModel> $value
     */
     public function SetModel(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'model',
-            __METHOD__,
             $value,
-            Product\ProductModel::class
+            true
         );
     }
 
@@ -268,10 +401,10 @@ class Product extends Thing
     */
     public function SetProductID(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'productID',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -297,11 +430,9 @@ class Product extends Thing
     */
     public function SetProductionDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'productionDate',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class
+            $value
         );
     }
 
@@ -327,11 +458,9 @@ class Product extends Thing
     */
     public function SetPurchaseDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'purchaseDate',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class
+            $value
         );
     }
 
@@ -357,11 +486,9 @@ class Product extends Thing
     */
     public function SetReleaseDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'releaseDate',
-            __METHOD__,
-            $value,
-            DataTypes\Date::class
+            $value
         );
     }
 
@@ -387,11 +514,9 @@ class Product extends Thing
     */
     public function SetWeight(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'weight',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 }

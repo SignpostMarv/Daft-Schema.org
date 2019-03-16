@@ -7,11 +7,10 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
 use CallbackFilterIterator;
-use InvalidArgumentException;
 use Generator;
-use RecursiveIteratorIterator;
-use RecursiveDirectoryIterator;
 use RecursiveCallbackFilterIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use ReflectionClass;
 use ReflectionClassConstant;
 use RuntimeException;
@@ -155,7 +154,7 @@ class DaftObjectFuzzingTest extends Base
 
         yield $args;
 
-        if ($type === SchemaOrg\Intangible\Enumeration\QualitativeValue::class) {
+        if (SchemaOrg\Intangible\Enumeration\QualitativeValue::class === $type) {
             yield [
                 'identifier' => [
                     'M',
@@ -233,15 +232,15 @@ class DaftObjectFuzzingTest extends Base
         bool $deep = false
     ) : Generator {
         foreach ($types as $gimme) {
-            if ($gimme === SchemaOrg\DataTypes\Date::class) {
+            if (SchemaOrg\DataTypes\Date::class === $gimme) {
                 yield new SchemaOrg\DataTypes\Date('January 1st 1970');
-            } elseif ($gimme === SchemaOrg\DataTypes\DateTime::class) {
+            } elseif (SchemaOrg\DataTypes\DateTime::class === $gimme) {
                 yield new SchemaOrg\DataTypes\DateTime('January 1st 1970 01:02:03');
-            } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class) {
+            } elseif (SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class === $gimme) {
                 yield SchemaOrg\DataTypes\DataType\Text\CssSelectorType::DataTypeFromString(
                     '.foo'
                 );
-            } elseif ($gimme === SchemaOrg\DataTypes\DataType\Text\XPathType::class) {
+            } elseif (SchemaOrg\DataTypes\DataType\Text\XPathType::class === $gimme) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
             } elseif (
                 is_a($gimme, SchemaOrg\Thing::class, true) &&

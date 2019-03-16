@@ -7,8 +7,8 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests;
 
 use Generator;
-use RecursiveIteratorIterator;
 use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
 use RegexIterator;
 use SignpostMarv\DaftObject\DaftObject;
 
@@ -43,7 +43,6 @@ trait DataProviderTrait
 
         foreach ($iterator as $current) {
             $current = $root_ns . str_replace('/', '\\', $current);
-
 
             if (is_a($current, DaftObject::class, true)) {
                 yield [$current];

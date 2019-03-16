@@ -6,10 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObject;
 
-use InvalidArgumentException;
-use Generator;
 use ReflectionClassConstant;
-use SignpostMarv\DaftObject\AbstractDaftObject;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectImplementationTest as Base;

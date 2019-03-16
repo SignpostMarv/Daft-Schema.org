@@ -119,10 +119,10 @@ class DaftObjectFuzzingTest extends Base
                 }
 
                 foreach (static::YieldCachedObjectsOfTypeForFuzzing($sub_types) as $obj) {
-                            if ( ! in_array($obj, $args[$property], true)) {
-                                $args[$property][] = $obj;
-                            }
-                        }
+                    if ( ! in_array($obj, $args[$property], true)) {
+                        $args[$property][] = $obj;
+                    }
+                }
             }
 
             $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
@@ -358,11 +358,12 @@ class DaftObjectFuzzingTest extends Base
     {
         if (count(self::$fuzzing_cache) < 1) {
             $cache = [];
-        foreach (static::YieldTypeForFuzzing() as $type) {
-            foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
-                $cache[] = [$type, $args];
+
+            foreach (static::YieldTypeForFuzzing() as $type) {
+                foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
+                    $cache[] = [$type, $args];
+                }
             }
-        }
 
             self::$fuzzing_cache = $cache;
         }

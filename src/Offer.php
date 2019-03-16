@@ -6,8 +6,31 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\OfferItemCondition;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
 
+/**
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, Place> $availableAtOrFrom
+* @property array<int, DeliveryMethod> $availableDeliveryMethod
+* @property array<int, string|Thing|PhysicalActivityCategory> $category
+* @property array<int, QuantitativeValue> $inventoryLevel
+* @property array<int, OfferItemCondition> $itemCondition
+* @property array<int, Product|Service> $itemOffered
+* @property array<int, string> $mpn
+* @property array<int, PriceSpecification> $priceSpecification
+* @property array<int, Review> $review
+* @property array<int, Organization|Person> $seller
+* @property array<int, string> $serialNumber
+* @property array<int, WarrantyPromise> $warranty
+*/
 class Offer extends Thing
 {
     use DaftObjectTraits\IsOfferOrDemand;
@@ -60,6 +83,52 @@ class Offer extends Thing
         'validFrom',
         'validThrough',
         'warranty',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'aggregateRating' => [
+            AggregateRating::class,
+        ],
+        'availableAtOrFrom' => [
+            Place::class,
+        ],
+        'availableDeliveryMethod' => [
+            DeliveryMethod::class,
+        ],
+        'category' => [
+            'string',
+            Thing::class,
+            PhysicalActivityCategory::class,
+        ],
+        'inventoryLevel' => [
+            QuantitativeValue::class,
+        ],
+        'itemCondition' => [
+            OfferItemCondition::class,
+        ],
+        'itemOffered' => [
+            Product::class,
+            Service::class,
+        ],
+        'mpn' => [
+            'string',
+        ],
+        'priceSpecification' => [
+            PriceSpecification::class,
+        ],
+        'review' => [
+            Review::class,
+        ],
+        'seller' => [
+            Organization::class,
+            Person::class,
+        ],
+        'serialNumber' => [
+            'string',
+        ],
+        'warranty' => [
+            WarrantyPromise::class,
+        ],
     ];
 
     /**

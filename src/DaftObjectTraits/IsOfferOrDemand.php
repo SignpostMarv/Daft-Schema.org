@@ -10,6 +10,8 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
@@ -30,12 +32,12 @@ trait IsOfferOrDemand
     use HasSku;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Place>
+    * @return array<int, Place>
     */
     public function GetAvailableAtOrFrom() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Place>
+        * @var array<int, Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'availableAtOrFrom',
@@ -47,7 +49,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Place> $value
+    * @param array<int, Place> $value
     */
     public function SetAvailableAtOrFrom(array $value) : void
     {
@@ -60,7 +62,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod>
+    * @return array<int, DeliveryMethod>
     */
     public function GetAvailableDeliveryMethod() : array
     {
@@ -77,7 +79,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod> $value
+    * @param array<int, DeliveryMethod> $value
     */
     public function SetAvailableDeliveryMethod(array $value) : void
     {
@@ -181,12 +183,12 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Organization|Person>
     */
     public function GetSeller() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Organization|Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'seller',
@@ -198,7 +200,7 @@ trait IsOfferOrDemand
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Organization|Person> $value
     */
     public function SetSeller(array $value) : void
     {

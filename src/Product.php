@@ -6,7 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\SchemaOrg\Audience;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\OfferItemCondition;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory;
@@ -15,8 +14,6 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
-use SignpostMarv\DaftObject\SchemaOrg\Offer;
-use SignpostMarv\DaftObject\SchemaOrg\Thing;
 
 /**
 * @property array<int, PropertyValue> $additionalProperty

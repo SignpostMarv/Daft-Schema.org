@@ -35,7 +35,8 @@
             "@tests"
         ],
         "coverage-html": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-html ./phpunit/"
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-html ./phpunit/",
+            "@tests"
         ],
         "tests": [
             "phpstan analyse -c ./phpstan.neon .php_cs.dist ./src/ ./Tests/",

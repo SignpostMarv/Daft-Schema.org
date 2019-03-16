@@ -15,12 +15,12 @@ trait HasGeospatialGeometry
     use DaftObjectTrait;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyContains() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyContains',
@@ -32,7 +32,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyContains(array $value) : void
     {
@@ -46,12 +46,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyCoveredBy() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyCoveredBy',
@@ -63,7 +63,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyCoveredBy(array $value) : void
     {
@@ -77,12 +77,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyCovers() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyCovers',
@@ -94,7 +94,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyCovers(array $value) : void
     {
@@ -108,12 +108,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyCrosses() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyCrosses',
@@ -125,7 +125,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyCrosses(array $value) : void
     {
@@ -139,12 +139,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyDisjoint() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyDisjoint',
@@ -156,7 +156,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyDisjoint(array $value) : void
     {
@@ -170,12 +170,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyEquals() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyEquals',
@@ -187,7 +187,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyEquals(array $value) : void
     {
@@ -201,12 +201,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyIntersects() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyIntersects',
@@ -218,7 +218,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyIntersects(array $value) : void
     {
@@ -232,12 +232,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyOverlaps() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyOverlaps',
@@ -249,7 +249,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyOverlaps(array $value) : void
     {
@@ -263,12 +263,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyTouches() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyTouches',
@@ -280,7 +280,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyTouches(array $value) : void
     {
@@ -294,12 +294,12 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+    * @return array<int, GeospatialGeometry|Place>
     */
     public function GetGeospatiallyWithin() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place>
+        * @var array<int, GeospatialGeometry|Place>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'geospatiallyWithin',
@@ -311,7 +311,7 @@ trait HasGeospatialGeometry
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry|Place> $value
+    * @param array<int, GeospatialGeometry|Place> $value
     */
     public function SetGeospatiallyWithin(array $value) : void
     {

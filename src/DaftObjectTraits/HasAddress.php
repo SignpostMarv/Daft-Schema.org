@@ -14,12 +14,12 @@ trait HasAddress
     use DaftObjectTrait;
 
     /**
-    * @return array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress>
+    * @return array<int, string|PostalAddress>
     */
     public function GetAddress() : array
     {
         /**
-        * @var array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress>
+        * @var array<int, string|PostalAddress>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'address',
@@ -31,7 +31,7 @@ trait HasAddress
     }
 
     /**
-    * @param array<int, string|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress> $value
+    * @param array<int, string|PostalAddress> $value
     */
     public function SetAddress(array $value) : void
     {

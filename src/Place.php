@@ -9,9 +9,49 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Map;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Photograph;
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
+use SignpostMarv\DaftObject\SchemaOrg\Event;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OpeningHoursSpecification;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue\LocationFeatureSpecification;
 
+/**
+* @property array<int, PropertyValue> $additionalProperty
+* @property array<int, string|PostalAddress> $address
+* @property array<int, AggregateRating> $aggregateRating
+* @property array<int, LocationFeatureSpecification> $amenityFeature
+* @property array<int, string> $branchCode
+* @property array<int, Place> $containedInPlace
+* @property array<int, Place> $containsPlace
+* @property array<int, Event> $event
+* @property array<int, string|Map> $hasMap
+* @property array<int, GeoCoordinates|GeoShape> $geo
+* @property array<int, GeospatialGeometry|Place> $geospatiallyContains
+* @property array<int, GeospatialGeometry|Place> $geospatiallyCoveredBy
+* @property array<int, GeospatialGeometry|Place> $geospatiallyCovers
+* @property array<int, GeospatialGeometry|Place> $geospatiallyCrosses
+* @property array<int, GeospatialGeometry|Place> $geospatiallyDisjoint
+* @property array<int, GeospatialGeometry|Place> $geospatiallyEquals
+* @property array<int, GeospatialGeometry|Place> $geospatiallyIntersects
+* @property array<int, GeospatialGeometry|Place> $geospatiallyOverlaps
+* @property array<int, GeospatialGeometry|Place> $geospatiallyTouches
+* @property array<int, GeospatialGeometry|Place> $geospatiallyWithin
+* @property array<int, string> $globalLocationNumber
+* @property array<int, bool> $isAccessibleForFree
+* @property array<int, string> $isicV4
+* @property array<int, ImageObject> $logo
+* @property array<int, int> $maximumAttendeeCapacity
+* @property array<int, OpeningHoursSpecification> $openingHoursSpecification
+* @property array<int, ImageObject|Photograph> $photo
+* @property array<int, bool> $publicAccess
+* @property array<int, Review> $review
+* @property array<int, bool> $smokingAllowed
+* @property array<int, OpeningHoursSpecification> $specialOpeningHoursSpecification
+* @property array<int, string> $telephone
+*/
 class Place extends Thing
 {
     use DaftObjectTraits\TraitAdditionalProperty;
@@ -63,6 +103,119 @@ class Place extends Thing
         'smokingAllowed',
         'specialOpeningHoursSpecification',
         'telephone',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'additionalProperty' => [
+            PropertyValue::class,
+        ],
+        'address' => [
+            'string',
+            PostalAddress::class,
+        ],
+        'aggregateRating' => [
+            AggregateRating::class,
+        ],
+        'amenityFeature' => [
+            LocationFeatureSpecification::class,
+        ],
+        'branchCode' => [
+            'string',
+        ],
+        'containedInPlace' => [
+            Place::class,
+        ],
+        'containsPlace' => [
+            Place::class,
+        ],
+        'event' => [
+            Event::class,
+        ],
+        'hasMap' => [
+            'string',
+            Map::class,
+        ],
+        'geo' => [
+            GeoCoordinates::class,
+            GeoShape::class,
+        ],
+        'geospatiallyContains' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyCoveredBy' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyCovers' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyCrosses' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyDisjoint' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyEquals' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyIntersects' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyOverlaps' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyTouches' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'geospatiallyWithin' => [
+            GeospatialGeometry::class,
+            Place::class,
+        ],
+        'globalLocationNumber' => [
+            'string',
+        ],
+        'isAccessibleForFree' => [
+            'boolean',
+        ],
+        'isicV4' => [
+            'string',
+        ],
+        'logo' => [
+            ImageObject::class,
+        ],
+        'maximumAttendeeCapacity' => [
+            'integer',
+        ],
+        'openingHoursSpecification' => [
+            OpeningHoursSpecification::class,
+        ],
+        'photo' => [
+            ImageObject::class,
+            Photograph::class,
+        ],
+        'publicAccess' => [
+            'boolean',
+        ],
+        'review' => [
+            Review::class,
+        ],
+        'smokingAllowed' => [
+            'boolean',
+        ],
+        'specialOpeningHoursSpecification' => [
+            OpeningHoursSpecification::class,
+        ],
+        'telephone' => [
+            'string',
+        ],
     ];
 
     /**

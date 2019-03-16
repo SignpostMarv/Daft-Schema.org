@@ -54,10 +54,12 @@ class DaftObjectFuzzingTest extends Base
     */
     protected static function YieldArgsForTypeForFuzzing(string $type, bool $deep = false) : Generator
     {
+        /**
+        * @var array<string, array<int, scalar|array|object|null>>
+        */
         $args = $deep ? (self::$deep_cache[$type] ?? []) : (self::$cache[$type] ?? []);
 
         if ($deep && ! isset(self::$deep_cache[$type])) {
-            $args = [];
             foreach (
                 $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
             ) {
@@ -222,16 +224,30 @@ class DaftObjectFuzzingTest extends Base
 
     /**
     * @param array<int, string> $types
-    *
-    * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>> $types
-    *
-    * @psalm-return Generator<int, SchemaOrg\Thing|SchemaOrg\DataTypes\DataType, mixed, void>
     */
     protected static function YieldObjectsOfTypeForFuzzing(
         array $types,
         bool $deep = false
     ) : Generator {
-        foreach ($types as $gimme) {
+        /**
+        * @psalm-var array<int, class-string<SchemaOrg\DataTypes\DataType>>
+        */
+        $data_types = [];
+
+        /**
+        * @psalm-var array<int, class-string<SchemaOrg\Thing>>
+        */
+        $thing_types = [];
+
+        foreach ($types as $type) {
+            if (is_a($type, SchemaOrg\DataTypes\DataType::class, true)) {
+                $data_types[] = $type;
+            } elseif (is_a($type, SchemaOrg\Thing::class, true)) {
+                $thing_types[] = $type;
+            }
+        }
+
+        foreach ($data_types as $gimme) {
             if (SchemaOrg\DataTypes\Date::class === $gimme) {
                 yield new SchemaOrg\DataTypes\Date('January 1st 1970');
             } elseif (SchemaOrg\DataTypes\DateTime::class === $gimme) {
@@ -242,8 +258,11 @@ class DaftObjectFuzzingTest extends Base
                 );
             } elseif (SchemaOrg\DataTypes\DataType\Text\XPathType::class === $gimme) {
                 yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
-            } elseif (
-                is_a($gimme, SchemaOrg\Thing::class, true) &&
+            }
+        }
+
+        foreach ($thing_types as $gimme) {
+            if (
                 ! ($reflector = new ReflectionClass($gimme))->isAbstract()
             ) {
                 foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
@@ -261,7 +280,7 @@ class DaftObjectFuzzingTest extends Base
     /**
     * @param string[] $types
     *
-    * @psalm-param array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>, mixed, void> $types
+    * @psalm-return Generator<int, SchemaOrg\Thing|SchemaOrg\DataTypes\DataType, mixed, void>
     */
     protected static function YieldCachedObjectsOfTypeForFuzzing(
         array $types,

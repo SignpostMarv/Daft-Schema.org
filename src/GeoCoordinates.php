@@ -6,8 +6,8 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
+use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
 
 /**
 * @property array<int, string|PostalAddress> $address

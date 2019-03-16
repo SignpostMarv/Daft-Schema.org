@@ -31,6 +31,8 @@ class DaftObjectFuzzingTest extends Base
 
     private static $obj_deep_cache = [];
 
+    private static $fuzzing_cache = [];
+
     /**
     * @psalm-param class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType> $type
     *
@@ -300,10 +302,17 @@ class DaftObjectFuzzingTest extends Base
 
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
+        if (count(self::$fuzzing_cache) < 1) {
+            $cache = [];
         foreach (static::YieldTypeForFuzzing() as $type) {
             foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
-                yield [$type, $args];
+                $cache[] = [$type, $args];
             }
         }
+
+            self::$fuzzing_cache = $cache;
+        }
+
+        yield from self::$fuzzing_cache;
     }
 }

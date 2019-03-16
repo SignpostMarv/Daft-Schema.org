@@ -10,7 +10,6 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Map;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Photograph;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
-use SignpostMarv\DaftObject\SchemaOrg\Event;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\GeospatialGeometry;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;

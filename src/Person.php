@@ -6,7 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
-use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Demand;

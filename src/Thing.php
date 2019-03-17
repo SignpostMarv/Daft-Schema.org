@@ -454,15 +454,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         );
     }
 
-    protected function ExpectRetrievedValueIsArray(string $property) : array
-    {
-        return TypeUtilities::ExpectRetrievedValueIsArray(
-            $property,
-            $this->RetrievePropertyValueFromData($property),
-            static::class
-        );
-    }
-
     public static function DaftObjectProperties() : array
     {
         /**
@@ -712,6 +703,15 @@ class Thing extends AbstractArrayBackedDaftObject implements
         $out = new $type($data, $writeAll);
 
         return $out;
+    }
+
+    protected function ExpectRetrievedValueIsArray(string $property) : array
+    {
+        return TypeUtilities::ExpectRetrievedValueIsArray(
+            $property,
+            $this->RetrievePropertyValueFromData($property),
+            static::class
+        );
     }
 
     /**

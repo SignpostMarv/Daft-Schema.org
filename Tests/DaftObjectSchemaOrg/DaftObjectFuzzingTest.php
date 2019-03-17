@@ -109,7 +109,7 @@ class DaftObjectFuzzingTest extends Base
                                 break;
                             case 'boolean':
                                 $args[$property][] = self::$last_boolean;
-                                self::$last_boolean = !self::$last_boolean;
+                                self::$last_boolean = ! self::$last_boolean;
                                 break;
                             default:
                                 throw new RuntimeException('Unsupported type: ' . $sub_type);

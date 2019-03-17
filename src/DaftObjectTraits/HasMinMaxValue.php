@@ -6,7 +6,6 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
-use InvalidArgumentException;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 

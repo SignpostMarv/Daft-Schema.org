@@ -35,11 +35,10 @@ trait HasInLanguage
     */
     public function SetInLanguage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'inLanguage',
-            __METHOD__,
             $value,
-            Language::class
+            true
         );
     }
 }

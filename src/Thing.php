@@ -304,11 +304,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetImage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'image',
-            __METHOD__,
             $value,
-            ImageObject::class
+            true
         );
     }
 
@@ -334,11 +333,10 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetMainEntityOfPage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'mainEntityOfPage',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -727,68 +725,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         $out = new $type($data, $writeAll);
 
         return $out;
-    }
-
-    /**
-    * @param array<int, bool|Thing|DataTypes\DataType> $value
-    *
-    * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> ...$implementation
-    */
-    protected function NudgePropertyWithUniqueBooleansOrThings(
-        string $property,
-        string $method,
-        array $value,
-        string ...$implementation
-    ) : void {
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
-    }
-
-    /**
-    * @param array<int, string|Thing|DataTypes\DataType> $value
-    *
-    * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> ...$implementation
-    */
-    protected function NudgePropertyWithUniqueTrimmedStringsOrThings(
-        string $property,
-        string $method,
-        array $value,
-        string ...$implementation
-    ) : void {
-        $initialCount = count($value);
-
-        /**
-        * @var array<int, string|Thing|DataTypes\DataType>
-        */
-        $value = array_values(array_filter(
-            array_map(
-                /**
-                * @param string|Thing|DataTypes\DataType $val
-                *
-                * @return string|Thing|DataTypes\DataType
-                */
-                function ($val) {
-                    return is_string($val) ? trim($val) : $val;
-                },
-                $value
-            ),
-            /**
-            * @param string|Thing|DataTypes\DataType $maybe
-            */
-            function ($maybe) : bool {
-                return '' !== $maybe;
-            }
-        ));
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Arguments passed to ' .
-                __METHOD__ .
-                ' must be strings with no trailing whitespace or instances of ' .
-                Thing::class
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
     }
 
     /**

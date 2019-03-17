@@ -106,11 +106,10 @@ class BroadcastChannel extends Base
     */
     public function SetBroadcastFrequency(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'broadcastFrequency',
-            __METHOD__,
             $value,
-            BroadcastFrequencySpecification::class
+            true
         );
     }
 

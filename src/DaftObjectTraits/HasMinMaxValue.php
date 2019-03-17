@@ -86,36 +86,6 @@ trait HasMinMaxValue
     */
     public function SetValue(array $value) : void
     {
-        $initialCount = count($value);
-
-        /**
-        * @var array<int, bool|string|int|float|StructuredValue>
-        */
-        $value = array_filter(
-            $value,
-            /**
-            * @param mixed $maybe
-            */
-            function ($maybe) : bool {
-                return
-                    is_bool($maybe) ||
-                    is_string($maybe) ||
-                    is_float($maybe) ||
-                    is_int($maybe) ||
-                    ($maybe instanceof StructuredValue);
-            }
-        );
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Argument 1 passed to ' .
-                __METHOD__ .
-                ' must be an array of any combination of booleans, strings, floats, ints, and ' .
-                StructuredValue::class .
-                '!'
-            );
-        }
-
-        $this->NudgePropertyValue('value', $value);
+        $this->NudgePropertyValue('value', $value, true);
     }
 }

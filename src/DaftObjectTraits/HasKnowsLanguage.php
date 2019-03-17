@@ -35,11 +35,10 @@ trait HasKnowsLanguage
     */
     public function SetKnowsLanguage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'knowsLanguage',
-            __METHOD__,
             $value,
-            Language::class
+            true
         );
     }
 }

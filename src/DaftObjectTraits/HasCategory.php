@@ -36,12 +36,10 @@ trait HasCategory
     */
     public function SetCategory(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'category',
-            __METHOD__,
             $value,
-            PhysicalActivityCategory::class,
-            Thing::class
+            true
         );
     }
 }

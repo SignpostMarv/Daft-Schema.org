@@ -389,11 +389,10 @@ class Place extends Thing
     */
     public function SetHasMap(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'hasMap',
-            __METHOD__,
             $value,
-            Map::class
+            true
         );
     }
 

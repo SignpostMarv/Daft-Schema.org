@@ -129,12 +129,10 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetEligibleRegion(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'eligibleRegion',
-            __METHOD__,
             $value,
-            GeoShape::class,
-            Place::class
+            true
         );
     }
 
@@ -190,12 +188,10 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetIneligibleRegion(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'ineligibleRegion',
-            __METHOD__,
             $value,
-            GeoShape::class,
-            Place::class
+            true
         );
     }
 }

@@ -36,12 +36,10 @@ trait HasLocation
     */
     public function SetLocation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'location',
-            __METHOD__,
             $value,
-            Place::class,
-            PostalAddress::class
+            true
         );
     }
 }

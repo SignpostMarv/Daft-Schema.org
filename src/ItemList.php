@@ -58,12 +58,10 @@ class ItemList extends Thing
     */
     public function SetItemListElement(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'itemListElement',
-            __METHOD__,
             $value,
-            Intangible\ListItem::class,
-            Thing::class
+            true
         );
     }
 
@@ -89,11 +87,10 @@ class ItemList extends Thing
     */
     public function SetItemListOrder(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'itemListOrder',
-            __METHOD__,
             $value,
-            Intangible\Enumeration\ItemListOrderType::class
+            true
         );
     }
 

@@ -35,11 +35,10 @@ trait AvailableLanguage
     */
     public function SetAvailableLanguage(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'availableLanguage',
-            __METHOD__,
             $value,
-            Language::class
+            true
         );
     }
 }

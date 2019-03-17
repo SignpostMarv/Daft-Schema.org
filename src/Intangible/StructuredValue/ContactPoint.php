@@ -166,11 +166,10 @@ class ContactPoint extends Base
     */
     public function SetProductSupported(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'productSupported',
-            __METHOD__,
             $value,
-            Product::class
+            true
         );
     }
 }

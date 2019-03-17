@@ -35,11 +35,10 @@ trait HasKnowsAbout
     */
     public function SetKnowsAbout(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'knowsAbout',
-            __METHOD__,
             $value,
-            Thing::class
+            true
         );
     }
 }

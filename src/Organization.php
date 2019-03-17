@@ -354,11 +354,10 @@ class Organization extends Thing
     */
     public function SetActionableFeedbackPolicy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'actionableFeedbackPolicy',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -414,11 +413,10 @@ class Organization extends Thing
     */
     public function SetCorrectionsPolicy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'correctionsPolicy',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -504,11 +502,10 @@ class Organization extends Thing
     */
     public function SetDiversityPolicy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'diversityPolicy',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -534,11 +531,10 @@ class Organization extends Thing
     */
     public function SetDiversityStaffingReport(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'diversityStaffingReport',
-            __METHOD__,
             $value,
-            Article::class
+            true
         );
     }
 
@@ -594,11 +590,10 @@ class Organization extends Thing
     */
     public function SetEthicsPolicy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'ethicsPolicy',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 
@@ -802,12 +797,10 @@ class Organization extends Thing
     */
     public function SetOwnershipFundingInfo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'ownershipFundingInfo',
-            __METHOD__,
             $value,
-            AboutPage::class,
-            CreativeWork::class
+            true
         );
     }
 
@@ -893,11 +886,10 @@ class Organization extends Thing
     */
     public function SetUnnamedSourcesPolicy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'unnamedSourcesPolicy',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 }

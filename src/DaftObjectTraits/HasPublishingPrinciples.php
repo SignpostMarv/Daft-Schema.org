@@ -35,11 +35,10 @@ trait HasPublishingPrinciples
     */
     public function SetPublishingPrinciples(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'publishingPrinciples',
-            __METHOD__,
             $value,
-            CreativeWork::class
+            true
         );
     }
 }

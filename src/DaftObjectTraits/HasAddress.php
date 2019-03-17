@@ -35,11 +35,10 @@ trait HasAddress
     */
     public function SetAddress(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'address',
-            __METHOD__,
             $value,
-            PostalAddress::class
+            true
         );
     }
 }

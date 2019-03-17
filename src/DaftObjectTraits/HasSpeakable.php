@@ -35,11 +35,10 @@ trait HasSpeakable
     */
     public function SetSpeakable(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'speakable',
-            __METHOD__,
             $value,
-            SpeakableSpecification::class
+            true
         );
     }
 }

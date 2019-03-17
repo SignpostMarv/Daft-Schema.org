@@ -529,11 +529,10 @@ class Person extends Thing
     */
     public function SetColleague(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'colleague',
-            __METHOD__,
             $value,
-            Person::class
+            true
         );
     }
 
@@ -672,11 +671,10 @@ class Person extends Thing
     */
     public function SetGender(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'gender',
-            __METHOD__,
             $value,
-            GenderType::class
+            true
         );
     }
 

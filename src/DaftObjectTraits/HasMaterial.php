@@ -35,11 +35,10 @@ trait HasMaterial
     */
     public function SetMaterial(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'material',
-            __METHOD__,
             $value,
-            Product::class
+            true
         );
     }
 }

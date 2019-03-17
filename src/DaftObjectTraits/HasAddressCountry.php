@@ -35,11 +35,10 @@ trait HasAddressCountry
     */
     public function SetAddressCountry(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'addressCountry',
-            __METHOD__,
             $value,
-            Country::class
+            true
         );
     }
 }

@@ -37,13 +37,10 @@ trait HasAreaServed
     */
     public function SetAreaServed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
+        $this->NudgePropertyValue(
             'areaServed',
-            __METHOD__,
             $value,
-            AdministrativeArea::class,
-            GeoShape::class,
-            Place::class
+            true
         );
     }
 }

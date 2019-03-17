@@ -28,6 +28,24 @@ class AlignmentObject extends Base
         'targetUrl',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'alignmentType' => [
+            'string',
+        ],
+        'educationalFramework' => [
+            'string',
+        ],
+        'targetDescription' => [
+            'string',
+        ],
+        'targetName' => [
+            'string',
+        ],
+        'targetUrl' => [
+            'string',
+        ],
+    ];
+
     /**
     * @return array<int, string>
     */

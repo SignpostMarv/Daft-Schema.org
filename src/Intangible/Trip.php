@@ -6,12 +6,20 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, DateTime> $arrivalTime
+* @property array<int, DateTime> $departureTime
+* @property array<int, CreativeWork|Trip> $hasPart
+* @property array<int, CreativeWork|Trip> $isPartOf
+* @property array<int, ItemList> $itinerary
+*/
 class Trip extends Base
 {
     use DaftObjectTraits\HasHasPart;
@@ -28,6 +36,26 @@ class Trip extends Base
         'itinerary',
         'offers',
         'provider',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'arrivalTime' => [
+            DateTime::class,
+        ],
+        'departureTime' => [
+            DateTime::class,
+        ],
+        'hasPart' => [
+            CreativeWork::class,
+            Trip::class,
+        ],
+        'isPartOf' => [
+            CreativeWork::class,
+            Trip::class,
+        ],
+        'itinerary' => [
+            ItemList::class,
+        ],
     ];
 
     /**

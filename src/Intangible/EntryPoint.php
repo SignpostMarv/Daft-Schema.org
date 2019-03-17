@@ -10,6 +10,14 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\SoftwareApplication;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, SoftwareApplication> $actionApplication
+* @property array<int, string> $actionPlatform
+* @property array<int, string> $contentType
+* @property array<int, string> $encodingType
+* @property array<int, string> $httpMethod
+* @property array<int, string> $urlTemplate
+*/
 class EntryPoint extends Intangible
 {
     const SCHEMA_ORG_TYPE = 'EntryPoint';
@@ -21,6 +29,27 @@ class EntryPoint extends Intangible
         'encodingType',
         'httpMethod',
         'urlTemplate',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'actionApplication' => [
+            SoftwareApplication::class,
+        ],
+        'actionPlatform' => [
+            'string',
+        ],
+        'contentType' => [
+            'string',
+        ],
+        'encodingType' => [
+            'string',
+        ],
+        'httpMethod' => [
+            'string',
+        ],
+        'urlTemplate' => [
+            'string',
+        ],
     ];
 
     /**

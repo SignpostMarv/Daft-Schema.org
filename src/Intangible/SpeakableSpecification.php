@@ -11,6 +11,10 @@ use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DataType\Text\XPathType;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, CssSelectorType> $cssSelector
+* @property array<int, XPathType> $xpath
+*/
 class SpeakableSpecification extends Base
 {
     const SCHEMA_ORG_TYPE = 'SpeakableSpecification';
@@ -18,6 +22,15 @@ class SpeakableSpecification extends Base
     const PROPERTIES = [
         'cssSelector',
         'xpath',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'cssSelector' => [
+            CssSelectorType::class,
+        ],
+        'xpath' => [
+            XPathType::class,
+        ],
     ];
 
     /**

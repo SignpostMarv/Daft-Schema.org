@@ -9,12 +9,23 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, int|float|StructuredValue\QuantitativeValue> $broadcastFrequencyValue
+*/
 class BroadcastFrequencySpecification extends Base
 {
     const SCHEMA_ORG_TYPE = 'BroadcastFrequencySpecification';
 
     const PROPERTIES = [
         'broadcastFrequencyValue',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'broadcastFrequencyValue' => [
+            'integer',
+            'double',
+            StructuredValue\QuantitativeValue::class,
+        ],
     ];
 
     /**

@@ -11,6 +11,10 @@ use SignpostMarv\DaftObject\SchemaOrg\Offer;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Organization> $authenticator
+* @property array<int, Offer> $expectsAcceptanceOf
+*/
 class MediaSubscription extends Base
 {
     const SCHEMA_ORG_TYPE = 'MediaSubscription';
@@ -18,6 +22,15 @@ class MediaSubscription extends Base
     const PROPERTIES = [
         'authenticator',
         'expectsAcceptanceOf',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'authenticator' => [
+            Organization::class,
+        ],
+        'expectsAcceptanceOf' => [
+            Offer::class,
+        ],
     ];
 
     /**

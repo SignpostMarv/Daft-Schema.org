@@ -10,6 +10,14 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $broadcastChannelId
+* @property array<int, string|BroadcastFrequencySpecification> $broadcastFrequency
+* @property array<int, string> $broadcastServiceTier
+* @property array<int, string> $genre
+* @property array<int, Service\BroadcastService> $inBroadcastLineup
+* @property array<int, Service\BroadcastService> $providesBroadcastService
+*/
 class BroadcastChannel extends Base
 {
     use DaftObjectTraits\Genre;
@@ -23,6 +31,28 @@ class BroadcastChannel extends Base
         'genre',
         'inBroadcastLineup',
         'providesBroadcastService',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'broadcastChannelId' => [
+            'string',
+        ],
+        'broadcastFrequency' => [
+            'string',
+            BroadcastFrequencySpecification::class,
+        ],
+        'broadcastServiceTier' => [
+            'string',
+        ],
+        'genre' => [
+            'string',
+        ],
+        'inBroadcastLineup' => [
+            Service\BroadcastService::class,
+        ],
+        'providesBroadcastService' => [
+            Service\BroadcastService::class,
+        ],
     ];
 
     /**

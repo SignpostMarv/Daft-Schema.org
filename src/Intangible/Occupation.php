@@ -11,6 +11,16 @@ use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
 use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $educationRequirements
+* @property array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|PriceSpecification> $estimatedSalary
+* @property array<int, string> $experienceRequirements
+* @property array<int, AdministrativeArea> $occupationLocation
+* @property array<int, string> $occupationalCategory
+* @property array<int, string> $qualifications
+* @property array<int, string> $responsibilities
+* @property array<int, string> $skills
+*/
 class Occupation extends Base
 {
     const SCHEMA_ORG_TYPE = 'Occupation';
@@ -24,6 +34,37 @@ class Occupation extends Base
         'qualifications',
         'responsibilities',
         'skills',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'educationRequirements' => [
+            'string',
+        ],
+        'estimatedSalary' => [
+            'integer',
+            'double',
+            StructuredValue\MonetaryAmount::class,
+            StructuredValue\QuantitativeValue\MonetaryAmountDistribution::class,
+            PriceSpecification::class,
+        ],
+        'experienceRequirements' => [
+            'string',
+        ],
+        'occupationLocation' => [
+            AdministrativeArea::class,
+        ],
+        'occupationalCategory' => [
+            'string',
+        ],
+        'qualifications' => [
+            'string',
+        ],
+        'responsibilities' => [
+            'string',
+        ],
+        'skills' => [
+            'string',
+        ],
     ];
 
     /**

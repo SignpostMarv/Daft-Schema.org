@@ -12,6 +12,16 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string|Language> $availableLanguage
+* @property array<int, DataTypes\Duration> $processingTime
+* @property array<int, Service> $providesService
+* @property array<int, Place> $serviceLocation
+* @property array<int, StructuredValue\ContactPoint> $servicePhone
+* @property array<int, StructuredValue\ContactPoint\PostalAddress> $servicePostalAddress
+* @property array<int, StructuredValue\ContactPoint> $serviceSmsNumber
+* @property array<int, string> $serviceUrl
+*/
 class ServiceChannel extends Base
 {
     use DaftObjectTraits\AvailableLanguage;
@@ -27,6 +37,34 @@ class ServiceChannel extends Base
         'servicePostalAddress',
         'serviceSmsNumber',
         'serviceUrl',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'availableLanguage' => [
+            'string',
+            Language::class,
+        ],
+        'processingTime' => [
+            DataTypes\Duration::class,
+        ],
+        'providesService' => [
+            Service::class,
+        ],
+        'serviceLocation' => [
+            Place::class,
+        ],
+        'servicePhone' => [
+            StructuredValue\ContactPoint::class,
+        ],
+        'servicePostalAddress' => [
+            StructuredValue\ContactPoint\PostalAddress::class,
+        ],
+        'serviceSmsNumber' => [
+            StructuredValue\ContactPoint::class,
+        ],
+        'serviceUrl' => [
+            'string',
+        ],
     ];
 
     /**

@@ -9,8 +9,15 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Organization> $hostingOrganization
+* @property array<int, Organization|Person> $member
+* @property array<int, string> $membershipNumber
+* @property array<int, string> $programName
+*/
 class ProgramMembership extends Base
 {
     use DaftObjectTraits\HasMember;
@@ -22,6 +29,22 @@ class ProgramMembership extends Base
         'member',
         'membershipNumber',
         'programName',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'hostingOrganization' => [
+            Organization::class,
+        ],
+        'member' => [
+            Organization::class,
+            Person::class,
+        ],
+        'membershipNumber' => [
+            'string',
+        ],
+        'programName' => [
+            'string',
+        ],
     ];
 
     /**

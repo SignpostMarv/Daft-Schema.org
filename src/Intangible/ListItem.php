@@ -10,6 +10,12 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Thing> $item
+* @property array<int, ListItem> $nextItem
+* @property array<int, int|string> $position
+* @property array<int, ListItem> $previousItem
+*/
 class ListItem extends Base
 {
     const SCHEMA_ORG_TYPE = 'ListItem';
@@ -19,6 +25,22 @@ class ListItem extends Base
         'nextItem',
         'position',
         'previousItem',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'item' => [
+            Thing::class,
+        ],
+        'nextItem' => [
+            ListItem::class,
+        ],
+        'position' => [
+            'integer',
+            'string',
+        ],
+        'previousItem' => [
+            ListItem::class,
+        ],
     ];
 
     /**

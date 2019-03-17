@@ -10,6 +10,11 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string|ListItem|Thing> $itemListElement
+* @property array<int, string|Enumeration\ItemListOrderType> $itemListOrder
+* @property array<int, int> $numberOfItems
+*/
 class ItemList extends Base
 {
     const SCHEMA_ORG_TYPE = 'ItemList';
@@ -18,6 +23,21 @@ class ItemList extends Base
         'itemListElement',
         'itemListOrder',
         'numberOfItems',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'itemListElement' => [
+            'string',
+            ListItem::class,
+            Thing::class,
+        ],
+        'itemListOrder' => [
+            'string',
+            Enumeration\ItemListOrderType::class,
+        ],
+        'numberOfItems' => [
+            'integer',
+        ],
     ];
 
     /**

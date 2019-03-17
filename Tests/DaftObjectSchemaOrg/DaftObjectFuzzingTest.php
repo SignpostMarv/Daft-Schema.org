@@ -72,9 +72,9 @@ class DaftObjectFuzzingTest extends Base
     public function dataProvider_DateTimeInterface() : array
     {
         return [
-            [SchemaOrg\DataTypes\Date::class, 'January 1st 1970'],
-            [SchemaOrg\DataTypes\DateTime::class, 'January 1st 1970 01:02:03'],
-            [SchemaOrg\DataTypes\Time::class, '01:02:03'],
+            [SchemaOrg\DataTypes\Date::class, '1970-01-01'],
+            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03+00:00'],
+            [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00'],
         ];
     }
 

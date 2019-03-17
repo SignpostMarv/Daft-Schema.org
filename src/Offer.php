@@ -22,6 +22,10 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise
 * @property array<int, Place> $availableAtOrFrom
 * @property array<int, DeliveryMethod> $availableDeliveryMethod
 * @property array<int, string|Thing|PhysicalActivityCategory> $category
+* @property array<int, string> $gtin12
+* @property array<int, string> $gtin13
+* @property array<int, string> $gtin14
+* @property array<int, string> $gtin8
 * @property array<int, QuantitativeValue> $inventoryLevel
 * @property array<int, OfferItemCondition> $itemCondition
 * @property array<int, Product|Service> $itemOffered

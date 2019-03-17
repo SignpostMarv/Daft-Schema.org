@@ -225,10 +225,8 @@ class Product extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'color',
-            $this->RetrievePropertyValueFromData('color'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'color'
         );
 
         return $out;
@@ -254,10 +252,8 @@ class Product extends Thing
         /**
         * @var array<int, Distance|QuantitativeValue>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'depth',
-            $this->RetrievePropertyValueFromData('depth'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'depth'
         );
 
         return $out;
@@ -282,10 +278,8 @@ class Product extends Thing
         /**
         * @var array<int, Product>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isAccessoryOrSparePartFor',
-            $this->RetrievePropertyValueFromData('isAccessoryOrSparePartFor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'isAccessoryOrSparePartFor'
         );
 
         return $out;
@@ -310,10 +304,8 @@ class Product extends Thing
         /**
         * @var array<int, Product>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isConsumableFor',
-            $this->RetrievePropertyValueFromData('isConsumableFor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'isConsumableFor'
         );
 
         return $out;
@@ -338,10 +330,8 @@ class Product extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'manufacturer',
-            $this->RetrievePropertyValueFromData('manufacturer'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'manufacturer'
         );
 
         return $out;
@@ -366,10 +356,8 @@ class Product extends Thing
         /**
         * @var array<int, string|Product\ProductModel>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'model',
-            $this->RetrievePropertyValueFromData('model'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'model'
         );
 
         return $out;
@@ -395,10 +383,8 @@ class Product extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'productID',
-            $this->RetrievePropertyValueFromData('productID'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'productID'
         );
 
         return $out;
@@ -424,10 +410,8 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'productionDate',
-            $this->RetrievePropertyValueFromData('productionDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'productionDate'
         );
 
         return $out;
@@ -452,10 +436,8 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'purchaseDate',
-            $this->RetrievePropertyValueFromData('purchaseDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'purchaseDate'
         );
 
         return $out;
@@ -480,10 +462,8 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'releaseDate',
-            $this->RetrievePropertyValueFromData('releaseDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'releaseDate'
         );
 
         return $out;
@@ -508,10 +488,8 @@ class Product extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'weight',
-            $this->RetrievePropertyValueFromData('weight'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'weight'
         );
 
         return $out;

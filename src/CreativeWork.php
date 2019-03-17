@@ -480,10 +480,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessMode',
-            $this->RetrievePropertyValueFromData('accessMode'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessMode'
         );
 
         return $out;
@@ -509,10 +507,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessModeSufficient',
-            $this->RetrievePropertyValueFromData('accessModeSufficient'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessModeSufficient'
         );
 
         return $out;
@@ -538,10 +534,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessibilityAPI',
-            $this->RetrievePropertyValueFromData('accessibilityAPI'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessibilityAPI'
         );
 
         return $out;
@@ -567,10 +561,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessibilityControl',
-            $this->RetrievePropertyValueFromData('accessibilityControl'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessibilityControl'
         );
 
         return $out;
@@ -596,10 +588,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessibilityFeature',
-            $this->RetrievePropertyValueFromData('accessibilityFeature'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessibilityFeature'
         );
 
         return $out;
@@ -625,10 +615,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessibilityHazard',
-            $this->RetrievePropertyValueFromData('accessibilityHazard'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessibilityHazard'
         );
 
         return $out;
@@ -654,10 +642,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accessibilitySummary',
-            $this->RetrievePropertyValueFromData('accessibilitySummary'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accessibilitySummary'
         );
 
         return $out;
@@ -683,10 +669,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'accountablePerson',
-            $this->RetrievePropertyValueFromData('accountablePerson'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'accountablePerson'
         );
 
         return $out;
@@ -708,10 +692,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'alternativeHeadline',
-            $this->RetrievePropertyValueFromData('alternativeHeadline'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'alternativeHeadline'
         );
 
         return $out;
@@ -737,10 +719,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, MediaObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'associatedMedia',
-            $this->RetrievePropertyValueFromData('associatedMedia'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'associatedMedia'
         );
 
         return $out;
@@ -766,10 +746,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, AudioObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'audio',
-            $this->RetrievePropertyValueFromData('audio'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'audio'
         );
 
         return $out;
@@ -795,10 +773,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'character',
-            $this->RetrievePropertyValueFromData('character'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'character'
         );
 
         return $out;
@@ -820,10 +796,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'citation',
-            $this->RetrievePropertyValueFromData('citation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'citation'
         );
 
         return $out;
@@ -849,10 +823,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Comment>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'comment',
-            $this->RetrievePropertyValueFromData('comment'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'comment'
         );
 
         return $out;
@@ -878,10 +850,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'commentCount',
-            $this->RetrievePropertyValueFromData('commentCount'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'commentCount'
         );
 
         return $out;
@@ -903,10 +873,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'contentLocation',
-            $this->RetrievePropertyValueFromData('contentLocation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'contentLocation'
         );
 
         return $out;
@@ -928,10 +896,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Rating>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'contentRating',
-            $this->RetrievePropertyValueFromData('contentRating'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'contentRating'
         );
 
         return $out;
@@ -957,10 +923,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'contentReferenceTime',
-            $this->RetrievePropertyValueFromData('contentReferenceTime'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'contentReferenceTime'
         );
 
         return $out;
@@ -982,10 +946,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'contributor',
-            $this->RetrievePropertyValueFromData('contributor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'contributor'
         );
 
         return $out;
@@ -1007,10 +969,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'copyrightHolder',
-            $this->RetrievePropertyValueFromData('copyrightHolder'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'copyrightHolder'
         );
 
         return $out;
@@ -1036,10 +996,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'copyrightYear',
-            $this->RetrievePropertyValueFromData('copyrightYear'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'copyrightYear'
         );
 
         return $out;
@@ -1061,10 +1019,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CorrectionComment>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'correction',
-            $this->RetrievePropertyValueFromData('correction'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'correction'
         );
 
         return $out;
@@ -1090,10 +1046,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'creator',
-            $this->RetrievePropertyValueFromData('creator'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'creator'
         );
 
         return $out;
@@ -1115,10 +1069,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'dateCreated',
-            $this->RetrievePropertyValueFromData('dateCreated'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'dateCreated'
         );
 
         return $out;
@@ -1140,10 +1092,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'dateModified',
-            $this->RetrievePropertyValueFromData('dateModified'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'dateModified'
         );
 
         return $out;
@@ -1165,10 +1115,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'datePublished',
-            $this->RetrievePropertyValueFromData('datePublished'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'datePublished'
         );
 
         return $out;
@@ -1190,10 +1138,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'discussionUrl',
-            $this->RetrievePropertyValueFromData('discussionUrl'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'discussionUrl'
         );
 
         return $out;
@@ -1219,10 +1165,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'editor',
-            $this->RetrievePropertyValueFromData('editor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'editor'
         );
 
         return $out;
@@ -1244,10 +1188,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, AlignmentObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'educationalAlignment',
-            $this->RetrievePropertyValueFromData('educationalAlignment'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'educationalAlignment'
         );
 
         return $out;
@@ -1273,10 +1215,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'educationalUse',
-            $this->RetrievePropertyValueFromData('educationalUse'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'educationalUse'
         );
 
         return $out;
@@ -1302,10 +1242,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, MediaObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'encoding',
-            $this->RetrievePropertyValueFromData('encoding'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'encoding'
         );
 
         return $out;
@@ -1331,10 +1269,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'encodingFormat',
-            $this->RetrievePropertyValueFromData('encodingFormat'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'encodingFormat'
         );
 
         return $out;
@@ -1360,10 +1296,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'exampleOfWork',
-            $this->RetrievePropertyValueFromData('exampleOfWork'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'exampleOfWork'
         );
 
         return $out;
@@ -1389,10 +1323,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'expires',
-            $this->RetrievePropertyValueFromData('expires'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'expires'
         );
 
         return $out;
@@ -1418,10 +1350,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'headline',
-            $this->RetrievePropertyValueFromData('headline'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'headline'
         );
 
         return $out;
@@ -1447,10 +1377,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, InteractionCounter>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'interactionStatistic',
-            $this->RetrievePropertyValueFromData('interactionStatistic'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'interactionStatistic'
         );
 
         return $out;
@@ -1476,10 +1404,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'interactivityType',
-            $this->RetrievePropertyValueFromData('interactivityType'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'interactivityType'
         );
 
         return $out;
@@ -1505,10 +1431,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork|Product>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isBasedOn',
-            $this->RetrievePropertyValueFromData('isBasedOn'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'isBasedOn'
         );
 
         return $out;
@@ -1534,10 +1458,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'isFamilyFriendly',
-            $this->RetrievePropertyValueFromData('isFamilyFriendly'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'isFamilyFriendly'
         );
 
         return $out;
@@ -1562,10 +1484,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'keywords',
-            $this->RetrievePropertyValueFromData('keywords'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'keywords'
         );
 
         return $out;
@@ -1591,10 +1511,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'learningResourceType',
-            $this->RetrievePropertyValueFromData('learningResourceType'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'learningResourceType'
         );
 
         return $out;
@@ -1620,10 +1538,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'license',
-            $this->RetrievePropertyValueFromData('license'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'license'
         );
 
         return $out;
@@ -1649,10 +1565,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'locationCreated',
-            $this->RetrievePropertyValueFromData('locationCreated'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'locationCreated'
         );
 
         return $out;
@@ -1674,10 +1588,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'mainEntity',
-            $this->RetrievePropertyValueFromData('mainEntity'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'mainEntity'
         );
 
         return $out;
@@ -1703,10 +1615,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'mentions',
-            $this->RetrievePropertyValueFromData('mentions'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'mentions'
         );
 
         return $out;
@@ -1732,10 +1642,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int|string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'position',
-            $this->RetrievePropertyValueFromData('position'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'position'
         );
 
         return $out;
@@ -1761,10 +1669,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'producer',
-            $this->RetrievePropertyValueFromData('producer'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'producer'
         );
 
         return $out;
@@ -1786,10 +1692,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, PublicationEvent>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'publication',
-            $this->RetrievePropertyValueFromData('publication'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'publication'
         );
 
         return $out;
@@ -1815,10 +1719,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'publisher',
-            $this->RetrievePropertyValueFromData('publisher'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'publisher'
         );
 
         return $out;
@@ -1840,10 +1742,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'publisherImprint',
-            $this->RetrievePropertyValueFromData('publisherImprint'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'publisherImprint'
         );
 
         return $out;
@@ -1869,10 +1769,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'recordedAt',
-            $this->RetrievePropertyValueFromData('recordedAt'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'recordedAt'
         );
 
         return $out;
@@ -1898,10 +1796,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, PublicationEvent>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'releasedEvent',
-            $this->RetrievePropertyValueFromData('releasedEvent'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'releasedEvent'
         );
 
         return $out;
@@ -1927,10 +1823,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'schemaVersion',
-            $this->RetrievePropertyValueFromData('schemaVersion'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'schemaVersion'
         );
 
         return $out;
@@ -1956,10 +1850,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sdDatePublished',
-            $this->RetrievePropertyValueFromData('sdDatePublished'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sdDatePublished'
         );
 
         return $out;
@@ -1985,10 +1877,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sdLicense',
-            $this->RetrievePropertyValueFromData('sdLicense'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sdLicense'
         );
 
         return $out;
@@ -2014,10 +1904,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sdPublisher',
-            $this->RetrievePropertyValueFromData('sdPublisher'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sdPublisher'
         );
 
         return $out;
@@ -2039,10 +1927,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sourceOrganization',
-            $this->RetrievePropertyValueFromData('sourceOrganization'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sourceOrganization'
         );
 
         return $out;
@@ -2068,10 +1954,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'spatialCoverage',
-            $this->RetrievePropertyValueFromData('spatialCoverage'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'spatialCoverage'
         );
 
         return $out;
@@ -2093,10 +1977,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'temporalCoverage',
-            $this->RetrievePropertyValueFromData('temporalCoverage'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'temporalCoverage'
         );
 
         return $out;
@@ -2122,10 +2004,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'text',
-            $this->RetrievePropertyValueFromData('text'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'text'
         );
 
         return $out;
@@ -2151,10 +2031,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'thumbnailUrl',
-            $this->RetrievePropertyValueFromData('thumbnailUrl'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'thumbnailUrl'
         );
 
         return $out;
@@ -2180,10 +2058,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Duration>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'timeRequired',
-            $this->RetrievePropertyValueFromData('timeRequired'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'timeRequired'
         );
 
         return $out;
@@ -2209,10 +2085,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'translationOfWork',
-            $this->RetrievePropertyValueFromData('translationOfWork'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'translationOfWork'
         );
 
         return $out;
@@ -2238,10 +2112,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int|string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'version',
-            $this->RetrievePropertyValueFromData('version'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'version'
         );
 
         return $out;
@@ -2267,10 +2139,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, VideoObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'video',
-            $this->RetrievePropertyValueFromData('video'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'video'
         );
 
         return $out;
@@ -2296,10 +2166,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'workExample',
-            $this->RetrievePropertyValueFromData('workExample'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'workExample'
         );
 
         return $out;
@@ -2325,10 +2193,8 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'workTranslation',
-            $this->RetrievePropertyValueFromData('workTranslation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'workTranslation'
         );
 
         return $out;

@@ -225,10 +225,8 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'attendee',
-            $this->RetrievePropertyValueFromData('attendee'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'attendee'
         );
 
         return $out;
@@ -250,10 +248,8 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'contributor',
-            $this->RetrievePropertyValueFromData('contributor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'contributor'
         );
 
         return $out;
@@ -275,10 +271,8 @@ class Event extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'doorTime',
-            $this->RetrievePropertyValueFromData('doorTime'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'doorTime'
         );
 
         return $out;
@@ -303,10 +297,8 @@ class Event extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'endDate',
-            $this->RetrievePropertyValueFromData('endDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'endDate'
         );
 
         return $out;
@@ -328,10 +320,8 @@ class Event extends Thing
         /**
         * @var array<int, EventStatusType>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'eventStatus',
-            $this->RetrievePropertyValueFromData('eventStatus'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'eventStatus'
         );
 
         return $out;
@@ -356,10 +346,8 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'maximumAttendeeCapacity',
-            $this->RetrievePropertyValueFromData('maximumAttendeeCapacity'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'maximumAttendeeCapacity'
         );
 
         return $out;
@@ -381,10 +369,8 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'organizer',
-            $this->RetrievePropertyValueFromData('organizer'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'organizer'
         );
 
         return $out;
@@ -406,10 +392,8 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'performer',
-            $this->RetrievePropertyValueFromData('performer'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'performer'
         );
 
         return $out;
@@ -431,10 +415,8 @@ class Event extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'previousStartDate',
-            $this->RetrievePropertyValueFromData('previousStartDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'previousStartDate'
         );
 
         return $out;
@@ -456,10 +438,8 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'recordedIn',
-            $this->RetrievePropertyValueFromData('recordedIn'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'recordedIn'
         );
 
         return $out;
@@ -484,10 +464,8 @@ class Event extends Thing
         /**
         * @var array<int, int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'remainingAttendeeCapacity',
-            $this->RetrievePropertyValueFromData('remainingAttendeeCapacity'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'remainingAttendeeCapacity'
         );
 
         return $out;
@@ -509,10 +487,8 @@ class Event extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'startDate',
-            $this->RetrievePropertyValueFromData('startDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'startDate'
         );
 
         return $out;
@@ -534,10 +510,8 @@ class Event extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'subEvent',
-            $this->RetrievePropertyValueFromData('subEvent'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'subEvent'
         );
 
         return $out;
@@ -559,10 +533,8 @@ class Event extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'superEvent',
-            $this->RetrievePropertyValueFromData('superEvent'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'superEvent'
         );
 
         return $out;
@@ -584,10 +556,8 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'workFeatured',
-            $this->RetrievePropertyValueFromData('workFeatured'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'workFeatured'
         );
 
         return $out;
@@ -612,10 +582,8 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'workPerformed',
-            $this->RetrievePropertyValueFromData('workPerformed'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'workPerformed'
         );
 
         return $out;

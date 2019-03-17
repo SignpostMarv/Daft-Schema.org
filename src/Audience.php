@@ -36,10 +36,8 @@ class Audience extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'audienceType',
-            $this->RetrievePropertyValueFromData('audienceType'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'audienceType'
         );
 
         return $out;
@@ -65,10 +63,8 @@ class Audience extends Thing
         /**
         * @var array<int, Place\AdministrativeArea>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geographicArea',
-            $this->RetrievePropertyValueFromData('geographicArea'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'geographicArea'
         );
 
         return $out;

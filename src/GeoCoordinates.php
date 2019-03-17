@@ -72,10 +72,8 @@ class GeoCoordinates extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'latitude',
-            $this->RetrievePropertyValueFromData('latitude'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'latitude'
         );
 
         return $out;
@@ -101,10 +99,8 @@ class GeoCoordinates extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'longitude',
-            $this->RetrievePropertyValueFromData('longitude'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'longitude'
         );
 
         return $out;

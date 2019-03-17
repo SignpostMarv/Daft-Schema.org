@@ -78,10 +78,8 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'box',
-            $this->RetrievePropertyValueFromData('box'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'box'
         );
 
         return $out;
@@ -107,10 +105,8 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'circle',
-            $this->RetrievePropertyValueFromData('circle'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'circle'
         );
 
         return $out;
@@ -136,10 +132,8 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'line',
-            $this->RetrievePropertyValueFromData('line'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'line'
         );
 
         return $out;
@@ -165,10 +159,8 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'polygon',
-            $this->RetrievePropertyValueFromData('polygon'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'polygon'
         );
 
         return $out;

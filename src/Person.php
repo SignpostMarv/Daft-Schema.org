@@ -354,10 +354,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'additionalName',
-            $this->RetrievePropertyValueFromData('additionalName'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'additionalName'
         );
 
         return $out;
@@ -383,10 +381,8 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'affiliation',
-            $this->RetrievePropertyValueFromData('affiliation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'affiliation'
         );
 
         return $out;
@@ -408,10 +404,8 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'alumniOf',
-            $this->RetrievePropertyValueFromData('alumniOf'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'alumniOf'
         );
 
         return $out;
@@ -433,10 +427,8 @@ class Person extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'birthDate',
-            $this->RetrievePropertyValueFromData('birthDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'birthDate'
         );
 
         return $out;
@@ -461,10 +453,8 @@ class Person extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'birthPlace',
-            $this->RetrievePropertyValueFromData('birthPlace'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'birthPlace'
         );
 
         return $out;
@@ -489,10 +479,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'children',
-            $this->RetrievePropertyValueFromData('children'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'children'
         );
 
         return $out;
@@ -514,10 +502,8 @@ class Person extends Thing
         /**
         * @var array<int, string|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'colleague',
-            $this->RetrievePropertyValueFromData('colleague'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'colleague'
         );
 
         return $out;
@@ -543,10 +529,8 @@ class Person extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'deathDate',
-            $this->RetrievePropertyValueFromData('deathDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'deathDate'
         );
 
         return $out;
@@ -571,10 +555,8 @@ class Person extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'deathPlace',
-            $this->RetrievePropertyValueFromData('deathPlace'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'deathPlace'
         );
 
         return $out;
@@ -599,10 +581,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'familyName',
-            $this->RetrievePropertyValueFromData('familyName'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'familyName'
         );
 
         return $out;
@@ -628,10 +608,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'follows',
-            $this->RetrievePropertyValueFromData('follows'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'follows'
         );
 
         return $out;
@@ -653,10 +631,8 @@ class Person extends Thing
         /**
         * @var array<int, string|GenderType>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'gender',
-            $this->RetrievePropertyValueFromData('gender'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'gender'
         );
 
         return $out;
@@ -682,10 +658,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'givenName',
-            $this->RetrievePropertyValueFromData('givenName'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'givenName'
         );
 
         return $out;
@@ -711,10 +685,8 @@ class Person extends Thing
         /**
         * @var array<int, Occupation>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'hasOccupation',
-            $this->RetrievePropertyValueFromData('hasOccupation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'hasOccupation'
         );
 
         return $out;
@@ -739,10 +711,8 @@ class Person extends Thing
         /**
         * @var array<int, ContactPoint|Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'homeLocation',
-            $this->RetrievePropertyValueFromData('homeLocation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'homeLocation'
         );
 
         return $out;
@@ -767,10 +737,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'honorificPrefix',
-            $this->RetrievePropertyValueFromData('honorificPrefix'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'honorificPrefix'
         );
 
         return $out;
@@ -796,10 +764,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'honorificSuffix',
-            $this->RetrievePropertyValueFromData('honorificSuffix'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'honorificSuffix'
         );
 
         return $out;
@@ -825,10 +791,8 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'jobTitle',
-            $this->RetrievePropertyValueFromData('jobTitle'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'jobTitle'
         );
 
         return $out;
@@ -854,10 +818,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'knows',
-            $this->RetrievePropertyValueFromData('knows'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'knows'
         );
 
         return $out;
@@ -879,10 +841,8 @@ class Person extends Thing
         /**
         * @var array<int, Country>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'nationality',
-            $this->RetrievePropertyValueFromData('nationality'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'nationality'
         );
 
         return $out;
@@ -907,10 +867,8 @@ class Person extends Thing
         /**
         * @var array<int, MonetaryAmount|PriceSpecification>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'netWorth',
-            $this->RetrievePropertyValueFromData('netWorth'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'netWorth'
         );
 
         return $out;
@@ -935,10 +893,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'parent',
-            $this->RetrievePropertyValueFromData('parent'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'parent'
         );
 
         return $out;
@@ -960,10 +916,8 @@ class Person extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'performerIn',
-            $this->RetrievePropertyValueFromData('performerIn'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'performerIn'
         );
 
         return $out;
@@ -985,10 +939,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'relatedTo',
-            $this->RetrievePropertyValueFromData('relatedTo'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'relatedTo'
         );
 
         return $out;
@@ -1010,10 +962,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sibling',
-            $this->RetrievePropertyValueFromData('sibling'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sibling'
         );
 
         return $out;
@@ -1035,10 +985,8 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'spouse',
-            $this->RetrievePropertyValueFromData('spouse'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'spouse'
         );
 
         return $out;
@@ -1060,10 +1008,8 @@ class Person extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'weight',
-            $this->RetrievePropertyValueFromData('weight'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'weight'
         );
 
         return $out;
@@ -1088,10 +1034,8 @@ class Person extends Thing
         /**
         * @var array<int, ContactPoint|Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'workLocation',
-            $this->RetrievePropertyValueFromData('workLocation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'workLocation'
         );
 
         return $out;
@@ -1116,10 +1060,8 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'worksFor',
-            $this->RetrievePropertyValueFromData('worksFor'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'worksFor'
         );
 
         return $out;

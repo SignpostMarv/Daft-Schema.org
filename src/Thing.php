@@ -142,10 +142,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'additionalType',
-            $this->RetrievePropertyValueFromData('additionalType'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'additionalType'
         );
 
         return $out;
@@ -171,10 +169,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'alternateName',
-            $this->RetrievePropertyValueFromData('alternateName'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'alternateName'
         );
 
         return $out;
@@ -200,10 +196,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'description',
-            $this->RetrievePropertyValueFromData('description'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'description'
         );
 
         return $out;
@@ -229,10 +223,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'disambiguatingDescription',
-            $this->RetrievePropertyValueFromData('disambiguatingDescription'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'disambiguatingDescription'
         );
 
         return $out;
@@ -258,10 +250,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|PropertyValue>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'identifier',
-            $this->RetrievePropertyValueFromData('identifier'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'identifier'
         );
 
         return $out;
@@ -287,10 +277,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|ImageObject>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'image',
-            $this->RetrievePropertyValueFromData('image'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'image'
         );
 
         return $out;
@@ -316,10 +304,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'mainEntityOfPage',
-            $this->RetrievePropertyValueFromData('mainEntityOfPage'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'mainEntityOfPage'
         );
 
         return $out;
@@ -345,10 +331,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'name',
-            $this->RetrievePropertyValueFromData('name'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'name'
         );
 
         return $out;
@@ -370,10 +354,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, Action>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'potentialAction',
-            $this->RetrievePropertyValueFromData('potentialAction'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'potentialAction'
         );
 
         return $out;
@@ -398,10 +380,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'sameAs',
-            $this->RetrievePropertyValueFromData('sameAs'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'sameAs'
         );
 
         return $out;
@@ -423,10 +403,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, CreativeWork|Event>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'subjectOf',
-            $this->RetrievePropertyValueFromData('subjectOf'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'subjectOf'
         );
 
         return $out;
@@ -448,10 +426,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'url',
-            $this->RetrievePropertyValueFromData('url'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'url'
         );
 
         return $out;
@@ -475,6 +451,15 @@ class Thing extends AbstractArrayBackedDaftObject implements
             function ($val) : bool {
                 return ! is_array($val) || count($val) > 0;
             }
+        );
+    }
+
+    protected function ExpectRetrievedValueIsArray(string $property) : array
+    {
+        return TypeUtilities::ExpectRetrievedValueIsArray(
+            $property,
+            $this->RetrievePropertyValueFromData($property),
+            static::class
         );
     }
 

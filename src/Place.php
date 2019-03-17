@@ -199,10 +199,8 @@ class Place extends Thing
         /**
         * @var array<int, LocationFeatureSpecification>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'amenityFeature',
-            $this->RetrievePropertyValueFromData('amenityFeature'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'amenityFeature'
         );
 
         return $out;
@@ -227,10 +225,8 @@ class Place extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'branchCode',
-            $this->RetrievePropertyValueFromData('branchCode'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'branchCode'
         );
 
         return $out;
@@ -256,10 +252,8 @@ class Place extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'containedInPlace',
-            $this->RetrievePropertyValueFromData('containedInPlace'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'containedInPlace'
         );
 
         return $out;
@@ -284,10 +278,8 @@ class Place extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'containsPlace',
-            $this->RetrievePropertyValueFromData('containsPlace'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'containsPlace'
         );
 
         return $out;
@@ -312,10 +304,8 @@ class Place extends Thing
         /**
         * @var array<int, GeoCoordinates|GeoShape>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'geo',
-            $this->RetrievePropertyValueFromData('geo'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'geo'
         );
 
         return $out;
@@ -340,10 +330,8 @@ class Place extends Thing
         /**
         * @var array<int, string|Map>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'hasMap',
-            $this->RetrievePropertyValueFromData('hasMap'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'hasMap'
         );
 
         return $out;
@@ -369,10 +357,8 @@ class Place extends Thing
         /**
         * @var array<int, int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'maximumAttendeeCapacity',
-            $this->RetrievePropertyValueFromData('maximumAttendeeCapacity'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'maximumAttendeeCapacity'
         );
 
         return $out;
@@ -397,10 +383,8 @@ class Place extends Thing
         /**
         * @var array<int, OpeningHoursSpecification>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'openingHoursSpecification',
-            $this->RetrievePropertyValueFromData('openingHoursSpecification'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'openingHoursSpecification'
         );
 
         return $out;
@@ -425,10 +409,8 @@ class Place extends Thing
         /**
         * @var array<int, ImageObject|Photograph>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'photo',
-            $this->RetrievePropertyValueFromData('photo'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'photo'
         );
 
         return $out;
@@ -453,10 +435,8 @@ class Place extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'publicAccess',
-            $this->RetrievePropertyValueFromData('publicAccess'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'publicAccess'
         );
 
         return $out;
@@ -481,10 +461,8 @@ class Place extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'smokingAllowed',
-            $this->RetrievePropertyValueFromData('smokingAllowed'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'smokingAllowed'
         );
 
         return $out;
@@ -509,10 +487,8 @@ class Place extends Thing
         /**
         * @var array<int, OpeningHoursSpecification>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'specialOpeningHoursSpecification',
-            $this->RetrievePropertyValueFromData('specialOpeningHoursSpecification'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'specialOpeningHoursSpecification'
         );
 
         return $out;

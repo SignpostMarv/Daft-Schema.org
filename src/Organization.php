@@ -348,10 +348,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'actionableFeedbackPolicy',
-            $this->RetrievePropertyValueFromData('actionableFeedbackPolicy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'actionableFeedbackPolicy'
         );
 
         return $out;
@@ -377,10 +375,8 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'alumni',
-            $this->RetrievePropertyValueFromData('alumni'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'alumni'
         );
 
         return $out;
@@ -405,10 +401,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'correctionsPolicy',
-            $this->RetrievePropertyValueFromData('correctionsPolicy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'correctionsPolicy'
         );
 
         return $out;
@@ -434,10 +428,8 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'department',
-            $this->RetrievePropertyValueFromData('department'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'department'
         );
 
         return $out;
@@ -462,10 +454,8 @@ class Organization extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'dissolutionDate',
-            $this->RetrievePropertyValueFromData('dissolutionDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'dissolutionDate'
         );
 
         return $out;
@@ -490,10 +480,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'diversityPolicy',
-            $this->RetrievePropertyValueFromData('diversityPolicy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'diversityPolicy'
         );
 
         return $out;
@@ -519,10 +507,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|Article>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'diversityStaffingReport',
-            $this->RetrievePropertyValueFromData('diversityStaffingReport'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'diversityStaffingReport'
         );
 
         return $out;
@@ -548,10 +534,8 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'employee',
-            $this->RetrievePropertyValueFromData('employee'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'employee'
         );
 
         return $out;
@@ -576,10 +560,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'ethicsPolicy',
-            $this->RetrievePropertyValueFromData('ethicsPolicy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'ethicsPolicy'
         );
 
         return $out;
@@ -605,10 +587,8 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'founder',
-            $this->RetrievePropertyValueFromData('founder'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'founder'
         );
 
         return $out;
@@ -633,10 +613,8 @@ class Organization extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'foundingDate',
-            $this->RetrievePropertyValueFromData('foundingDate'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'foundingDate'
         );
 
         return $out;
@@ -661,10 +639,8 @@ class Organization extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'foundingLocation',
-            $this->RetrievePropertyValueFromData('foundingLocation'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'foundingLocation'
         );
 
         return $out;
@@ -689,10 +665,8 @@ class Organization extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'legalName',
-            $this->RetrievePropertyValueFromData('legalName'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'legalName'
         );
 
         return $out;
@@ -718,10 +692,8 @@ class Organization extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'leiCode',
-            $this->RetrievePropertyValueFromData('leiCode'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'leiCode'
         );
 
         return $out;
@@ -747,10 +719,8 @@ class Organization extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'numberOfEmployees',
-            $this->RetrievePropertyValueFromData('numberOfEmployees'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'numberOfEmployees'
         );
 
         return $out;
@@ -775,10 +745,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|AboutPage|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'ownershipFundingInfo',
-            $this->RetrievePropertyValueFromData('ownershipFundingInfo'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'ownershipFundingInfo'
         );
 
         return $out;
@@ -804,10 +772,8 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'parentOrganization',
-            $this->RetrievePropertyValueFromData('parentOrganization'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'parentOrganization'
         );
 
         return $out;
@@ -832,10 +798,8 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'subOrganization',
-            $this->RetrievePropertyValueFromData('subOrganization'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'subOrganization'
         );
 
         return $out;
@@ -860,10 +824,8 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'unnamedSourcesPolicy',
-            $this->RetrievePropertyValueFromData('unnamedSourcesPolicy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'unnamedSourcesPolicy'
         );
 
         return $out;

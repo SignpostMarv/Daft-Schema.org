@@ -230,10 +230,8 @@ class Offer extends Thing
         /**
         * @var array<int, Offer>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'addOn',
-            $this->RetrievePropertyValueFromData('addOn'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'addOn'
         );
 
         return $out;
@@ -258,10 +256,8 @@ class Offer extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'offeredBy',
-            $this->RetrievePropertyValueFromData('offeredBy'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'offeredBy'
         );
 
         return $out;
@@ -286,10 +282,8 @@ class Offer extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'price',
-            $this->RetrievePropertyValueFromData('price'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'price'
         );
 
         return $out;
@@ -315,10 +309,8 @@ class Offer extends Thing
         /**
         * @var array<int, string>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'priceCurrency',
-            $this->RetrievePropertyValueFromData('priceCurrency'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'priceCurrency'
         );
 
         return $out;
@@ -344,10 +336,8 @@ class Offer extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'priceValidUntil',
-            $this->RetrievePropertyValueFromData('priceValidUntil'),
-            static::class
+        $out = $this->ExpectRetrievedValueIsArray(
+            'priceValidUntil'
         );
 
         return $out;

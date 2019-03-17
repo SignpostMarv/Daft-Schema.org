@@ -6,10 +6,10 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
-use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
 
 /**

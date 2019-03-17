@@ -9,7 +9,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**

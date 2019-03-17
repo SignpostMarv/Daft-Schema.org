@@ -16,7 +16,6 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ItemAvailability;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\OfferItemCondition;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PaymentMethod;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\FinancialProduct\LoanOrCredit;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;

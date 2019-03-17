@@ -52,6 +52,8 @@ class DaftObjectFuzzingTest extends Base
     */
     private static $YieldTypeForFuzzing = [];
 
+    private static $last_boolean = false;
+
     /**
     * @psalm-param class-string<SchemaOrg\Thing> $type
     *
@@ -103,7 +105,8 @@ class DaftObjectFuzzingTest extends Base
                                 $args[$property][] = count($args[$property]);
                                 break;
                             case 'boolean':
-                                $args[$property][] = true;
+                                $args[$property][] = self::$last_boolean;
+                                self::$last_boolean = !self::$last_boolean;
                                 break;
                             default:
                                 throw new RuntimeException('Unsupported type: ' . $sub_type);

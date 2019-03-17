@@ -15,12 +15,12 @@ trait AvailabilityAndStartsAndEnds
     use DaftObjectTrait;
 
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ItemAvailability>
+    * @return array<int, ItemAvailability>
     */
     public function GetAvailability() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ItemAvailability>
+        * @var array<int, ItemAvailability>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'availability',
@@ -32,7 +32,7 @@ trait AvailabilityAndStartsAndEnds
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ItemAvailability> $value
+    * @param array<int, ItemAvailability> $value
     */
     public function SetAvailability(array $value) : void
     {

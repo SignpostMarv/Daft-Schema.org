@@ -118,13 +118,9 @@ class Occupation extends Base
     */
     public function SetEstimatedSalary(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'estimatedSalary',
-            __METHOD__,
-            $value,
-            StructuredValue\MonetaryAmount::class,
-            StructuredValue\QuantitativeValue\MonetaryAmountDistribution::class,
-            PriceSpecification::class
+            $value
         );
     }
 

@@ -86,10 +86,10 @@ class GeoCoordinates extends Thing
     */
     public function SetLatitude(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'latitude',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -115,10 +115,10 @@ class GeoCoordinates extends Thing
     */
     public function SetLongitude(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'longitude',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

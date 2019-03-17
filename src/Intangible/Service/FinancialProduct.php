@@ -63,11 +63,9 @@ class FinancialProduct extends Base
     */
     public function SetAnnualPercentageRate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'annualPercentageRate',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -122,11 +120,9 @@ class FinancialProduct extends Base
     */
     public function SetInterestRate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'interestRate',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 }

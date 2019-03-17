@@ -94,11 +94,9 @@ class LoanOrCredit extends Base
     */
     public function SetAmount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'amount',
-            __METHOD__,
-            $value,
-            MonetaryAmount::class
+            $value
         );
     }
 

@@ -50,11 +50,9 @@ class BroadcastFrequencySpecification extends Base
     */
     public function SetBroadcastFrequencyValue(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'broadcastFrequencyValue',
-            __METHOD__,
-            $value,
-            StructuredValue\QuantitativeValue::class
+            $value
         );
     }
 }

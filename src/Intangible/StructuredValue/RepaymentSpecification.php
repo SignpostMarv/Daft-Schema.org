@@ -72,11 +72,9 @@ class RepaymentSpecification extends Base
     */
     public function SetDownPayment(array $value) : void
     {
-        $this->NudgePropertyWithUniqueNumericsOrThings(
+        $this->NudgePropertyValue(
             'downPayment',
-            __METHOD__,
-            $value,
-            MonetaryAmount::class
+            $value
         );
     }
 
@@ -154,13 +152,12 @@ class RepaymentSpecification extends Base
     }
 
     /**
-    * @param array<int, int|float|string> $value
+    * @param array<int, int|float> $value
     */
     public function SetLoanPaymentFrequency(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegersOrFloats(
+        $this->NudgePropertyValue(
             'loanPaymentFrequency',
-            __METHOD__,
             $value
         );
     }
@@ -183,13 +180,12 @@ class RepaymentSpecification extends Base
     }
 
     /**
-    * @param array<int, int|float|string> $value
+    * @param array<int, int|float> $value
     */
     public function SetNumberOfLoanPayments(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegersOrFloats(
+        $this->NudgePropertyValue(
             'numberOfLoanPayments',
-            __METHOD__,
             $value
         );
     }

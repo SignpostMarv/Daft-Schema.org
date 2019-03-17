@@ -34,10 +34,10 @@ trait HasElevation
     */
     public function SetElevation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'elevation',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

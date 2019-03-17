@@ -336,10 +336,10 @@ class Offer extends Thing
     */
     public function SetPrice(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsNumericsMightNotBeStringsOrNumerics(
+        $this->NudgePropertyValue(
             'price',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

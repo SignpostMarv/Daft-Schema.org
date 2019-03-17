@@ -26,6 +26,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue\L
 * @property array<int, Place> $containedInPlace
 * @property array<int, Place> $containsPlace
 * @property array<int, Event> $event
+* @property array<int, string> $faxNumber
 * @property array<int, string|Map> $hasMap
 * @property array<int, GeoCoordinates|GeoShape> $geo
 * @property array<int, GeospatialGeometry|Place> $geospatiallyContains
@@ -130,6 +131,9 @@ class Place extends Thing
         'event' => [
             Event::class,
         ],
+        'faxNumber' => [
+            'string',
+        ],
         'hasMap' => [
             'string',
             Map::class,
@@ -138,46 +142,16 @@ class Place extends Thing
             GeoCoordinates::class,
             GeoShape::class,
         ],
-        'geospatiallyContains' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyCoveredBy' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyCovers' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyCrosses' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyDisjoint' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyEquals' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyIntersects' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyOverlaps' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyTouches' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
-        'geospatiallyWithin' => [
-            GeospatialGeometry::class,
-            Place::class,
-        ],
+        'geospatiallyContains' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyCoveredBy' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyCovers' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyCrosses' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyDisjoint' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyEquals' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyIntersects' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyOverlaps' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyTouches' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
+        'geospatiallyWithin' => TypeUtilities::MULTI_TYPE_COMMON__GeospatialGeometry__or__Place,
         'globalLocationNumber' => [
             'string',
         ],

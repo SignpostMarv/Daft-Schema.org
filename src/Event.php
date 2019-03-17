@@ -51,7 +51,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\Po
 */
 class Event extends Thing
 {
-    use DaftObjectTraits\HasAboutThing;
+    use DaftObjectTraits\About;
     use DaftObjectTraits\HasActor;
     use DaftObjectTraits\HasAggregateRating;
     use DaftObjectTraits\HasAudience;

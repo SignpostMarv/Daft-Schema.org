@@ -28,11 +28,20 @@ class TypeUtilities extends Base
         Intangible\Trip::class,
     ];
 
+    const MULTI_TYPE_COMMON__GeospatialGeometry__or__Place = [
+        Intangible\GeospatialGeometry::class,
+        Place::class,
+    ];
+
     const MULTI_TYPE_COMMON__Person = [
         Person::class,
     ];
 
-    const MULTI_TYPE_DICT__aboutThing = [
+    const MULTI_TYPE_COMMON__QuantitativeValue = [
+        Intangible\StructuredValue\QuantitativeValue::class,
+    ];
+
+    const MULTI_TYPE_DICT__about = [
         Thing::class,
     ];
 
@@ -58,6 +67,8 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__composer = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
+    const MULTI_TYPE_DICT__deliveryLeadTime = self::MULTI_TYPE_COMMON__QuantitativeValue;
+
     const MULTI_TYPE_DICT__director = self::MULTI_TYPE_COMMON__Person;
 
     const MULTI_TYPE_DICT__downvoteCount = self::MULTI_TYPE_COMMON__int_only;
@@ -66,9 +77,32 @@ class TypeUtilities extends Base
         Intangible\Quantity\Duration::class,
     ];
 
+    const MULTI_TYPE_DICT__eligibleCustomerType = [
+        Intangible\Enumeration\BusinessEntityType::class,
+    ];
+
+    const MULTI_TYPE_DICT__eligibleDuration = self::MULTI_TYPE_COMMON__QuantitativeValue;
+
+    const MULTI_TYPE_DICT__eligibleQuantity = self::MULTI_TYPE_COMMON__QuantitativeValue;
+
+    const MULTI_TYPE_DICT__eligibleRegion = [
+        'string',
+        GeoShape::class,
+        Place::class,
+    ];
+
+    const MULTI_TYPE_DICT__eligibleTransactionVolume = [
+        Intangible\StructuredValue\PriceSpecification::class,
+    ];
+
     const MULTI_TYPE_DICT__funder = self::MULTI_TYPE_COMMON__Organization__or__Person;
 
     const MULTI_TYPE_DICT__genre = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__gtin12 = self::MULTI_TYPE_COMMON__string_only;
+    const MULTI_TYPE_DICT__gtin13 = self::MULTI_TYPE_COMMON__string_only;
+    const MULTI_TYPE_DICT__gtin14 = self::MULTI_TYPE_COMMON__string_only;
+    const MULTI_TYPE_DICT__gtin8 = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__hasPart = self::MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip;
 
@@ -76,6 +110,18 @@ class TypeUtilities extends Base
         Intangible\Quantity\Distance::class,
         Intangible\StructuredValue\QuantitativeValue::class,
     ];
+
+    const MULTI_TYPE_DICT__includesObject = [
+        Intangible\StructuredValue\TypeAndQuantityNode::class,
+    ];
+
+    const MULTI_TYPE_DICT__ineligibleRegion = [
+        'string',
+        GeoShape::class,
+        Place::class,
+    ];
+
+    const MULTI_TYPE_DICT__inventoryLevel = self::MULTI_TYPE_COMMON__QuantitativeValue;
 
     const MULTI_TYPE_DICT__inLanguage = [
         'string',
@@ -89,6 +135,15 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__isPartOf = self::MULTI_TYPE_COMMON__CreativeWork__or__Intangible_Trip;
 
     const MULTI_TYPE_DICT__issn = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__itemCondition = [
+        Intangible\Enumeration\OfferItemCondition::class,
+    ];
+
+    const MULTI_TYPE_DICT__itemOffered = [
+        Product::class,
+        Intangible\Service::class,
+    ];
 
     const MULTI_TYPE_DICT__itemReviewed = [
         Thing::class,
@@ -105,6 +160,8 @@ class TypeUtilities extends Base
     ];
 
     const MULTI_TYPE_DICT__measurementTechnique = self::MULTI_TYPE_COMMON__string_only;
+
+    const MULTI_TYPE_DICT__mpn = self::MULTI_TYPE_COMMON__string_only;
 
     const MULTI_TYPE_DICT__offers = [
         Offer::class,

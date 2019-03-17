@@ -7,15 +7,16 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits\TraitSupersededBy;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
-* @property array<int, IntangibleClass> $domainIncludes
+* @property array<int, Base> $domainIncludes
 * @property array<int, IntangibleProperty> $inverseOf
-* @property array<int, IntangibleClass> $rangeIncludes
+* @property array<int, Base> $rangeIncludes
+* @property array<int, IntangibleClass|Enumeration|IntangibleProperty> $supersededBy
 */
-class IntangibleProperty extends Intangible
+class IntangibleProperty extends Base
 {
     use TraitSupersededBy;
 
@@ -30,23 +31,28 @@ class IntangibleProperty extends Intangible
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
         'domainIncludes' => [
-            IntangibleClass::class,
+            Base::class,
         ],
         'inverseOf' => [
             IntangibleProperty::class,
         ],
         'rangeIncludes' => [
+            Base::class,
+        ],
+        'supersededBy' => [
             IntangibleClass::class,
+            Enumeration::class,
+            IntangibleProperty::class,
         ],
     ];
 
     /**
-    * @return array<int, IntangibleClass>
+    * @return array<int, Base>
     */
     public function GetDomainIncludes() : array
     {
         /**
-        * @var array<int, IntangibleClass>
+        * @var array<int, Base>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'domainIncludes',
@@ -58,7 +64,7 @@ class IntangibleProperty extends Intangible
     }
 
     /**
-    * @param array<int, IntangibleClass> $value
+    * @param array<int, Base> $value
     */
     public function SetDomainIncludes(array $value) : void
     {
@@ -97,12 +103,12 @@ class IntangibleProperty extends Intangible
     }
 
     /**
-    * @return array<int, IntangibleClass>
+    * @return array<int, Base>
     */
     public function GetRangeIncludes() : array
     {
         /**
-        * @var array<int, IntangibleClass>
+        * @var array<int, Base>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'rangeIncludes',
@@ -114,7 +120,7 @@ class IntangibleProperty extends Intangible
     }
 
     /**
-    * @param array<int, IntangibleClass> $value
+    * @param array<int, Base> $value
     */
     public function SetRangeIncludes(array $value) : void
     {

@@ -8,12 +8,12 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DeliveryMethod;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
-use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 

@@ -8,7 +8,10 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Organization;
 
 use SignpostMarv\DaftObject\SchemaOrg\Organization as Base;
 
-class PerformingGroup extends Base
+/**
+* {@inheritdoc}
+*/
+abstract class PerformingGroup extends Base
 {
     const SCHEMA_ORG_TYPE = 'PerformingGroup';
 }

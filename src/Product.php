@@ -6,7 +6,9 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg;
 
+use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\OfferItemCondition;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Distance;
@@ -20,6 +22,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 * @property array<int, AggregateRating> $aggregateRating
 * @property array<int, Audience> $audience
 * @property array<int, string> $award
+* @property array<int, Brand|Organization> $brand
 * @property array<int, string|Thing|PhysicalActivityCategory> $category
 * @property array<int, string> $color
 * @property array<int, Distance|QuantitativeValue> $depth
@@ -33,6 +36,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 * @property array<int, Product|Service> $isRelatedTo
 * @property array<int, Product|Service> $isSimilarTo
 * @property array<int, OfferItemCondition> $itemCondition
+* @property array<int, ImageObject> $logo
 * @property array<int, Organization> $manufacturer
 * @property array<int, string|Product> $material
 * @property array<int, string|Product\ProductModel> $model
@@ -117,6 +121,10 @@ class Product extends Thing
         'award' => [
             'string',
         ],
+        'brand' => [
+            Brand::class,
+            Organization::class,
+        ],
         'category' => [
             'string',
             Thing::class,
@@ -161,6 +169,9 @@ class Product extends Thing
         ],
         'itemCondition' => [
             OfferItemCondition::class,
+        ],
+        'logo' => [
+            ImageObject::class,
         ],
         'manufacturer' => [
             Organization::class,

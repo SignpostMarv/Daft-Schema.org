@@ -9,7 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
-trait HasAboutThing
+trait About
 {
     use DaftObjectTrait;
 

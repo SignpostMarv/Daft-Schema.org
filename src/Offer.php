@@ -19,6 +19,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCat
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\FinancialProduct\LoanOrCredit;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\TypeAndQuantityNode;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
@@ -163,59 +164,22 @@ class Offer extends Thing
             Thing::class,
             PhysicalActivityCategory::class,
         ],
-        'deliveryLeadTime' => [
-            QuantitativeValue::class,
-        ],
-        'eligibleCustomerType' => [
-            BusinessEntityType::class,
-        ],
-        'eligibleDuration' => [
-            QuantitativeValue::class,
-        ],
-        'eligibleQuantity' => [
-            QuantitativeValue::class,
-        ],
-        'eligibleRegion' => [
-            'string',
-            GeoShape::class,
-            Place::class,
-        ],
-        'eligibleTransactionVolume' => [
-            PriceSpecification::class,
-        ],
-        'gtin12' => [
-            'string',
-        ],
-        'gtin13' => [
-            'string',
-        ],
-        'gtin14' => [
-            'string',
-        ],
-        'gtin8' => [
-            'string',
-        ],
-        'includesObject' => [
-            TypeAndQuantityNode::class,
-        ],
-        'ineligibleRegion' => [
-            'string',
-            GeoShape::class,
-            Place::class,
-        ],
-        'inventoryLevel' => [
-            QuantitativeValue::class,
-        ],
-        'itemCondition' => [
-            OfferItemCondition::class,
-        ],
-        'itemOffered' => [
-            Product::class,
-            Service::class,
-        ],
-        'mpn' => [
-            'string',
-        ],
+        'deliveryLeadTime' => TypeUtilities::MULTI_TYPE_DICT__deliveryLeadTime,
+        'eligibleCustomerType' => TypeUtilities::MULTI_TYPE_DICT__eligibleCustomerType,
+        'eligibleDuration' => TypeUtilities::MULTI_TYPE_DICT__eligibleDuration,
+        'eligibleQuantity' => TypeUtilities::MULTI_TYPE_DICT__eligibleQuantity,
+        'eligibleRegion' => TypeUtilities::MULTI_TYPE_DICT__eligibleRegion,
+        'eligibleTransactionVolume' => TypeUtilities::MULTI_TYPE_DICT__eligibleTransactionVolume,
+        'gtin12' => TypeUtilities::MULTI_TYPE_DICT__gtin12,
+        'gtin13' => TypeUtilities::MULTI_TYPE_DICT__gtin13,
+        'gtin14' => TypeUtilities::MULTI_TYPE_DICT__gtin14,
+        'gtin8' => TypeUtilities::MULTI_TYPE_DICT__gtin8,
+        'includesObject' => TypeUtilities::MULTI_TYPE_DICT__includesObject,
+        'ineligibleRegion' => TypeUtilities::MULTI_TYPE_DICT__ineligibleRegion,
+        'inventoryLevel' => TypeUtilities::MULTI_TYPE_DICT__inventoryLevel,
+        'itemCondition' => TypeUtilities::MULTI_TYPE_DICT__itemCondition,
+        'itemOffered' => TypeUtilities::MULTI_TYPE_DICT__itemOffered,
+        'mpn' => TypeUtilities::MULTI_TYPE_DICT__mpn,
         'offeredBy' => [
             Organization::class,
             Person::class,

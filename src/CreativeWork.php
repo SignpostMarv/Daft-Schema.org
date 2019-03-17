@@ -21,7 +21,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCoun
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Trip;
 
 /**
-* @property array<int, Thing> $aboutThing
+* @property array<int, Thing> $about
 * @property array<int, string> $accessMode
 * @property array<int, string> $accessModeSufficient
 * @property array<int, string> $accessibilityAPI
@@ -111,7 +111,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Trip;
 */
 class CreativeWork extends Thing
 {
-    use DaftObjectTraits\HasAboutThing;
+    use DaftObjectTraits\About;
     use DaftObjectTraits\HasAggregateRating;
     use DaftObjectTraits\HasAudience;
     use DaftObjectTraits\HasAuthor;
@@ -222,7 +222,7 @@ class CreativeWork extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'aboutThing' => TypeUtilities::MULTI_TYPE_DICT__aboutThing,
+        'about' => TypeUtilities::MULTI_TYPE_DICT__about,
         'accessMode' => [
             'string',
         ],

@@ -4,10 +4,13 @@
 */
 declare(strict_types=1);
 
-namespace SignpostMarv\DaftObject\SchemaOrg;
+namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, QuantitativeValue> $eligibleQuantity
@@ -20,7 +23,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 * @property array<int, DateTime> $validFrom
 * @property array<int, DateTime> $validThrough
 */
-class PriceSpecification extends Thing
+class PriceSpecification extends Base
 {
     use DaftObjectTraits\HasValidFromThrough;
 

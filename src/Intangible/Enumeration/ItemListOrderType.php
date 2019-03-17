@@ -8,6 +8,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration as Base;
 
+/**
+* {@inheritdoc}
+*/
 class ItemListOrderType extends Base
 {
     const SCHEMA_ORG_TYPE = 'ItemListOrderType';

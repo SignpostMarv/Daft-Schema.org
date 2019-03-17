@@ -21,12 +21,14 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OwnershipInfo;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
 
 /**
 * @property array<int, string|CreativeWork> $actionableFeedbackPolicy
 * @property array<int, string|PostalAddress> $address
 * @property array<int, AggregateRating> $aggregateRating
 * @property array<int, Person> $alumni
+* @property array<int, string|AdministrativeArea|GeoShape|Place> $areaServed
 * @property array<int, string> $award
 * @property array<int, Brand|Organization> $brand
 * @property array<int, ContactPoint> $contactPoint
@@ -176,6 +178,12 @@ class Organization extends Thing
         ],
         'alumni' => [
             Person::class,
+        ],
+        'areaServed' => [
+            'string',
+            AdministrativeArea::class,
+            GeoShape::class,
+            Place::class,
         ],
         'award' => [
             'string',

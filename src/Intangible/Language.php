@@ -8,6 +8,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
+/**
+* {@inheritdoc}
+*/
 class Language extends Intangible
 {
 }

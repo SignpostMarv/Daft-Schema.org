@@ -8,6 +8,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity as Base;
 
+/**
+* {@inheritdoc}
+*/
 class Distance extends Base
 {
     const SCHEMA_ORG_TYPE = 'Distance';

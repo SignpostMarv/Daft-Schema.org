@@ -48,6 +48,11 @@ class DaftObjectFuzzingTest extends Base
     private static $fuzzing_cache = [];
 
     /**
+    * @var array
+    */
+    private static $YieldTypeForFuzzing = [];
+
+    /**
     * @psalm-param class-string<SchemaOrg\Thing> $type
     *
     * @psalm-return Generator<int, array<string, scalar|array|object|null>, mixed, void>
@@ -286,8 +291,11 @@ class DaftObjectFuzzingTest extends Base
     */
     protected static function YieldCachedObjectsOfTypeForFuzzing(
         array $types,
-        bool $deep = false
+        bool $deep = false,
+        array $skip_these = []
     ) : Generator {
+        $yield_count = [];
+
         if ($deep) {
             foreach ($types as $gimme) {
                 if ( ! isset(self::$obj_deep_cache[$gimme])) {
@@ -297,6 +305,12 @@ class DaftObjectFuzzingTest extends Base
                 }
 
                 yield from self::$obj_deep_cache[$gimme];
+
+                if (count(self::$obj_deep_cache[$gimme]) > 0) {
+                    $yield_count[$gimme] = ($yield_count[$gimme] ?? 0) + 1;
+                } else {
+                    $yield_count[$gimme] = $yield_count[$gimme] ?? 0;
+                }
             }
         } else {
             foreach ($types as $gimme) {
@@ -307,7 +321,50 @@ class DaftObjectFuzzingTest extends Base
                 }
 
                 yield from self::$obj_cache[$gimme];
+
+                if (count(self::$obj_cache[$gimme]) > 0) {
+                    $yield_count[$gimme] = ($yield_count[$gimme] ?? 0) + 1;
+                } else {
+                    $yield_count[$gimme] = $yield_count[$gimme] ?? 0;
+                }
             }
+        }
+
+        /**
+        * @var array<int, string>
+        *
+        * @psalm-var array<int, class-string<SchemaOrg\Thing>>
+        */
+        $recheck_with_these = [];
+
+        foreach ($yield_count as $gimme => $count) {
+            if ($count < 1) {
+                foreach (static::YieldTypeForFuzzing() as $gimme_again) {
+                    if (
+                        ! in_array($gimme_again, $skip_these, true) &&
+                        is_a($gimme_again, $gimme, true)
+                    ) {
+                        /**
+                        * @var string
+                        *
+                        * @psalm-var class-string<SchemaOrg\Thing>
+                        */
+                        $gimme_again = $gimme_again;
+
+                        $recheck_with_these[] = $gimme_again;
+                    }
+                }
+            } elseif ( ! in_array($gimme, $skip_these, true)) {
+                $skip_these[] = $gimme;
+            }
+        }
+
+        if (count($recheck_with_these) > 0) {
+            yield from static::YieldCachedObjectsOfTypeForFuzzing(
+                $recheck_with_these,
+                $deep,
+                $skip_these
+            );
         }
     }
 
@@ -316,6 +373,12 @@ class DaftObjectFuzzingTest extends Base
     */
     protected static function YieldTypeForFuzzing() : Generator
     {
+        if (count(self::$YieldTypeForFuzzing) > 0) {
+            yield from self::$YieldTypeForFuzzing;
+
+            return;
+        }
+
         /**
         * @var iterable<string>
         */
@@ -347,6 +410,8 @@ class DaftObjectFuzzingTest extends Base
 
         $root_length = mb_strlen(__DIR__ . '/../../src/');
 
+        $cache = [];
+
         foreach ($iterator as $pathname) {
             $class_name =
                 '\\SignpostMarv\\DaftObject\\SchemaOrg\\' .
@@ -367,11 +432,17 @@ class DaftObjectFuzzingTest extends Base
                         */
                         $out = $reflector->name;
 
+                        if ( ! in_array($out, $cache, true)) {
+                            $cache[] = $out;
+                        }
+
                         yield $out;
                     }
                 }
             }
         }
+
+        self::$YieldTypeForFuzzing = $cache;
     }
 
     protected function FuzzingImplementationsViaGenerator() : Generator

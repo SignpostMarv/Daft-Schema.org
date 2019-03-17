@@ -8,9 +8,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\GeoShape;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\BusinessEntityType;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
-use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAndIneligibleRegion

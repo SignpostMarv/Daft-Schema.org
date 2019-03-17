@@ -8,6 +8,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity as Base;
 
+/**
+* {@inheritdoc}
+*/
 class Duration extends Base
 {
     const SCHEMA_ORG_TYPE = 'Duration';

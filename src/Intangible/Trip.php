@@ -10,6 +10,9 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Offer;
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -18,6 +21,8 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 * @property array<int, CreativeWork|Trip> $hasPart
 * @property array<int, CreativeWork|Trip> $isPartOf
 * @property array<int, ItemList> $itinerary
+* @property array<int, Offer> $offers
+* @property array<int, Organization|Person> $provider
 */
 class Trip extends Base
 {
@@ -54,6 +59,13 @@ class Trip extends Base
         ],
         'itinerary' => [
             ItemList::class,
+        ],
+        'offers' => [
+            Offer::class,
+        ],
+        'provider' => [
+            Organization::class,
+            Person::class,
         ],
     ];
 

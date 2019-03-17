@@ -8,12 +8,11 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
-use SignpostMarv\DaftObject\SchemaOrg\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, string> $educationRequirements
-* @property array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|PriceSpecification> $estimatedSalary
+* @property array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|StructuredValue\PriceSpecification> $estimatedSalary
 * @property array<int, string> $experienceRequirements
 * @property array<int, AdministrativeArea> $occupationLocation
 * @property array<int, string> $occupationalCategory
@@ -45,7 +44,7 @@ class Occupation extends Base
             'double',
             StructuredValue\MonetaryAmount::class,
             StructuredValue\QuantitativeValue\MonetaryAmountDistribution::class,
-            PriceSpecification::class,
+            StructuredValue\PriceSpecification::class,
         ],
         'experienceRequirements' => [
             'string',
@@ -97,12 +96,12 @@ class Occupation extends Base
     }
 
     /**
-    * @return array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|PriceSpecification>
+    * @return array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|StructuredValue\PriceSpecification>
     */
     public function GetEstimatedSalary() : array
     {
         /**
-        * @var array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|PriceSpecification>
+        * @var array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|StructuredValue\PriceSpecification>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'estimatedSalary',
@@ -114,7 +113,7 @@ class Occupation extends Base
     }
 
     /**
-    * @param array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|PriceSpecification> $value
+    * @param array<int, int|float|StructuredValue\MonetaryAmount|StructuredValue\QuantitativeValue\MonetaryAmountDistribution|StructuredValue\PriceSpecification> $value
     */
     public function SetEstimatedSalary(array $value) : void
     {

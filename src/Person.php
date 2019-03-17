@@ -19,6 +19,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\MonetaryAmount;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OwnershipInfo;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
 

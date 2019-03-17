@@ -35,11 +35,9 @@ trait IncludesObject
     */
     public function SetIncludesObject(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'includesObject',
-            __METHOD__,
-            $value,
-            TypeAndQuantityNode::class
+            $value
         );
     }
 }

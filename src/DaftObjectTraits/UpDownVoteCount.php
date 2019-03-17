@@ -34,9 +34,8 @@ trait UpDownVoteCount
     */
     public function SetDownvoteCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'downvoteCount',
-            __METHOD__,
             $value
         );
     }
@@ -63,9 +62,8 @@ trait UpDownVoteCount
     */
     public function SetUpvoteCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'upvoteCount',
-            __METHOD__,
             $value
         );
     }

@@ -147,7 +147,7 @@ class PriceSpecification extends Thing
     */
     public function SetMaxPrice(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers('maxPrice', __METHOD__, $value);
+        $this->NudgePropertyValue('maxPrice', $value);
     }
 
     /**
@@ -172,7 +172,7 @@ class PriceSpecification extends Thing
     */
     public function SetMinPrice(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers('minPrice', __METHOD__, $value);
+        $this->NudgePropertyValue('minPrice', $value);
     }
 
     /**
@@ -197,9 +197,8 @@ class PriceSpecification extends Thing
     */
     public function SetPrice(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'price',
-            __METHOD__,
             $value
         );
     }

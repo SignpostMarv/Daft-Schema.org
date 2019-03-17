@@ -39,11 +39,9 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetEligibleCustomerType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleCustomerType',
-            __METHOD__,
-            $value,
-            BusinessEntityType::class
+            $value
         );
     }
 
@@ -69,11 +67,9 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetEligibleDuration(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleDuration',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -99,11 +95,9 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetEligibleQuantity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleQuantity',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -158,11 +152,9 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
     */
     public function SetEligibleTransactionVolume(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eligibleTransactionVolume',
-            __METHOD__,
-            $value,
-            PriceSpecification::class
+            $value
         );
     }
 

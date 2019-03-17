@@ -35,11 +35,9 @@ trait HasAboutThing
     */
     public function SetAbout(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'about',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 }

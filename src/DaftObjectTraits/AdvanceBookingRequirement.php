@@ -35,11 +35,9 @@ trait AdvanceBookingRequirement
     */
     public function SetAdvanceBookingRequirement(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'advanceBookingRequirement',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 }

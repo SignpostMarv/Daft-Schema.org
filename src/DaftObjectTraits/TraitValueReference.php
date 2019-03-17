@@ -18,12 +18,12 @@ trait TraitValueReference
     use DaftObjectTrait;
 
     /**
-    * @return array<int, Enumeration|PropertyValue|QualitativeValue|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue|StructuredValue>
+    * @return array<int, Enumeration|PropertyValue|QualitativeValue|QuantitativeValue|StructuredValue>
     */
     public function GetValueReference() : array
     {
         /**
-        * @var array<int, Enumeration|PropertyValue|QualitativeValue|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue|StructuredValue>
+        * @var array<int, Enumeration|PropertyValue|QualitativeValue|QuantitativeValue|StructuredValue>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'valueReference',
@@ -35,19 +35,13 @@ trait TraitValueReference
     }
 
     /**
-    * @param array<int, Enumeration|PropertyValue|QualitativeValue|\SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue|StructuredValue> $value
+    * @param array<int, Enumeration|PropertyValue|QualitativeValue|QuantitativeValue|StructuredValue> $value
     */
     public function SetValueReference(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'valueReference',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class,
-            QualitativeValue::class,
-            Enumeration::class,
-            PropertyValue::class,
-            StructuredValue::class
+            $value
         );
     }
 }

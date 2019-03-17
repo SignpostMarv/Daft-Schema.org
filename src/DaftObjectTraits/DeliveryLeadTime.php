@@ -35,11 +35,9 @@ trait DeliveryLeadTime
     */
     public function SetDeliveryLeadTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'deliveryLeadTime',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 }

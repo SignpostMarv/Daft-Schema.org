@@ -36,12 +36,9 @@ trait HasOwns
     */
     public function SetOwns(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'owns',
-            __METHOD__,
-            $value,
-            OwnershipInfo::class,
-            Product::class
+            $value
         );
     }
 }

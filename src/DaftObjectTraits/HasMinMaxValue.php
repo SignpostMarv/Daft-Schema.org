@@ -35,7 +35,7 @@ trait HasMinMaxValue
     */
     public function SetMaxValue(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegersOrFloats('maxValue', __METHOD__, $value);
+        $this->NudgePropertyValue('maxValue', $value);
     }
 
     /**
@@ -60,7 +60,7 @@ trait HasMinMaxValue
     */
     public function SetMinValue(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegersOrFloats('minValue', __METHOD__, $value);
+        $this->NudgePropertyValue('minValue', $value);
     }
 
     /**

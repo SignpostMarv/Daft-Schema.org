@@ -88,11 +88,9 @@ class ServiceChannel extends Base
     */
     public function SetProcessingTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'processingTime',
-            __METHOD__,
-            $value,
-            Quantity\Duration::class
+            $value
         );
     }
 
@@ -118,11 +116,9 @@ class ServiceChannel extends Base
     */
     public function SetProvidesService(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'providesService',
-            __METHOD__,
-            $value,
-            Service::class
+            $value
         );
     }
 
@@ -148,11 +144,9 @@ class ServiceChannel extends Base
     */
     public function SetServiceLocation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'serviceLocation',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -178,11 +172,9 @@ class ServiceChannel extends Base
     */
     public function SetServicePhone(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'servicePhone',
-            __METHOD__,
-            $value,
-            StructuredValue\ContactPoint::class
+            $value
         );
     }
 
@@ -208,11 +200,9 @@ class ServiceChannel extends Base
     */
     public function SetServicePostalAddress(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'servicePostalAddress',
-            __METHOD__,
-            $value,
-            StructuredValue\ContactPoint\PostalAddress::class
+            $value
         );
     }
 
@@ -238,11 +228,9 @@ class ServiceChannel extends Base
     */
     public function SetServiceSmsNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'serviceSmsNumber',
-            __METHOD__,
-            $value,
-            StructuredValue\ContactPoint::class
+            $value
         );
     }
 

@@ -280,11 +280,9 @@ class Offer extends Thing
     */
     public function SetAddOn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'addOn',
-            __METHOD__,
-            $value,
-            Offer::class
+            $value
         );
     }
 
@@ -310,9 +308,8 @@ class Offer extends Thing
     */
     public function SetOfferedBy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'offeredBy',
-            __METHOD__,
             $value
         );
     }
@@ -397,11 +394,9 @@ class Offer extends Thing
     */
     public function SetPriceValidUntil(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'priceValidUntil',
-            __METHOD__,
-            $value,
-            Date::class
+            $value
         );
     }
 }

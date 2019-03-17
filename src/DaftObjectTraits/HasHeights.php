@@ -36,12 +36,9 @@ trait HasHeights
     */
     public function SetHeight(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'height',
-            __METHOD__,
-            $value,
-            Distance::class,
-            QuantitativeValue::class
+            $value
         );
     }
 }

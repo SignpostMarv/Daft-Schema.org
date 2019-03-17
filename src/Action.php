@@ -106,11 +106,9 @@ class Action extends Thing
     */
     public function SetActionStatus(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'actionStatus',
-            __METHOD__,
-            $value,
-            ActionStatusType::class
+            $value
         );
     }
 
@@ -136,12 +134,9 @@ class Action extends Thing
     */
     public function SetAgent(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'agent',
-            __METHOD__,
-            $value,
-            Organization::class,
-            Person::class
+            $value
         );
     }
 
@@ -167,11 +162,9 @@ class Action extends Thing
     */
     public function SetEndTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'endTime',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -197,11 +190,9 @@ class Action extends Thing
     */
     public function SetError(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'error',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 
@@ -227,11 +218,9 @@ class Action extends Thing
     */
     public function SetInstrument(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'instrument',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 
@@ -257,11 +246,9 @@ class Action extends Thing
     */
     public function SetObject(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'object',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 
@@ -287,12 +274,9 @@ class Action extends Thing
     */
     public function SetParticipant(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'participant',
-            __METHOD__,
-            $value,
-            Organization::class,
-            Person::class
+            $value
         );
     }
 
@@ -318,11 +302,9 @@ class Action extends Thing
     */
     public function SetResult(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'result',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 
@@ -348,11 +330,9 @@ class Action extends Thing
     */
     public function SetStartTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'startTime',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -378,11 +358,9 @@ class Action extends Thing
     */
     public function SetTarget(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'target',
-            __METHOD__,
-            $value,
-            EntryPoint::class
+            $value
         );
     }
 }

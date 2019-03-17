@@ -65,11 +65,9 @@ class MusicGroup extends Base
     */
     public function SetAlbum(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'album',
-            __METHOD__,
-            $value,
-            MusicAlbum::class
+            $value
         );
     }
 
@@ -95,12 +93,9 @@ class MusicGroup extends Base
     */
     public function SetTrack(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'track',
-            __METHOD__,
-            $value,
-            ItemList::class,
-            MusicRecording::class
+            $value
         );
     }
 }

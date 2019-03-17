@@ -35,9 +35,8 @@ trait HasHasPOS
     */
     public function SetHasPOS(array $value) : void
     {
-        $this->NudgePropertyValueWithUniquePlaces(
+        $this->NudgePropertyValue(
             'hasPOS',
-            __METHOD__,
             $value
         );
     }

@@ -35,11 +35,9 @@ trait HasEvent
     */
     public function SetEvent(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'event',
-            __METHOD__,
-            $value,
-            Event::class
+            $value
         );
     }
 }

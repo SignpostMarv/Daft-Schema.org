@@ -36,12 +36,9 @@ trait AcceptedPaymentMethod
     */
     public function SetAcceptedPaymentMethod(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'acceptedPaymentMethod',
-            __METHOD__,
-            $value,
-            LoanOrCredit::class,
-            PaymentMethod::class
+            $value
         );
     }
 }

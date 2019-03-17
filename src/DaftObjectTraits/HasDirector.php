@@ -35,6 +35,6 @@ trait HasDirector
     */
     public function SetDirector(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('director', __METHOD__, $value);
+        $this->NudgePropertyValue('director', $value);
     }
 }

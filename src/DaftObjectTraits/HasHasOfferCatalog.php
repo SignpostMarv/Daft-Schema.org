@@ -35,11 +35,9 @@ trait HasHasOfferCatalog
     */
     public function SetHasOfferCatalog(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hasOfferCatalog',
-            __METHOD__,
-            $value,
-            OfferCatalog::class
+            $value
         );
     }
 }

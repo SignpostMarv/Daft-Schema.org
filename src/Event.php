@@ -239,7 +239,7 @@ class Event extends Thing
     */
     public function SetAttendee(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('attendee', __METHOD__, $value);
+        $this->NudgePropertyValue('attendee', $value);
     }
 
     /**
@@ -264,7 +264,7 @@ class Event extends Thing
     */
     public function SetContributor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('contributor', __METHOD__, $value);
+        $this->NudgePropertyValue('contributor', $value);
     }
 
     /**
@@ -289,11 +289,9 @@ class Event extends Thing
     */
     public function SetDoorTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'doorTime',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -319,7 +317,7 @@ class Event extends Thing
     */
     public function SetEndDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDatesOrDateTimes('endDate', __METHOD__, $value);
+        $this->NudgePropertyValue('endDate', $value);
     }
 
     /**
@@ -344,11 +342,9 @@ class Event extends Thing
     */
     public function SetEventStatus(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'eventStatus',
-            __METHOD__,
-            $value,
-            EventStatusType::class
+            $value
         );
     }
 
@@ -374,7 +370,7 @@ class Event extends Thing
     */
     public function SetMaximumAttendeeCapacity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValues('maximumAttendeeCapacity', __METHOD__, $value);
+        $this->NudgePropertyValue('maximumAttendeeCapacity', $value);
     }
 
     /**
@@ -399,7 +395,7 @@ class Event extends Thing
     */
     public function SetOrganizer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('organizer', __METHOD__, $value);
+        $this->NudgePropertyValue('organizer', $value);
     }
 
     /**
@@ -424,7 +420,7 @@ class Event extends Thing
     */
     public function SetPerformer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('performer', __METHOD__, $value);
+        $this->NudgePropertyValue('performer', $value);
     }
 
     /**
@@ -449,7 +445,7 @@ class Event extends Thing
     */
     public function SetPreviousStartDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDates('previousStartDate', __METHOD__, $value);
+        $this->NudgePropertyValue('previousStartDate', $value);
     }
 
     /**
@@ -474,11 +470,9 @@ class Event extends Thing
     */
     public function SetRecordedIn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'recordedIn',
-            __METHOD__,
-            $value,
-            CreativeWork::class
+            $value
         );
     }
 
@@ -504,7 +498,7 @@ class Event extends Thing
     */
     public function SetRemainingAttendeeCapacity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers('remainingAttendeeCapacity', __METHOD__, $value);
+        $this->NudgePropertyValue('remainingAttendeeCapacity', $value);
     }
 
     /**
@@ -529,7 +523,7 @@ class Event extends Thing
     */
     public function SetStartDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDatesOrDateTimes('startDate', __METHOD__, $value);
+        $this->NudgePropertyValue('startDate', $value);
     }
 
     /**
@@ -554,7 +548,7 @@ class Event extends Thing
     */
     public function SetSubEvent(array $value) : void
     {
-        $this->NudgePropertyWithUniqueEvents('subEvent', __METHOD__, $value);
+        $this->NudgePropertyValue('subEvent', $value);
     }
 
     /**
@@ -579,7 +573,7 @@ class Event extends Thing
     */
     public function SetSuperEvent(array $value) : void
     {
-        $this->NudgePropertyWithUniqueEvents('superEvent', __METHOD__, $value);
+        $this->NudgePropertyValue('superEvent', $value);
     }
 
     /**
@@ -604,11 +598,9 @@ class Event extends Thing
     */
     public function SetWorkFeatured(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'workFeatured',
-            __METHOD__,
-            $value,
-            CreativeWork::class
+            $value
         );
     }
 
@@ -634,11 +626,9 @@ class Event extends Thing
     */
     public function SetWorkPerformed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'workPerformed',
-            __METHOD__,
-            $value,
-            CreativeWork::class
+            $value
         );
     }
 }

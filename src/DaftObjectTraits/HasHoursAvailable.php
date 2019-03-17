@@ -35,11 +35,9 @@ trait HasHoursAvailable
     */
     public function SetHoursAvailable(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hoursAvailable',
-            __METHOD__,
-            $value,
-            OpeningHoursSpecification::class
+            $value
         );
     }
 }

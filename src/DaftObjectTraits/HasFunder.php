@@ -36,6 +36,6 @@ trait HasFunder
     */
     public function SetFunder(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('funder', __METHOD__, $value);
+        $this->NudgePropertyValue('funder', $value);
     }
 }

@@ -35,6 +35,6 @@ trait HasActor
     */
     public function SetActor(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('actor', __METHOD__, $value);
+        $this->NudgePropertyValue('actor', $value);
     }
 }

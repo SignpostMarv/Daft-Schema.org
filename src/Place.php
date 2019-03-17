@@ -239,11 +239,9 @@ class Place extends Thing
     */
     public function SetAmenityFeature(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'amenityFeature',
-            __METHOD__,
-            $value,
-            LocationFeatureSpecification::class
+            $value
         );
     }
 
@@ -298,11 +296,9 @@ class Place extends Thing
     */
     public function SetContainedInPlace(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'containedInPlace',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -328,11 +324,9 @@ class Place extends Thing
     */
     public function SetContainsPlace(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'containsPlace',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -358,12 +352,9 @@ class Place extends Thing
     */
     public function SetGeo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geo',
-            __METHOD__,
-            $value,
-            GeoCoordinates::class,
-            GeoShape::class
+            $value
         );
     }
 
@@ -418,9 +409,8 @@ class Place extends Thing
     */
     public function SetMaximumAttendeeCapacity(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'maximumAttendeeCapacity',
-            __METHOD__,
             $value
         );
     }
@@ -447,11 +437,9 @@ class Place extends Thing
     */
     public function SetOpeningHoursSpecification(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'openingHoursSpecification',
-            __METHOD__,
-            $value,
-            OpeningHoursSpecification::class
+            $value
         );
     }
 
@@ -477,12 +465,9 @@ class Place extends Thing
     */
     public function SetPhoto(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'photo',
-            __METHOD__,
-            $value,
-            ImageObject::class,
-            Photograph::class
+            $value
         );
     }
 
@@ -564,11 +549,9 @@ class Place extends Thing
     */
     public function SetSpecialOpeningHoursSpecification(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'specialOpeningHoursSpecification',
-            __METHOD__,
-            $value,
-            OpeningHoursSpecification::class
+            $value
         );
     }
 }

@@ -36,12 +36,9 @@ trait HasBrand
     */
     public function SetBrand(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'brand',
-            __METHOD__,
-            $value,
-            Brand::class,
-            Organization::class
+            $value
         );
     }
 }

@@ -37,13 +37,9 @@ trait TraitSupersededBy
     */
     public function SetSupersededBy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'supersededBy',
-            __METHOD__,
-            $value,
-            IntangibleClass::class,
-            Enumeration::class,
-            IntangibleProperty::class
+            $value
         );
     }
 }

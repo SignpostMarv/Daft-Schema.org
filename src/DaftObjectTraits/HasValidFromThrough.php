@@ -35,11 +35,9 @@ trait HasValidFromThrough
     */
     public function SetValidFrom(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'validFrom',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -65,11 +63,9 @@ trait HasValidFromThrough
     */
     public function SetValidThrough(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'validThrough',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 }

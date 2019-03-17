@@ -53,11 +53,9 @@ trait IsOfferOrDemand
     */
     public function SetAvailableAtOrFrom(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availableAtOrFrom',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -83,11 +81,9 @@ trait IsOfferOrDemand
     */
     public function SetAvailableDeliveryMethod(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availableDeliveryMethod',
-            __METHOD__,
-            $value,
-            DeliveryMethod::class
+            $value
         );
     }
 
@@ -113,11 +109,9 @@ trait IsOfferOrDemand
     */
     public function SetInventoryLevel(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'inventoryLevel',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -143,12 +137,9 @@ trait IsOfferOrDemand
     */
     public function SetItemOffered(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'itemOffered',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 
@@ -174,11 +165,9 @@ trait IsOfferOrDemand
     */
     public function SetPriceSpecification(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'priceSpecification',
-            __METHOD__,
-            $value,
-            PriceSpecification::class
+            $value
         );
     }
 
@@ -204,9 +193,8 @@ trait IsOfferOrDemand
     */
     public function SetSeller(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'seller',
-            __METHOD__,
             $value
         );
     }
@@ -262,11 +250,9 @@ trait IsOfferOrDemand
     */
     public function SetWarranty(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'warranty',
-            __METHOD__,
-            $value,
-            WarrantyPromise::class
+            $value
         );
     }
 }

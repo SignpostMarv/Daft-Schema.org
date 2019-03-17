@@ -36,12 +36,9 @@ trait IsRelatedOrSimilarTo
     */
     public function SetIsRelatedTo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isRelatedTo',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 
@@ -67,12 +64,9 @@ trait IsRelatedOrSimilarTo
     */
     public function SetIsSimilarTo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isSimilarTo',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 }

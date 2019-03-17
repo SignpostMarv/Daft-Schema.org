@@ -35,11 +35,9 @@ trait Duration
     */
     public function SetDuration(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'duration',
-            __METHOD__,
-            $value,
-            Type::class
+            $value
         );
     }
 }

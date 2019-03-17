@@ -65,11 +65,9 @@ class ListItem extends Base
     */
     public function SetItem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'item',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 
@@ -95,11 +93,9 @@ class ListItem extends Base
     */
     public function SetNextItem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'nextItem',
-            __METHOD__,
-            $value,
-            ListItem::class
+            $value
         );
     }
 
@@ -125,9 +121,8 @@ class ListItem extends Base
     */
     public function SetPosition(array $value) : void
     {
-        $this->NudgePropertWithUniqueIntegersOrTrimmedStrings(
+        $this->NudgePropertyValue(
             'position',
-            __METHOD__,
             $value
         );
     }
@@ -154,11 +149,9 @@ class ListItem extends Base
     */
     public function SetPreviousItem(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'previousItem',
-            __METHOD__,
-            $value,
-            ListItem::class
+            $value
         );
     }
 }

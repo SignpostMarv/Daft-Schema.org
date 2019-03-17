@@ -183,11 +183,9 @@ class Service extends Base
     */
     public function SetAvailableChannel(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availableChannel',
-            __METHOD__,
-            $value,
-            ServiceChannel::class
+            $value
         );
     }
 
@@ -213,9 +211,8 @@ class Service extends Base
     */
     public function SetBroker(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'broker',
-            __METHOD__,
             $value
         );
     }

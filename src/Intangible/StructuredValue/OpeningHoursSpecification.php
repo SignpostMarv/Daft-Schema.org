@@ -73,11 +73,9 @@ class OpeningHoursSpecification extends Base
     */
     public function SetCloses(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'closes',
-            __METHOD__,
-            $value,
-            DataTypes\Time::class
+            $value
         );
     }
 
@@ -103,11 +101,9 @@ class OpeningHoursSpecification extends Base
     */
     public function SetDayOfWeek(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dayOfWeek',
-            __METHOD__,
-            $value,
-            DayOfWeek::class
+            $value
         );
     }
 
@@ -133,11 +129,9 @@ class OpeningHoursSpecification extends Base
     */
     public function SetOpens(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'opens',
-            __METHOD__,
-            $value,
-            DataTypes\Time::class
+            $value
         );
     }
 }

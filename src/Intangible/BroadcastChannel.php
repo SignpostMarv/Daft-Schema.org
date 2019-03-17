@@ -164,11 +164,9 @@ class BroadcastChannel extends Base
     */
     public function SetInBroadcastLineup(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'inBroadcastLineup',
-            __METHOD__,
-            $value,
-            Service\BroadcastService::class
+            $value
         );
     }
 
@@ -194,11 +192,9 @@ class BroadcastChannel extends Base
     */
     public function SetProvidesBroadcastService(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'providesBroadcastService',
-            __METHOD__,
-            $value,
-            Service\BroadcastService::class
+            $value
         );
     }
 }

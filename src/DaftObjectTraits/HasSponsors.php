@@ -36,6 +36,6 @@ trait HasSponsors
     */
     public function SetSponsor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('sponsor', __METHOD__, $value);
+        $this->NudgePropertyValue('sponsor', $value);
     }
 }

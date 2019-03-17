@@ -80,11 +80,9 @@ class Trip extends Base
     */
     public function SetArrivalTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'arrivalTime',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -110,11 +108,9 @@ class Trip extends Base
     */
     public function SetDepartureTime(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'departureTime',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -140,12 +136,9 @@ class Trip extends Base
     */
     public function SetItinerary(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'itinerary',
-            __METHOD__,
-            $value,
-            ItemList::class,
-            Place::class
+            $value
         );
     }
 }

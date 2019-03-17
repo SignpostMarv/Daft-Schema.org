@@ -55,11 +55,9 @@ class MediaSubscription extends Base
     */
     public function SetAuthenticator(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'authenticator',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -85,11 +83,9 @@ class MediaSubscription extends Base
     */
     public function SetExpectsAcceptanceOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'expectsAcceptanceOf',
-            __METHOD__,
-            $value,
-            Offer::class
+            $value
         );
     }
 }

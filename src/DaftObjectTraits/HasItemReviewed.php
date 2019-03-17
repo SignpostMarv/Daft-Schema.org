@@ -35,11 +35,9 @@ trait HasItemReviewed
     */
     public function SetItemReviewed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'itemReviewed',
-            __METHOD__,
-            $value,
-            Thing::class
+            $value
         );
     }
 }

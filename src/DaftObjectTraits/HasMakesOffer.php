@@ -35,11 +35,9 @@ trait HasMakesOffer
     */
     public function SetMakesOffer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'makesOffer',
-            __METHOD__,
-            $value,
-            Offer::class
+            $value
         );
     }
 }

@@ -36,12 +36,9 @@ trait HasHasPart
     */
     public function SetHasPart(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hasPart',
-            __METHOD__,
-            $value,
-            CreativeWork::class,
-            Trip::class
+            $value
         );
     }
 
@@ -67,12 +64,9 @@ trait HasHasPart
     */
     public function SetIsPartOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isPartOf',
-            __METHOD__,
-            $value,
-            CreativeWork::class,
-            Trip::class
+            $value
         );
     }
 }

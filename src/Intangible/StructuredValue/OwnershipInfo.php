@@ -70,7 +70,7 @@ class OwnershipInfo extends Base
     */
     public function SetAcquiredFrom(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('acquiredFrom', __METHOD__, $value);
+        $this->NudgePropertyValue('acquiredFrom', $value);
     }
 
     /**
@@ -95,11 +95,9 @@ class OwnershipInfo extends Base
     */
     public function SetOwnedFrom(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'ownedFrom',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -125,11 +123,9 @@ class OwnershipInfo extends Base
     */
     public function SetOwnedThrough(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'ownedThrough',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -155,12 +151,9 @@ class OwnershipInfo extends Base
     */
     public function SetTypeOfGood(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'typeOfGood',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 }

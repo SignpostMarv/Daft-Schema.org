@@ -107,11 +107,9 @@ class ContactPoint extends Base
     */
     public function SetContactOption(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'contactOption',
-            __METHOD__,
-            $value,
-            ContactPointOption::class
+            $value
         );
     }
 

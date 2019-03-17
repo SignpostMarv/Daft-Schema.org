@@ -124,11 +124,9 @@ class LoanOrCredit extends Base
     */
     public function SetGracePeriod(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'gracePeriod',
-            __METHOD__,
-            $value,
-            Duration::class
+            $value
         );
     }
 
@@ -154,11 +152,9 @@ class LoanOrCredit extends Base
     */
     public function SetLoanRepaymentForm(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'loanRepaymentForm',
-            __METHOD__,
-            $value,
-            RepaymentSpecification::class
+            $value
         );
     }
 
@@ -184,11 +180,9 @@ class LoanOrCredit extends Base
     */
     public function SetLoanTerm(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'loanTerm',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 

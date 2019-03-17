@@ -35,11 +35,9 @@ trait HasItemCondition
     */
     public function SetItemCondition(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'itemCondition',
-            __METHOD__,
-            $value,
-            OfferItemCondition::class
+            $value
         );
     }
 }

@@ -887,7 +887,7 @@ class CreativeWork extends Thing
     */
     public function SetCommentCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers('commentCount', __METHOD__, $value);
+        $this->NudgePropertyValue('commentCount', $value);
     }
 
     /**
@@ -1045,7 +1045,7 @@ class CreativeWork extends Thing
     */
     public function SetCopyrightYear(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers('copyrightYear', __METHOD__, $value);
+        $this->NudgePropertyValue('copyrightYear', $value);
     }
 
     /**

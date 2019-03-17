@@ -36,12 +36,9 @@ trait HasWidth
     */
     public function SetWidth(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'width',
-            __METHOD__,
-            $value,
-            Distance::class,
-            QuantitativeValue::class
+            $value
         );
     }
 }

@@ -35,11 +35,9 @@ trait HasThumbnail
     */
     public function SetThumbnail(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'thumbnail',
-            __METHOD__,
-            $value,
-            ImageObject::class
+            $value
         );
     }
 }

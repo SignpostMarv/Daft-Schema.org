@@ -58,11 +58,9 @@ class ProductModel extends Base
     */
     public function SetIsVariantOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'isVariantOf',
-            __METHOD__,
-            $value,
-            ProductModel::class
+            $value
         );
     }
 
@@ -88,11 +86,9 @@ class ProductModel extends Base
     */
     public function SetPredecessorOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'predecessorOf',
-            __METHOD__,
-            $value,
-            ProductModel::class
+            $value
         );
     }
 
@@ -118,11 +114,9 @@ class ProductModel extends Base
     */
     public function SetSuccessorOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'successorOf',
-            __METHOD__,
-            $value,
-            ProductModel::class
+            $value
         );
     }
 }

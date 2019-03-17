@@ -36,6 +36,6 @@ trait HasTranslators
     */
     public function SetTranslator(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('translator', __METHOD__, $value);
+        $this->NudgePropertyValue('translator', $value);
     }
 }

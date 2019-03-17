@@ -35,11 +35,9 @@ trait HasAggregateRating
     */
     public function SetAggregateRating(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'aggregateRating',
-            __METHOD__,
-            $value,
-            AggregateRating::class
+            $value
         );
     }
 }

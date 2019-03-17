@@ -35,11 +35,9 @@ trait HasAudience
     */
     public function SetAudience(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'audience',
-            __METHOD__,
-            $value,
-            Audience::class
+            $value
         );
     }
 }

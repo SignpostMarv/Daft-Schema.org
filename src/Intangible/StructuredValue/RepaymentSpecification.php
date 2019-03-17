@@ -102,11 +102,9 @@ class RepaymentSpecification extends Base
     */
     public function SetEarlyPrepaymentPenalty(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'earlyPrepaymentPenalty',
-            __METHOD__,
-            $value,
-            MonetaryAmount::class
+            $value
         );
     }
 
@@ -132,11 +130,9 @@ class RepaymentSpecification extends Base
     */
     public function SetLoanPaymentAmount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'loanPaymentAmount',
-            __METHOD__,
-            $value,
-            MonetaryAmount::class
+            $value
         );
     }
 

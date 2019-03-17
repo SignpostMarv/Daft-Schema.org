@@ -35,11 +35,9 @@ trait HasLogo
     */
     public function SetLogo(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'logo',
-            __METHOD__,
-            $value,
-            ImageObject::class
+            $value
         );
     }
 }

@@ -179,11 +179,9 @@ class Occupation extends Base
     */
     public function SetOccupationLocation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'occupationLocation',
-            __METHOD__,
-            $value,
-            AdministrativeArea::class
+            $value
         );
     }
 

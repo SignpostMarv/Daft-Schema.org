@@ -36,12 +36,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyContains(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyContains',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -67,12 +64,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyCoveredBy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyCoveredBy',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -98,12 +92,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyCovers(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyCovers',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -129,12 +120,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyCrosses(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyCrosses',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -160,12 +148,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyDisjoint(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyDisjoint',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -191,12 +176,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyEquals(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyEquals',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -222,12 +204,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyIntersects(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyIntersects',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -253,12 +232,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyOverlaps(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyOverlaps',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -284,12 +260,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyTouches(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyTouches',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 
@@ -315,12 +288,9 @@ trait HasGeospatialGeometry
     */
     public function SetGeospatiallyWithin(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geospatiallyWithin',
-            __METHOD__,
-            $value,
-            GeospatialGeometry::class,
-            Place::class
+            $value
         );
     }
 }

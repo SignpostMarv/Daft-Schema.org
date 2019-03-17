@@ -55,11 +55,9 @@ class SpeakableSpecification extends Base
     */
     public function SetCssSelector(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'cssSelector',
-            __METHOD__,
-            $value,
-            CssSelectorType::class
+            $value
         );
     }
 
@@ -85,11 +83,9 @@ class SpeakableSpecification extends Base
     */
     public function SetXpath(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'xpath',
-            __METHOD__,
-            $value,
-            XPathType::class
+            $value
         );
     }
 }

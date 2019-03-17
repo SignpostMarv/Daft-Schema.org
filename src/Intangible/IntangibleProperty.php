@@ -62,11 +62,9 @@ class IntangibleProperty extends Intangible
     */
     public function SetDomainIncludes(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'domainIncludes',
-            __METHOD__,
-            $value,
-            IntangibleClass::class
+            $value
         );
     }
 
@@ -92,11 +90,9 @@ class IntangibleProperty extends Intangible
     */
     public function SetInverseOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'inverseOf',
-            __METHOD__,
-            $value,
-            IntangibleProperty::class
+            $value
         );
     }
 
@@ -122,11 +118,9 @@ class IntangibleProperty extends Intangible
     */
     public function SetRangeIncludes(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'rangeIncludes',
-            __METHOD__,
-            $value,
-            IntangibleClass::class
+            $value
         );
     }
 }

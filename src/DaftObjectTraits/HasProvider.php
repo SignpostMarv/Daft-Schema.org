@@ -36,6 +36,6 @@ trait HasProvider
     */
     public function SetProvider(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('provider', __METHOD__, $value);
+        $this->NudgePropertyValue('provider', $value);
     }
 }

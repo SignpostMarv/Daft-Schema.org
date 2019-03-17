@@ -35,11 +35,9 @@ trait HasContactPoint
     */
     public function SetContactPoint(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'contactPoint',
-            __METHOD__,
-            $value,
-            ContactPoint::class
+            $value
         );
     }
 }

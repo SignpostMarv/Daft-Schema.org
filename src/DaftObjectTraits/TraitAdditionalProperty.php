@@ -35,11 +35,9 @@ trait TraitAdditionalProperty
     */
     public function SetAdditionalProperty(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'additionalProperty',
-            __METHOD__,
-            $value,
-            PropertyValue::class
+            $value
         );
     }
 }

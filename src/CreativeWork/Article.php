@@ -263,9 +263,8 @@ class Article extends Base
     */
     public function SetWordCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'wordCount',
-            __METHOD__,
             $value
         );
     }

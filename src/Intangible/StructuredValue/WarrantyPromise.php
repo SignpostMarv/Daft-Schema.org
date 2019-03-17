@@ -56,11 +56,9 @@ class WarrantyPromise extends Base
     */
     public function SetDurationOfWarranty(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'durationOfWarranty',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -86,12 +84,9 @@ class WarrantyPromise extends Base
     */
     public function SetWarrantyScope(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'warrantyScope',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 }

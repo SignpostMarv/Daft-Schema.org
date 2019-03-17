@@ -102,9 +102,8 @@ class Question extends Base
     */
     public function SetAnswerCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'answerCount',
-            __METHOD__,
             $value
         );
     }

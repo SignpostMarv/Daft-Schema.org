@@ -387,11 +387,9 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetPotentialAction(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'potentialAction',
-            __METHOD__,
-            $value,
-            Action::class
+            $value
         );
     }
 
@@ -773,7 +771,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
             );
         }
 
-        $this->NudgePropertyWithUniqueValues($property, $method, $value, SORT_NUMERIC);
+        $this->NudgePropertyValue($property, $value);
     }
 
     /**
@@ -836,7 +834,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
             SORT_NUMERIC
         );
 
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
+        $this->NudgePropertyValue($property, $value);
     }
 
     /**
@@ -847,7 +845,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         string $method,
         array $value
     ) : void {
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
+        $this->NudgePropertyValue($property, $value);
     }
 
     /**
@@ -890,7 +888,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
             );
         }
 
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
+        $this->NudgePropertyValue($property, $value);
     }
 
     /**
@@ -909,283 +907,5 @@ class Thing extends AbstractArrayBackedDaftObject implements
         }
 
         $this->NudgePropertyValue($property, $replace);
-    }
-
-    /**
-    * @param array<int, int|string> $value
-    */
-    protected function NudgePropertWithUniqueIntegersOrTrimmedStrings(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $initialCount = count($value);
-
-        $value = array_map(
-            /**
-            * @param int|string $val
-            *
-            * @return int|string
-            */
-            function ($val) {
-                return is_string($val) ? trim($val) : $val;
-            },
-            array_filter(
-                $value,
-                /**
-                * @param mixed $maybe
-                */
-                function ($maybe) : bool {
-                    return is_string($maybe) || is_int($maybe);
-                }
-            )
-        );
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Argument 1 passed to ' .
-                $method .
-                ' must be a list of integers & strings!'
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
-    }
-
-    /**
-    * @param array<int, scalar|array|object|null> $value
-    */
-    protected function NudgePropertyWithUniqueValues(
-        string $property,
-        string $method,
-        array $value,
-        int $sort_flags = SORT_REGULAR
-    ) : void {
-        $initialCount = count($value);
-
-        $out = [];
-
-        foreach ($value as $val) {
-            if ( ! in_array($val, $out, true)) {
-                $out[] = $val;
-            } else {
-                throw new InvalidArgumentException(
-                    'Arguments passed to ' .
-                    $method .
-                    ' must be unique, ' .
-                    var_export($val, true) .
-                    ' already found!'
-                );
-            }
-        }
-
-        $value = $out;
-
-        if ($initialCount !== count($value)) {
-            throw new InvalidArgumentException(
-                'Arguments passed to ' .
-                $method .
-                ' must be unique!'
-            );
-        }
-
-        $this->NudgePropertyValue($property, $value);
-    }
-
-    /**
-    * @param array<int, Date> $value
-    */
-    protected function NudgePropertyWithUniqueDates(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings($property, $method, $value, Date::class);
-    }
-
-    /**
-    * @param array<int, DateTime> $value
-    */
-    protected function NudgePropertyWithUniqueDateTimes(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings($property, $method, $value, DateTime::class);
-    }
-
-    /**
-    * @param array<int, Date|DateTime> $value
-    */
-    protected function NudgePropertyWithUniqueDatesOrDateTimes(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Date::class,
-            DateTime::class
-        );
-    }
-
-    /**
-    * @param array<int, Person> $value
-    */
-    protected function NudgePropertyWithUniquePersons(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Person::class
-        );
-    }
-
-    /**
-    * @param array<int, Organization|Person> $value
-    */
-    protected function NudgePropertyWithUniqueOrganizationsOrPersons(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Organization::class,
-            Person::class
-        );
-    }
-
-    /**
-    * @param array<int, Organization> $value
-    */
-    protected function NudgePropertyWithUniqueOrganizations(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Organization::class
-        );
-    }
-
-    /**
-    * @param array<int, Event> $value
-    */
-    protected function NudgePropertyWithUniqueEvents(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            $method,
-            $value,
-            Event::class
-        );
-    }
-
-    /**
-    * @param array<int, Place> $value
-    */
-    protected function NudgePropertyValueWithUniquePlaces(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            __METHOD__,
-            $value,
-            Place::class
-        );
-    }
-
-    /**
-    * @param array<int, ContactPoint|Place> $value
-    */
-    protected function NudgePropertyValueWithUniqueContactPointsOrPlaces(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $this->NudgePropertyWithUniqueValuesOfThings(
-            $property,
-            __METHOD__,
-            $value,
-            ContactPoint::class,
-            Place::class
-        );
-    }
-
-    /**
-    * @param array<int, Thing|DataTypes\DataType> $value
-    *
-    * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> $validThing
-    * @psalm-param class-string<Thing>|class-string<DataTypes\DataType> ...$validThings
-    */
-    protected function NudgePropertyWithUniqueValuesOfThings(
-        string $property,
-        string $method,
-        array $value,
-        string $validThing,
-        string ...$validThings
-    ) : void {
-        array_unshift($validThings, $validThing);
-
-        $initialCount = count($validThings);
-
-        if (count($validThings) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Arguments 4+ passed to ' .
-                __METHOD__ .
-                ' must be implementations of ' .
-                Thing::class .
-                '!'
-            );
-        }
-
-        $initialCount = count($value);
-
-        /**
-        * @var array<int, Thing|DataTypes\DataType>
-        */
-        $value = array_filter(
-            $value,
-            /**
-            * @param Thing|DataTypes\DataType $maybe
-            */
-            function ($maybe) use ($validThings) : bool {
-                foreach ($validThings as $thing) {
-                    if (is_a($maybe, $thing, true)) {
-                        return true;
-                    }
-                }
-
-                return false;
-            }
-        );
-
-        if (count($value) !== $initialCount) {
-            throw new InvalidArgumentException(
-                'Argument 1 passed to ' .
-                $method .
-                ' must be an array containing any combination of ' .
-                implode(', ', $validThings)
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
     }
 }

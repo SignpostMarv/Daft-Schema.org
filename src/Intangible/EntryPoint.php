@@ -74,11 +74,9 @@ class EntryPoint extends Intangible
     */
     public function SetActionApplication(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'actionApplication',
-            __METHOD__,
-            $value,
-            SoftwareApplication::class
+            $value
         );
     }
 

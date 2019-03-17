@@ -36,12 +36,9 @@ trait HasMemberOf
     */
     public function SetMemberOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'memberOf',
-            __METHOD__,
-            $value,
-            Organization::class,
-            ProgramMembership::class
+            $value
         );
     }
 }

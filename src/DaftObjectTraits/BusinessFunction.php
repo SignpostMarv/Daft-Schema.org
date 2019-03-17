@@ -35,11 +35,9 @@ trait BusinessFunction
     */
     public function SetBusinessFunction(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'businessFunction',
-            __METHOD__,
-            $value,
-            Type::class
+            $value
         );
     }
 }

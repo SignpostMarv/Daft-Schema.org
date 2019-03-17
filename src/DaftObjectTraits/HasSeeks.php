@@ -35,11 +35,9 @@ trait HasSeeks
     */
     public function SetSeeks(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'seeks',
-            __METHOD__,
-            $value,
-            Demand::class
+            $value
         );
     }
 }

@@ -76,9 +76,8 @@ class TypeAndQuantityNode extends Base
     */
     public function SetAmountOfThisGood(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegersOrFloats(
+        $this->NudgePropertyValue(
             'amountOfThisGood',
-            __METHOD__,
             $value
         );
     }
@@ -105,11 +104,9 @@ class TypeAndQuantityNode extends Base
     */
     public function SetBusinessFunction(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'businessFunction',
-            __METHOD__,
-            $value,
-            BusinessFunction::class
+            $value
         );
     }
 
@@ -135,12 +132,9 @@ class TypeAndQuantityNode extends Base
     */
     public function SetTypeOfGood(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'typeOfGood',
-            __METHOD__,
-            $value,
-            Product::class,
-            Service::class
+            $value
         );
     }
 }

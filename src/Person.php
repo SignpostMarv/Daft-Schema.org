@@ -396,7 +396,7 @@ class Person extends Thing
     */
     public function SetAffiliation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizations('affiliation', __METHOD__, $value);
+        $this->NudgePropertyValue('affiliation', $value);
     }
 
     /**
@@ -421,7 +421,7 @@ class Person extends Thing
     */
     public function SetAlumniOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizations('alumniOf', __METHOD__, $value);
+        $this->NudgePropertyValue('alumniOf', $value);
     }
 
     /**
@@ -446,9 +446,8 @@ class Person extends Thing
     */
     public function SetBirthDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDates(
+        $this->NudgePropertyValue(
             'birthDate',
-            __METHOD__,
             $value
         );
     }
@@ -475,9 +474,8 @@ class Person extends Thing
     */
     public function SetBirthPlace(array $value) : void
     {
-        $this->NudgePropertyValueWithUniquePlaces(
+        $this->NudgePropertyValue(
             'birthPlace',
-            __METHOD__,
             $value
         );
     }
@@ -504,7 +502,7 @@ class Person extends Thing
     */
     public function SetChildren(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('children', __METHOD__, $value);
+        $this->NudgePropertyValue('children', $value);
     }
 
     /**
@@ -558,9 +556,8 @@ class Person extends Thing
     */
     public function SetDeathDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueDates(
+        $this->NudgePropertyValue(
             'deathDate',
-            __METHOD__,
             $value
         );
     }
@@ -587,11 +584,9 @@ class Person extends Thing
     */
     public function SetDeathPlace(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'deathPlace',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -646,7 +641,7 @@ class Person extends Thing
     */
     public function SetFollows(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('follows', __METHOD__, $value);
+        $this->NudgePropertyValue('follows', $value);
     }
 
     /**
@@ -729,11 +724,9 @@ class Person extends Thing
     */
     public function SetHasOccupation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hasOccupation',
-            __METHOD__,
-            $value,
-            Occupation::class
+            $value
         );
     }
 
@@ -759,9 +752,8 @@ class Person extends Thing
     */
     public function SetHomeLocation(array $value) : void
     {
-        $this->NudgePropertyValueWithUniqueContactPointsOrPlaces(
+        $this->NudgePropertyValue(
             'homeLocation',
-            __METHOD__,
             $value
         );
     }
@@ -875,7 +867,7 @@ class Person extends Thing
     */
     public function SetKnows(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('knows', __METHOD__, $value);
+        $this->NudgePropertyValue('knows', $value);
     }
 
     /**
@@ -900,11 +892,9 @@ class Person extends Thing
     */
     public function SetNationality(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'nationality',
-            __METHOD__,
-            $value,
-            Country::class
+            $value
         );
     }
 
@@ -930,12 +920,9 @@ class Person extends Thing
     */
     public function SetNetWorth(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'netWorth',
-            __METHOD__,
-            $value,
-            MonetaryAmount::class,
-            PriceSpecification::class
+            $value
         );
     }
 
@@ -961,7 +948,7 @@ class Person extends Thing
     */
     public function SetParent(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('parent', __METHOD__, $value);
+        $this->NudgePropertyValue('parent', $value);
     }
 
     /**
@@ -986,7 +973,7 @@ class Person extends Thing
     */
     public function SetPerformerIn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueEvents('performerIn', __METHOD__, $value);
+        $this->NudgePropertyValue('performerIn', $value);
     }
 
     /**
@@ -1011,7 +998,7 @@ class Person extends Thing
     */
     public function SetRelatedTo(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('relatedTo', __METHOD__, $value);
+        $this->NudgePropertyValue('relatedTo', $value);
     }
 
     /**
@@ -1036,7 +1023,7 @@ class Person extends Thing
     */
     public function SetSibling(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('sibling', __METHOD__, $value);
+        $this->NudgePropertyValue('sibling', $value);
     }
 
     /**
@@ -1061,7 +1048,7 @@ class Person extends Thing
     */
     public function SetSpouse(array $value) : void
     {
-        $this->NudgePropertyWithUniquePersons('spouse', __METHOD__, $value);
+        $this->NudgePropertyValue('spouse', $value);
     }
 
     /**
@@ -1086,11 +1073,9 @@ class Person extends Thing
     */
     public function SetWeight(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'weight',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -1116,9 +1101,8 @@ class Person extends Thing
     */
     public function SetWorkLocation(array $value) : void
     {
-        $this->NudgePropertyValueWithUniqueContactPointsOrPlaces(
+        $this->NudgePropertyValue(
             'workLocation',
-            __METHOD__,
             $value
         );
     }
@@ -1145,6 +1129,6 @@ class Person extends Thing
     */
     public function SetWorksFor(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizations('worksFor', __METHOD__, $value);
+        $this->NudgePropertyValue('worksFor', $value);
     }
 }

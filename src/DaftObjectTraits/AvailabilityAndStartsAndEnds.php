@@ -36,11 +36,9 @@ trait AvailabilityAndStartsAndEnds
     */
     public function SetAvailability(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availability',
-            __METHOD__,
-            $value,
-            ItemAvailability::class
+            $value
         );
     }
 
@@ -66,11 +64,9 @@ trait AvailabilityAndStartsAndEnds
     */
     public function SetAvailabilityEnds(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availabilityEnds',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 
@@ -96,11 +92,9 @@ trait AvailabilityAndStartsAndEnds
     */
     public function SetAvailabilityStarts(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'availabilityStarts',
-            __METHOD__,
-            $value,
-            DateTime::class
+            $value
         );
     }
 }

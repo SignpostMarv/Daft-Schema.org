@@ -35,11 +35,9 @@ trait HasReview
     */
     public function SetReview(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'review',
-            __METHOD__,
-            $value,
-            Review::class
+            $value
         );
     }
 }

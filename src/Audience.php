@@ -79,11 +79,9 @@ class Audience extends Thing
     */
     public function SetGeographicArea(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'geographicArea',
-            __METHOD__,
-            $value,
-            Place\AdministrativeArea::class
+            $value
         );
     }
 }

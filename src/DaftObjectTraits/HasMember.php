@@ -36,9 +36,8 @@ trait HasMember
     */
     public function SetMember(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons(
+        $this->NudgePropertyValue(
             'member',
-            __METHOD__,
             $value
         );
     }

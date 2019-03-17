@@ -60,9 +60,8 @@ class AggregateRating extends Base
     */
     public function SetRatingCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'ratingCount',
-            __METHOD__,
             $value
         );
     }
@@ -89,9 +88,8 @@ class AggregateRating extends Base
     */
     public function SetReviewCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'reviewCount',
-            __METHOD__,
             $value
         );
     }

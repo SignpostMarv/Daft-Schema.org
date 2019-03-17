@@ -63,12 +63,9 @@ class InteractionCounter extends Base
     */
     public function SetInteractionService(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'interactionService',
-            __METHOD__,
-            $value,
-            CreativeWork::class,
-            WebSite::class
+            $value
         );
     }
 
@@ -94,11 +91,9 @@ class InteractionCounter extends Base
     */
     public function SetInteractionType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'interactionType',
-            __METHOD__,
-            $value,
-            Action::class
+            $value
         );
     }
 
@@ -124,9 +119,8 @@ class InteractionCounter extends Base
     */
     public function SetUserInteractionCount(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'userInteractionCount',
-            __METHOD__,
             $value
         );
     }

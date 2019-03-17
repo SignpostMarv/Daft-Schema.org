@@ -65,7 +65,7 @@ class PublicationEvent extends Base
     */
     public function SetPublishedBy(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('publishedBy', __METHOD__, $value);
+        $this->NudgePropertyValue('publishedBy', $value);
     }
 
     /**
@@ -90,11 +90,9 @@ class PublicationEvent extends Base
     */
     public function SetPublishedOn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'publishedOn',
-            __METHOD__,
-            $value,
-            BroadcastService::class
+            $value
         );
     }
 }

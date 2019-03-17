@@ -87,11 +87,9 @@ class BroadcastService extends Base
     */
     public function SetBroadcastAffiliateOf(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'broadcastAffiliateOf',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -204,11 +202,9 @@ class BroadcastService extends Base
     */
     public function SetBroadcaster(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'broadcaster',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -234,11 +230,9 @@ class BroadcastService extends Base
     */
     public function SetHasBroadcastChannel(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hasBroadcastChannel',
-            __METHOD__,
-            $value,
-            BroadcastChannel::class
+            $value
         );
     }
 
@@ -264,11 +258,9 @@ class BroadcastService extends Base
     */
     public function SetParentService(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'parentService',
-            __METHOD__,
-            $value,
-            BroadcastService::class
+            $value
         );
     }
 

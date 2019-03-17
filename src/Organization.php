@@ -383,11 +383,9 @@ class Organization extends Thing
     */
     public function SetAlumni(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'alumni',
-            __METHOD__,
-            $value,
-            Person::class
+            $value
         );
     }
 
@@ -442,11 +440,9 @@ class Organization extends Thing
     */
     public function SetDepartment(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'department',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -472,11 +468,9 @@ class Organization extends Thing
     */
     public function SetDissolutionDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'dissolutionDate',
-            __METHOD__,
-            $value,
-            Date::class
+            $value
         );
     }
 
@@ -560,11 +554,9 @@ class Organization extends Thing
     */
     public function SetEmployee(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'employee',
-            __METHOD__,
-            $value,
-            Person::class
+            $value
         );
     }
 
@@ -619,11 +611,9 @@ class Organization extends Thing
     */
     public function SetFounder(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'founder',
-            __METHOD__,
-            $value,
-            Person::class
+            $value
         );
     }
 
@@ -649,11 +639,9 @@ class Organization extends Thing
     */
     public function SetFoundingDate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'foundingDate',
-            __METHOD__,
-            $value,
-            Date::class
+            $value
         );
     }
 
@@ -679,11 +667,9 @@ class Organization extends Thing
     */
     public function SetFoundingLocation(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'foundingLocation',
-            __METHOD__,
-            $value,
-            Place::class
+            $value
         );
     }
 
@@ -767,11 +753,9 @@ class Organization extends Thing
     */
     public function SetNumberOfEmployees(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'numberOfEmployees',
-            __METHOD__,
-            $value,
-            QuantitativeValue::class
+            $value
         );
     }
 
@@ -826,11 +810,9 @@ class Organization extends Thing
     */
     public function SetParentOrganization(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'parentOrganization',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 
@@ -856,11 +838,9 @@ class Organization extends Thing
     */
     public function SetSubOrganization(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'subOrganization',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 

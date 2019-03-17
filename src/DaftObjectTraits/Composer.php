@@ -36,6 +36,6 @@ trait Composer
     */
     public function SetComposer(array $value) : void
     {
-        $this->NudgePropertyWithUniqueOrganizationsOrPersons('composer', __METHOD__, $value);
+        $this->NudgePropertyValue('composer', $value);
     }
 }

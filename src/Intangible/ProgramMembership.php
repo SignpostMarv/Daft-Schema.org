@@ -69,11 +69,9 @@ class ProgramMembership extends Base
     */
     public function SetHostingOrganization(array $value) : void
     {
-        $this->NudgePropertyWithUniqueValuesOfThings(
+        $this->NudgePropertyValue(
             'hostingOrganization',
-            __METHOD__,
-            $value,
-            Organization::class
+            $value
         );
     }
 

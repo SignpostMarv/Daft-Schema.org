@@ -120,9 +120,8 @@ class ItemList extends Base
     */
     public function SetNumberOfItems(array $value) : void
     {
-        $this->NudgePropertyWithUniqueIntegers(
+        $this->NudgePropertyValue(
             'numberOfItems',
-            __METHOD__,
             $value
         );
     }

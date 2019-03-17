@@ -52,6 +52,9 @@ class DaftObjectFuzzingTest extends Base
     */
     private static $YieldTypeForFuzzing = [];
 
+    /**
+    * @var bool
+    */
     private static $last_boolean = false;
 
     /**

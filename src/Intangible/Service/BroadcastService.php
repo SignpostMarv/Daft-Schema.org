@@ -12,6 +12,16 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Organization> $broadcastAffiliateOf
+* @property array<int, string> $broadcastDisplayName
+* @property array<int, string|BroadcastFrequencySpecification> $broadcastFrequency
+* @property array<int, string> $broadcastTimezone
+* @property array<int, Organization> $broadcaster
+* @property array<int, BroadcastChannel> $hasBroadcastChannel
+* @property array<int, BroadcastService> $parentService
+* @property array<int, string> $videoFormat
+*/
 class BroadcastService extends Base
 {
     const SCHEMA_ORG_TYPE = 'BroadcastService';
@@ -25,6 +35,34 @@ class BroadcastService extends Base
         'hasBroadcastChannel',
         'parentService',
         'videoFormat',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'broadcastAffiliateOf' => [
+            Organization::class,
+        ],
+        'broadcastDisplayName' => [
+            'string',
+        ],
+        'broadcastFrequency' => [
+            'string',
+            BroadcastFrequencySpecification::class,
+        ],
+        'broadcastTimezone' => [
+            'string',
+        ],
+        'broadcaster' => [
+            Organization::class,
+        ],
+        'hasBroadcastChannel' => [
+            BroadcastChannel::class,
+        ],
+        'parentService' => [
+            BroadcastService::class,
+        ],
+        'videoFormat' => [
+            'string',
+        ],
     ];
 
     /**

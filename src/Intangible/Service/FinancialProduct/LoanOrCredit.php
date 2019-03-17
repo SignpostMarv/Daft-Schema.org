@@ -14,6 +14,17 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\RepaymentSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string> $currency
+* @property array<int, int|float|MonetaryAmount> $amount
+* @property array<int, Duration> $gracePeriod
+* @property array<int, RepaymentSpecification> $loanRepaymentForm
+* @property array<int, QuantitativeValue> $loanTerm
+* @property array<int, string> $loanType
+* @property array<int, bool> $recourseLoan
+* @property array<int, bool> $renegotiableLoan
+* @property array<int, string> $requiredCollateral
+*/
 class LoanOrCredit extends Base
 {
     use DaftObjectTraits\Currency;
@@ -30,6 +41,35 @@ class LoanOrCredit extends Base
         'recourseLoan',
         'renegotiableLoan',
         'requiredCollateral',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'amount' => [
+            'integer',
+            'double',
+            MonetaryAmount::class,
+        ],
+        'gracePeriod' => [
+            Duration::class,
+        ],
+        'loanRepaymentForm' => [
+            RepaymentSpecification::class,
+        ],
+        'loanTerm' => [
+            QuantitativeValue::class,
+        ],
+        'loanType' => [
+            'string',
+        ],
+        'recourseLoan' => [
+            'boolean',
+        ],
+        'renegotiableLoan' => [
+            'boolean',
+        ],
+        'requiredCollateral' => [
+            'string',
+        ],
     ];
 
     /**

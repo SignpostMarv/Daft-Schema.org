@@ -9,6 +9,11 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\SchemaOrg\Product as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, ProductModel> $isVariantOf
+* @property array<int, ProductModel> $predecessorOf
+* @property array<int, ProductModel> $successorOf
+*/
 class ProductModel extends Base
 {
     const SCHEMA_ORG_TYPE = 'ProductModel';
@@ -17,6 +22,18 @@ class ProductModel extends Base
         'isVariantOf',
         'predecessorOf',
         'successorOf',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'isVariantOf' => [
+            ProductModel::class,
+        ],
+        'predecessorOf' => [
+            ProductModel::class,
+        ],
+        'successorOf' => [
+            ProductModel::class,
+        ],
     ];
 
     /**

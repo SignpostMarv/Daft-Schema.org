@@ -40,8 +40,8 @@ trait HasCategory
             'category',
             __METHOD__,
             $value,
-            Thing::class,
-            PhysicalActivityCategory::class
+            PhysicalActivityCategory::class,
+            Thing::class
         );
     }
 }

@@ -10,6 +10,11 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, int|float|QuantitativeValue> $annualPercentageRate
+* @property array<int, string> $feesAndCommissionsSpecification
+* @property array<int, int|float|QuantitativeValue> $interestRate
+*/
 class FinancialProduct extends Base
 {
     const SCHEMA_ORG_TYPE = 'FinancialProduct';
@@ -18,6 +23,22 @@ class FinancialProduct extends Base
         'annualPercentageRate',
         'feesAndCommissionsSpecification',
         'interestRate',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'annualPercentageRate' => [
+            'integer',
+            'double',
+            QuantitativeValue::class,
+        ],
+        'feesAndCommissionsSpecification' => [
+            'string',
+        ],
+        'interestRate' => [
+            'integer',
+            'double',
+            QuantitativeValue::class,
+        ],
     ];
 
     /**

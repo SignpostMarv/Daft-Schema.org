@@ -6,6 +6,16 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
+use CallbackFilterIterator;
+use DateTimeZone;
+use Exception;
+use Generator;
+use RecursiveCallbackFilterIterator;
+use RecursiveDirectoryIterator;
+use RecursiveIteratorIterator;
+use ReflectionClass;
+use ReflectionClassConstant;
+use RuntimeException;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\Tests\TestCase as Base;
 
@@ -88,5 +98,69 @@ class DaftSchemaOrgTest extends Base
         static::assertSame($json, $from_str);
 
         static::assertSame($json, $from_arr);
+    }
+
+    public function test_supersededBy() : void
+    {
+        $obj = new SchemaOrg\Intangible\Enumeration();
+        $class = new SchemaOrg\Intangible\IntangibleClass(['name' => ['Foo']]);
+        $enumeration = new SchemaOrg\Intangible\Enumeration(['name' => ['Foo']]);
+        $property = new SchemaOrg\Intangible\IntangibleProperty(['name' => ['Foo']]);
+
+        $obj->SetSupersededBy([$class, $enumeration, $property]);
+
+        static::assertContains($class, $obj->GetSupersededBy());
+        static::assertContains($enumeration, $obj->GetSupersededBy());
+        static::assertContains($property, $obj->GetSupersededBy());
+    }
+
+    /**
+    * @psalm-return array<int, array{0:class-string<SchemaOrg\DataTypes\DateTimeInterface>, 1:string}>
+    */
+    public function dataProvider_DateTimeInterface() : array
+    {
+        return [
+            [SchemaOrg\DataTypes\Date::class, '1970-01-01'],
+            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03Z+00:00'],
+            [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00'],
+            [SchemaOrg\DataTypes\Date::class, '1970-01-01', 'Europe/London'],
+            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03Z+00:00', 'Europe/London'],
+            [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00', 'Europe/London'],
+        ];
+    }
+
+    /**
+    * @dataProvider dataProvider_DateTimeInterface
+    *
+    * @psalm-param class-string<SchemaOrg\DataTypes\DateTimeInterface> $data_type
+    */
+    public function test_DateTimeInterface_succeeds(string $data_type, string $input, string $timezone = null) : void
+    {
+        /**
+        * @var DateTimeZone|null
+        */
+        $tz = null;
+
+        if (is_string($timezone)) {
+            $tz = new DateTimeZone($timezone);
+        }
+
+        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($input, $tz));
+    }
+
+    /**
+    * @dataProvider dataProvider_DateTimeInterface
+    *
+    * @psalm-param class-string<SchemaOrg\DataTypes\DateTimeInterface> $data_type
+    */
+    public function test_DateTimeInterface_fails(string $data_type) : void
+    {
+        static::expectException(Exception::class);
+        static::expectExceptionMessage(
+            'Failed to parse time string (nope) at position 0 (n)' .
+            ': The timezone could not be found in the database'
+        );
+
+        $data_type::DataTypeFromString('nope');
     }
 }

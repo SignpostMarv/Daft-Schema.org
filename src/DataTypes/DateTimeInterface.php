@@ -31,7 +31,8 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
         string $value,
         DateTimeZone $tz = null
     ) : DateTimeInterface {
-        $out = static::createFromFormat($value, static::ObtainFormat(), $tz);
+        $format = static::ObtainFormat();
+        $out = static::createFromFormat($format, $value, $tz);
 
         if ( ! is_object($out)) {
             throw new RuntimeException(
@@ -44,7 +45,7 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
             );
         }
 
-        return $out;
+        return new static($out->format($format));
     }
 
     abstract protected static function ObtainFormat() : string;

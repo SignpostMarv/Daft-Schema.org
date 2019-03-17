@@ -67,13 +67,13 @@ class DaftObjectFuzzingTest extends Base
     }
 
     /**
-    * @psalm-return array<int, class-string<SchemaOrg\DataTypes\DateTimeInterface>>
+    * @psalm-return array<int, array{0:class-string<SchemaOrg\DataTypes\DateTimeInterface>, 1:string}>
     */
     public function dataProvider_DateTimeInterface() : array
     {
         return [
             [SchemaOrg\DataTypes\Date::class, '1970-01-01'],
-            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03+00:00'],
+            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03Z+00:00'],
             [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00'],
         ];
     }

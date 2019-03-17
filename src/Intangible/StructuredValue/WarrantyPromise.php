@@ -11,6 +11,10 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, QuantitativeValue> $durationOfWarranty
+* @property array<int, Product|Service> $warrantyScope
+*/
 class WarrantyPromise extends Base
 {
     const SCHEMA_ORG_TYPE = 'WarrantyPromise';
@@ -18,6 +22,16 @@ class WarrantyPromise extends Base
     const PROPERTIES = [
         'durationOfWarranty',
         'warrantyScope',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'durationOfWarranty' => [
+            QuantitativeValue::class,
+        ],
+        'warrantyScope' => [
+            Product::class,
+            Service::class,
+        ],
     ];
 
     /**

@@ -9,6 +9,9 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\Quantitat
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue as Base;
 
+/**
+* @property array<int, string> $currency
+*/
 class MonetaryAmountDistribution extends Base
 {
     use DaftObjectTraits\Currency;
@@ -17,5 +20,11 @@ class MonetaryAmountDistribution extends Base
 
     const PROPERTIES = [
         'currency',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'currency' => [
+            'string',
+        ],
     ];
 }

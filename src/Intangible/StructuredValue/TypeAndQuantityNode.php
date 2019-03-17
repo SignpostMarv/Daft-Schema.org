@@ -13,6 +13,13 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, int|float> $amountOfThisGood
+* @property array<int, BusinessFunction> $businessFunction
+* @property array<int, Product|Service> $typeOfGood
+* @property array<int, string> $unitCode
+* @property array<int, string> $unitText
+*/
 class TypeAndQuantityNode extends Base
 {
     use DaftObjectTraits\HasUnitCodeText;
@@ -25,6 +32,26 @@ class TypeAndQuantityNode extends Base
         'typeOfGood',
         'unitCode',
         'unitText',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'amountOfThisGood' => [
+            'integer',
+            'double',
+        ],
+        'businessFunction' => [
+            BusinessFunction::class,
+        ],
+        'typeOfGood' => [
+            Product::class,
+            Service::class,
+        ],
+        'unitCode' => [
+            'string',
+        ],
+        'unitText' => [
+            'string',
+        ],
     ];
 
     /**

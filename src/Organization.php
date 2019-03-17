@@ -23,33 +23,54 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\OwnershipInfo;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 
 /**
+* @property array<int, string|CreativeWork> $actionableFeedbackPolicy
 * @property array<int, string|PostalAddress> $address
 * @property array<int, AggregateRating> $aggregateRating
+* @property array<int, Person> $alumni
 * @property array<int, string> $award
 * @property array<int, Brand|Organization> $brand
 * @property array<int, ContactPoint> $contactPoint
+* @property array<int, string|CreativeWork> $correctionsPolicy
+* @property array<int, Organization> $department
+* @property array<int, Date> $dissolutionDate
+* @property array<int, string|CreativeWork> $diversityPolicy
+* @property array<int, string|Article> $diversityStaffingReport
 * @property array<int, string> $duns
 * @property array<int, string> $email
+* @property array<int, Person> $employee
+* @property array<int, string|CreativeWork> $ethicsPolicy
+* @property array<int, Event> $event
 * @property array<int, string> $faxNumber
+* @property array<int, Person> $founder
+* @property array<int, Date> $foundingDate
+* @property array<int, Place> $foundingLocation
 * @property array<int, Organization|Person> $funder
 * @property array<int, string> $globalLocationNumber
 * @property array<int, OfferCatalog> $hasOfferCatalog
 * @property array<int, Place> $hasPOS
+* @property array<int, string> $isicV4
 * @property array<int, string|Thing> $knowsAbout
 * @property array<int, string|Language> $knowsLanguage
+* @property array<int, string> $legalName
+* @property array<int, string> $leiCode
 * @property array<int, string|Place|PostalAddress> $location
 * @property array<int, ImageObject> $logo
 * @property array<int, Offer> $makesOffer
 * @property array<int, Organization|Person> $member
 * @property array<int, Organization|ProgramMembership> $memberOf
 * @property array<int, string> $naics
+* @property array<int, QuantitativeValue> $numberOfEmployees
+* @property array<int, string|AboutPage|CreativeWork> $ownershipFundingInfo
 * @property array<int, OwnershipInfo|Product> $owns
+* @property array<int, Organization> $parentOrganization
 * @property array<int, string|CreativeWork> $publishingPrinciples
 * @property array<int, Review> $review
 * @property array<int, Demand> $seeks
 * @property array<int, Organization|Person> $sponsor
+* @property array<int, Organization> $subOrganization
 * @property array<int, string> $taxID
 * @property array<int, string> $telephone
+* @property array<int, string|CreativeWork> $unnamedSourcesPolicy
 * @property array<int, string> $vatID
 */
 class Organization extends Thing
@@ -142,12 +163,19 @@ class Organization extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'actionableFeedbackPolicy' => [
+            'string',
+            CreativeWork::class,
+        ],
         'address' => [
             'string',
             PostalAddress::class,
         ],
         'aggregateRating' => [
             AggregateRating::class,
+        ],
+        'alumni' => [
+            Person::class,
         ],
         'award' => [
             'string',
@@ -159,14 +187,51 @@ class Organization extends Thing
         'contactPoint' => [
             ContactPoint::class,
         ],
+        'correctionsPolicy' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'department' => [
+            Organization::class,
+        ],
+        'dissolutionDate' => [
+            Date::class,
+        ],
+        'diversityPolicy' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'diversityStaffingReport' => [
+            'string',
+            Article::class,
+        ],
         'duns' => [
             'string',
         ],
         'email' => [
             'string',
         ],
+        'employee' => [
+            Person::class,
+        ],
+        'ethicsPolicy' => [
+            'string',
+            CreativeWork::class,
+        ],
+        'event' => [
+            Event::class,
+        ],
         'faxNumber' => [
             'string',
+        ],
+        'founder' => [
+            Person::class,
+        ],
+        'foundingDate' => [
+            Date::class,
+        ],
+        'foundingLocation' => [
+            Place::class,
         ],
         'funder' => [
             Organization::class,
@@ -181,6 +246,9 @@ class Organization extends Thing
         'hasPOS' => [
             Place::class,
         ],
+        'isicV4' => [
+            'string',
+        ],
         'knowsAbout' => [
             'string',
             Thing::class,
@@ -188,6 +256,12 @@ class Organization extends Thing
         'knowsLanguage' => [
             'string',
             Language::class,
+        ],
+        'legalName' => [
+            'string',
+        ],
+        'leiCode' => [
+            'string',
         ],
         'location' => [
             'string',
@@ -211,9 +285,20 @@ class Organization extends Thing
         'naics' => [
             'string',
         ],
+        'numberOfEmployees' => [
+            QuantitativeValue::class,
+        ],
+        'ownershipFundingInfo' => [
+            'string',
+            AboutPage::class,
+            CreativeWork::class,
+        ],
         'owns' => [
             OwnershipInfo::class,
             Product::class,
+        ],
+        'parentOrganization' => [
+            Organization::class,
         ],
         'publishingPrinciples' => [
             'string',
@@ -229,11 +314,18 @@ class Organization extends Thing
             Organization::class,
             Person::class,
         ],
+        'subOrganization' => [
+            Organization::class,
+        ],
         'taxID' => [
             'string',
         ],
         'telephone' => [
             'string',
+        ],
+        'unnamedSourcesPolicy' => [
+            'string',
+            CreativeWork::class,
         ],
         'vatID' => [
             'string',
@@ -697,8 +789,8 @@ class Organization extends Thing
         * @var array<int, string|AboutPage|CreativeWork>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'diversityStaffingReport',
-            $this->RetrievePropertyValueFromData('diversityStaffingReport'),
+            'ownershipFundingInfo',
+            $this->RetrievePropertyValueFromData('ownershipFundingInfo'),
             static::class
         );
 
@@ -711,7 +803,7 @@ class Organization extends Thing
     public function SetOwnershipFundingInfo(array $value) : void
     {
         $this->NudgePropertyWithUniqueTrimmedStringsOrThings(
-            'diversityStaffingReport',
+            'ownershipFundingInfo',
             __METHOD__,
             $value,
             AboutPage::class,

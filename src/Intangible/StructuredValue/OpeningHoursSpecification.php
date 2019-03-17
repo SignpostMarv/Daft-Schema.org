@@ -12,6 +12,13 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\DayOfWeek;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, DataTypes\Time> $closes
+* @property array<int, DayOfWeek> $dayOfWeek
+* @property array<int, DataTypes\Time> $opens
+* @property array<int, DataTypes\DateTime> $validFrom
+* @property array<int, DataTypes\DateTime> $validThrough
+*/
 class OpeningHoursSpecification extends Base
 {
     use DaftObjectTraits\HasValidFromThrough;
@@ -24,6 +31,24 @@ class OpeningHoursSpecification extends Base
         'opens',
         'validFrom',
         'validThrough',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'closes' => [
+            DataTypes\Time::class,
+        ],
+        'dayOfWeek' => [
+            DayOfWeek::class,
+        ],
+        'opens' => [
+            DataTypes\Time::class,
+        ],
+        'validFrom' => [
+            DataTypes\DateTime::class,
+        ],
+        'validThrough' => [
+            DataTypes\DateTime::class,
+        ],
     ];
 
     /**

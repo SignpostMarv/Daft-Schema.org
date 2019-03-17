@@ -23,31 +23,60 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
 
 /**
-* @property array<int, Distance|QuantitativeValue> $height
+* @property array<int, string> $additionalName
 * @property array<int, string|PostalAddress> $address
+* @property array<int, Organization> $affiliation
+* @property array<int, Organization> $alumniOf
 * @property array<int, string> $award
+* @property array<int, Date> $birthDate
+* @property array<int, Place> $birthPlace
 * @property array<int, Brand|Organization> $brand
+* @property array<int, Person> $children
+* @property array<int, string|Person> $colleague
 * @property array<int, ContactPoint> $contactPoint
+* @property array<int, Date> $deathDate
+* @property array<int, Place> $deathPlace
 * @property array<int, string> $duns
 * @property array<int, string> $email
+* @property array<int, string> $familyName
 * @property array<int, string> $faxNumber
+* @property array<int, Person> $follows
 * @property array<int, Organization|Person> $funder
+* @property array<int, string|GenderType> $gender
+* @property array<int, string> $givenName
 * @property array<int, string> $globalLocationNumber
+* @property array<int, Occupation> $hasOccupation
 * @property array<int, OfferCatalog> $hasOfferCatalog
 * @property array<int, Place> $hasPOS
+* @property array<int, Distance|QuantitativeValue> $height
+* @property array<int, ContactPoint|Place> $homeLocation
+* @property array<int, string> $honorificPrefix
+* @property array<int, string> $honorificSuffix
 * @property array<int, string> $isicV4
+* @property array<int, string> $jobTitle
+* @property array<int, Person> $knows
 * @property array<int, string|Thing> $knowsAbout
 * @property array<int, string|Language> $knowsLanguage
 * @property array<int, Offer> $makesOffer
 * @property array<int, Organization|ProgramMembership> $memberOf
 * @property array<int, string> $naics
+* @property array<int, Country> $nationality
+* @property array<int, MonetaryAmount|PriceSpecification> $netWorth
+* @property array<int, Person> $parent
+* @property array<int, Event> $performerIn
 * @property array<int, OwnershipInfo|Product> $owns
 * @property array<int, string|CreativeWork> $publishingPrinciples
+* @property array<int, Person> $relatedTo
 * @property array<int, Demand> $seeks
+* @property array<int, Person> $sibling
 * @property array<int, Organization|Person> $sponsor
+* @property array<int, Person> $spouse
 * @property array<int, string> $taxID
 * @property array<int, string> $telephone
 * @property array<int, string> $vatID
+* @property array<int, QuantitativeValue> $weight
+* @property array<int, ContactPoint|Place> $workLocation
+* @property array<int, Organization> $worksFor
 */
 class Person extends Thing
 {
@@ -137,23 +166,47 @@ class Person extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'height' => [
-            Distance::class,
-            QuantitativeValue::class,
+        'additionalName' => [
+            'string',
         ],
         'address' => [
             'string',
             PostalAddress::class,
         ],
+        'affiliation' => [
+            Organization::class,
+        ],
+        'alumniOf' => [
+            Organization::class,
+        ],
         'award' => [
             'string',
+        ],
+        'birthDate' => [
+            Date::class,
+        ],
+        'birthPlace' => [
+            Place::class,
         ],
         'brand' => [
             Brand::class,
             Organization::class,
         ],
+        'children' => [
+            Person::class,
+        ],
+        'colleague' => [
+            'string',
+            Person::class,
+        ],
         'contactPoint' => [
             ContactPoint::class,
+        ],
+        'deathDate' => [
+            Date::class,
+        ],
+        'deathPlace' => [
+            Place::class,
         ],
         'duns' => [
             'string',
@@ -161,15 +214,31 @@ class Person extends Thing
         'email' => [
             'string',
         ],
+        'familyName' => [
+            'string',
+        ],
         'faxNumber' => [
             'string',
+        ],
+        'follows' => [
+            Person::class,
         ],
         'funder' => [
             Organization::class,
             Person::class,
         ],
+        'gender' => [
+            'string',
+            GenderType::class,
+        ],
+        'givenName' => [
+            'string',
+        ],
         'globalLocationNumber' => [
             'string',
+        ],
+        'hasOccupation' => [
+            Occupation::class,
         ],
         'hasOfferCatalog' => [
             OfferCatalog::class,
@@ -177,8 +246,28 @@ class Person extends Thing
         'hasPOS' => [
             Place::class,
         ],
+        'height' => [
+            Distance::class,
+            QuantitativeValue::class,
+        ],
+        'homeLocation' => [
+            ContactPoint::class,
+            Place::class,
+        ],
+        'honorificPrefix' => [
+            'string',
+        ],
+        'honorificSuffix' => [
+            'string',
+        ],
         'isicV4' => [
             'string',
+        ],
+        'jobTitle' => [
+            'string',
+        ],
+        'knows' => [
+            Person::class,
         ],
         'knowsAbout' => [
             'string',
@@ -198,19 +287,41 @@ class Person extends Thing
         'naics' => [
             'string',
         ],
+        'nationality' => [
+            Country::class,
+        ],
+        'netWorth' => [
+            MonetaryAmount::class,
+            PriceSpecification::class,
+        ],
         'owns' => [
             OwnershipInfo::class,
             Product::class,
+        ],
+        'parent' => [
+            Person::class,
+        ],
+        'performerIn' => [
+            Event::class,
         ],
         'publishingPrinciples' => [
             'string',
             CreativeWork::class,
         ],
+        'relatedTo' => [
+            Person::class,
+        ],
         'seeks' => [
             Demand::class,
         ],
+        'sibling' => [
+            Person::class,
+        ],
         'sponsor' => [
             Organization::class,
+            Person::class,
+        ],
+        'spouse' => [
             Person::class,
         ],
         'taxID' => [
@@ -218,6 +329,16 @@ class Person extends Thing
         ],
         'telephone' => [
             'string',
+        ],
+        'weight' => [
+            QuantitativeValue::class,
+        ],
+        'workLocation' => [
+            ContactPoint::class,
+            Place::class,
+        ],
+        'worksFor' => [
+            Organization::class,
         ],
         'vatID' => [
             'string',

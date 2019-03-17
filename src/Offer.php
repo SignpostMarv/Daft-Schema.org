@@ -17,6 +17,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeVal
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise;
 
 /**
+* @property array<int, Offer> $addOn
 * @property array<int, AggregateRating> $aggregateRating
 * @property array<int, Place> $availableAtOrFrom
 * @property array<int, DeliveryMethod> $availableDeliveryMethod
@@ -25,7 +26,11 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\WarrantyPromise
 * @property array<int, OfferItemCondition> $itemCondition
 * @property array<int, Product|Service> $itemOffered
 * @property array<int, string> $mpn
+* @property array<int, Organization|Person> $offeredBy
+* @property array<int, string|float|int> $price
+* @property array<int, string> $priceCurrency
 * @property array<int, PriceSpecification> $priceSpecification
+* @property array<int, Date> $priceValidUntil
 * @property array<int, Review> $review
 * @property array<int, Organization|Person> $seller
 * @property array<int, string> $serialNumber
@@ -86,6 +91,9 @@ class Offer extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'addOn' => [
+            Offer::class,
+        ],
         'aggregateRating' => [
             AggregateRating::class,
         ],
@@ -113,8 +121,23 @@ class Offer extends Thing
         'mpn' => [
             'string',
         ],
+        'offeredBy' => [
+            Organization::class,
+            Person::class,
+        ],
+        'price' => [
+            'string',
+            'double',
+            'integer',
+        ],
+        'priceCurrency' => [
+            'string',
+        ],
         'priceSpecification' => [
             PriceSpecification::class,
+        ],
+        'priceValidUntil' => [
+            Date::class,
         ],
         'review' => [
             Review::class,

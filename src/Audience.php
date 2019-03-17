@@ -19,6 +19,15 @@ class Audience extends Thing
         'geographicArea',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'audienceType' => [
+            'string',
+        ],
+        'geographicArea' => [
+            Place\AdministrativeArea::class,
+        ],
+    ];
+
     /**
     * @return array<int, string>
     */

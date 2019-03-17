@@ -252,6 +252,8 @@ class DaftObjectFuzzingTest extends Base
                 yield new SchemaOrg\DataTypes\Date('January 1st 1970');
             } elseif (SchemaOrg\DataTypes\DateTime::class === $gimme) {
                 yield new SchemaOrg\DataTypes\DateTime('January 1st 1970 01:02:03');
+            } elseif (SchemaOrg\DataTypes\Time::class === $gimme) {
+                yield new SchemaOrg\DataTypes\Time('01:02:03');
             } elseif (SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class === $gimme) {
                 yield SchemaOrg\DataTypes\DataType\Text\CssSelectorType::DataTypeFromString(
                     '.foo'

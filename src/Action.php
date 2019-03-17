@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\EntryPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\ActionStatusType;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 
 /**
 * @property array<int, ActionStatusType> $actionStatus
@@ -41,6 +42,46 @@ class Action extends Thing
         'result',
         'startTime',
         'target',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'actionStatus' => [
+            ActionStatusType::class,
+        ],
+        'agent' => [
+            Organization::class,
+            Person::class,
+        ],
+        'endTime' => [
+            DateTime::class,
+        ],
+        'error' => [
+            Thing::class,
+        ],
+        'instrument' => [
+            Thing::class,
+        ],
+        'location' => [
+            'string',
+            Place::class,
+            PostalAddress::class,
+        ],
+        'object' => [
+            Thing::class,
+        ],
+        'participant' => [
+            Organization::class,
+            Person::class,
+        ],
+        'result' => [
+            Thing::class,
+        ],
+        'startTime' => [
+            DateTime::class,
+        ],
+        'target' => [
+            EntryPoint::class,
+        ],
     ];
 
     /**

@@ -70,7 +70,7 @@ trait HasMinMaxValue
     public function GetValue() : array
     {
         /**
-        * @var array<int, string>
+        * @var array<int, bool|string|int|float|StructuredValue>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'value',

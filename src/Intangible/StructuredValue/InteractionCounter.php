@@ -13,6 +13,11 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebSite;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, SoftwareApplication|WebSite> $interactionService
+* @property array<int, Action> $interactionType
+* @property array<int, int> $userInteractionCount
+*/
 class InteractionCounter extends Base
 {
     const SCHEMA_ORG_TYPE = 'InteractionCounter';
@@ -21,6 +26,19 @@ class InteractionCounter extends Base
         'interactionService',
         'interactionType',
         'userInteractionCount',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'interactionService' => [
+            SoftwareApplication::class,
+            WebSite::class,
+        ],
+        'interactionType' => [
+            Action::class,
+        ],
+        'userInteractionCount' => [
+            'integer',
+        ],
     ];
 
     /**

@@ -9,6 +9,13 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, int|float|MonetaryAmount> $downPayment
+* @property array<int, MonetaryAmount> $earlyPrepaymentPenalty
+* @property array<int, MonetaryAmount> $loanPaymentAmount
+* @property array<int, int|float> $loanPaymentFrequency
+* @property array<int, int|float> $numberOfLoanPayments
+*/
 class RepaymentSpecification extends Base
 {
     const SCHEMA_ORG_TYPE = 'RepaymentSpecification';
@@ -19,6 +26,28 @@ class RepaymentSpecification extends Base
         'loanPaymentAmount',
         'loanPaymentFrequency',
         'numberOfLoanPayments',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'downPayment' => [
+            'integer',
+            'double',
+            MonetaryAmount::class,
+        ],
+        'earlyPrepaymentPenalty' => [
+            MonetaryAmount::class,
+        ],
+        'loanPaymentAmount' => [
+            MonetaryAmount::class,
+        ],
+        'loanPaymentFrequency' => [
+            'integer',
+            'double',
+        ],
+        'numberOfLoanPayments' => [
+            'integer',
+            'double',
+        ],
     ];
 
     /**

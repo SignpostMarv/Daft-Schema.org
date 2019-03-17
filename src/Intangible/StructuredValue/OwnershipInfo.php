@@ -9,9 +9,17 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, Organization|Person> $acquiredFrom
+* @property array<int, DateTime> $ownedFrom
+* @property array<int, DateTime> $ownedThrough
+* @property array<int, Product|Service> $typeOfGood
+*/
 class OwnershipInfo extends Base
 {
     const SCHEMA_ORG_TYPE = 'OwnershipInfo';
@@ -23,13 +31,30 @@ class OwnershipInfo extends Base
         'typeOfGood',
     ];
 
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'acquiredFrom' => [
+            Organization::class,
+            Person::class,
+        ],
+        'ownedFrom' => [
+            DateTime::class,
+        ],
+        'ownedThrough' => [
+            DateTime::class,
+        ],
+        'typeOfGood' => [
+            Product::class,
+            Service::class,
+        ],
+    ];
+
     /**
-    * @return array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+    * @return array<int, Organization|Person>
     */
     public function GetAcquiredFrom() : array
     {
         /**
-        * @var array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person>
+        * @var array<int, Organization|Person>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'acquiredFrom',
@@ -41,7 +66,7 @@ class OwnershipInfo extends Base
     }
 
     /**
-    * @param array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $value
+    * @param array<int, Organization|Person> $value
     */
     public function SetAcquiredFrom(array $value) : void
     {

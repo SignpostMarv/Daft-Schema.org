@@ -8,8 +8,17 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPo
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
+/**
+* @property array<int, string|Country> $addressCountry
+* @property array<int, string> $addressLocality
+* @property array<int, string> $addressRegion
+* @property array<int, string> $postalCode
+* @property array<int, string> $postOfficeBoxNumber
+* @property array<int, string> $streetAddress
+*/
 class PostalAddress extends Base
 {
     use DaftObjectTraits\HasAddressCountry;
@@ -24,6 +33,28 @@ class PostalAddress extends Base
         'postOfficeBoxNumber',
         'postalCode',
         'streetAddress',
+    ];
+
+    const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'addressCountry' => [
+            'string',
+            Country::class,
+        ],
+        'addressLocality' => [
+            'string',
+        ],
+        'addressRegion' => [
+            'string',
+        ],
+        'postalCode' => [
+            'string',
+        ],
+        'postOfficeBoxNumber' => [
+            'string',
+        ],
+        'streetAddress' => [
+            'string',
+        ],
     ];
 
     /**

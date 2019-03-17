@@ -34,13 +34,13 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
         $format = static::ObtainFormat();
 
         if ( ! is_null($tz)) {
-            $out->setTimezone($tz);
+            $out = $out->setTimezone($tz);
         }
 
         $out = new static($out->format($format));
 
         if ( ! is_null($tz)) {
-            $out->setTimezone($tz);
+            return $out->setTimezone($tz);
         }
 
         return $out;

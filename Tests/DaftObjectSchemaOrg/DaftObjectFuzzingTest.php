@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
 use CallbackFilterIterator;
+use Exception;
 use Generator;
 use RecursiveCallbackFilterIterator;
 use RecursiveDirectoryIterator;
@@ -95,15 +96,13 @@ class DaftObjectFuzzingTest extends Base
     */
     public function test_DateTimeInterface_fails(string $data_type) : void
     {
-        static::expectException(RuntimeException::class);
+        static::expectException(Exception::class);
         static::expectExceptionMessage(
-            $data_type .
-            '::createFromFormat() did not return an instance of ' .
-            $data_type .
-            ', boolean given!'
+            'Failed to parse time string (nope) at position 0 (n)' .
+            ': The timezone could not be found in the database'
         );
 
-        $data_type::DataTypeFromString('');
+        $data_type::DataTypeFromString('nope');
     }
 
     /**

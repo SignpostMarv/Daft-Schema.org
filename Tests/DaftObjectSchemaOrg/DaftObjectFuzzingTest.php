@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
 use CallbackFilterIterator;
+use DateTimeZone;
 use Exception;
 use Generator;
 use RecursiveCallbackFilterIterator;
@@ -76,6 +77,9 @@ class DaftObjectFuzzingTest extends Base
             [SchemaOrg\DataTypes\Date::class, '1970-01-01'],
             [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03Z+00:00'],
             [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00'],
+            [SchemaOrg\DataTypes\Date::class, '1970-01-01', 'Europe/London'],
+            [SchemaOrg\DataTypes\DateTime::class, '1970-01-01T01:02:03Z+00:00', 'Europe/London'],
+            [SchemaOrg\DataTypes\Time::class, '01:02:03Z+00:00', 'Europe/London'],
         ];
     }
 
@@ -84,9 +88,18 @@ class DaftObjectFuzzingTest extends Base
     *
     * @psalm-param class-string<SchemaOrg\DataTypes\DateTimeInterface> $data_type
     */
-    public function test_DateTimeInterface_succeeds(string $data_type, string $input) : void
+    public function test_DateTimeInterface_succeeds(string $data_type, string $input, string $timezone = null) : void
     {
-        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($input));
+        /**
+        * @var DateTimeZone|null
+        */
+        $tz = null;
+
+        if (is_string($timezone)) {
+            $tz = new DateTimeZone($timezone);
+        }
+
+        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($input, $tz));
     }
 
     /**

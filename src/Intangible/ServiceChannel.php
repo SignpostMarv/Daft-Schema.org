@@ -268,10 +268,10 @@ class ServiceChannel extends Base
     */
     public function SetServiceUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'serviceUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

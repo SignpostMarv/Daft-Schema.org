@@ -709,10 +709,10 @@ class Organization extends Thing
     */
     public function SetLegalName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'legalName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -738,10 +738,10 @@ class Organization extends Thing
     */
     public function SetLeiCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'leiCode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

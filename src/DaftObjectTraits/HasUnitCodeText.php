@@ -34,10 +34,10 @@ trait HasUnitCodeText
     */
     public function SetUnitCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'unitCode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -63,10 +63,10 @@ trait HasUnitCodeText
     */
     public function SetUnitText(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'unitText',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

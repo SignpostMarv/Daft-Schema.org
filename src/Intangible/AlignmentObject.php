@@ -68,10 +68,10 @@ class AlignmentObject extends Base
     */
     public function SetAlignmentType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'alignmentType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -97,10 +97,10 @@ class AlignmentObject extends Base
     */
     public function SetEducationalFramework(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'educationalFramework',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -126,10 +126,10 @@ class AlignmentObject extends Base
     */
     public function SetTargetDescription(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'targetDescription',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -155,10 +155,10 @@ class AlignmentObject extends Base
     */
     public function SetTargetName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'targetName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -184,10 +184,10 @@ class AlignmentObject extends Base
     */
     public function SetTargetUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'targetUrl',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

@@ -92,10 +92,10 @@ class GeoShape extends Thing
     */
     public function SetBox(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'box',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -121,10 +121,10 @@ class GeoShape extends Thing
     */
     public function SetCircle(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'circle',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -150,10 +150,10 @@ class GeoShape extends Thing
     */
     public function SetLine(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'line',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -179,10 +179,10 @@ class GeoShape extends Thing
     */
     public function SetPolygon(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'polygon',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

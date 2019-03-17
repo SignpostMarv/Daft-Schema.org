@@ -269,10 +269,10 @@ class Place extends Thing
     */
     public function SetBranchCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'branchCode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

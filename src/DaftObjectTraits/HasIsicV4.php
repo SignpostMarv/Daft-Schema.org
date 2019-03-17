@@ -34,10 +34,10 @@ trait HasIsicV4
     */
     public function SetIsicV4(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'isicV4',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

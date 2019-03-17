@@ -34,10 +34,10 @@ trait HasTaxID
     */
     public function SetTaxID(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'taxID',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

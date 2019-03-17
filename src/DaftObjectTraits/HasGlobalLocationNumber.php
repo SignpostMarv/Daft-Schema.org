@@ -34,10 +34,10 @@ trait HasGlobalLocationNumber
     */
     public function SetGlobalLocationNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'globalLocationNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

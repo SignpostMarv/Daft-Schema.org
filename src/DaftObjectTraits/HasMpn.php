@@ -34,10 +34,10 @@ trait HasMpn
     */
     public function SetMpn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'mpn',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

@@ -79,10 +79,10 @@ class PostalAddress extends Base
     */
     public function SetAddressLocality(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'addressLocality',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -108,10 +108,10 @@ class PostalAddress extends Base
     */
     public function SetAddressRegion(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'addressRegion',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -137,10 +137,10 @@ class PostalAddress extends Base
     */
     public function SetPostOfficeBoxNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'postOfficeBoxNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -166,10 +166,10 @@ class PostalAddress extends Base
     */
     public function SetStreetAddress(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'streetAddress',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

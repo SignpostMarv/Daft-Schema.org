@@ -99,10 +99,10 @@ class ProgramMembership extends Base
     */
     public function SetMembershipNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'membershipNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -128,10 +128,10 @@ class ProgramMembership extends Base
     */
     public function SetProgramName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'programName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

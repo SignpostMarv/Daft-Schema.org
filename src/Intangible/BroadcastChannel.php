@@ -77,10 +77,10 @@ class BroadcastChannel extends Base
     */
     public function SetBroadcastChannelId(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'broadcastChannelId',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -135,10 +135,10 @@ class BroadcastChannel extends Base
     */
     public function SetBroadcastServiceTier(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'broadcastServiceTier',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

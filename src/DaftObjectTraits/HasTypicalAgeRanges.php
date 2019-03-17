@@ -34,10 +34,10 @@ trait HasTypicalAgeRanges
     */
     public function SetTypicalAgeRange(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'typicalAgeRange',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

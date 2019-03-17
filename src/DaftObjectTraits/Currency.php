@@ -34,10 +34,10 @@ trait Currency
     */
     public function SetCurrency(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'currency',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

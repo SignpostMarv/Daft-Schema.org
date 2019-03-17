@@ -34,10 +34,10 @@ trait HasDuns
     */
     public function SetDuns(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'duns',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

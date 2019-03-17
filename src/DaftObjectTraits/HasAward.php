@@ -34,10 +34,10 @@ trait HasAward
     */
     public function SetAward(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'award',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

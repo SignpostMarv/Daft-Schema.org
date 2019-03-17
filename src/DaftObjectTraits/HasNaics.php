@@ -34,10 +34,10 @@ trait HasNaics
     */
     public function SetNaics(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'naics',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

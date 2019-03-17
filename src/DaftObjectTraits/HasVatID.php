@@ -34,10 +34,10 @@ trait HasVatID
     */
     public function SetVatID(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'vatID',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

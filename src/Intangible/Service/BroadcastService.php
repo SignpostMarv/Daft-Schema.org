@@ -117,10 +117,10 @@ class BroadcastService extends Base
     */
     public function SetBroadcastDisplayName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'broadcastDisplayName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -175,10 +175,10 @@ class BroadcastService extends Base
     */
     public function SetBroadcastTimezone(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'broadcastTimezone',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -294,10 +294,10 @@ class BroadcastService extends Base
     */
     public function SetVideoFormat(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'videoFormat',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

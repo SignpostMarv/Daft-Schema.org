@@ -34,10 +34,10 @@ trait HasReviewAspect
     */
     public function SetReviewAspect(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'reviewAspect',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

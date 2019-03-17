@@ -34,10 +34,10 @@ trait HasEmail
     */
     public function SetEmail(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'email',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

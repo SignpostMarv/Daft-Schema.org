@@ -367,10 +367,10 @@ class Person extends Thing
     */
     public function SetAdditionalName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'additionalName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -617,10 +617,10 @@ class Person extends Thing
     */
     public function SetFamilyName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'familyName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -700,10 +700,10 @@ class Person extends Thing
     */
     public function SetGivenName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'givenName',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -788,10 +788,10 @@ class Person extends Thing
     */
     public function SetHonorificPrefix(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'honorificPrefix',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -817,10 +817,10 @@ class Person extends Thing
     */
     public function SetHonorificSuffix(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'honorificSuffix',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -846,10 +846,10 @@ class Person extends Thing
     */
     public function SetJobTitle(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'jobTitle',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

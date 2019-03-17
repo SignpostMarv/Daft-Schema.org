@@ -34,10 +34,10 @@ trait HasGtin
     */
     public function SetGtin12(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'gtin12',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -63,10 +63,10 @@ trait HasGtin
     */
     public function SetGtin13(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'gtin13',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -92,10 +92,10 @@ trait HasGtin
     */
     public function SetGtin14(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'gtin14',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -121,10 +121,10 @@ trait HasGtin
     */
     public function SetGtin8(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'gtin8',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

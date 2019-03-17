@@ -34,10 +34,10 @@ trait MeasurementTechnique
     */
     public function SetMeasurementTechnique(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'measurementTechnique',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

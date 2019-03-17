@@ -34,10 +34,10 @@ trait HasTranscript
     */
     public function SetTranscript(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'transcript',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

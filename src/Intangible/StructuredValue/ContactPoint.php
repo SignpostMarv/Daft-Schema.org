@@ -137,10 +137,10 @@ class ContactPoint extends Base
     */
     public function SetContactType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'contactType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

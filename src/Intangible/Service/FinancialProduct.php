@@ -93,10 +93,10 @@ class FinancialProduct extends Base
     */
     public function SetFeesAndCommissionsSpecification(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'feesAndCommissionsSpecification',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

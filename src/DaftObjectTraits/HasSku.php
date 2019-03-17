@@ -32,10 +32,10 @@ trait HasSku
     */
     public function SetSku(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'sku',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

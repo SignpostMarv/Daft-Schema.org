@@ -34,10 +34,10 @@ trait HasPostalCode
     */
     public function SetPostalCode(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'postalCode',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

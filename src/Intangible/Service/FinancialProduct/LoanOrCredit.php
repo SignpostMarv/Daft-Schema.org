@@ -214,10 +214,10 @@ class LoanOrCredit extends Base
     */
     public function SetLoanType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'loanType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -299,10 +299,10 @@ class LoanOrCredit extends Base
     */
     public function SetRequiredCollateral(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'requiredCollateral',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

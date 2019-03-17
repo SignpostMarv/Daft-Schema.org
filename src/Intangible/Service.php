@@ -242,10 +242,10 @@ class Service extends Base
     */
     public function SetProviderMobility(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'providerMobility',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -271,10 +271,10 @@ class Service extends Base
     */
     public function SetServiceOutput(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'serviceOutput',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -300,10 +300,10 @@ class Service extends Base
     */
     public function SetServiceType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'serviceType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -329,10 +329,10 @@ class Service extends Base
     */
     public function SetTermsOfService(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'termsOfService',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

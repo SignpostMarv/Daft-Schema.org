@@ -104,10 +104,10 @@ class EntryPoint extends Intangible
     */
     public function SetActionPlatform(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'actionPlatform',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -133,10 +133,10 @@ class EntryPoint extends Intangible
     */
     public function SetContentType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'contentType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -162,10 +162,10 @@ class EntryPoint extends Intangible
     */
     public function SetEncodingType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'encodingType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -191,10 +191,10 @@ class EntryPoint extends Intangible
     */
     public function SetHttpMethod(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'httpMethod',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -220,10 +220,10 @@ class EntryPoint extends Intangible
     */
     public function SetUrlTemplate(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'urlTemplate',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

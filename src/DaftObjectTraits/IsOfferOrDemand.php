@@ -233,10 +233,10 @@ trait IsOfferOrDemand
     */
     public function SetSerialNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'serialNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

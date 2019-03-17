@@ -34,10 +34,10 @@ trait Genre
     */
     public function SetGenre(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'genre',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

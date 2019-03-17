@@ -34,10 +34,10 @@ trait HasFaxNumber
     */
     public function SetFaxNumber(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'faxNumber',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

@@ -34,10 +34,10 @@ trait HasCaption
     */
     public function SetCaption(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'caption',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

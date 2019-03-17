@@ -50,10 +50,10 @@ class Audience extends Thing
     */
     public function SetAudienceType(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'audienceType',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 

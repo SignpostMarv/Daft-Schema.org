@@ -362,7 +362,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetName(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString('name', __METHOD__, $value);
+        $this->NudgePropertyValue('name', $value, true);
     }
 
     /**
@@ -417,7 +417,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetSameAs(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString('sameAs', __METHOD__, $value);
+        $this->NudgePropertyValue('sameAs', $value, true);
     }
 
     /**
@@ -467,7 +467,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetUrl(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString('url', __METHOD__, $value);
+        $this->NudgePropertyValue('url', $value, true);
     }
 
     public function jsonSerialize() : array
@@ -774,31 +774,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
         }
 
         $this->NudgePropertyWithUniqueValues($property, $method, $value, SORT_NUMERIC);
-    }
-
-    /**
-    * @param array<int, string> $value
-    */
-    protected function NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
-        string $property,
-        string $method,
-        array $value
-    ) : void {
-        $initialCount = count($value);
-
-        $value = array_filter(array_map('trim', $value), function (string $maybe) : bool {
-            return '' !== $maybe;
-        });
-
-        if ($initialCount !== count($value)) {
-            throw new InvalidArgumentException(
-                'Arguments passed to ' .
-                $method .
-                ' must not have trailing whitespace!'
-            );
-        }
-
-        $this->NudgePropertyWithUniqueValues($property, $method, $value);
     }
 
     /**

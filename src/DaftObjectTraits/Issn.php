@@ -34,10 +34,10 @@ trait Issn
     */
     public function SetIssn(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'issn',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

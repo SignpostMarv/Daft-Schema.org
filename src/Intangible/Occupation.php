@@ -89,10 +89,10 @@ class Occupation extends Base
     */
     public function SetEducationRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'educationRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -150,10 +150,10 @@ class Occupation extends Base
     */
     public function SetExperienceRequirements(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'experienceRequirements',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -209,10 +209,10 @@ class Occupation extends Base
     */
     public function SetOccupationalCategory(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'occupationalCategory',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -238,10 +238,10 @@ class Occupation extends Base
     */
     public function SetQualifications(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'qualifications',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -267,10 +267,10 @@ class Occupation extends Base
     */
     public function SetResponsibilities(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'responsibilities',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 
@@ -296,10 +296,10 @@ class Occupation extends Base
     */
     public function SetSkills(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'skills',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

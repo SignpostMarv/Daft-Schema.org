@@ -34,10 +34,10 @@ trait HasTelephone
     */
     public function SetTelephone(array $value) : void
     {
-        $this->NudgePropertyWithUniqueTrimmedStringsMightNotBeString(
+        $this->NudgePropertyValue(
             'telephone',
-            __METHOD__,
-            $value
+            $value,
+            true
         );
     }
 }

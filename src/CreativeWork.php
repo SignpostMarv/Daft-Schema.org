@@ -18,6 +18,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\AlignmentObject;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCounter;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Trip;
 
 /**
 * @property array<int, Thing> $aboutThing
@@ -34,7 +35,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCoun
 * @property array<int, MediaObject> $associatedMedia
 * @property array<int, Audience> $audience
 * @property array<int, AudioObject> $audio
-* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $author
+* @property array<int, Organization|Person> $author
 * @property array<int, string> $award
 * @property array<int, Person> $character
 * @property array<int, string|CreativeWork> $citation
@@ -59,7 +60,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCoun
 * @property array<int, string> $encodingFormat
 * @property array<int, CreativeWork> $exampleOfWork
 * @property array<int, Date> $expires
-* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $funder
+* @property array<int, Organization|Person> $funder
 * @property array<int, string> $genre
 * @property array<int, CreativeWork|Intangible\Trip> $hasPart
 * @property array<int, string> $headline
@@ -81,7 +82,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCoun
 * @property array<int, Offer> $offers
 * @property array<int, int|string> $position
 * @property array<int, Organization|Person> $producer
-* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $provider
+* @property array<int, Organization|Person> $provider
 * @property array<int, PublicationEvent> $publication
 * @property array<int, Organization|Person> $publisher
 * @property array<int, Organization> $publisherImprint
@@ -95,13 +96,13 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\InteractionCoun
 * @property array<int, Organization|Person> $sdPublisher
 * @property array<int, Organization> $sourceOrganization
 * @property array<int, Place> $spatialCoverage
-* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $sponsor
+* @property array<int, Organization|Person> $sponsor
 * @property array<int, string|DateTime> $temporalCoverage
 * @property array<int, string> $text
 * @property array<int, string> $thumbnailUrl
 * @property array<int, Duration> $timeRequired
 * @property array<int, CreativeWork> $translationOfWork
-* @property array<int, \SignpostMarv\DaftObject\SchemaOrg\Organization|\SignpostMarv\DaftObject\SchemaOrg\Person> $translators
+* @property array<int, Organization|Person> $translator
 * @property array<int, string> $typicalAgeRange
 * @property array<int, int|string> $version
 * @property array<int, VideoObject> $video
@@ -361,6 +362,10 @@ class CreativeWork extends Thing
         'isFamilyFriendly' => [
             'boolean',
         ],
+        'isPartOf' => [
+            CreativeWork::class,
+            Trip::class,
+        ],
         'keywords' => [
             'string',
         ],
@@ -447,7 +452,7 @@ class CreativeWork extends Thing
         'translationOfWork' => [
             CreativeWork::class,
         ],
-        'translators' => [
+        'translator' => [
             Organization::class,
             Person::class,
         ],

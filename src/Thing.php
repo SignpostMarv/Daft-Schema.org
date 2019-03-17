@@ -663,13 +663,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
 
         $array_keys = array_keys($array);
 
-        $data = array_combine($array_keys, array_map(
-            /**
-            * @param int|string $k
-            *
-            * @return mixed
-            */
-            function ($k) use ($array, $multi_type) {
+        foreach ($array_keys as $k) {
                 if ( ! is_string($k)) {
                     throw new InvalidArgumentException(
                         'Argument 1 passed to ' .
@@ -677,6 +671,20 @@ class Thing extends AbstractArrayBackedDaftObject implements
                         '() must have all-string indices!'
                     );
                 }
+        }
+
+        /**
+        * @var array<int, string>
+        */
+        $array_keys = $array_keys;
+
+        $data = array_combine($array_keys, array_map(
+            /**
+            * @param string $k
+            *
+            * @return mixed
+            */
+            function (string $k) use ($array, $multi_type) {
 
                 if (is_array($array[$k])) {
                     return array_map(

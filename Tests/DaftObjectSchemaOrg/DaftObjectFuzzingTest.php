@@ -52,6 +52,60 @@ class DaftObjectFuzzingTest extends Base
     */
     private static $YieldTypeForFuzzing = [];
 
+    public function test_supersededBy() : void
+    {
+        $obj = new SchemaOrg\Intangible\Enumeration();
+        $class = new SchemaOrg\Intangible\IntangibleClass(['name' => ['Foo']]);
+        $enumeration = new SchemaOrg\Intangible\Enumeration(['name' => ['Foo']]);
+        $property = new SchemaOrg\Intangible\IntangibleProperty(['name' => ['Foo']]);
+
+        $obj->SetSupersededBy([$class, $enumeration, $property]);
+
+        static::assertContains($class, $obj->GetSupersededBy());
+        static::assertContains($enumeration, $obj->GetSupersededBy());
+        static::assertContains($property, $obj->GetSupersededBy());
+    }
+
+    /**
+    * @psalm-return array<int, class-string<SchemaOrg\DataTypes\DateTimeInterface>>
+    */
+    public function dataProvider_DateTimeInterface() : array
+    {
+        return [
+            [SchemaOrg\DataTypes\Date::class, 'January 1st 1970'],
+            [SchemaOrg\DataTypes\DateTime::class, 'January 1st 1970 01:02:03'],
+            [SchemaOrg\DataTypes\Time::class, '01:02:03'],
+        ];
+    }
+
+    /**
+    * @dataProvider dataProvider_DateTimeInterface
+    *
+    * @psalm-param class-string<SchemaOrg\DataTypes\DateTimeInterface> $data_type
+    */
+    public function test_DateTimeInterface_succeeds(string $data_type, string $input) : void
+    {
+        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($input));
+    }
+
+    /**
+    * @dataProvider dataProvider_DateTimeInterface
+    *
+    * @psalm-param class-string<SchemaOrg\DataTypes\DateTimeInterface> $data_type
+    */
+    public function test_DateTimeInterface_fails(string $data_type) : void
+    {
+        static::expectException(RuntimeException::class);
+        static::expectExceptionMessage(
+            $data_type .
+            '::createFromFormat() did not return an instance of ' .
+            $data_type .
+            ', boolean given!'
+        );
+
+        $data_type::DataTypeFromString('');
+    }
+
     /**
     * @psalm-param class-string<SchemaOrg\Thing> $type
     *

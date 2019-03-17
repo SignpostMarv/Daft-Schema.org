@@ -664,13 +664,13 @@ class Thing extends AbstractArrayBackedDaftObject implements
         $array_keys = array_keys($array);
 
         foreach ($array_keys as $k) {
-                if ( ! is_string($k)) {
-                    throw new InvalidArgumentException(
-                        'Argument 1 passed to ' .
-                        __METHOD__ .
-                        '() must have all-string indices!'
-                    );
-                }
+            if ( ! is_string($k)) {
+                throw new InvalidArgumentException(
+                    'Argument 1 passed to ' .
+                    __METHOD__ .
+                    '() must have all-string indices!'
+                );
+            }
         }
 
         /**

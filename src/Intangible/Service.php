@@ -12,7 +12,6 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\Review;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\GeoShape;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\Brand;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\ItemList\OfferCatalog;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Rating\AggregateRating;

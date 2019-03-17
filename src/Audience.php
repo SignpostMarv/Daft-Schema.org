@@ -36,9 +36,7 @@ class Audience extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'audienceType'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('audienceType');
 
         return $out;
     }
@@ -48,11 +46,7 @@ class Audience extends Thing
     */
     public function SetAudienceType(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'audienceType',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('audienceType', $value, true);
     }
 
     /**
@@ -63,9 +57,7 @@ class Audience extends Thing
         /**
         * @var array<int, Place\AdministrativeArea>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'geographicArea'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('geographicArea');
 
         return $out;
     }
@@ -75,9 +67,6 @@ class Audience extends Thing
     */
     public function SetGeographicArea(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'geographicArea',
-            $value
-        );
+        $this->NudgePropertyValue('geographicArea', $value);
     }
 }

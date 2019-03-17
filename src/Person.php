@@ -354,9 +354,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'additionalName'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('additionalName');
 
         return $out;
     }
@@ -366,11 +364,7 @@ class Person extends Thing
     */
     public function SetAdditionalName(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'additionalName',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('additionalName', $value, true);
     }
 
     /**
@@ -381,9 +375,7 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'affiliation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('affiliation');
 
         return $out;
     }
@@ -404,9 +396,7 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'alumniOf'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('alumniOf');
 
         return $out;
     }
@@ -427,9 +417,7 @@ class Person extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'birthDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('birthDate');
 
         return $out;
     }
@@ -439,10 +427,7 @@ class Person extends Thing
     */
     public function SetBirthDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'birthDate',
-            $value
-        );
+        $this->NudgePropertyValue('birthDate', $value);
     }
 
     /**
@@ -453,9 +438,7 @@ class Person extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'birthPlace'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('birthPlace');
 
         return $out;
     }
@@ -465,10 +448,7 @@ class Person extends Thing
     */
     public function SetBirthPlace(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'birthPlace',
-            $value
-        );
+        $this->NudgePropertyValue('birthPlace', $value);
     }
 
     /**
@@ -479,9 +459,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'children'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('children');
 
         return $out;
     }
@@ -502,9 +480,7 @@ class Person extends Thing
         /**
         * @var array<int, string|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'colleague'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('colleague');
 
         return $out;
     }
@@ -514,11 +490,7 @@ class Person extends Thing
     */
     public function SetColleague(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'colleague',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('colleague', $value, true);
     }
 
     /**
@@ -529,9 +501,7 @@ class Person extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'deathDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('deathDate');
 
         return $out;
     }
@@ -541,10 +511,7 @@ class Person extends Thing
     */
     public function SetDeathDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'deathDate',
-            $value
-        );
+        $this->NudgePropertyValue('deathDate', $value);
     }
 
     /**
@@ -555,9 +522,7 @@ class Person extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'deathPlace'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('deathPlace');
 
         return $out;
     }
@@ -567,10 +532,7 @@ class Person extends Thing
     */
     public function SetDeathPlace(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'deathPlace',
-            $value
-        );
+        $this->NudgePropertyValue('deathPlace', $value);
     }
 
     /**
@@ -581,9 +543,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'familyName'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('familyName');
 
         return $out;
     }
@@ -593,11 +553,7 @@ class Person extends Thing
     */
     public function SetFamilyName(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'familyName',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('familyName', $value, true);
     }
 
     /**
@@ -608,9 +564,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'follows'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('follows');
 
         return $out;
     }
@@ -631,9 +585,7 @@ class Person extends Thing
         /**
         * @var array<int, string|GenderType>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'gender'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('gender');
 
         return $out;
     }
@@ -643,11 +595,7 @@ class Person extends Thing
     */
     public function SetGender(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'gender',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('gender', $value, true);
     }
 
     /**
@@ -658,9 +606,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'givenName'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('givenName');
 
         return $out;
     }
@@ -670,11 +616,7 @@ class Person extends Thing
     */
     public function SetGivenName(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'givenName',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('givenName', $value, true);
     }
 
     /**
@@ -685,9 +627,7 @@ class Person extends Thing
         /**
         * @var array<int, Occupation>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'hasOccupation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('hasOccupation');
 
         return $out;
     }
@@ -697,10 +637,7 @@ class Person extends Thing
     */
     public function SetHasOccupation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'hasOccupation',
-            $value
-        );
+        $this->NudgePropertyValue('hasOccupation', $value);
     }
 
     /**
@@ -711,9 +648,7 @@ class Person extends Thing
         /**
         * @var array<int, ContactPoint|Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'homeLocation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('homeLocation');
 
         return $out;
     }
@@ -723,10 +658,7 @@ class Person extends Thing
     */
     public function SetHomeLocation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'homeLocation',
-            $value
-        );
+        $this->NudgePropertyValue('homeLocation', $value);
     }
 
     /**
@@ -737,9 +669,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'honorificPrefix'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('honorificPrefix');
 
         return $out;
     }
@@ -749,11 +679,7 @@ class Person extends Thing
     */
     public function SetHonorificPrefix(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'honorificPrefix',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('honorificPrefix', $value, true);
     }
 
     /**
@@ -764,9 +690,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'honorificSuffix'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('honorificSuffix');
 
         return $out;
     }
@@ -776,11 +700,7 @@ class Person extends Thing
     */
     public function SetHonorificSuffix(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'honorificSuffix',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('honorificSuffix', $value, true);
     }
 
     /**
@@ -791,9 +711,7 @@ class Person extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'jobTitle'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('jobTitle');
 
         return $out;
     }
@@ -803,11 +721,7 @@ class Person extends Thing
     */
     public function SetJobTitle(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'jobTitle',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('jobTitle', $value, true);
     }
 
     /**
@@ -818,9 +732,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'knows'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('knows');
 
         return $out;
     }
@@ -841,9 +753,7 @@ class Person extends Thing
         /**
         * @var array<int, Country>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'nationality'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('nationality');
 
         return $out;
     }
@@ -853,10 +763,7 @@ class Person extends Thing
     */
     public function SetNationality(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'nationality',
-            $value
-        );
+        $this->NudgePropertyValue('nationality', $value);
     }
 
     /**
@@ -867,9 +774,7 @@ class Person extends Thing
         /**
         * @var array<int, MonetaryAmount|PriceSpecification>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'netWorth'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('netWorth');
 
         return $out;
     }
@@ -879,10 +784,7 @@ class Person extends Thing
     */
     public function SetNetWorth(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'netWorth',
-            $value
-        );
+        $this->NudgePropertyValue('netWorth', $value);
     }
 
     /**
@@ -893,9 +795,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'parent'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('parent');
 
         return $out;
     }
@@ -916,9 +816,7 @@ class Person extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'performerIn'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('performerIn');
 
         return $out;
     }
@@ -939,9 +837,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'relatedTo'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('relatedTo');
 
         return $out;
     }
@@ -962,9 +858,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sibling'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sibling');
 
         return $out;
     }
@@ -985,9 +879,7 @@ class Person extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'spouse'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('spouse');
 
         return $out;
     }
@@ -1008,9 +900,7 @@ class Person extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'weight'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('weight');
 
         return $out;
     }
@@ -1020,10 +910,7 @@ class Person extends Thing
     */
     public function SetWeight(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'weight',
-            $value
-        );
+        $this->NudgePropertyValue('weight', $value);
     }
 
     /**
@@ -1034,9 +921,7 @@ class Person extends Thing
         /**
         * @var array<int, ContactPoint|Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'workLocation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('workLocation');
 
         return $out;
     }
@@ -1046,10 +931,7 @@ class Person extends Thing
     */
     public function SetWorkLocation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'workLocation',
-            $value
-        );
+        $this->NudgePropertyValue('workLocation', $value);
     }
 
     /**
@@ -1060,9 +942,7 @@ class Person extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'worksFor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('worksFor');
 
         return $out;
     }

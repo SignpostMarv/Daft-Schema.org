@@ -78,9 +78,7 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'box'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('box');
 
         return $out;
     }
@@ -90,11 +88,7 @@ class GeoShape extends Thing
     */
     public function SetBox(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'box',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('box', $value, true);
     }
 
     /**
@@ -105,9 +99,7 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'circle'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('circle');
 
         return $out;
     }
@@ -117,11 +109,7 @@ class GeoShape extends Thing
     */
     public function SetCircle(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'circle',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('circle', $value, true);
     }
 
     /**
@@ -132,9 +120,7 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'line'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('line');
 
         return $out;
     }
@@ -144,11 +130,7 @@ class GeoShape extends Thing
     */
     public function SetLine(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'line',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('line', $value, true);
     }
 
     /**
@@ -159,9 +141,7 @@ class GeoShape extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'polygon'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('polygon');
 
         return $out;
     }
@@ -171,10 +151,6 @@ class GeoShape extends Thing
     */
     public function SetPolygon(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'polygon',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('polygon', $value, true);
     }
 }

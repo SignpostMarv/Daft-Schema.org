@@ -480,9 +480,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessMode'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessMode');
 
         return $out;
     }
@@ -492,11 +490,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessMode(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessMode',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessMode', $value, true);
     }
 
     /**
@@ -507,9 +501,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessModeSufficient'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessModeSufficient');
 
         return $out;
     }
@@ -519,11 +511,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessModeSufficient(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessModeSufficient',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessModeSufficient', $value, true);
     }
 
     /**
@@ -534,9 +522,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessibilityAPI'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityAPI');
 
         return $out;
     }
@@ -546,11 +532,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityAPI(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessibilityAPI',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessibilityAPI', $value, true);
     }
 
     /**
@@ -561,9 +543,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessibilityControl'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityControl');
 
         return $out;
     }
@@ -573,11 +553,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityControl(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessibilityControl',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessibilityControl', $value, true);
     }
 
     /**
@@ -588,9 +564,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessibilityFeature'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityFeature');
 
         return $out;
     }
@@ -600,11 +574,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityFeature(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessibilityFeature',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessibilityFeature', $value, true);
     }
 
     /**
@@ -615,9 +585,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessibilityHazard'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityHazard');
 
         return $out;
     }
@@ -627,11 +595,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityHazard(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessibilityHazard',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessibilityHazard', $value, true);
     }
 
     /**
@@ -642,9 +606,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accessibilitySummary'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accessibilitySummary');
 
         return $out;
     }
@@ -654,11 +616,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilitySummary(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'accessibilitySummary',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('accessibilitySummary', $value, true);
     }
 
     /**
@@ -669,9 +627,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'accountablePerson'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('accountablePerson');
 
         return $out;
     }
@@ -681,7 +637,7 @@ class CreativeWork extends Thing
     */
     public function SetAccountablePerson(array $value) : void
     {
-        $this->NudgePropertyValue('accountablePerson', $value, true);
+        $this->NudgePropertyValue('accountablePerson', $value);
     }
 
     /**
@@ -692,9 +648,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'alternativeHeadline'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('alternativeHeadline');
 
         return $out;
     }
@@ -704,11 +658,7 @@ class CreativeWork extends Thing
     */
     public function SetAlternativeHeadline(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'alternativeHeadline',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('alternativeHeadline', $value, true);
     }
 
     /**
@@ -719,9 +669,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, MediaObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'associatedMedia'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('associatedMedia');
 
         return $out;
     }
@@ -731,11 +679,7 @@ class CreativeWork extends Thing
     */
     public function SetAssociatedMedia(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'associatedMedia',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('associatedMedia', $value);
     }
 
     /**
@@ -746,9 +690,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, AudioObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'audio'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('audio');
 
         return $out;
     }
@@ -758,11 +700,7 @@ class CreativeWork extends Thing
     */
     public function SetAudio(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'audio',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('audio', $value);
     }
 
     /**
@@ -773,9 +711,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'character'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('character');
 
         return $out;
     }
@@ -785,7 +721,7 @@ class CreativeWork extends Thing
     */
     public function SetCharacter(array $value) : void
     {
-        $this->NudgePropertyValue('character', $value, true);
+        $this->NudgePropertyValue('character', $value);
     }
 
     /**
@@ -796,9 +732,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'citation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('citation');
 
         return $out;
     }
@@ -808,11 +742,7 @@ class CreativeWork extends Thing
     */
     public function SetCitation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'citation',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('citation', $value, true);
     }
 
     /**
@@ -823,9 +753,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Comment>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'comment'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('comment');
 
         return $out;
     }
@@ -835,11 +763,7 @@ class CreativeWork extends Thing
     */
     public function SetComment(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'comment',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('comment', $value);
     }
 
     /**
@@ -850,9 +774,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'commentCount'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('commentCount');
 
         return $out;
     }
@@ -873,9 +795,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'contentLocation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('contentLocation');
 
         return $out;
     }
@@ -885,7 +805,7 @@ class CreativeWork extends Thing
     */
     public function SetContentLocation(array $value) : void
     {
-        $this->NudgePropertyValue('contentLocation', $value, true);
+        $this->NudgePropertyValue('contentLocation', $value);
     }
 
     /**
@@ -896,9 +816,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Rating>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'contentRating'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('contentRating');
 
         return $out;
     }
@@ -908,11 +826,7 @@ class CreativeWork extends Thing
     */
     public function SetContentRating(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'contentRating',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('contentRating', $value);
     }
 
     /**
@@ -923,9 +837,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'contentReferenceTime'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('contentReferenceTime');
 
         return $out;
     }
@@ -935,7 +847,7 @@ class CreativeWork extends Thing
     */
     public function SetContentReferenceTime(array $value) : void
     {
-        $this->NudgePropertyValue('contentReferenceTime', $value, true);
+        $this->NudgePropertyValue('contentReferenceTime', $value);
     }
 
     /**
@@ -946,9 +858,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'contributor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('contributor');
 
         return $out;
     }
@@ -958,7 +868,7 @@ class CreativeWork extends Thing
     */
     public function SetContributor(array $value) : void
     {
-        $this->NudgePropertyValue('contributor', $value, true);
+        $this->NudgePropertyValue('contributor', $value);
     }
 
     /**
@@ -969,9 +879,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'copyrightHolder'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('copyrightHolder');
 
         return $out;
     }
@@ -981,11 +889,7 @@ class CreativeWork extends Thing
     */
     public function SetCopyrightHolder(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'copyrightHolder',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('copyrightHolder', $value);
     }
 
     /**
@@ -996,9 +900,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'copyrightYear'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('copyrightYear');
 
         return $out;
     }
@@ -1019,9 +921,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CorrectionComment>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'correction'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('correction');
 
         return $out;
     }
@@ -1031,11 +931,7 @@ class CreativeWork extends Thing
     */
     public function SetCorrection(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'correction',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('correction', $value, true);
     }
 
     /**
@@ -1046,9 +942,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'creator'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('creator');
 
         return $out;
     }
@@ -1058,7 +952,7 @@ class CreativeWork extends Thing
     */
     public function SetCreator(array $value) : void
     {
-        $this->NudgePropertyValue('creator', $value, true);
+        $this->NudgePropertyValue('creator', $value);
     }
 
     /**
@@ -1069,9 +963,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'dateCreated'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('dateCreated');
 
         return $out;
     }
@@ -1081,7 +973,7 @@ class CreativeWork extends Thing
     */
     public function SetDateCreated(array $value) : void
     {
-        $this->NudgePropertyValue('dateCreated', $value, true);
+        $this->NudgePropertyValue('dateCreated', $value);
     }
 
     /**
@@ -1092,9 +984,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'dateModified'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('dateModified');
 
         return $out;
     }
@@ -1104,7 +994,7 @@ class CreativeWork extends Thing
     */
     public function SetDateModified(array $value) : void
     {
-        $this->NudgePropertyValue('dateModified', $value, true);
+        $this->NudgePropertyValue('dateModified', $value);
     }
 
     /**
@@ -1115,9 +1005,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'datePublished'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('datePublished');
 
         return $out;
     }
@@ -1127,7 +1015,7 @@ class CreativeWork extends Thing
     */
     public function SetDatePublished(array $value) : void
     {
-        $this->NudgePropertyValue('datePublished', $value, true);
+        $this->NudgePropertyValue('datePublished', $value);
     }
 
     /**
@@ -1138,9 +1026,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'discussionUrl'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('discussionUrl');
 
         return $out;
     }
@@ -1150,11 +1036,7 @@ class CreativeWork extends Thing
     */
     public function SetDiscussionUrl(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'discussionUrl',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('discussionUrl', $value, true);
     }
 
     /**
@@ -1165,9 +1047,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'editor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('editor');
 
         return $out;
     }
@@ -1177,7 +1057,7 @@ class CreativeWork extends Thing
     */
     public function SetEditor(array $value) : void
     {
-        $this->NudgePropertyValue('editor', $value, true);
+        $this->NudgePropertyValue('editor', $value);
     }
 
     /**
@@ -1188,9 +1068,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, AlignmentObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'educationalAlignment'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('educationalAlignment');
 
         return $out;
     }
@@ -1200,11 +1078,7 @@ class CreativeWork extends Thing
     */
     public function SetEducationalAlignment(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'educationalAlignment',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('educationalAlignment', $value);
     }
 
     /**
@@ -1215,9 +1089,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'educationalUse'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('educationalUse');
 
         return $out;
     }
@@ -1227,11 +1099,7 @@ class CreativeWork extends Thing
     */
     public function SetEducationalUse(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'educationalUse',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('educationalUse', $value, true);
     }
 
     /**
@@ -1242,9 +1110,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, MediaObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'encoding'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('encoding');
 
         return $out;
     }
@@ -1254,11 +1120,7 @@ class CreativeWork extends Thing
     */
     public function SetEncoding(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'encoding',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('encoding', $value);
     }
 
     /**
@@ -1269,9 +1131,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'encodingFormat'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('encodingFormat');
 
         return $out;
     }
@@ -1281,11 +1141,7 @@ class CreativeWork extends Thing
     */
     public function SetEncodingFormat(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'encodingFormat',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('encodingFormat', $value, true);
     }
 
     /**
@@ -1296,9 +1152,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'exampleOfWork'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('exampleOfWork');
 
         return $out;
     }
@@ -1308,11 +1162,7 @@ class CreativeWork extends Thing
     */
     public function SetExampleOfWork(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'exampleOfWork',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('exampleOfWork', $value);
     }
 
     /**
@@ -1323,9 +1173,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'expires'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('expires');
 
         return $out;
     }
@@ -1335,11 +1183,7 @@ class CreativeWork extends Thing
     */
     public function SetExpires(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'expires',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('expires', $value);
     }
 
     /**
@@ -1350,9 +1194,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'headline'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('headline');
 
         return $out;
     }
@@ -1362,11 +1204,7 @@ class CreativeWork extends Thing
     */
     public function SetHeadline(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'headline',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('headline', $value, true);
     }
 
     /**
@@ -1377,9 +1215,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, InteractionCounter>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'interactionStatistic'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('interactionStatistic');
 
         return $out;
     }
@@ -1389,11 +1225,7 @@ class CreativeWork extends Thing
     */
     public function SetInteractionStatistic(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'interactionStatistic',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('interactionStatistic', $value);
     }
 
     /**
@@ -1404,9 +1236,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'interactivityType'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('interactivityType');
 
         return $out;
     }
@@ -1416,11 +1246,7 @@ class CreativeWork extends Thing
     */
     public function SetInteractivityType(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'interactivityType',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('interactivityType', $value, true);
     }
 
     /**
@@ -1431,9 +1257,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork|Product>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'isBasedOn'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('isBasedOn');
 
         return $out;
     }
@@ -1443,11 +1267,7 @@ class CreativeWork extends Thing
     */
     public function SetIsBasedOn(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'isBasedOn',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('isBasedOn', $value, true);
     }
 
     /**
@@ -1458,9 +1278,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'isFamilyFriendly'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('isFamilyFriendly');
 
         return $out;
     }
@@ -1470,10 +1288,7 @@ class CreativeWork extends Thing
     */
     public function SetIsFamilyFriendly(array $value) : void
     {
-        $this->NudgePropertyWithUniqueBooleans(
-            'isFamilyFriendly',
-            $value
-        );
+        $this->NudgePropertyWithUniqueBooleans('isFamilyFriendly', $value);
     }
 
     /**
@@ -1484,9 +1299,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'keywords'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('keywords');
 
         return $out;
     }
@@ -1496,11 +1309,7 @@ class CreativeWork extends Thing
     */
     public function SetKeywords(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'keywords',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('keywords', $value, true);
     }
 
     /**
@@ -1511,9 +1320,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'learningResourceType'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('learningResourceType');
 
         return $out;
     }
@@ -1523,11 +1330,7 @@ class CreativeWork extends Thing
     */
     public function SetLearningResourceType(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'learningResourceType',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('learningResourceType', $value, true);
     }
 
     /**
@@ -1538,9 +1341,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'license'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('license');
 
         return $out;
     }
@@ -1550,11 +1351,7 @@ class CreativeWork extends Thing
     */
     public function SetLicense(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'license',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('license', $value, true);
     }
 
     /**
@@ -1565,9 +1362,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'locationCreated'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('locationCreated');
 
         return $out;
     }
@@ -1577,7 +1372,7 @@ class CreativeWork extends Thing
     */
     public function SetLocationCreated(array $value) : void
     {
-        $this->NudgePropertyValue('locationCreated', $value, true);
+        $this->NudgePropertyValue('locationCreated', $value);
     }
 
     /**
@@ -1588,9 +1383,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'mainEntity'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('mainEntity');
 
         return $out;
     }
@@ -1600,11 +1393,7 @@ class CreativeWork extends Thing
     */
     public function SetMainEntity(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'mainEntity',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('mainEntity', $value);
     }
 
     /**
@@ -1615,9 +1404,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'mentions'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('mentions');
 
         return $out;
     }
@@ -1627,11 +1414,7 @@ class CreativeWork extends Thing
     */
     public function SetMentions(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'mentions',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('mentions', $value);
     }
 
     /**
@@ -1642,9 +1425,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int|string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'position'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('position');
 
         return $out;
     }
@@ -1654,11 +1435,7 @@ class CreativeWork extends Thing
     */
     public function SetPosition(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'position',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('position', $value, true);
     }
 
     /**
@@ -1669,9 +1446,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'producer'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('producer');
 
         return $out;
     }
@@ -1681,7 +1456,7 @@ class CreativeWork extends Thing
     */
     public function SetProducer(array $value) : void
     {
-        $this->NudgePropertyValue('producer', $value, true);
+        $this->NudgePropertyValue('producer', $value);
     }
 
     /**
@@ -1692,9 +1467,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, PublicationEvent>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'publication'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('publication');
 
         return $out;
     }
@@ -1704,11 +1477,7 @@ class CreativeWork extends Thing
     */
     public function SetPublication(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'publication',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('publication', $value);
     }
 
     /**
@@ -1719,9 +1488,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'publisher'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('publisher');
 
         return $out;
     }
@@ -1731,7 +1498,7 @@ class CreativeWork extends Thing
     */
     public function SetPublisher(array $value) : void
     {
-        $this->NudgePropertyValue('publisher', $value, true);
+        $this->NudgePropertyValue('publisher', $value);
     }
 
     /**
@@ -1742,9 +1509,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'publisherImprint'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('publisherImprint');
 
         return $out;
     }
@@ -1754,11 +1519,7 @@ class CreativeWork extends Thing
     */
     public function SetPublisherImprint(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'publisherImprint',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('publisherImprint', $value);
     }
 
     /**
@@ -1769,9 +1530,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'recordedAt'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('recordedAt');
 
         return $out;
     }
@@ -1781,11 +1540,7 @@ class CreativeWork extends Thing
     */
     public function SetRecordedAt(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'recordedAt',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('recordedAt', $value);
     }
 
     /**
@@ -1796,9 +1551,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, PublicationEvent>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'releasedEvent'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('releasedEvent');
 
         return $out;
     }
@@ -1808,11 +1561,7 @@ class CreativeWork extends Thing
     */
     public function SetReleasedEvent(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'releasedEvent',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('releasedEvent', $value);
     }
 
     /**
@@ -1823,9 +1572,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'schemaVersion'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('schemaVersion');
 
         return $out;
     }
@@ -1835,11 +1582,7 @@ class CreativeWork extends Thing
     */
     public function SetSchemaVersion(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'schemaVersion',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('schemaVersion', $value, true);
     }
 
     /**
@@ -1850,9 +1593,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sdDatePublished'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sdDatePublished');
 
         return $out;
     }
@@ -1862,11 +1603,7 @@ class CreativeWork extends Thing
     */
     public function SetSdDatePublished(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'sdDatePublished',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('sdDatePublished', $value);
     }
 
     /**
@@ -1877,9 +1614,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sdLicense'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sdLicense');
 
         return $out;
     }
@@ -1889,11 +1624,7 @@ class CreativeWork extends Thing
     */
     public function SetSdLicense(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'sdLicense',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('sdLicense', $value, true);
     }
 
     /**
@@ -1904,9 +1635,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sdPublisher'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sdPublisher');
 
         return $out;
     }
@@ -1916,7 +1645,7 @@ class CreativeWork extends Thing
     */
     public function SetSdPublisher(array $value) : void
     {
-        $this->NudgePropertyValue('sdPublisher', $value, true);
+        $this->NudgePropertyValue('sdPublisher', $value);
     }
 
     /**
@@ -1927,9 +1656,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sourceOrganization'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sourceOrganization');
 
         return $out;
     }
@@ -1939,11 +1666,7 @@ class CreativeWork extends Thing
     */
     public function SetSourceOrganization(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'sourceOrganization',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('sourceOrganization', $value);
     }
 
     /**
@@ -1954,9 +1677,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'spatialCoverage'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('spatialCoverage');
 
         return $out;
     }
@@ -1966,7 +1687,7 @@ class CreativeWork extends Thing
     */
     public function SetSpatialCoverage(array $value) : void
     {
-        $this->NudgePropertyValue('spatialCoverage', $value, true);
+        $this->NudgePropertyValue('spatialCoverage', $value);
     }
 
     /**
@@ -1977,9 +1698,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'temporalCoverage'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('temporalCoverage');
 
         return $out;
     }
@@ -1989,11 +1708,7 @@ class CreativeWork extends Thing
     */
     public function SetTemporalCoverage(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'temporalCoverage',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('temporalCoverage', $value, true);
     }
 
     /**
@@ -2004,9 +1719,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'text'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('text');
 
         return $out;
     }
@@ -2016,11 +1729,7 @@ class CreativeWork extends Thing
     */
     public function SetText(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'text',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('text', $value, true);
     }
 
     /**
@@ -2031,9 +1740,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'thumbnailUrl'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('thumbnailUrl');
 
         return $out;
     }
@@ -2043,11 +1750,7 @@ class CreativeWork extends Thing
     */
     public function SetThumbnailUrl(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'thumbnailUrl',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('thumbnailUrl', $value, true);
     }
 
     /**
@@ -2058,9 +1761,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, Duration>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'timeRequired'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('timeRequired');
 
         return $out;
     }
@@ -2070,11 +1771,7 @@ class CreativeWork extends Thing
     */
     public function SetTimeRequired(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'timeRequired',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('timeRequired', $value);
     }
 
     /**
@@ -2085,9 +1782,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'translationOfWork'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('translationOfWork');
 
         return $out;
     }
@@ -2097,11 +1792,7 @@ class CreativeWork extends Thing
     */
     public function SetTranslationOfWork(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'translationOfWork',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('translationOfWork', $value);
     }
 
     /**
@@ -2112,9 +1803,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, int|string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'version'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('version');
 
         return $out;
     }
@@ -2124,11 +1813,7 @@ class CreativeWork extends Thing
     */
     public function SetVersion(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'version',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('version', $value, true);
     }
 
     /**
@@ -2139,9 +1824,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, VideoObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'video'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('video');
 
         return $out;
     }
@@ -2151,11 +1834,7 @@ class CreativeWork extends Thing
     */
     public function SetVideo(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'video',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('video', $value);
     }
 
     /**
@@ -2166,9 +1845,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'workExample'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('workExample');
 
         return $out;
     }
@@ -2178,11 +1855,7 @@ class CreativeWork extends Thing
     */
     public function SetWorkExample(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'workExample',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('workExample', $value);
     }
 
     /**
@@ -2193,9 +1866,7 @@ class CreativeWork extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'workTranslation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('workTranslation');
 
         return $out;
     }
@@ -2205,10 +1876,6 @@ class CreativeWork extends Thing
     */
     public function SetWorkTranslation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'workTranslation',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('workTranslation', $value);
     }
 }

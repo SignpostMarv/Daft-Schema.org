@@ -348,9 +348,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'actionableFeedbackPolicy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('actionableFeedbackPolicy');
 
         return $out;
     }
@@ -360,11 +358,7 @@ class Organization extends Thing
     */
     public function SetActionableFeedbackPolicy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'actionableFeedbackPolicy',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('actionableFeedbackPolicy', $value, true);
     }
 
     /**
@@ -375,9 +369,7 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'alumni'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('alumni');
 
         return $out;
     }
@@ -387,10 +379,7 @@ class Organization extends Thing
     */
     public function SetAlumni(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'alumni',
-            $value
-        );
+        $this->NudgePropertyValue('alumni', $value);
     }
 
     /**
@@ -401,9 +390,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'correctionsPolicy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('correctionsPolicy');
 
         return $out;
     }
@@ -413,11 +400,7 @@ class Organization extends Thing
     */
     public function SetCorrectionsPolicy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'correctionsPolicy',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('correctionsPolicy', $value, true);
     }
 
     /**
@@ -428,9 +411,7 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'department'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('department');
 
         return $out;
     }
@@ -440,10 +421,7 @@ class Organization extends Thing
     */
     public function SetDepartment(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'department',
-            $value
-        );
+        $this->NudgePropertyValue('department', $value);
     }
 
     /**
@@ -454,9 +432,7 @@ class Organization extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'dissolutionDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('dissolutionDate');
 
         return $out;
     }
@@ -466,10 +442,7 @@ class Organization extends Thing
     */
     public function SetDissolutionDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'dissolutionDate',
-            $value
-        );
+        $this->NudgePropertyValue('dissolutionDate', $value);
     }
 
     /**
@@ -480,9 +453,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'diversityPolicy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('diversityPolicy');
 
         return $out;
     }
@@ -492,11 +463,7 @@ class Organization extends Thing
     */
     public function SetDiversityPolicy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'diversityPolicy',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('diversityPolicy', $value, true);
     }
 
     /**
@@ -507,9 +474,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|Article>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'diversityStaffingReport'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('diversityStaffingReport');
 
         return $out;
     }
@@ -519,11 +484,7 @@ class Organization extends Thing
     */
     public function SetDiversityStaffingReport(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'diversityStaffingReport',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('diversityStaffingReport', $value, true);
     }
 
     /**
@@ -534,9 +495,7 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'employee'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('employee');
 
         return $out;
     }
@@ -546,10 +505,7 @@ class Organization extends Thing
     */
     public function SetEmployee(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'employee',
-            $value
-        );
+        $this->NudgePropertyValue('employee', $value);
     }
 
     /**
@@ -560,9 +516,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'ethicsPolicy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('ethicsPolicy');
 
         return $out;
     }
@@ -572,11 +526,7 @@ class Organization extends Thing
     */
     public function SetEthicsPolicy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'ethicsPolicy',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('ethicsPolicy', $value, true);
     }
 
     /**
@@ -587,9 +537,7 @@ class Organization extends Thing
         /**
         * @var array<int, Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'founder'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('founder');
 
         return $out;
     }
@@ -599,10 +547,7 @@ class Organization extends Thing
     */
     public function SetFounder(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'founder',
-            $value
-        );
+        $this->NudgePropertyValue('founder', $value);
     }
 
     /**
@@ -613,9 +558,7 @@ class Organization extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'foundingDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('foundingDate');
 
         return $out;
     }
@@ -625,10 +568,7 @@ class Organization extends Thing
     */
     public function SetFoundingDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'foundingDate',
-            $value
-        );
+        $this->NudgePropertyValue('foundingDate', $value);
     }
 
     /**
@@ -639,9 +579,7 @@ class Organization extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'foundingLocation'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('foundingLocation');
 
         return $out;
     }
@@ -651,10 +589,7 @@ class Organization extends Thing
     */
     public function SetFoundingLocation(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'foundingLocation',
-            $value
-        );
+        $this->NudgePropertyValue('foundingLocation', $value);
     }
 
     /**
@@ -665,9 +600,7 @@ class Organization extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'legalName'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('legalName');
 
         return $out;
     }
@@ -677,11 +610,7 @@ class Organization extends Thing
     */
     public function SetLegalName(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'legalName',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('legalName', $value, true);
     }
 
     /**
@@ -692,9 +621,7 @@ class Organization extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'leiCode'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('leiCode');
 
         return $out;
     }
@@ -704,11 +631,7 @@ class Organization extends Thing
     */
     public function SetLeiCode(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'leiCode',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('leiCode', $value, true);
     }
 
     /**
@@ -719,9 +642,7 @@ class Organization extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'numberOfEmployees'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('numberOfEmployees');
 
         return $out;
     }
@@ -731,10 +652,7 @@ class Organization extends Thing
     */
     public function SetNumberOfEmployees(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'numberOfEmployees',
-            $value
-        );
+        $this->NudgePropertyValue('numberOfEmployees', $value);
     }
 
     /**
@@ -745,9 +663,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|AboutPage|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'ownershipFundingInfo'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('ownershipFundingInfo');
 
         return $out;
     }
@@ -757,11 +673,7 @@ class Organization extends Thing
     */
     public function SetOwnershipFundingInfo(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'ownershipFundingInfo',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('ownershipFundingInfo', $value, true);
     }
 
     /**
@@ -772,9 +684,7 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'parentOrganization'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('parentOrganization');
 
         return $out;
     }
@@ -784,10 +694,7 @@ class Organization extends Thing
     */
     public function SetParentOrganization(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'parentOrganization',
-            $value
-        );
+        $this->NudgePropertyValue('parentOrganization', $value);
     }
 
     /**
@@ -798,9 +705,7 @@ class Organization extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'subOrganization'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('subOrganization');
 
         return $out;
     }
@@ -810,10 +715,7 @@ class Organization extends Thing
     */
     public function SetSubOrganization(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'subOrganization',
-            $value
-        );
+        $this->NudgePropertyValue('subOrganization', $value);
     }
 
     /**
@@ -824,9 +726,7 @@ class Organization extends Thing
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'unnamedSourcesPolicy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('unnamedSourcesPolicy');
 
         return $out;
     }
@@ -836,10 +736,6 @@ class Organization extends Thing
     */
     public function SetUnnamedSourcesPolicy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'unnamedSourcesPolicy',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('unnamedSourcesPolicy', $value, true);
     }
 }

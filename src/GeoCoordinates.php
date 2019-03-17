@@ -72,9 +72,7 @@ class GeoCoordinates extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'latitude'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('latitude');
 
         return $out;
     }
@@ -84,11 +82,7 @@ class GeoCoordinates extends Thing
     */
     public function SetLatitude(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'latitude',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('latitude', $value, true);
     }
 
     /**
@@ -99,9 +93,7 @@ class GeoCoordinates extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'longitude'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('longitude');
 
         return $out;
     }
@@ -111,10 +103,6 @@ class GeoCoordinates extends Thing
     */
     public function SetLongitude(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'longitude',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('longitude', $value, true);
     }
 }

@@ -225,9 +225,7 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'attendee'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('attendee');
 
         return $out;
     }
@@ -248,9 +246,7 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'contributor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('contributor');
 
         return $out;
     }
@@ -271,9 +267,7 @@ class Event extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'doorTime'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('doorTime');
 
         return $out;
     }
@@ -283,10 +277,7 @@ class Event extends Thing
     */
     public function SetDoorTime(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'doorTime',
-            $value
-        );
+        $this->NudgePropertyValue('doorTime', $value);
     }
 
     /**
@@ -297,9 +288,7 @@ class Event extends Thing
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'endDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('endDate');
 
         return $out;
     }
@@ -320,9 +309,7 @@ class Event extends Thing
         /**
         * @var array<int, EventStatusType>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'eventStatus'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('eventStatus');
 
         return $out;
     }
@@ -332,10 +319,7 @@ class Event extends Thing
     */
     public function SetEventStatus(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'eventStatus',
-            $value
-        );
+        $this->NudgePropertyValue('eventStatus', $value);
     }
 
     /**
@@ -346,9 +330,7 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'maximumAttendeeCapacity'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('maximumAttendeeCapacity');
 
         return $out;
     }
@@ -369,9 +351,7 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'organizer'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('organizer');
 
         return $out;
     }
@@ -392,9 +372,7 @@ class Event extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'performer'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('performer');
 
         return $out;
     }
@@ -415,9 +393,7 @@ class Event extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'previousStartDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('previousStartDate');
 
         return $out;
     }
@@ -438,9 +414,7 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'recordedIn'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('recordedIn');
 
         return $out;
     }
@@ -450,10 +424,7 @@ class Event extends Thing
     */
     public function SetRecordedIn(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'recordedIn',
-            $value
-        );
+        $this->NudgePropertyValue('recordedIn', $value);
     }
 
     /**
@@ -464,9 +435,7 @@ class Event extends Thing
         /**
         * @var array<int, int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'remainingAttendeeCapacity'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('remainingAttendeeCapacity');
 
         return $out;
     }
@@ -487,9 +456,7 @@ class Event extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'startDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('startDate');
 
         return $out;
     }
@@ -510,9 +477,7 @@ class Event extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'subEvent'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('subEvent');
 
         return $out;
     }
@@ -533,9 +498,7 @@ class Event extends Thing
         /**
         * @var array<int, Event>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'superEvent'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('superEvent');
 
         return $out;
     }
@@ -556,9 +519,7 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'workFeatured'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('workFeatured');
 
         return $out;
     }
@@ -568,10 +529,7 @@ class Event extends Thing
     */
     public function SetWorkFeatured(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'workFeatured',
-            $value
-        );
+        $this->NudgePropertyValue('workFeatured', $value);
     }
 
     /**
@@ -582,9 +540,7 @@ class Event extends Thing
         /**
         * @var array<int, CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'workPerformed'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('workPerformed');
 
         return $out;
     }
@@ -594,9 +550,6 @@ class Event extends Thing
     */
     public function SetWorkPerformed(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'workPerformed',
-            $value
-        );
+        $this->NudgePropertyValue('workPerformed', $value);
     }
 }

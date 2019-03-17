@@ -225,9 +225,7 @@ class Product extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'color'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('color');
 
         return $out;
     }
@@ -237,11 +235,7 @@ class Product extends Thing
     */
     public function SetColor(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'color',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('color', $value, true);
     }
 
     /**
@@ -252,9 +246,7 @@ class Product extends Thing
         /**
         * @var array<int, Distance|QuantitativeValue>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'depth'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('depth');
 
         return $out;
     }
@@ -264,10 +256,7 @@ class Product extends Thing
     */
     public function SetDepth(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'depth',
-            $value
-        );
+        $this->NudgePropertyValue('depth', $value);
     }
 
     /**
@@ -278,9 +267,7 @@ class Product extends Thing
         /**
         * @var array<int, Product>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'isAccessoryOrSparePartFor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('isAccessoryOrSparePartFor');
 
         return $out;
     }
@@ -290,10 +277,7 @@ class Product extends Thing
     */
     public function SetIsAccessoryOrSparePartFor(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'isAccessoryOrSparePartFor',
-            $value
-        );
+        $this->NudgePropertyValue('isAccessoryOrSparePartFor', $value);
     }
 
     /**
@@ -304,9 +288,7 @@ class Product extends Thing
         /**
         * @var array<int, Product>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'isConsumableFor'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('isConsumableFor');
 
         return $out;
     }
@@ -316,10 +298,7 @@ class Product extends Thing
     */
     public function SetIsConsumableFor(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'isConsumableFor',
-            $value
-        );
+        $this->NudgePropertyValue('isConsumableFor', $value);
     }
 
     /**
@@ -330,9 +309,7 @@ class Product extends Thing
         /**
         * @var array<int, Organization>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'manufacturer'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('manufacturer');
 
         return $out;
     }
@@ -342,10 +319,7 @@ class Product extends Thing
     */
     public function SetManufacturer(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'manufacturer',
-            $value
-        );
+        $this->NudgePropertyValue('manufacturer', $value);
     }
 
     /**
@@ -356,9 +330,7 @@ class Product extends Thing
         /**
         * @var array<int, string|Product\ProductModel>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'model'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('model');
 
         return $out;
     }
@@ -368,11 +340,7 @@ class Product extends Thing
     */
     public function SetModel(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'model',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('model', $value, true);
     }
 
     /**
@@ -383,9 +351,7 @@ class Product extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'productID'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('productID');
 
         return $out;
     }
@@ -395,11 +361,7 @@ class Product extends Thing
     */
     public function SetProductID(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'productID',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('productID', $value, true);
     }
 
     /**
@@ -410,9 +372,7 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'productionDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('productionDate');
 
         return $out;
     }
@@ -422,10 +382,7 @@ class Product extends Thing
     */
     public function SetProductionDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'productionDate',
-            $value
-        );
+        $this->NudgePropertyValue('productionDate', $value);
     }
 
     /**
@@ -436,9 +393,7 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'purchaseDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('purchaseDate');
 
         return $out;
     }
@@ -448,10 +403,7 @@ class Product extends Thing
     */
     public function SetPurchaseDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'purchaseDate',
-            $value
-        );
+        $this->NudgePropertyValue('purchaseDate', $value);
     }
 
     /**
@@ -462,9 +414,7 @@ class Product extends Thing
         /**
         * @var array<int, DataTypes\Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'releaseDate'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('releaseDate');
 
         return $out;
     }
@@ -474,10 +424,7 @@ class Product extends Thing
     */
     public function SetReleaseDate(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'releaseDate',
-            $value
-        );
+        $this->NudgePropertyValue('releaseDate', $value);
     }
 
     /**
@@ -488,9 +435,7 @@ class Product extends Thing
         /**
         * @var array<int, QuantitativeValue>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'weight'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('weight');
 
         return $out;
     }
@@ -500,9 +445,6 @@ class Product extends Thing
     */
     public function SetWeight(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'weight',
-            $value
-        );
+        $this->NudgePropertyValue('weight', $value);
     }
 }

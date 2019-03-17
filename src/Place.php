@@ -199,9 +199,7 @@ class Place extends Thing
         /**
         * @var array<int, LocationFeatureSpecification>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'amenityFeature'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('amenityFeature');
 
         return $out;
     }
@@ -211,10 +209,7 @@ class Place extends Thing
     */
     public function SetAmenityFeature(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'amenityFeature',
-            $value
-        );
+        $this->NudgePropertyValue('amenityFeature', $value);
     }
 
     /**
@@ -225,9 +220,7 @@ class Place extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'branchCode'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('branchCode');
 
         return $out;
     }
@@ -237,11 +230,7 @@ class Place extends Thing
     */
     public function SetBranchCode(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'branchCode',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('branchCode', $value, true);
     }
 
     /**
@@ -252,9 +241,7 @@ class Place extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'containedInPlace'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('containedInPlace');
 
         return $out;
     }
@@ -264,10 +251,7 @@ class Place extends Thing
     */
     public function SetContainedInPlace(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'containedInPlace',
-            $value
-        );
+        $this->NudgePropertyValue('containedInPlace', $value);
     }
 
     /**
@@ -278,9 +262,7 @@ class Place extends Thing
         /**
         * @var array<int, Place>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'containsPlace'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('containsPlace');
 
         return $out;
     }
@@ -290,10 +272,7 @@ class Place extends Thing
     */
     public function SetContainsPlace(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'containsPlace',
-            $value
-        );
+        $this->NudgePropertyValue('containsPlace', $value);
     }
 
     /**
@@ -304,9 +283,7 @@ class Place extends Thing
         /**
         * @var array<int, GeoCoordinates|GeoShape>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'geo'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('geo');
 
         return $out;
     }
@@ -316,10 +293,7 @@ class Place extends Thing
     */
     public function SetGeo(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'geo',
-            $value
-        );
+        $this->NudgePropertyValue('geo', $value);
     }
 
     /**
@@ -330,9 +304,7 @@ class Place extends Thing
         /**
         * @var array<int, string|Map>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'hasMap'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('hasMap');
 
         return $out;
     }
@@ -342,11 +314,7 @@ class Place extends Thing
     */
     public function SetHasMap(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'hasMap',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('hasMap', $value, true);
     }
 
     /**
@@ -357,9 +325,7 @@ class Place extends Thing
         /**
         * @var array<int, int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'maximumAttendeeCapacity'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('maximumAttendeeCapacity');
 
         return $out;
     }
@@ -369,10 +335,7 @@ class Place extends Thing
     */
     public function SetMaximumAttendeeCapacity(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'maximumAttendeeCapacity',
-            $value
-        );
+        $this->NudgePropertyValue('maximumAttendeeCapacity', $value);
     }
 
     /**
@@ -383,9 +346,7 @@ class Place extends Thing
         /**
         * @var array<int, OpeningHoursSpecification>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'openingHoursSpecification'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('openingHoursSpecification');
 
         return $out;
     }
@@ -395,10 +356,7 @@ class Place extends Thing
     */
     public function SetOpeningHoursSpecification(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'openingHoursSpecification',
-            $value
-        );
+        $this->NudgePropertyValue('openingHoursSpecification', $value);
     }
 
     /**
@@ -409,9 +367,7 @@ class Place extends Thing
         /**
         * @var array<int, ImageObject|Photograph>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'photo'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('photo');
 
         return $out;
     }
@@ -421,10 +377,7 @@ class Place extends Thing
     */
     public function SetPhoto(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'photo',
-            $value
-        );
+        $this->NudgePropertyValue('photo', $value);
     }
 
     /**
@@ -435,9 +388,7 @@ class Place extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'publicAccess'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('publicAccess');
 
         return $out;
     }
@@ -447,10 +398,7 @@ class Place extends Thing
     */
     public function SetPublicAccess(array $value) : void
     {
-        $this->NudgePropertyWithUniqueBooleans(
-            'publicAccess',
-            $value
-        );
+        $this->NudgePropertyWithUniqueBooleans('publicAccess', $value);
     }
 
     /**
@@ -461,9 +409,7 @@ class Place extends Thing
         /**
         * @var array<int, bool>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'smokingAllowed'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('smokingAllowed');
 
         return $out;
     }
@@ -473,10 +419,7 @@ class Place extends Thing
     */
     public function SetSmokingAllowed(array $value) : void
     {
-        $this->NudgePropertyWithUniqueBooleans(
-            'smokingAllowed',
-            $value
-        );
+        $this->NudgePropertyWithUniqueBooleans('smokingAllowed', $value);
     }
 
     /**
@@ -487,9 +430,7 @@ class Place extends Thing
         /**
         * @var array<int, OpeningHoursSpecification>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'specialOpeningHoursSpecification'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('specialOpeningHoursSpecification');
 
         return $out;
     }
@@ -499,9 +440,6 @@ class Place extends Thing
     */
     public function SetSpecialOpeningHoursSpecification(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'specialOpeningHoursSpecification',
-            $value
-        );
+        $this->NudgePropertyValue('specialOpeningHoursSpecification', $value);
     }
 }

@@ -92,9 +92,7 @@ class Action extends Thing
         /**
         * @var array<int, ActionStatusType>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'actionStatus'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('actionStatus');
 
         return $out;
     }
@@ -104,10 +102,7 @@ class Action extends Thing
     */
     public function SetActionStatus(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'actionStatus',
-            $value
-        );
+        $this->NudgePropertyValue('actionStatus', $value);
     }
 
     /**
@@ -118,9 +113,7 @@ class Action extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'agent'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('agent');
 
         return $out;
     }
@@ -130,10 +123,7 @@ class Action extends Thing
     */
     public function SetAgent(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'agent',
-            $value
-        );
+        $this->NudgePropertyValue('agent', $value);
     }
 
     /**
@@ -144,9 +134,7 @@ class Action extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'endTime'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('endTime');
 
         return $out;
     }
@@ -156,10 +144,7 @@ class Action extends Thing
     */
     public function SetEndTime(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'endTime',
-            $value
-        );
+        $this->NudgePropertyValue('endTime', $value);
     }
 
     /**
@@ -170,9 +155,7 @@ class Action extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'error'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('error');
 
         return $out;
     }
@@ -182,10 +165,7 @@ class Action extends Thing
     */
     public function SetError(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'error',
-            $value
-        );
+        $this->NudgePropertyValue('error', $value);
     }
 
     /**
@@ -196,9 +176,7 @@ class Action extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'instrument'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('instrument');
 
         return $out;
     }
@@ -208,10 +186,7 @@ class Action extends Thing
     */
     public function SetInstrument(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'instrument',
-            $value
-        );
+        $this->NudgePropertyValue('instrument', $value);
     }
 
     /**
@@ -222,9 +197,7 @@ class Action extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'object'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('object');
 
         return $out;
     }
@@ -234,10 +207,7 @@ class Action extends Thing
     */
     public function SetObject(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'object',
-            $value
-        );
+        $this->NudgePropertyValue('object', $value);
     }
 
     /**
@@ -248,9 +218,7 @@ class Action extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'participant'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('participant');
 
         return $out;
     }
@@ -260,10 +228,7 @@ class Action extends Thing
     */
     public function SetParticipant(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'participant',
-            $value
-        );
+        $this->NudgePropertyValue('participant', $value);
     }
 
     /**
@@ -274,9 +239,7 @@ class Action extends Thing
         /**
         * @var array<int, Thing>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'result'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('result');
 
         return $out;
     }
@@ -286,10 +249,7 @@ class Action extends Thing
     */
     public function SetResult(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'result',
-            $value
-        );
+        $this->NudgePropertyValue('result', $value);
     }
 
     /**
@@ -300,9 +260,7 @@ class Action extends Thing
         /**
         * @var array<int, DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'startTime'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('startTime');
 
         return $out;
     }
@@ -312,10 +270,7 @@ class Action extends Thing
     */
     public function SetStartTime(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'startTime',
-            $value
-        );
+        $this->NudgePropertyValue('startTime', $value);
     }
 
     /**
@@ -326,9 +281,7 @@ class Action extends Thing
         /**
         * @var array<int, EntryPoint>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'target'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('target');
 
         return $out;
     }
@@ -338,9 +291,6 @@ class Action extends Thing
     */
     public function SetTarget(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'target',
-            $value
-        );
+        $this->NudgePropertyValue('target', $value);
     }
 }

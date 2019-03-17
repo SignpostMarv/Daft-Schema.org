@@ -142,9 +142,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'additionalType'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('additionalType');
 
         return $out;
     }
@@ -154,11 +152,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAdditionalType(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'additionalType',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('additionalType', $value, true);
     }
 
     /**
@@ -169,9 +163,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'alternateName'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('alternateName');
 
         return $out;
     }
@@ -181,11 +173,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAlternateName(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'alternateName',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('alternateName', $value, true);
     }
 
     /**
@@ -196,9 +184,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'description'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('description');
 
         return $out;
     }
@@ -208,11 +194,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDescription(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'description',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('description', $value, true);
     }
 
     /**
@@ -223,9 +205,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'disambiguatingDescription'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('disambiguatingDescription');
 
         return $out;
     }
@@ -235,11 +215,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDisambiguatingDescription(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'disambiguatingDescription',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('disambiguatingDescription', $value, true);
     }
 
     /**
@@ -250,9 +226,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|PropertyValue>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'identifier'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('identifier');
 
         return $out;
     }
@@ -262,11 +236,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetIdentifier(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'identifier',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('identifier', $value, true);
     }
 
     /**
@@ -277,9 +247,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|ImageObject>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'image'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('image');
 
         return $out;
     }
@@ -289,11 +257,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetImage(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'image',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('image', $value, true);
     }
 
     /**
@@ -304,9 +268,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string|CreativeWork>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'mainEntityOfPage'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('mainEntityOfPage');
 
         return $out;
     }
@@ -316,11 +278,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetMainEntityOfPage(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'mainEntityOfPage',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('mainEntityOfPage', $value, true);
     }
 
     /**
@@ -331,9 +289,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'name'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('name');
 
         return $out;
     }
@@ -354,9 +310,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, Action>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'potentialAction'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('potentialAction');
 
         return $out;
     }
@@ -366,10 +320,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetPotentialAction(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'potentialAction',
-            $value
-        );
+        $this->NudgePropertyValue('potentialAction', $value);
     }
 
     /**
@@ -380,9 +331,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'sameAs'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('sameAs');
 
         return $out;
     }
@@ -403,9 +352,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, CreativeWork|Event>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'subjectOf'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('subjectOf');
 
         return $out;
     }
@@ -426,9 +373,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'url'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('url');
 
         return $out;
     }

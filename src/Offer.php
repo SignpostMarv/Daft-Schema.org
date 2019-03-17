@@ -230,9 +230,7 @@ class Offer extends Thing
         /**
         * @var array<int, Offer>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'addOn'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('addOn');
 
         return $out;
     }
@@ -242,10 +240,7 @@ class Offer extends Thing
     */
     public function SetAddOn(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'addOn',
-            $value
-        );
+        $this->NudgePropertyValue('addOn', $value);
     }
 
     /**
@@ -256,9 +251,7 @@ class Offer extends Thing
         /**
         * @var array<int, Organization|Person>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'offeredBy'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('offeredBy');
 
         return $out;
     }
@@ -268,10 +261,7 @@ class Offer extends Thing
     */
     public function SetOfferedBy(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'offeredBy',
-            $value
-        );
+        $this->NudgePropertyValue('offeredBy', $value);
     }
 
     /**
@@ -282,9 +272,7 @@ class Offer extends Thing
         /**
         * @var array<int, string|float|int>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'price'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('price');
 
         return $out;
     }
@@ -294,11 +282,7 @@ class Offer extends Thing
     */
     public function SetPrice(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'price',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('price', $value, true);
     }
 
     /**
@@ -309,9 +293,7 @@ class Offer extends Thing
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'priceCurrency'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('priceCurrency');
 
         return $out;
     }
@@ -321,11 +303,7 @@ class Offer extends Thing
     */
     public function SetPriceCurrency(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'priceCurrency',
-            $value,
-            true
-        );
+        $this->NudgePropertyValue('priceCurrency', $value, true);
     }
 
     /**
@@ -336,9 +314,7 @@ class Offer extends Thing
         /**
         * @var array<int, Date>
         */
-        $out = $this->ExpectRetrievedValueIsArray(
-            'priceValidUntil'
-        );
+        $out = $this->ExpectRetrievedValueIsArray('priceValidUntil');
 
         return $out;
     }
@@ -348,9 +324,6 @@ class Offer extends Thing
     */
     public function SetPriceValidUntil(array $value) : void
     {
-        $this->NudgePropertyValue(
-            'priceValidUntil',
-            $value
-        );
+        $this->NudgePropertyValue('priceValidUntil', $value);
     }
 }

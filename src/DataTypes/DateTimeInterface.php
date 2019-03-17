@@ -8,7 +8,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DataTypes;
 
 use DateTimeImmutable;
 use DateTimeZone;
-use RuntimeException;
 
 abstract class DateTimeInterface extends DateTimeImmutable implements DataType
 {

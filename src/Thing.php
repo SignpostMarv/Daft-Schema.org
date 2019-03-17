@@ -685,7 +685,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
             * @return mixed
             */
             function (string $k) use ($array, $multi_type) {
-
                 if (is_array($array[$k])) {
                     return array_map(
                         /**

@@ -7,7 +7,6 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
 use SignpostMarv\DaftObject\SchemaOrg\Action;
-use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\SoftwareApplication;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\WebSite;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;

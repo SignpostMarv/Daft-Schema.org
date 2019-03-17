@@ -10,7 +10,6 @@ use SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
-use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**

@@ -12,9 +12,6 @@ use SignpostMarv\DaftObject\DaftJson;
 use SignpostMarv\DaftObject\DaftObjectHasPropertiesWithMultiTypedArraysOfUniqueValues;
 use SignpostMarv\DaftObject\JsonTypeUtilities;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
-use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
-use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
-use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
 
 /**

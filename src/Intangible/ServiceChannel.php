@@ -14,7 +14,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
 * @property array<int, string|Language> $availableLanguage
-* @property array<int, DataTypes\Duration> $processingTime
+* @property array<int, Quantity\Duration> $processingTime
 * @property array<int, Service> $providesService
 * @property array<int, Place> $serviceLocation
 * @property array<int, StructuredValue\ContactPoint> $servicePhone
@@ -45,7 +45,7 @@ class ServiceChannel extends Base
             Language::class,
         ],
         'processingTime' => [
-            DataTypes\Duration::class,
+            Quantity\Duration::class,
         ],
         'providesService' => [
             Service::class,
@@ -68,12 +68,12 @@ class ServiceChannel extends Base
     ];
 
     /**
-    * @return array<int, DataTypes\Duration>
+    * @return array<int, Quantity\Duration>
     */
     public function GetProcessingTime() : array
     {
         /**
-        * @var array<int, DataTypes\Duration>
+        * @var array<int, Quantity\Duration>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'processingTime',
@@ -85,7 +85,7 @@ class ServiceChannel extends Base
     }
 
     /**
-    * @param array<int, DataTypes\Duration> $value
+    * @param array<int, Quantity\Duration> $value
     */
     public function SetProcessingTime(array $value) : void
     {
@@ -93,7 +93,7 @@ class ServiceChannel extends Base
             'processingTime',
             __METHOD__,
             $value,
-            DataTypes\Duration::class
+            Quantity\Duration::class
         );
     }
 

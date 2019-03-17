@@ -108,6 +108,18 @@ class Offer extends Thing
             Thing::class,
             PhysicalActivityCategory::class,
         ],
+        'gtin12' => [
+            'string',
+        ],
+        'gtin13' => [
+            'string',
+        ],
+        'gtin14' => [
+            'string',
+        ],
+        'gtin8' => [
+            'string',
+        ],
         'inventoryLevel' => [
             QuantitativeValue::class,
         ],

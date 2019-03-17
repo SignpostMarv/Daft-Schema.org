@@ -6,16 +6,8 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
-use CallbackFilterIterator;
 use DateTimeZone;
 use Exception;
-use Generator;
-use RecursiveCallbackFilterIterator;
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
-use ReflectionClass;
-use ReflectionClassConstant;
-use RuntimeException;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\Tests\TestCase as Base;
 

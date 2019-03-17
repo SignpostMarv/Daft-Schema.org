@@ -145,7 +145,7 @@ class DaftSchemaOrgTest extends Base
             $tz = new DateTimeZone($timezone);
         }
 
-        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($input, $tz));
+        static::assertInstanceOf($data_type, $data_type::ObtainFromString($input, $tz));
     }
 
     /**
@@ -162,5 +162,26 @@ class DaftSchemaOrgTest extends Base
         );
 
         $data_type::DataTypeFromString('nope');
+    }
+
+    /**
+    * @psalm-return array<int, array{0:class-string<SchemaOrg\DataTypes\DataType\Text>, 1:string}>
+    */
+    public function dataProvider_DataType_Text() : array
+    {
+        return [
+            [SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class, '.foo'],
+            [SchemaOrg\DataTypes\DataType\Text\XPathType ::class, '//foo'],
+        ];
+    }
+
+    /**
+    * @dataProvider dataProvider_DataType_Text
+    *
+    * @psalm-param class-string<SchemaOrg\DataTypes\DataType\Text> $data_type
+    */
+    public function test_DataType_Text(string $data_type, string $text) : void
+    {
+        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($text));
     }
 }

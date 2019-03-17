@@ -31,21 +31,20 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
         string $value,
         DateTimeZone $tz = null
     ) : DateTimeInterface {
+        $out = new static($value);
         $format = static::ObtainFormat();
-        $out = static::createFromFormat($format, $value, $tz);
 
-        if ( ! is_object($out)) {
-            throw new RuntimeException(
-                static::class .
-                '::createFromFormat() did not return an instance of ' .
-                static::class .
-                ', ' .
-                gettype($out) .
-                ' given!'
-            );
+        if ( ! is_null($tz)) {
+            $out->setTimezone($tz);
         }
 
-        return new static($out->format($format));
+        $out = new static($out->format($format));
+
+        if ( ! is_null($tz)) {
+            $out->setTimezone($tz);
+        }
+
+        return $out;
     }
 
     abstract protected static function ObtainFormat() : string;

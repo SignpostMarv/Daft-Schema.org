@@ -113,7 +113,6 @@ class DaftObjectFuzzingTest extends Base
                                 break;
                             default:
                                 throw new RuntimeException('Unsupported type: ' . $sub_type);
-                                break;
                         }
                     } elseif (
                         is_a($sub_type, SchemaOrg\Thing::class, true) ||
@@ -237,8 +236,7 @@ class DaftObjectFuzzingTest extends Base
     * @param array<int, string> $types
     */
     protected static function YieldObjectsOfTypeForFuzzing(
-        array $types,
-        bool $deep = false
+        array $types
     ) : Generator {
         /**
         * @psalm-var array<int, class-string<SchemaOrg\DataTypes\DataType>>
@@ -306,7 +304,7 @@ class DaftObjectFuzzingTest extends Base
             foreach ($types as $gimme) {
                 if ( ! isset(self::$obj_deep_cache[$gimme])) {
                     self::$obj_deep_cache[$gimme] = iterator_to_array(
-                        static::YieldObjectsOfTypeForFuzzing([$gimme], $deep)
+                        static::YieldObjectsOfTypeForFuzzing([$gimme])
                     );
                 }
 
@@ -322,7 +320,7 @@ class DaftObjectFuzzingTest extends Base
             foreach ($types as $gimme) {
                 if ( ! isset(self::$obj_cache[$gimme])) {
                     self::$obj_cache[$gimme] = iterator_to_array(
-                        static::YieldObjectsOfTypeForFuzzing([$gimme], $deep)
+                        static::YieldObjectsOfTypeForFuzzing([$gimme])
                     );
                 }
 

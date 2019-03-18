@@ -15,4 +15,5 @@ use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DataType as Base;
 */
 interface Text extends Base
 {
+    public function __toString() : string;
 }

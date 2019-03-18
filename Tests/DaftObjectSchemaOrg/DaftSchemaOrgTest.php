@@ -176,6 +176,11 @@ class DaftSchemaOrgTest extends Base
     */
     public function test_DataType_Text(string $data_type, string $text) : void
     {
-        static::assertInstanceOf($data_type, $data_type::DataTypeFromString($text));
+        /**
+        * @var SchemaOrg\DataTypes\DataType\Text
+        */
+        $obj = $data_type::DataTypeFromString($text);
+        static::assertInstanceOf($data_type, $obj);
+        static::assertSame($text, $obj->__toString());
     }
 }

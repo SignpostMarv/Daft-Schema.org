@@ -647,6 +647,25 @@ class Thing extends AbstractArrayBackedDaftObject implements
                     */
                     $val = $val;
 
+                    return static::DaftObjectFromJsonArrayFromArrayMapVal($val, $multi_type, $k);
+                }
+
+                return $val;
+            },
+            $arr
+        );
+    }
+
+    /**
+    * @param array<string, array<int, string>> $multi_type
+    *
+    * @psalm-param array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null> $val
+    */
+    protected static function DaftObjectFromJsonArrayFromArrayMapVal(
+        array $val,
+        array $multi_type,
+        string $k
+    ) : Thing {
                     foreach ($multi_type[$k] as $maybe) {
                         if (
                             is_a($maybe, Thing::class, true) &&
@@ -656,13 +675,17 @@ class Thing extends AbstractArrayBackedDaftObject implements
                             return $maybe::DaftObjectFromJsonArray($val);
                         }
                     }
-                }
 
-                return $val;
-            },
-            $arr
+
+        throw new InvalidArgumentException(
+            'Argument 3 passed to ' .
+            __METHOD__ .
+            '() did not correspond to an instance of ' .
+            Thing::class .
+            ' as defined in Argument 2!'
         );
     }
+
 
     protected function ExpectRetrievedValueIsArray(string $property) : array
     {

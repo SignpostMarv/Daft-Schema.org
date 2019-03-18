@@ -616,6 +616,11 @@ class Thing extends AbstractArrayBackedDaftObject implements
                                 is_array($val) &&
                                 isset($val['@context'], $val['@type'], $multi_type[$k])
                             ) {
+                                /**
+                                * @psalm-var array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null>
+                                */
+                                $val = $val;
+
                                 foreach ($multi_type[$k] as $maybe) {
                                     if (
                                         is_a($maybe, Thing::class, true) &&

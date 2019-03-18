@@ -79,6 +79,8 @@ class DaftSchemaOrgTest extends Base
 
         /**
         * @var array
+        *
+        * @psalm-var array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null>
         */
         $decoded = $decoded;
 

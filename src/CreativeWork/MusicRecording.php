@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup\MusicGroup;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 

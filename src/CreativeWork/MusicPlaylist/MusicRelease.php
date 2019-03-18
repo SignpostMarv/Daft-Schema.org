@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist as Base;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicReleaseFormatType;
+use SignpostMarv\DaftObject\SchemaOrg\Intangible\Quantity\Duration;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;

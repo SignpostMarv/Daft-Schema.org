@@ -677,7 +677,9 @@ class Thing extends AbstractArrayBackedDaftObject implements
         }
 
         throw new InvalidArgumentException(
-            'Argument 3 passed to ' .
+            'Argument 3 (' .
+            $k .
+            ') passed to ' .
             __METHOD__ .
             '() did not correspond to an instance of ' .
             Thing::class .

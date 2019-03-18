@@ -676,7 +676,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
             }
         }
 
-
         throw new InvalidArgumentException(
             'Argument 3 passed to ' .
             __METHOD__ .

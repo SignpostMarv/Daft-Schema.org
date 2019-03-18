@@ -180,7 +180,6 @@ class DaftSchemaOrgTest extends Base
         * @var SchemaOrg\DataTypes\DataType\Text
         */
         $obj = $data_type::DataTypeFromString($text);
-        static::assertInstanceOf($data_type, $obj);
         static::assertSame($text, $obj->__toString());
     }
 }

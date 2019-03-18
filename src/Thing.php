@@ -605,6 +605,32 @@ class Thing extends AbstractArrayBackedDaftObject implements
             */
             function (string $k) use ($array, $multi_type) {
                 if (is_array($array[$k])) {
+                    return static::DaftObjectFromJsonArrayFromArray($k, $multi_type, $array[$k]);
+                }
+
+                return $array[$k];
+            },
+            $array_keys
+        ));
+
+        /**
+        * @psalm-var Thing
+        *
+        * @var Thing
+        */
+        $out = new $type($data, $writeAll);
+
+        return $out;
+    }
+
+    /**
+    * @param array<string, array<int, string>> $multi_type
+    */
+    protected static function DaftObjectFromJsonArrayFromArray(
+        string $k,
+        array $multi_type,
+        array $arr
+    ) : array {
                     return array_map(
                         /**
                         * @param mixed $val
@@ -634,23 +660,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
 
                             return $val;
                         },
-                        $array[$k]
+                        $arr
                     );
-                }
-
-                return $array[$k];
-            },
-            $array_keys
-        ));
-
-        /**
-        * @psalm-var Thing
-        *
-        * @var Thing
-        */
-        $out = new $type($data, $writeAll);
-
-        return $out;
     }
 
     protected function ExpectRetrievedValueIsArray(string $property) : array

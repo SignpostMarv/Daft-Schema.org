@@ -1,2 +1,1695 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files/>
+<files>
+  <file src="Tests\DaftObjectSchemaOrg\DaftObjectFuzzingTest.php">
+    <MixedTypeCoercion occurrences="4">
+      <code>Generator</code>
+      <code>Generator</code>
+      <code>Generator</code>
+    </MixedTypeCoercion>
+  </file>
+  <file src="src\Action.php">
+    <PossiblyUnusedMethod occurrences="20">
+      <code>public function GetActionStatus() : array</code>
+      <code>public function SetActionStatus(array $value) : void</code>
+      <code>public function GetAgent() : array</code>
+      <code>public function SetAgent(array $value) : void</code>
+      <code>public function GetEndTime() : array</code>
+      <code>public function SetEndTime(array $value) : void</code>
+      <code>public function GetError() : array</code>
+      <code>public function SetError(array $value) : void</code>
+      <code>public function GetInstrument() : array</code>
+      <code>public function SetInstrument(array $value) : void</code>
+      <code>public function GetObject() : array</code>
+      <code>public function SetObject(array $value) : void</code>
+      <code>public function GetParticipant() : array</code>
+      <code>public function SetParticipant(array $value) : void</code>
+      <code>public function GetResult() : array</code>
+      <code>public function SetResult(array $value) : void</code>
+      <code>public function GetStartTime() : array</code>
+      <code>public function SetStartTime(array $value) : void</code>
+      <code>public function GetTarget() : array</code>
+      <code>public function SetTarget(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Audience.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetAudienceType() : array</code>
+      <code>public function SetAudienceType(array $value) : void</code>
+      <code>public function GetGeographicArea() : array</code>
+      <code>public function SetGeographicArea(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork.php">
+    <PossiblyUnusedMethod occurrences="134">
+      <code>public function GetAccessMode() : array</code>
+      <code>public function SetAccessMode(array $value) : void</code>
+      <code>public function GetAccessModeSufficient() : array</code>
+      <code>public function SetAccessModeSufficient(array $value) : void</code>
+      <code>public function GetAccessibilityAPI() : array</code>
+      <code>public function SetAccessibilityAPI(array $value) : void</code>
+      <code>public function GetAccessibilityControl() : array</code>
+      <code>public function SetAccessibilityControl(array $value) : void</code>
+      <code>public function GetAccessibilityFeature() : array</code>
+      <code>public function SetAccessibilityFeature(array $value) : void</code>
+      <code>public function GetAccessibilityHazard() : array</code>
+      <code>public function SetAccessibilityHazard(array $value) : void</code>
+      <code>public function GetAccessibilitySummary() : array</code>
+      <code>public function SetAccessibilitySummary(array $value) : void</code>
+      <code>public function GetAccountablePerson() : array</code>
+      <code>public function SetAccountablePerson(array $value) : void</code>
+      <code>public function GetAlternativeHeadline() : array</code>
+      <code>public function SetAlternativeHeadline(array $value) : void</code>
+      <code>public function GetAssociatedMedia() : array</code>
+      <code>public function SetAssociatedMedia(array $value) : void</code>
+      <code>public function GetAudio() : array</code>
+      <code>public function SetAudio(array $value) : void</code>
+      <code>public function GetCharacter() : array</code>
+      <code>public function SetCharacter(array $value) : void</code>
+      <code>public function GetCitation() : array</code>
+      <code>public function SetCitation(array $value) : void</code>
+      <code>public function GetComment() : array</code>
+      <code>public function SetComment(array $value) : void</code>
+      <code>public function GetCommentCount() : array</code>
+      <code>public function SetCommentCount(array $value) : void</code>
+      <code>public function GetContentLocation() : array</code>
+      <code>public function SetContentLocation(array $value) : void</code>
+      <code>public function GetContentRating() : array</code>
+      <code>public function SetContentRating(array $value) : void</code>
+      <code>public function GetContentReferenceTime() : array</code>
+      <code>public function SetContentReferenceTime(array $value) : void</code>
+      <code>public function GetContributor() : array</code>
+      <code>public function SetContributor(array $value) : void</code>
+      <code>public function GetCopyrightHolder() : array</code>
+      <code>public function SetCopyrightHolder(array $value) : void</code>
+      <code>public function GetCopyrightYear() : array</code>
+      <code>public function SetCopyrightYear(array $value) : void</code>
+      <code>public function GetCorrection() : array</code>
+      <code>public function SetCorrection(array $value) : void</code>
+      <code>public function GetCreator() : array</code>
+      <code>public function SetCreator(array $value) : void</code>
+      <code>public function GetDateCreated() : array</code>
+      <code>public function SetDateCreated(array $value) : void</code>
+      <code>public function GetDateModified() : array</code>
+      <code>public function SetDateModified(array $value) : void</code>
+      <code>public function GetDatePublished() : array</code>
+      <code>public function SetDatePublished(array $value) : void</code>
+      <code>public function GetDiscussionUrl() : array</code>
+      <code>public function SetDiscussionUrl(array $value) : void</code>
+      <code>public function GetEditor() : array</code>
+      <code>public function SetEditor(array $value) : void</code>
+      <code>public function GetEducationalAlignment() : array</code>
+      <code>public function SetEducationalAlignment(array $value) : void</code>
+      <code>public function GetEducationalUse() : array</code>
+      <code>public function SetEducationalUse(array $value) : void</code>
+      <code>public function GetEncoding() : array</code>
+      <code>public function SetEncoding(array $value) : void</code>
+      <code>public function GetEncodingFormat() : array</code>
+      <code>public function SetEncodingFormat(array $value) : void</code>
+      <code>public function GetExampleOfWork() : array</code>
+      <code>public function SetExampleOfWork(array $value) : void</code>
+      <code>public function GetExpires() : array</code>
+      <code>public function SetExpires(array $value) : void</code>
+      <code>public function GetHeadline() : array</code>
+      <code>public function SetHeadline(array $value) : void</code>
+      <code>public function GetInteractionStatistic() : array</code>
+      <code>public function SetInteractionStatistic(array $value) : void</code>
+      <code>public function GetInteractivityType() : array</code>
+      <code>public function SetInteractivityType(array $value) : void</code>
+      <code>public function GetIsBasedOn() : array</code>
+      <code>public function SetIsBasedOn(array $value) : void</code>
+      <code>public function GetIsFamilyFriendly() : array</code>
+      <code>public function SetIsFamilyFriendly(array $value) : void</code>
+      <code>public function GetKeywords() : array</code>
+      <code>public function SetKeywords(array $value) : void</code>
+      <code>public function GetLearningResourceType() : array</code>
+      <code>public function SetLearningResourceType(array $value) : void</code>
+      <code>public function GetLicense() : array</code>
+      <code>public function SetLicense(array $value) : void</code>
+      <code>public function GetLocationCreated() : array</code>
+      <code>public function SetLocationCreated(array $value) : void</code>
+      <code>public function GetMainEntity() : array</code>
+      <code>public function SetMainEntity(array $value) : void</code>
+      <code>public function GetMentions() : array</code>
+      <code>public function SetMentions(array $value) : void</code>
+      <code>public function GetPosition() : array</code>
+      <code>public function SetPosition(array $value) : void</code>
+      <code>public function GetProducer() : array</code>
+      <code>public function SetProducer(array $value) : void</code>
+      <code>public function GetPublication() : array</code>
+      <code>public function SetPublication(array $value) : void</code>
+      <code>public function GetPublisher() : array</code>
+      <code>public function SetPublisher(array $value) : void</code>
+      <code>public function GetPublisherImprint() : array</code>
+      <code>public function SetPublisherImprint(array $value) : void</code>
+      <code>public function GetRecordedAt() : array</code>
+      <code>public function SetRecordedAt(array $value) : void</code>
+      <code>public function GetReleasedEvent() : array</code>
+      <code>public function SetReleasedEvent(array $value) : void</code>
+      <code>public function GetSchemaVersion() : array</code>
+      <code>public function SetSchemaVersion(array $value) : void</code>
+      <code>public function GetSdDatePublished() : array</code>
+      <code>public function SetSdDatePublished(array $value) : void</code>
+      <code>public function GetSdLicense() : array</code>
+      <code>public function SetSdLicense(array $value) : void</code>
+      <code>public function GetSdPublisher() : array</code>
+      <code>public function SetSdPublisher(array $value) : void</code>
+      <code>public function GetSourceOrganization() : array</code>
+      <code>public function SetSourceOrganization(array $value) : void</code>
+      <code>public function GetSpatialCoverage() : array</code>
+      <code>public function SetSpatialCoverage(array $value) : void</code>
+      <code>public function GetTemporalCoverage() : array</code>
+      <code>public function SetTemporalCoverage(array $value) : void</code>
+      <code>public function GetText() : array</code>
+      <code>public function SetText(array $value) : void</code>
+      <code>public function GetThumbnailUrl() : array</code>
+      <code>public function SetThumbnailUrl(array $value) : void</code>
+      <code>public function GetTimeRequired() : array</code>
+      <code>public function SetTimeRequired(array $value) : void</code>
+      <code>public function GetTranslationOfWork() : array</code>
+      <code>public function SetTranslationOfWork(array $value) : void</code>
+      <code>public function GetVersion() : array</code>
+      <code>public function SetVersion(array $value) : void</code>
+      <code>public function GetVideo() : array</code>
+      <code>public function SetVideo(array $value) : void</code>
+      <code>public function GetWorkExample() : array</code>
+      <code>public function SetWorkExample(array $value) : void</code>
+      <code>public function GetWorkTranslation() : array</code>
+      <code>public function SetWorkTranslation(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Article.php">
+    <PossiblyUnusedMethod occurrences="14">
+      <code>public function GetArticleBody() : array</code>
+      <code>public function SetArticleBody(array $value) : void</code>
+      <code>public function GetArticleSection() : array</code>
+      <code>public function SetArticleSection(array $value) : void</code>
+      <code>public function GetBackstory() : array</code>
+      <code>public function SetBackstory(array $value) : void</code>
+      <code>public function GetPageEnd() : array</code>
+      <code>public function SetPageEnd(array $value) : void</code>
+      <code>public function GetPageStart() : array</code>
+      <code>public function SetPageStart(array $value) : void</code>
+      <code>public function GetPagination() : array</code>
+      <code>public function SetPagination(array $value) : void</code>
+      <code>public function GetWordCount() : array</code>
+      <code>public function SetWordCount(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Article\NewsArticle.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetDateline() : array</code>
+      <code>public function SetDateline(array $value) : void</code>
+      <code>public function GetPrintColumn() : array</code>
+      <code>public function SetPrintColumn(array $value) : void</code>
+      <code>public function GetPrintEdition() : array</code>
+      <code>public function SetPrintEdition(array $value) : void</code>
+      <code>public function GetPrintPage() : array</code>
+      <code>public function SetPrintPage(array $value) : void</code>
+      <code>public function GetPrintSection() : array</code>
+      <code>public function SetPrintSection(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Comment.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetParentItem() : array</code>
+      <code>public function SetParentItem(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\DataCatalog.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDataset() : array</code>
+      <code>public function SetDataset(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Dataset.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetDistribution() : array</code>
+      <code>public function SetDistribution(array $value) : void</code>
+      <code>public function GetIncludedInDataCatalog() : array</code>
+      <code>public function SetIncludedInDataCatalog(array $value) : void</code>
+      <code>public function GetVariableMeasured() : array</code>
+      <code>public function SetVariableMeasured(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Dataset\DataFeed.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDataFeedElement() : array</code>
+      <code>public function SetDataFeedElement(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Map.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMapType() : array</code>
+      <code>public function SetMapType(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MediaObject.php">
+    <PossiblyUnusedMethod occurrences="24">
+      <code>public function GetAssociatedArticle() : array</code>
+      <code>public function SetAssociatedArticle(array $value) : void</code>
+      <code>public function GetBitrate() : array</code>
+      <code>public function SetBitrate(array $value) : void</code>
+      <code>public function GetContentSize() : array</code>
+      <code>public function SetContentSize(array $value) : void</code>
+      <code>public function GetContentUrl() : array</code>
+      <code>public function SetContentUrl(array $value) : void</code>
+      <code>public function GetEmbedUrl() : array</code>
+      <code>public function SetEmbedUrl(array $value) : void</code>
+      <code>public function GetEncodesCreativeWork() : array</code>
+      <code>public function SetEncodesCreativeWork(array $value) : void</code>
+      <code>public function GetPlayerType() : array</code>
+      <code>public function SetPlayerType(array $value) : void</code>
+      <code>public function GetProductionCompany() : array</code>
+      <code>public function SetProductionCompany(array $value) : void</code>
+      <code>public function GetRegionsAllowed() : array</code>
+      <code>public function SetRegionsAllowed(array $value) : void</code>
+      <code>public function GetRequiresSubscription() : array</code>
+      <code>public function SetRequiresSubscription(array $value) : void</code>
+      <code>public function GetUploadDate() : array</code>
+      <code>public function SetUploadDate(array $value) : void</code>
+      <code>public function GetWidth() : array</code>
+      <code>public function SetWidth(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MediaObject\ImageObject.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetExifData() : array</code>
+      <code>public function SetExifData(array $value) : void</code>
+      <code>public function GetRepresentativeOfPage() : array</code>
+      <code>public function SetRepresentativeOfPage(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MediaObject\VideoObject.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetMusicBy() : array</code>
+      <code>public function SetMusicBy(array $value) : void</code>
+      <code>public function GetVideoFrameSize() : array</code>
+      <code>public function SetVideoFrameSize(array $value) : void</code>
+      <code>public function GetVideoQuality() : array</code>
+      <code>public function SetVideoQuality(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MusicComposition.php">
+    <PossiblyUnusedMethod occurrences="18">
+      <code>public function GetFirstPerformance() : array</code>
+      <code>public function SetFirstPerformance(array $value) : void</code>
+      <code>public function GetIncludedComposition() : array</code>
+      <code>public function SetIncludedComposition(array $value) : void</code>
+      <code>public function GetIswcCode() : array</code>
+      <code>public function SetIswcCode(array $value) : void</code>
+      <code>public function GetLyricist() : array</code>
+      <code>public function SetLyricist(array $value) : void</code>
+      <code>public function GetLyrics() : array</code>
+      <code>public function SetLyrics(array $value) : void</code>
+      <code>public function GetMusicArrangement() : array</code>
+      <code>public function SetMusicArrangement(array $value) : void</code>
+      <code>public function GetMusicCompositionForm() : array</code>
+      <code>public function SetMusicCompositionForm(array $value) : void</code>
+      <code>public function GetMusicalKey() : array</code>
+      <code>public function SetMusicalKey(array $value) : void</code>
+      <code>public function GetRecordedAs() : array</code>
+      <code>public function SetRecordedAs(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MusicPlaylist.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetNumTracks() : array</code>
+      <code>public function SetNumTracks(array $value) : void</code>
+      <code>public function GetTrack() : array</code>
+      <code>public function SetTrack(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MusicPlaylist\MusicAlbum.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetAlbumProductionType() : array</code>
+      <code>public function SetAlbumProductionType(array $value) : void</code>
+      <code>public function GetAlbumRelease() : array</code>
+      <code>public function SetAlbumRelease(array $value) : void</code>
+      <code>public function GetAlbumReleaseType() : array</code>
+      <code>public function SetAlbumReleaseType(array $value) : void</code>
+      <code>public function GetByArtist() : array</code>
+      <code>public function SetByArtist(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MusicPlaylist\MusicRelease.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetCatalogNumber() : array</code>
+      <code>public function SetCatalogNumber(array $value) : void</code>
+      <code>public function GetCreditedTo() : array</code>
+      <code>public function SetCreditedTo(array $value) : void</code>
+      <code>public function GetMusicReleaseFormat() : array</code>
+      <code>public function SetMusicReleaseFormat(array $value) : void</code>
+      <code>public function GetRecordLabel() : array</code>
+      <code>public function SetRecordLabel(array $value) : void</code>
+      <code>public function GetReleaseOf() : array</code>
+      <code>public function SetReleaseOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\MusicRecording.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetByArtist() : array</code>
+      <code>public function SetByArtist(array $value) : void</code>
+      <code>public function GetInAlbum() : array</code>
+      <code>public function SetInAlbum(array $value) : void</code>
+      <code>public function GetInPlaylist() : array</code>
+      <code>public function SetInPlaylist(array $value) : void</code>
+      <code>public function GetIsrcCode() : array</code>
+      <code>public function SetIsrcCode(array $value) : void</code>
+      <code>public function GetRecordingOf() : array</code>
+      <code>public function SetRecordingOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Question.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetAcceptedAnswer() : array</code>
+      <code>public function SetAcceptedAnswer(array $value) : void</code>
+      <code>public function GetAnswerCount() : array</code>
+      <code>public function SetAnswerCount(array $value) : void</code>
+      <code>public function GetSuggestedAnswer() : array</code>
+      <code>public function SetSuggestedAnswer(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\Review.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetReviewBody() : array</code>
+      <code>public function SetReviewBody(array $value) : void</code>
+      <code>public function GetReviewRating() : array</code>
+      <code>public function SetReviewRating(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\SoftwareApplication.php">
+    <PossiblyUnusedMethod occurrences="44">
+      <code>public function GetApplicationCategory() : array</code>
+      <code>public function SetApplicationCategory(array $value) : void</code>
+      <code>public function GetApplicationSubCategory() : array</code>
+      <code>public function SetApplicationSubCategory(array $value) : void</code>
+      <code>public function GetApplicationSuite() : array</code>
+      <code>public function SetApplicationSuite(array $value) : void</code>
+      <code>public function GetAvailableOnDevice() : array</code>
+      <code>public function SetAvailableOnDevice(array $value) : void</code>
+      <code>public function GetCountriesNotSupported() : array</code>
+      <code>public function SetCountriesNotSupported(array $value) : void</code>
+      <code>public function GetCountriesSupported() : array</code>
+      <code>public function SetCountriesSupported(array $value) : void</code>
+      <code>public function GetDownloadUrl() : array</code>
+      <code>public function SetDownloadUrl(array $value) : void</code>
+      <code>public function GetFeatureList() : array</code>
+      <code>public function SetFeatureList(array $value) : void</code>
+      <code>public function GetFileSize() : array</code>
+      <code>public function SetFileSize(array $value) : void</code>
+      <code>public function GetInstallUrl() : array</code>
+      <code>public function SetInstallUrl(array $value) : void</code>
+      <code>public function GetMemoryRequirements() : array</code>
+      <code>public function SetMemoryRequirements(array $value) : void</code>
+      <code>public function GetOperatingSystem() : array</code>
+      <code>public function SetOperatingSystem(array $value) : void</code>
+      <code>public function GetPermissions() : array</code>
+      <code>public function SetPermissions(array $value) : void</code>
+      <code>public function GetProcessorRequirements() : array</code>
+      <code>public function SetProcessorRequirements(array $value) : void</code>
+      <code>public function GetReleaseNotes() : array</code>
+      <code>public function SetReleaseNotes(array $value) : void</code>
+      <code>public function GetScreenshot() : array</code>
+      <code>public function SetScreenshot(array $value) : void</code>
+      <code>public function GetSoftwareAddOn() : array</code>
+      <code>public function SetSoftwareAddOn(array $value) : void</code>
+      <code>public function GetSoftwareHelp() : array</code>
+      <code>public function SetSoftwareHelp(array $value) : void</code>
+      <code>public function GetSoftwareRequirements() : array</code>
+      <code>public function SetSoftwareRequirements(array $value) : void</code>
+      <code>public function GetSoftwareVersion() : array</code>
+      <code>public function SetSoftwareVersion(array $value) : void</code>
+      <code>public function GetStorageRequirements() : array</code>
+      <code>public function SetStorageRequirements(array $value) : void</code>
+      <code>public function GetSupportingData() : array</code>
+      <code>public function SetSupportingData(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\CreativeWork\WebPage.php">
+    <PossiblyUnusedMethod occurrences="16">
+      <code>public function GetBreadcrumb() : array</code>
+      <code>public function SetBreadcrumb(array $value) : void</code>
+      <code>public function GetLastReviewed() : array</code>
+      <code>public function SetLastReviewed(array $value) : void</code>
+      <code>public function GetMainContentOfPage() : array</code>
+      <code>public function SetMainContentOfPage(array $value) : void</code>
+      <code>public function GetPrimaryImageOfPage() : array</code>
+      <code>public function SetPrimaryImageOfPage(array $value) : void</code>
+      <code>public function GetRelatedLink() : array</code>
+      <code>public function SetRelatedLink(array $value) : void</code>
+      <code>public function GetReviewedBy() : array</code>
+      <code>public function SetReviewedBy(array $value) : void</code>
+      <code>public function GetSignificantLink() : array</code>
+      <code>public function SetSignificantLink(array $value) : void</code>
+      <code>public function GetSpecialty() : array</code>
+      <code>public function SetSpecialty(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\About.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAbout() : array</code>
+      <code>public function SetAbout(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\AcceptedPaymentMethod.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAcceptedPaymentMethod() : array</code>
+      <code>public function SetAcceptedPaymentMethod(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\AdvanceBookingRequirement.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAdvanceBookingRequirement() : array</code>
+      <code>public function SetAdvanceBookingRequirement(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\AvailabilityAndStartsAndEnds.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetAvailability() : array</code>
+      <code>public function SetAvailability(array $value) : void</code>
+      <code>public function GetAvailabilityEnds() : array</code>
+      <code>public function SetAvailabilityEnds(array $value) : void</code>
+      <code>public function GetAvailabilityStarts() : array</code>
+      <code>public function SetAvailabilityStarts(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\AvailableLanguage.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAvailableLanguage() : array</code>
+      <code>public function SetAvailableLanguage(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\BusinessFunction.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetBusinessFunction() : array</code>
+      <code>public function SetBusinessFunction(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Composer.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetComposer() : array</code>
+      <code>public function SetComposer(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Currency.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetCurrency() : array</code>
+      <code>public function SetCurrency(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\DeliveryLeadTime.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDeliveryLeadTime() : array</code>
+      <code>public function SetDeliveryLeadTime(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Duration.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDuration() : array</code>
+      <code>public function SetDuration(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAndIneligibleRegion.php">
+    <PossiblyUnusedMethod occurrences="12">
+      <code>public function GetEligibleCustomerType() : array</code>
+      <code>public function SetEligibleCustomerType(array $value) : void</code>
+      <code>public function GetEligibleDuration() : array</code>
+      <code>public function SetEligibleDuration(array $value) : void</code>
+      <code>public function GetEligibleQuantity() : array</code>
+      <code>public function SetEligibleQuantity(array $value) : void</code>
+      <code>public function GetEligibleRegion() : array</code>
+      <code>public function SetEligibleRegion(array $value) : void</code>
+      <code>public function GetEligibleTransactionVolume() : array</code>
+      <code>public function SetEligibleTransactionVolume(array $value) : void</code>
+      <code>public function GetIneligibleRegion() : array</code>
+      <code>public function SetIneligibleRegion(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Genre.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetGenre() : array</code>
+      <code>public function SetGenre(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasActor.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetActor() : array</code>
+      <code>public function SetActor(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAddress.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAddress() : array</code>
+      <code>public function SetAddress(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAddressCountry.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAddressCountry() : array</code>
+      <code>public function SetAddressCountry(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAggregateRating.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAggregateRating() : array</code>
+      <code>public function SetAggregateRating(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAreaServed.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAreaServed() : array</code>
+      <code>public function SetAreaServed(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAudience.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAudience() : array</code>
+      <code>public function SetAudience(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAuthor.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAuthor() : array</code>
+      <code>public function SetAuthor(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasAward.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAward() : array</code>
+      <code>public function SetAward(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasBrand.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetBrand() : array</code>
+      <code>public function SetBrand(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasCaption.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetCaption() : array</code>
+      <code>public function SetCaption(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasCategory.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetCategory() : array</code>
+      <code>public function SetCategory(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasContactPoint.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetContactPoint() : array</code>
+      <code>public function SetContactPoint(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasDirector.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDirector() : array</code>
+      <code>public function SetDirector(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasDuns.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetDuns() : array</code>
+      <code>public function SetDuns(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasElevation.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetElevation() : array</code>
+      <code>public function SetElevation(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasEmail.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetEmail() : array</code>
+      <code>public function SetEmail(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasEvent.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetEvent() : array</code>
+      <code>public function SetEvent(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasFaxNumber.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetFaxNumber() : array</code>
+      <code>public function SetFaxNumber(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasFunder.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetFunder() : array</code>
+      <code>public function SetFunder(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasGeospatialGeometry.php">
+    <PossiblyUnusedMethod occurrences="20">
+      <code>public function GetGeospatiallyContains() : array</code>
+      <code>public function SetGeospatiallyContains(array $value) : void</code>
+      <code>public function GetGeospatiallyCoveredBy() : array</code>
+      <code>public function SetGeospatiallyCoveredBy(array $value) : void</code>
+      <code>public function GetGeospatiallyCovers() : array</code>
+      <code>public function SetGeospatiallyCovers(array $value) : void</code>
+      <code>public function GetGeospatiallyCrosses() : array</code>
+      <code>public function SetGeospatiallyCrosses(array $value) : void</code>
+      <code>public function GetGeospatiallyDisjoint() : array</code>
+      <code>public function SetGeospatiallyDisjoint(array $value) : void</code>
+      <code>public function GetGeospatiallyEquals() : array</code>
+      <code>public function SetGeospatiallyEquals(array $value) : void</code>
+      <code>public function GetGeospatiallyIntersects() : array</code>
+      <code>public function SetGeospatiallyIntersects(array $value) : void</code>
+      <code>public function GetGeospatiallyOverlaps() : array</code>
+      <code>public function SetGeospatiallyOverlaps(array $value) : void</code>
+      <code>public function GetGeospatiallyTouches() : array</code>
+      <code>public function SetGeospatiallyTouches(array $value) : void</code>
+      <code>public function GetGeospatiallyWithin() : array</code>
+      <code>public function SetGeospatiallyWithin(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasGlobalLocationNumber.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetGlobalLocationNumber() : array</code>
+      <code>public function SetGlobalLocationNumber(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasGtin.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetGtin12() : array</code>
+      <code>public function SetGtin12(array $value) : void</code>
+      <code>public function GetGtin13() : array</code>
+      <code>public function SetGtin13(array $value) : void</code>
+      <code>public function GetGtin14() : array</code>
+      <code>public function SetGtin14(array $value) : void</code>
+      <code>public function GetGtin8() : array</code>
+      <code>public function SetGtin8(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasHasOfferCatalog.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetHasOfferCatalog() : array</code>
+      <code>public function SetHasOfferCatalog(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasHasPOS.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetHasPOS() : array</code>
+      <code>public function SetHasPOS(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasHasPart.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetHasPart() : array</code>
+      <code>public function SetHasPart(array $value) : void</code>
+      <code>public function GetIsPartOf() : array</code>
+      <code>public function SetIsPartOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasHeights.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetHeight() : array</code>
+      <code>public function SetHeight(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasHoursAvailable.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetHoursAvailable() : array</code>
+      <code>public function SetHoursAvailable(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasInLanguage.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetInLanguage() : array</code>
+      <code>public function SetInLanguage(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasIsAccessibleForFree.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetIsAccessibleForFree() : array</code>
+      <code>public function SetIsAccessibleForFree(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasIsicV4.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetIsicV4() : array</code>
+      <code>public function SetIsicV4(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasItemCondition.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetItemCondition() : array</code>
+      <code>public function SetItemCondition(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasItemReviewed.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetItemReviewed() : array</code>
+      <code>public function SetItemReviewed(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasKnowsAbout.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetKnowsAbout() : array</code>
+      <code>public function SetKnowsAbout(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasKnowsLanguage.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetKnowsLanguage() : array</code>
+      <code>public function SetKnowsLanguage(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasLocation.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetLocation() : array</code>
+      <code>public function SetLocation(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasLogo.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetLogo() : array</code>
+      <code>public function SetLogo(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMakesOffer.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMakesOffer() : array</code>
+      <code>public function SetMakesOffer(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMaterial.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMaterial() : array</code>
+      <code>public function SetMaterial(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMember.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMember() : array</code>
+      <code>public function SetMember(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMemberOf.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMemberOf() : array</code>
+      <code>public function SetMemberOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMinMaxValue.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetMaxValue() : array</code>
+      <code>public function SetMaxValue(array $value) : void</code>
+      <code>public function GetMinValue() : array</code>
+      <code>public function SetMinValue(array $value) : void</code>
+      <code>public function GetValue() : array</code>
+      <code>public function SetValue(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasMpn.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMpn() : array</code>
+      <code>public function SetMpn(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasNaics.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetNaics() : array</code>
+      <code>public function SetNaics(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasOffers.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetOffers() : array</code>
+      <code>public function SetOffers(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasOwns.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetOwns() : array</code>
+      <code>public function SetOwns(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasPostalCode.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetPostalCode() : array</code>
+      <code>public function SetPostalCode(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasProvider.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetProvider() : array</code>
+      <code>public function SetProvider(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasPublishingPrinciples.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetPublishingPrinciples() : array</code>
+      <code>public function SetPublishingPrinciples(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasReview.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetReview() : array</code>
+      <code>public function SetReview(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasReviewAspect.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetReviewAspect() : array</code>
+      <code>public function SetReviewAspect(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasSeeks.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetSeeks() : array</code>
+      <code>public function SetSeeks(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasSku.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetSku() : array</code>
+      <code>public function SetSku(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasSpeakable.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetSpeakable() : array</code>
+      <code>public function SetSpeakable(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasSponsors.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetSponsor() : array</code>
+      <code>public function SetSponsor(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasTaxID.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTaxID() : array</code>
+      <code>public function SetTaxID(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasTelephone.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTelephone() : array</code>
+      <code>public function SetTelephone(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasThumbnail.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetThumbnail() : array</code>
+      <code>public function SetThumbnail(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasTranscript.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTranscript() : array</code>
+      <code>public function SetTranscript(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasTranslators.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTranslator() : array</code>
+      <code>public function SetTranslator(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasTypicalAgeRanges.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTypicalAgeRange() : array</code>
+      <code>public function SetTypicalAgeRange(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasUnitCodeText.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetUnitCode() : array</code>
+      <code>public function SetUnitCode(array $value) : void</code>
+      <code>public function GetUnitText() : array</code>
+      <code>public function SetUnitText(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasValidFromThrough.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetValidFrom() : array</code>
+      <code>public function SetValidFrom(array $value) : void</code>
+      <code>public function GetValidThrough() : array</code>
+      <code>public function SetValidThrough(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasVatID.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetVatID() : array</code>
+      <code>public function SetVatID(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\HasWidth.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetWidth() : array</code>
+      <code>public function SetWidth(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\IncludesObject.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetIncludesObject() : array</code>
+      <code>public function SetIncludesObject(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\IsOfferOrDemand.php">
+    <PossiblyUnusedMethod occurrences="16">
+      <code>public function GetAvailableAtOrFrom() : array</code>
+      <code>public function SetAvailableAtOrFrom(array $value) : void</code>
+      <code>public function GetAvailableDeliveryMethod() : array</code>
+      <code>public function SetAvailableDeliveryMethod(array $value) : void</code>
+      <code>public function GetInventoryLevel() : array</code>
+      <code>public function SetInventoryLevel(array $value) : void</code>
+      <code>public function GetItemOffered() : array</code>
+      <code>public function SetItemOffered(array $value) : void</code>
+      <code>public function GetPriceSpecification() : array</code>
+      <code>public function SetPriceSpecification(array $value) : void</code>
+      <code>public function GetSeller() : array</code>
+      <code>public function SetSeller(array $value) : void</code>
+      <code>public function GetSerialNumber() : array</code>
+      <code>public function SetSerialNumber(array $value) : void</code>
+      <code>public function GetWarranty() : array</code>
+      <code>public function SetWarranty(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\IsRelatedOrSimilarTo.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetIsRelatedTo() : array</code>
+      <code>public function SetIsRelatedTo(array $value) : void</code>
+      <code>public function GetIsSimilarTo() : array</code>
+      <code>public function SetIsSimilarTo(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Issn.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetIssn() : array</code>
+      <code>public function SetIssn(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\MeasurementTechnique.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMeasurementTechnique() : array</code>
+      <code>public function SetMeasurementTechnique(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\TraitAdditionalProperty.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetAdditionalProperty() : array</code>
+      <code>public function SetAdditionalProperty(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\TraitValueReference.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetValueReference() : array</code>
+      <code>public function SetValueReference(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\UpDownVoteCount.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetDownvoteCount() : array</code>
+      <code>public function SetDownvoteCount(array $value) : void</code>
+      <code>public function GetUpvoteCount() : array</code>
+      <code>public function SetUpvoteCount(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DataTypes\DataType\Text\CssSelectorType.php">
+    <PossiblyUnusedMethod occurrences="1">
+      <code>public function jsonSerialize() : string</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DataTypes\DataType\Text\XPathType.php">
+    <PossiblyUnusedMethod occurrences="1">
+      <code>public function jsonSerialize() : string</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DataTypes\DateTimeInterface.php">
+    <PossiblyUnusedMethod occurrences="1">
+      <code>public function jsonSerialize() : string</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Event.php">
+    <PossiblyUnusedMethod occurrences="32">
+      <code>public function GetAttendee() : array</code>
+      <code>public function SetAttendee(array $value) : void</code>
+      <code>public function GetContributor() : array</code>
+      <code>public function SetContributor(array $value) : void</code>
+      <code>public function GetDoorTime() : array</code>
+      <code>public function SetDoorTime(array $value) : void</code>
+      <code>public function GetEndDate() : array</code>
+      <code>public function SetEndDate(array $value) : void</code>
+      <code>public function GetEventStatus() : array</code>
+      <code>public function SetEventStatus(array $value) : void</code>
+      <code>public function GetMaximumAttendeeCapacity() : array</code>
+      <code>public function SetMaximumAttendeeCapacity(array $value) : void</code>
+      <code>public function GetOrganizer() : array</code>
+      <code>public function SetOrganizer(array $value) : void</code>
+      <code>public function GetPerformer() : array</code>
+      <code>public function SetPerformer(array $value) : void</code>
+      <code>public function GetPreviousStartDate() : array</code>
+      <code>public function SetPreviousStartDate(array $value) : void</code>
+      <code>public function GetRecordedIn() : array</code>
+      <code>public function SetRecordedIn(array $value) : void</code>
+      <code>public function GetRemainingAttendeeCapacity() : array</code>
+      <code>public function SetRemainingAttendeeCapacity(array $value) : void</code>
+      <code>public function GetStartDate() : array</code>
+      <code>public function SetStartDate(array $value) : void</code>
+      <code>public function GetSubEvent() : array</code>
+      <code>public function SetSubEvent(array $value) : void</code>
+      <code>public function GetSuperEvent() : array</code>
+      <code>public function SetSuperEvent(array $value) : void</code>
+      <code>public function GetWorkFeatured() : array</code>
+      <code>public function SetWorkFeatured(array $value) : void</code>
+      <code>public function GetWorkPerformed() : array</code>
+      <code>public function SetWorkPerformed(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Event\PublicationEvent.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetPublishedBy() : array</code>
+      <code>public function SetPublishedBy(array $value) : void</code>
+      <code>public function GetPublishedOn() : array</code>
+      <code>public function SetPublishedOn(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\GeoCoordinates.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetLatitude() : array</code>
+      <code>public function SetLatitude(array $value) : void</code>
+      <code>public function GetLongitude() : array</code>
+      <code>public function SetLongitude(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\GeoShape.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetBox() : array</code>
+      <code>public function SetBox(array $value) : void</code>
+      <code>public function GetCircle() : array</code>
+      <code>public function SetCircle(array $value) : void</code>
+      <code>public function GetLine() : array</code>
+      <code>public function SetLine(array $value) : void</code>
+      <code>public function GetPolygon() : array</code>
+      <code>public function SetPolygon(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\AlignmentObject.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetAlignmentType() : array</code>
+      <code>public function SetAlignmentType(array $value) : void</code>
+      <code>public function GetEducationalFramework() : array</code>
+      <code>public function SetEducationalFramework(array $value) : void</code>
+      <code>public function GetTargetDescription() : array</code>
+      <code>public function SetTargetDescription(array $value) : void</code>
+      <code>public function GetTargetName() : array</code>
+      <code>public function SetTargetName(array $value) : void</code>
+      <code>public function GetTargetUrl() : array</code>
+      <code>public function SetTargetUrl(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\BroadcastChannel.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetBroadcastChannelId() : array</code>
+      <code>public function SetBroadcastChannelId(array $value) : void</code>
+      <code>public function GetBroadcastFrequency() : array</code>
+      <code>public function SetBroadcastFrequency(array $value) : void</code>
+      <code>public function GetBroadcastServiceTier() : array</code>
+      <code>public function SetBroadcastServiceTier(array $value) : void</code>
+      <code>public function GetInBroadcastLineup() : array</code>
+      <code>public function SetInBroadcastLineup(array $value) : void</code>
+      <code>public function GetProvidesBroadcastService() : array</code>
+      <code>public function SetProvidesBroadcastService(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\BroadcastFrequencySpecification.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetBroadcastFrequencyValue() : array</code>
+      <code>public function SetBroadcastFrequencyValue(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\DataFeedItem.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetDateCreated() : array</code>
+      <code>public function SetDateCreated(array $value) : void</code>
+      <code>public function GetDateDeleted() : array</code>
+      <code>public function SetDateDeleted(array $value) : void</code>
+      <code>public function GetDateModified() : array</code>
+      <code>public function SetDateModified(array $value) : void</code>
+      <code>public function GetItem() : array</code>
+      <code>public function SetItem(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\EntryPoint.php">
+    <PossiblyUnusedMethod occurrences="12">
+      <code>public function GetActionApplication() : array</code>
+      <code>public function SetActionApplication(array $value) : void</code>
+      <code>public function GetActionPlatform() : array</code>
+      <code>public function SetActionPlatform(array $value) : void</code>
+      <code>public function GetContentType() : array</code>
+      <code>public function SetContentType(array $value) : void</code>
+      <code>public function GetEncodingType() : array</code>
+      <code>public function SetEncodingType(array $value) : void</code>
+      <code>public function GetHttpMethod() : array</code>
+      <code>public function SetHttpMethod(array $value) : void</code>
+      <code>public function GetUrlTemplate() : array</code>
+      <code>public function SetUrlTemplate(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Enumeration\QualitativeValue.php">
+    <PossiblyUnusedMethod occurrences="12">
+      <code>public function GetEqual() : array</code>
+      <code>public function SetEqual(array $value) : void</code>
+      <code>public function GetGreater() : array</code>
+      <code>public function SetGreater(array $value) : void</code>
+      <code>public function GetGreaterOrEqual() : array</code>
+      <code>public function SetGreaterOrEqual(array $value) : void</code>
+      <code>public function GetLesser() : array</code>
+      <code>public function SetLesser(array $value) : void</code>
+      <code>public function GetLesserOrEqual() : array</code>
+      <code>public function SetLesserOrEqual(array $value) : void</code>
+      <code>public function GetNonEqual() : array</code>
+      <code>public function SetNonEqual(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\IntangibleProperty.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetDomainIncludes() : array</code>
+      <code>public function SetDomainIncludes(array $value) : void</code>
+      <code>public function GetInverseOf() : array</code>
+      <code>public function SetInverseOf(array $value) : void</code>
+      <code>public function GetRangeIncludes() : array</code>
+      <code>public function SetRangeIncludes(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\ItemList.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetItemListElement() : array</code>
+      <code>public function SetItemListElement(array $value) : void</code>
+      <code>public function GetItemListOrder() : array</code>
+      <code>public function SetItemListOrder(array $value) : void</code>
+      <code>public function GetNumberOfItems() : array</code>
+      <code>public function SetNumberOfItems(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\ListItem.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetItem() : array</code>
+      <code>public function SetItem(array $value) : void</code>
+      <code>public function GetNextItem() : array</code>
+      <code>public function SetNextItem(array $value) : void</code>
+      <code>public function GetPosition() : array</code>
+      <code>public function SetPosition(array $value) : void</code>
+      <code>public function GetPreviousItem() : array</code>
+      <code>public function SetPreviousItem(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\MediaSubscription.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetAuthenticator() : array</code>
+      <code>public function SetAuthenticator(array $value) : void</code>
+      <code>public function GetExpectsAcceptanceOf() : array</code>
+      <code>public function SetExpectsAcceptanceOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Occupation.php">
+    <PossiblyUnusedMethod occurrences="16">
+      <code>public function GetEducationRequirements() : array</code>
+      <code>public function SetEducationRequirements(array $value) : void</code>
+      <code>public function GetEstimatedSalary() : array</code>
+      <code>public function SetEstimatedSalary(array $value) : void</code>
+      <code>public function GetExperienceRequirements() : array</code>
+      <code>public function SetExperienceRequirements(array $value) : void</code>
+      <code>public function GetOccupationLocation() : array</code>
+      <code>public function SetOccupationLocation(array $value) : void</code>
+      <code>public function GetOccupationalCategory() : array</code>
+      <code>public function SetOccupationalCategory(array $value) : void</code>
+      <code>public function GetQualifications() : array</code>
+      <code>public function SetQualifications(array $value) : void</code>
+      <code>public function GetResponsibilities() : array</code>
+      <code>public function SetResponsibilities(array $value) : void</code>
+      <code>public function GetSkills() : array</code>
+      <code>public function SetSkills(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\ProgramMembership.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetHostingOrganization() : array</code>
+      <code>public function SetHostingOrganization(array $value) : void</code>
+      <code>public function GetMembershipNumber() : array</code>
+      <code>public function SetMembershipNumber(array $value) : void</code>
+      <code>public function GetProgramName() : array</code>
+      <code>public function SetProgramName(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Rating.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetBestRating() : array</code>
+      <code>public function SetBestRating(array $value) : void</code>
+      <code>public function GetRatingValue() : array</code>
+      <code>public function SetRatingValue(array $value) : void</code>
+      <code>public function GetWorstRating() : array</code>
+      <code>public function SetWorstRating(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Rating\AggregateRating.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetRatingCount() : array</code>
+      <code>public function SetRatingCount(array $value) : void</code>
+      <code>public function GetReviewCount() : array</code>
+      <code>public function SetReviewCount(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Service.php">
+    <PossiblyUnusedMethod occurrences="12">
+      <code>public function GetAvailableChannel() : array</code>
+      <code>public function SetAvailableChannel(array $value) : void</code>
+      <code>public function GetBroker() : array</code>
+      <code>public function SetBroker(array $value) : void</code>
+      <code>public function GetProviderMobility() : array</code>
+      <code>public function SetProviderMobility(array $value) : void</code>
+      <code>public function GetServiceOutput() : array</code>
+      <code>public function SetServiceOutput(array $value) : void</code>
+      <code>public function GetServiceType() : array</code>
+      <code>public function SetServiceType(array $value) : void</code>
+      <code>public function GetTermsOfService() : array</code>
+      <code>public function SetTermsOfService(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\ServiceChannel.php">
+    <PossiblyUnusedMethod occurrences="14">
+      <code>public function GetProcessingTime() : array</code>
+      <code>public function SetProcessingTime(array $value) : void</code>
+      <code>public function GetProvidesService() : array</code>
+      <code>public function SetProvidesService(array $value) : void</code>
+      <code>public function GetServiceLocation() : array</code>
+      <code>public function SetServiceLocation(array $value) : void</code>
+      <code>public function GetServicePhone() : array</code>
+      <code>public function SetServicePhone(array $value) : void</code>
+      <code>public function GetServicePostalAddress() : array</code>
+      <code>public function SetServicePostalAddress(array $value) : void</code>
+      <code>public function GetServiceSmsNumber() : array</code>
+      <code>public function SetServiceSmsNumber(array $value) : void</code>
+      <code>public function GetServiceUrl() : array</code>
+      <code>public function SetServiceUrl(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Service\BroadcastService.php">
+    <PossiblyUnusedMethod occurrences="16">
+      <code>public function GetBroadcastAffiliateOf() : array</code>
+      <code>public function SetBroadcastAffiliateOf(array $value) : void</code>
+      <code>public function GetBroadcastDisplayName() : array</code>
+      <code>public function SetBroadcastDisplayName(array $value) : void</code>
+      <code>public function GetBroadcastFrequency() : array</code>
+      <code>public function SetBroadcastFrequency(array $value) : void</code>
+      <code>public function GetBroadcastTimezone() : array</code>
+      <code>public function SetBroadcastTimezone(array $value) : void</code>
+      <code>public function GetBroadcaster() : array</code>
+      <code>public function SetBroadcaster(array $value) : void</code>
+      <code>public function GetHasBroadcastChannel() : array</code>
+      <code>public function SetHasBroadcastChannel(array $value) : void</code>
+      <code>public function GetParentService() : array</code>
+      <code>public function SetParentService(array $value) : void</code>
+      <code>public function GetVideoFormat() : array</code>
+      <code>public function SetVideoFormat(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Service\FinancialProduct.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetAnnualPercentageRate() : array</code>
+      <code>public function SetAnnualPercentageRate(array $value) : void</code>
+      <code>public function GetFeesAndCommissionsSpecification() : array</code>
+      <code>public function SetFeesAndCommissionsSpecification(array $value) : void</code>
+      <code>public function GetInterestRate() : array</code>
+      <code>public function SetInterestRate(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Service\FinancialProduct\LoanOrCredit.php">
+    <PossiblyUnusedMethod occurrences="16">
+      <code>public function GetAmount() : array</code>
+      <code>public function SetAmount(array $value) : void</code>
+      <code>public function GetGracePeriod() : array</code>
+      <code>public function SetGracePeriod(array $value) : void</code>
+      <code>public function GetLoanRepaymentForm() : array</code>
+      <code>public function SetLoanRepaymentForm(array $value) : void</code>
+      <code>public function GetLoanTerm() : array</code>
+      <code>public function SetLoanTerm(array $value) : void</code>
+      <code>public function GetLoanType() : array</code>
+      <code>public function SetLoanType(array $value) : void</code>
+      <code>public function GetRecourseLoan() : array</code>
+      <code>public function SetRecourseLoan(array $value) : void</code>
+      <code>public function GetRenegotiableLoan() : array</code>
+      <code>public function SetRenegotiableLoan(array $value) : void</code>
+      <code>public function GetRequiredCollateral() : array</code>
+      <code>public function SetRequiredCollateral(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\SpeakableSpecification.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetCssSelector() : array</code>
+      <code>public function SetCssSelector(array $value) : void</code>
+      <code>public function GetXpath() : array</code>
+      <code>public function SetXpath(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\ContactPoint.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetContactOption() : array</code>
+      <code>public function SetContactOption(array $value) : void</code>
+      <code>public function GetContactType() : array</code>
+      <code>public function SetContactType(array $value) : void</code>
+      <code>public function GetProductSupported() : array</code>
+      <code>public function SetProductSupported(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\ContactPoint\PostalAddress.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetAddressLocality() : array</code>
+      <code>public function SetAddressLocality(array $value) : void</code>
+      <code>public function GetAddressRegion() : array</code>
+      <code>public function SetAddressRegion(array $value) : void</code>
+      <code>public function GetPostOfficeBoxNumber() : array</code>
+      <code>public function SetPostOfficeBoxNumber(array $value) : void</code>
+      <code>public function GetStreetAddress() : array</code>
+      <code>public function SetStreetAddress(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\InteractionCounter.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetInteractionService() : array</code>
+      <code>public function SetInteractionService(array $value) : void</code>
+      <code>public function GetInteractionType() : array</code>
+      <code>public function SetInteractionType(array $value) : void</code>
+      <code>public function GetUserInteractionCount() : array</code>
+      <code>public function SetUserInteractionCount(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\OpeningHoursSpecification.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetCloses() : array</code>
+      <code>public function SetCloses(array $value) : void</code>
+      <code>public function GetDayOfWeek() : array</code>
+      <code>public function SetDayOfWeek(array $value) : void</code>
+      <code>public function GetOpens() : array</code>
+      <code>public function SetOpens(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\OwnershipInfo.php">
+    <PossiblyUnusedMethod occurrences="8">
+      <code>public function GetAcquiredFrom() : array</code>
+      <code>public function SetAcquiredFrom(array $value) : void</code>
+      <code>public function GetOwnedFrom() : array</code>
+      <code>public function SetOwnedFrom(array $value) : void</code>
+      <code>public function GetOwnedThrough() : array</code>
+      <code>public function SetOwnedThrough(array $value) : void</code>
+      <code>public function GetTypeOfGood() : array</code>
+      <code>public function SetTypeOfGood(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\PriceSpecification.php">
+    <PossiblyUnusedMethod occurrences="14">
+      <code>public function GetEligibleQuantity() : array</code>
+      <code>public function SetEligibleQuantity(array $value) : void</code>
+      <code>public function GetEligibleTransactionVolume() : array</code>
+      <code>public function SetEligibleTransactionVolume(array $value) : void</code>
+      <code>public function GetMaxPrice() : array</code>
+      <code>public function SetMaxPrice(array $value) : void</code>
+      <code>public function GetMinPrice() : array</code>
+      <code>public function SetMinPrice(array $value) : void</code>
+      <code>public function GetPrice() : array</code>
+      <code>public function SetPrice(array $value) : void</code>
+      <code>public function GetPriceCurrency() : array</code>
+      <code>public function SetPriceCurrency(array $value) : void</code>
+      <code>public function GetValueAddedTaxIncluded() : array</code>
+      <code>public function SetValueAddedTaxIncluded(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\PropertyValue.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetPropertyID() : array</code>
+      <code>public function SetPropertyID(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\RepaymentSpecification.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetDownPayment() : array</code>
+      <code>public function SetDownPayment(array $value) : void</code>
+      <code>public function GetEarlyPrepaymentPenalty() : array</code>
+      <code>public function SetEarlyPrepaymentPenalty(array $value) : void</code>
+      <code>public function GetLoanPaymentAmount() : array</code>
+      <code>public function SetLoanPaymentAmount(array $value) : void</code>
+      <code>public function GetLoanPaymentFrequency() : array</code>
+      <code>public function SetLoanPaymentFrequency(array $value) : void</code>
+      <code>public function GetNumberOfLoanPayments() : array</code>
+      <code>public function SetNumberOfLoanPayments(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\TypeAndQuantityNode.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetAmountOfThisGood() : array</code>
+      <code>public function SetAmountOfThisGood(array $value) : void</code>
+      <code>public function GetBusinessFunction() : array</code>
+      <code>public function SetBusinessFunction(array $value) : void</code>
+      <code>public function GetTypeOfGood() : array</code>
+      <code>public function SetTypeOfGood(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\StructuredValue\WarrantyPromise.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetDurationOfWarranty() : array</code>
+      <code>public function SetDurationOfWarranty(array $value) : void</code>
+      <code>public function GetWarrantyScope() : array</code>
+      <code>public function SetWarrantyScope(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Intangible\Trip.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetArrivalTime() : array</code>
+      <code>public function SetArrivalTime(array $value) : void</code>
+      <code>public function GetDepartureTime() : array</code>
+      <code>public function SetDepartureTime(array $value) : void</code>
+      <code>public function GetItinerary() : array</code>
+      <code>public function SetItinerary(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Offer.php">
+    <PossiblyUnusedMethod occurrences="10">
+      <code>public function GetAddOn() : array</code>
+      <code>public function SetAddOn(array $value) : void</code>
+      <code>public function GetOfferedBy() : array</code>
+      <code>public function SetOfferedBy(array $value) : void</code>
+      <code>public function GetPrice() : array</code>
+      <code>public function SetPrice(array $value) : void</code>
+      <code>public function GetPriceCurrency() : array</code>
+      <code>public function SetPriceCurrency(array $value) : void</code>
+      <code>public function GetPriceValidUntil() : array</code>
+      <code>public function SetPriceValidUntil(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Organization.php">
+    <PossiblyUnusedMethod occurrences="38">
+      <code>public function GetActionableFeedbackPolicy() : array</code>
+      <code>public function SetActionableFeedbackPolicy(array $value) : void</code>
+      <code>public function GetAlumni() : array</code>
+      <code>public function SetAlumni(array $value) : void</code>
+      <code>public function GetCorrectionsPolicy() : array</code>
+      <code>public function SetCorrectionsPolicy(array $value) : void</code>
+      <code>public function GetDepartment() : array</code>
+      <code>public function SetDepartment(array $value) : void</code>
+      <code>public function GetDissolutionDate() : array</code>
+      <code>public function SetDissolutionDate(array $value) : void</code>
+      <code>public function GetDiversityPolicy() : array</code>
+      <code>public function SetDiversityPolicy(array $value) : void</code>
+      <code>public function GetDiversityStaffingReport() : array</code>
+      <code>public function SetDiversityStaffingReport(array $value) : void</code>
+      <code>public function GetEmployee() : array</code>
+      <code>public function SetEmployee(array $value) : void</code>
+      <code>public function GetEthicsPolicy() : array</code>
+      <code>public function SetEthicsPolicy(array $value) : void</code>
+      <code>public function GetFounder() : array</code>
+      <code>public function SetFounder(array $value) : void</code>
+      <code>public function GetFoundingDate() : array</code>
+      <code>public function SetFoundingDate(array $value) : void</code>
+      <code>public function GetFoundingLocation() : array</code>
+      <code>public function SetFoundingLocation(array $value) : void</code>
+      <code>public function GetLegalName() : array</code>
+      <code>public function SetLegalName(array $value) : void</code>
+      <code>public function GetLeiCode() : array</code>
+      <code>public function SetLeiCode(array $value) : void</code>
+      <code>public function GetNumberOfEmployees() : array</code>
+      <code>public function SetNumberOfEmployees(array $value) : void</code>
+      <code>public function GetOwnershipFundingInfo() : array</code>
+      <code>public function SetOwnershipFundingInfo(array $value) : void</code>
+      <code>public function GetParentOrganization() : array</code>
+      <code>public function SetParentOrganization(array $value) : void</code>
+      <code>public function GetSubOrganization() : array</code>
+      <code>public function SetSubOrganization(array $value) : void</code>
+      <code>public function GetUnnamedSourcesPolicy() : array</code>
+      <code>public function SetUnnamedSourcesPolicy(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Organization\PerformingGroup\MusicGroup.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetAlbum() : array</code>
+      <code>public function SetAlbum(array $value) : void</code>
+      <code>public function GetTrack() : array</code>
+      <code>public function SetTrack(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Person.php">
+    <PossiblyUnusedMethod occurrences="58">
+      <code>public function GetAdditionalName() : array</code>
+      <code>public function SetAdditionalName(array $value) : void</code>
+      <code>public function GetAffiliation() : array</code>
+      <code>public function SetAffiliation(array $value) : void</code>
+      <code>public function GetAlumniOf() : array</code>
+      <code>public function SetAlumniOf(array $value) : void</code>
+      <code>public function GetBirthDate() : array</code>
+      <code>public function SetBirthDate(array $value) : void</code>
+      <code>public function GetBirthPlace() : array</code>
+      <code>public function SetBirthPlace(array $value) : void</code>
+      <code>public function GetChildren() : array</code>
+      <code>public function SetChildren(array $value) : void</code>
+      <code>public function GetColleague() : array</code>
+      <code>public function SetColleague(array $value) : void</code>
+      <code>public function GetDeathDate() : array</code>
+      <code>public function SetDeathDate(array $value) : void</code>
+      <code>public function GetDeathPlace() : array</code>
+      <code>public function SetDeathPlace(array $value) : void</code>
+      <code>public function GetFamilyName() : array</code>
+      <code>public function SetFamilyName(array $value) : void</code>
+      <code>public function GetFollows() : array</code>
+      <code>public function SetFollows(array $value) : void</code>
+      <code>public function GetGender() : array</code>
+      <code>public function SetGender(array $value) : void</code>
+      <code>public function GetGivenName() : array</code>
+      <code>public function SetGivenName(array $value) : void</code>
+      <code>public function GetHasOccupation() : array</code>
+      <code>public function SetHasOccupation(array $value) : void</code>
+      <code>public function GetHomeLocation() : array</code>
+      <code>public function SetHomeLocation(array $value) : void</code>
+      <code>public function GetHonorificPrefix() : array</code>
+      <code>public function SetHonorificPrefix(array $value) : void</code>
+      <code>public function GetHonorificSuffix() : array</code>
+      <code>public function SetHonorificSuffix(array $value) : void</code>
+      <code>public function GetJobTitle() : array</code>
+      <code>public function SetJobTitle(array $value) : void</code>
+      <code>public function GetKnows() : array</code>
+      <code>public function SetKnows(array $value) : void</code>
+      <code>public function GetNationality() : array</code>
+      <code>public function SetNationality(array $value) : void</code>
+      <code>public function GetNetWorth() : array</code>
+      <code>public function SetNetWorth(array $value) : void</code>
+      <code>public function GetParent() : array</code>
+      <code>public function SetParent(array $value) : void</code>
+      <code>public function GetPerformerIn() : array</code>
+      <code>public function SetPerformerIn(array $value) : void</code>
+      <code>public function GetRelatedTo() : array</code>
+      <code>public function SetRelatedTo(array $value) : void</code>
+      <code>public function GetSibling() : array</code>
+      <code>public function SetSibling(array $value) : void</code>
+      <code>public function GetSpouse() : array</code>
+      <code>public function SetSpouse(array $value) : void</code>
+      <code>public function GetWeight() : array</code>
+      <code>public function SetWeight(array $value) : void</code>
+      <code>public function GetWorkLocation() : array</code>
+      <code>public function SetWorkLocation(array $value) : void</code>
+      <code>public function GetWorksFor() : array</code>
+      <code>public function SetWorksFor(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Place.php">
+    <PossiblyUnusedMethod occurrences="24">
+      <code>public function GetAmenityFeature() : array</code>
+      <code>public function SetAmenityFeature(array $value) : void</code>
+      <code>public function GetBranchCode() : array</code>
+      <code>public function SetBranchCode(array $value) : void</code>
+      <code>public function GetContainedInPlace() : array</code>
+      <code>public function SetContainedInPlace(array $value) : void</code>
+      <code>public function GetContainsPlace() : array</code>
+      <code>public function SetContainsPlace(array $value) : void</code>
+      <code>public function GetGeo() : array</code>
+      <code>public function SetGeo(array $value) : void</code>
+      <code>public function GetHasMap() : array</code>
+      <code>public function SetHasMap(array $value) : void</code>
+      <code>public function GetMaximumAttendeeCapacity() : array</code>
+      <code>public function SetMaximumAttendeeCapacity(array $value) : void</code>
+      <code>public function GetOpeningHoursSpecification() : array</code>
+      <code>public function SetOpeningHoursSpecification(array $value) : void</code>
+      <code>public function GetPhoto() : array</code>
+      <code>public function SetPhoto(array $value) : void</code>
+      <code>public function GetPublicAccess() : array</code>
+      <code>public function SetPublicAccess(array $value) : void</code>
+      <code>public function GetSmokingAllowed() : array</code>
+      <code>public function SetSmokingAllowed(array $value) : void</code>
+      <code>public function GetSpecialOpeningHoursSpecification() : array</code>
+      <code>public function SetSpecialOpeningHoursSpecification(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Product.php">
+    <PossiblyUnusedMethod occurrences="22">
+      <code>public function GetColor() : array</code>
+      <code>public function SetColor(array $value) : void</code>
+      <code>public function GetDepth() : array</code>
+      <code>public function SetDepth(array $value) : void</code>
+      <code>public function GetIsAccessoryOrSparePartFor() : array</code>
+      <code>public function SetIsAccessoryOrSparePartFor(array $value) : void</code>
+      <code>public function GetIsConsumableFor() : array</code>
+      <code>public function SetIsConsumableFor(array $value) : void</code>
+      <code>public function GetManufacturer() : array</code>
+      <code>public function SetManufacturer(array $value) : void</code>
+      <code>public function GetModel() : array</code>
+      <code>public function SetModel(array $value) : void</code>
+      <code>public function GetProductID() : array</code>
+      <code>public function SetProductID(array $value) : void</code>
+      <code>public function GetProductionDate() : array</code>
+      <code>public function SetProductionDate(array $value) : void</code>
+      <code>public function GetPurchaseDate() : array</code>
+      <code>public function SetPurchaseDate(array $value) : void</code>
+      <code>public function GetReleaseDate() : array</code>
+      <code>public function SetReleaseDate(array $value) : void</code>
+      <code>public function GetWeight() : array</code>
+      <code>public function SetWeight(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Product\ProductModel.php">
+    <PossiblyUnusedMethod occurrences="6">
+      <code>public function GetIsVariantOf() : array</code>
+      <code>public function SetIsVariantOf(array $value) : void</code>
+      <code>public function GetPredecessorOf() : array</code>
+      <code>public function SetPredecessorOf(array $value) : void</code>
+      <code>public function GetSuccessorOf() : array</code>
+      <code>public function SetSuccessorOf(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\Thing.php">
+    <PossiblyUnusedMethod occurrences="26">
+      <code>public function ObtainContext() : string</code>
+      <code>public function ObtainType() : string</code>
+      <code>public function GetAdditionalType() : array</code>
+      <code>public function SetAdditionalType(array $value) : void</code>
+      <code>public function GetAlternateName() : array</code>
+      <code>public function SetAlternateName(array $value) : void</code>
+      <code>public function GetDescription() : array</code>
+      <code>public function SetDescription(array $value) : void</code>
+      <code>public function GetDisambiguatingDescription() : array</code>
+      <code>public function SetDisambiguatingDescription(array $value) : void</code>
+      <code>public function GetIdentifier() : array</code>
+      <code>public function SetIdentifier(array $value) : void</code>
+      <code>public function GetImage() : array</code>
+      <code>public function SetImage(array $value) : void</code>
+      <code>public function GetMainEntityOfPage() : array</code>
+      <code>public function SetMainEntityOfPage(array $value) : void</code>
+      <code>public function GetName() : array</code>
+      <code>public function SetName(array $value) : void</code>
+      <code>public function GetPotentialAction() : array</code>
+      <code>public function SetPotentialAction(array $value) : void</code>
+      <code>public function GetSameAs() : array</code>
+      <code>public function SetSameAs(array $value) : void</code>
+      <code>public function GetSubjectOf() : array</code>
+      <code>public function SetSubjectOf(array $value) : void</code>
+      <code>public function GetUrl() : array</code>
+      <code>public function SetUrl(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+</files>

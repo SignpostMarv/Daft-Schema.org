@@ -13,6 +13,8 @@
     </projectFiles>
 
     <issueHandlers>
-        <MixedTypeCoercion errorLevel="info" />
     </issueHandlers>
+    <plugins>
+        <pluginClass class="Psalm\PhpUnitPlugin\Plugin" />
+    </plugins>
 </psalm>

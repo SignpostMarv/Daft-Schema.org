@@ -580,8 +580,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
 
         $multi_type = static::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues();
 
-        $data = [];
-
         $array_keys = array_keys($array);
 
         foreach ($array_keys as $k) {

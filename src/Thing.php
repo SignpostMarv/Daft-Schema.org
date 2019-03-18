@@ -631,37 +631,37 @@ class Thing extends AbstractArrayBackedDaftObject implements
         array $multi_type,
         array $arr
     ) : array {
-                    return array_map(
-                        /**
-                        * @param mixed $val
-                        *
-                        * @return mixed
-                        */
-                        function ($val) use ($k, $multi_type) {
-                            if (
-                                is_array($val) &&
-                                isset($val['@context'], $val['@type'], $multi_type[$k])
-                            ) {
-                                /**
-                                * @psalm-var array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null>
-                                */
-                                $val = $val;
+        return array_map(
+            /**
+            * @param mixed $val
+            *
+            * @return mixed
+            */
+            function ($val) use ($k, $multi_type) {
+                if (
+                    is_array($val) &&
+                    isset($val['@context'], $val['@type'], $multi_type[$k])
+                ) {
+                    /**
+                    * @psalm-var array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null>
+                    */
+                    $val = $val;
 
-                                foreach ($multi_type[$k] as $maybe) {
-                                    if (
-                                        is_a($maybe, Thing::class, true) &&
-                                        $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
-                                        $val['@type'] === $maybe::SCHEMA_ORG_TYPE
-                                    ) {
-                                        return $maybe::DaftObjectFromJsonArray($val);
-                                    }
-                                }
-                            }
+                    foreach ($multi_type[$k] as $maybe) {
+                        if (
+                            is_a($maybe, Thing::class, true) &&
+                            $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
+                            $val['@type'] === $maybe::SCHEMA_ORG_TYPE
+                        ) {
+                            return $maybe::DaftObjectFromJsonArray($val);
+                        }
+                    }
+                }
 
-                            return $val;
-                        },
-                        $arr
-                    );
+                return $val;
+            },
+            $arr
+        );
     }
 
     protected function ExpectRetrievedValueIsArray(string $property) : array

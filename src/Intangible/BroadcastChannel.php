@@ -15,7 +15,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 * @property array<int, string|BroadcastFrequencySpecification> $broadcastFrequency
 * @property array<int, string> $broadcastServiceTier
 * @property array<int, string> $genre
-* @property array<int, Service\BroadcastService> $inBroadcastLineup
+* @property array<int, Service\CableOrSatelliteService> $inBroadcastLineup
 * @property array<int, Service\BroadcastService> $providesBroadcastService
 */
 class BroadcastChannel extends Base
@@ -48,7 +48,7 @@ class BroadcastChannel extends Base
             'string',
         ],
         'inBroadcastLineup' => [
-            Service\BroadcastService::class,
+            Service\CableOrSatelliteService::class,
         ],
         'providesBroadcastService' => [
             Service\BroadcastService::class,
@@ -143,12 +143,12 @@ class BroadcastChannel extends Base
     }
 
     /**
-    * @return array<int, Service\BroadcastService>
+    * @return array<int, Service\CableOrSatelliteService>
     */
     public function GetInBroadcastLineup() : array
     {
         /**
-        * @var array<int, Service\BroadcastService>
+        * @var array<int, Service\CableOrSatelliteService>
         */
         $out = TypeUtilities::ExpectRetrievedValueIsArray(
             'inBroadcastLineup',
@@ -160,7 +160,7 @@ class BroadcastChannel extends Base
     }
 
     /**
-    * @param array<int, Service\BroadcastService> $value
+    * @param array<int, Service\CableOrSatelliteService> $value
     */
     public function SetInBroadcastLineup(array $value) : void
     {

@@ -666,15 +666,15 @@ class Thing extends AbstractArrayBackedDaftObject implements
         array $multi_type,
         string $k
     ) : Thing {
-                    foreach ($multi_type[$k] as $maybe) {
-                        if (
-                            is_a($maybe, Thing::class, true) &&
-                            $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
-                            $val['@type'] === $maybe::SCHEMA_ORG_TYPE
-                        ) {
-                            return $maybe::DaftObjectFromJsonArray($val);
-                        }
-                    }
+        foreach ($multi_type[$k] as $maybe) {
+            if (
+                is_a($maybe, Thing::class, true) &&
+                $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
+                $val['@type'] === $maybe::SCHEMA_ORG_TYPE
+            ) {
+                return $maybe::DaftObjectFromJsonArray($val);
+            }
+        }
 
 
         throw new InvalidArgumentException(
@@ -685,7 +685,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
             ' as defined in Argument 2!'
         );
     }
-
 
     protected function ExpectRetrievedValueIsArray(string $property) : array
     {

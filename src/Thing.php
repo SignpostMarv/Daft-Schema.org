@@ -668,13 +668,9 @@ class Thing extends AbstractArrayBackedDaftObject implements
         string $k
     ) : Thing {
         foreach ($multi_type[$k] as $maybe) {
-            if (
-                is_a($maybe, Thing::class, true)
-            ) {
                 $lookup_class =
                     '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
                     hash('sha512', $maybe);
-
                 if (is_a($lookup_class, LookupInterface::class, true)) {
                     /**
                     * @psalm-var array<int, class-string<Thing>>
@@ -689,7 +685,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
                             return $maybe_class::DaftObjectFromJsonArray($val);
                         }
                     }
-                }
             }
         }
 

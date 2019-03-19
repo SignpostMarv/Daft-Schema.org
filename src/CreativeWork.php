@@ -689,12 +689,7 @@ class CreativeWork extends Thing
     */
     public function GetCitation() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('citation');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('citation');
     }
 
     /**
@@ -1263,12 +1258,7 @@ class CreativeWork extends Thing
     */
     public function GetLicense() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('license');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('license');
     }
 
     /**
@@ -1531,12 +1521,7 @@ class CreativeWork extends Thing
     */
     public function GetSdLicense() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('sdLicense');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('sdLicense');
     }
 
     /**

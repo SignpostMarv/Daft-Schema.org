@@ -204,12 +204,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetIdentifier() : array
     {
-        /**
-        * @var array<int, string|PropertyValue>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('identifier');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrPropertyValues('identifier');
     }
 
     /**
@@ -246,12 +241,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetMainEntityOfPage() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('mainEntityOfPage');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('mainEntityOfPage');
     }
 
     /**
@@ -680,6 +670,34 @@ class Thing extends AbstractArrayBackedDaftObject implements
     {
         /**
         * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray($property);
+
+        return $out;
+    }
+
+    /**
+    * @return array<int, string|PropertyValue>
+    */
+    protected function ExpectRetrievedValueIsArrayOfStringsOrPropertyValues(
+        string $property
+    ) : array {
+        /**
+        * @var array<int, string|PropertyValue>
+        */
+        $out = $this->ExpectRetrievedValueIsArray($property);
+
+        return $out;
+    }
+
+    /**
+    * @return array<int, string|CreativeWork>
+    */
+    protected function ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks(
+        string $property
+    ) : array {
+        /**
+        * @var array<int, string|CreativeWork>
         */
         $out = $this->ExpectRetrievedValueIsArray($property);
 

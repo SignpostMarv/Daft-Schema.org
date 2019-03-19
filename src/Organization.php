@@ -345,12 +345,7 @@ class Organization extends Thing
     */
     public function GetActionableFeedbackPolicy() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('actionableFeedbackPolicy');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('actionableFeedbackPolicy');
     }
 
     /**
@@ -387,12 +382,7 @@ class Organization extends Thing
     */
     public function GetCorrectionsPolicy() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('correctionsPolicy');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('correctionsPolicy');
     }
 
     /**
@@ -450,12 +440,7 @@ class Organization extends Thing
     */
     public function GetDiversityPolicy() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('diversityPolicy');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('diversityPolicy');
     }
 
     /**
@@ -513,12 +498,7 @@ class Organization extends Thing
     */
     public function GetEthicsPolicy() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('ethicsPolicy');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('ethicsPolicy');
     }
 
     /**
@@ -723,12 +703,7 @@ class Organization extends Thing
     */
     public function GetUnnamedSourcesPolicy() : array
     {
-        /**
-        * @var array<int, string|CreativeWork>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('unnamedSourcesPolicy');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('unnamedSourcesPolicy');
     }
 
     /**

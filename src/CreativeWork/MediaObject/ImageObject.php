@@ -52,16 +52,7 @@ class ImageObject extends MediaObject
     */
     public function GetExifData() : array
     {
-        /**
-        * @var array<int, string|PropertyValue>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'exifData',
-            $this->RetrievePropertyValueFromData('exifData'),
-            static::class
-        );
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStringsOrPropertyValues('exifData');
     }
 
     /**

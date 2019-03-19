@@ -690,7 +690,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
                         }
                     }
                 }
-
             }
         }
 

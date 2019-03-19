@@ -7,21 +7,16 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrgLookup;
 
 use CallbackFilterIterator;
-use Generator;
 use PhpParser\BuilderFactory;
-use PhpParser\Builder\Class_;
-use PhpParser\Builder\Method;
-use PhpParser\PrettyPrinter\Standard;
 use PhpParser\Node\Expr\Array_;
 use PhpParser\Node\Expr\ArrayItem;
 use PhpParser\Node\Scalar\String_;
 use PhpParser\Node\Stmt\Return_;
+use PhpParser\PrettyPrinter\Standard;
 use RecursiveCallbackFilterIterator;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use ReflectionClass;
 use ReflectionClassConstant;
-use RuntimeException;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 
 require_once(__DIR__ . '/../vendor/autoload.php');
@@ -97,7 +92,7 @@ foreach ($classes as $class_name) {
 
     $int_distance = 0;
 
-    while(is_a($checking, Thing::class, true)) {
+    while (is_a($checking, Thing::class, true)) {
         $append[] = $checking;
         $distances[$checking][$class_name] = $int_distance;
 
@@ -107,7 +102,7 @@ foreach ($classes as $class_name) {
             }
         }
 
-        $int_distance += 1;
+        ++$int_distance;
 
         /**
         * @var string
@@ -119,14 +114,14 @@ foreach ($classes as $class_name) {
 }
 
 foreach ($cache as $class_name => $cache_classes) {
-    usort($cache_classes, function(string $a, string $b) use ($class_name, $distances) : int {
+    usort($cache_classes, function (string $a, string $b) use ($class_name, $distances) : int {
         return $distances[$class_name][$b] <=> $distances[$class_name][$a];
     });
 
     $cache[$class_name] = $cache_classes;
 }
 
-uksort($cache, function (string $a, string $b) use($distances) : int {
+uksort($cache, function (string $a, string $b) use ($distances) : int {
     return $distances[Thing::class][$a] <=> $distances[Thing::class][$b];
 });
 

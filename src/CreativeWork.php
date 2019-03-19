@@ -477,12 +477,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessMode() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessMode');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessMode');
     }
 
     /**
@@ -498,12 +493,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessModeSufficient() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessModeSufficient');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessModeSufficient');
     }
 
     /**
@@ -519,12 +509,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityAPI() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessibilityAPI');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityAPI');
     }
 
     /**
@@ -540,12 +525,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityControl() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessibilityControl');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityControl');
     }
 
     /**
@@ -561,12 +541,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityFeature() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessibilityFeature');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityFeature');
     }
 
     /**
@@ -582,12 +557,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityHazard() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessibilityHazard');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityHazard');
     }
 
     /**
@@ -603,12 +573,7 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilitySummary() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('accessibilitySummary');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilitySummary');
     }
 
     /**
@@ -645,12 +610,7 @@ class CreativeWork extends Thing
     */
     public function GetAlternativeHeadline() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('alternativeHeadline');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('alternativeHeadline');
     }
 
     /**
@@ -1023,12 +983,7 @@ class CreativeWork extends Thing
     */
     public function GetDiscussionUrl() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('discussionUrl');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('discussionUrl');
     }
 
     /**
@@ -1086,12 +1041,7 @@ class CreativeWork extends Thing
     */
     public function GetEducationalUse() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('educationalUse');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('educationalUse');
     }
 
     /**
@@ -1128,12 +1078,7 @@ class CreativeWork extends Thing
     */
     public function GetEncodingFormat() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('encodingFormat');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('encodingFormat');
     }
 
     /**
@@ -1191,12 +1136,7 @@ class CreativeWork extends Thing
     */
     public function GetHeadline() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('headline');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('headline');
     }
 
     /**
@@ -1233,12 +1173,7 @@ class CreativeWork extends Thing
     */
     public function GetInteractivityType() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('interactivityType');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('interactivityType');
     }
 
     /**
@@ -1296,12 +1231,7 @@ class CreativeWork extends Thing
     */
     public function GetKeywords() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('keywords');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('keywords');
     }
 
     /**
@@ -1317,12 +1247,7 @@ class CreativeWork extends Thing
     */
     public function GetLearningResourceType() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('learningResourceType');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('learningResourceType');
     }
 
     /**
@@ -1569,12 +1494,7 @@ class CreativeWork extends Thing
     */
     public function GetSchemaVersion() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('schemaVersion');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('schemaVersion');
     }
 
     /**
@@ -1716,12 +1636,7 @@ class CreativeWork extends Thing
     */
     public function GetText() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('text');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('text');
     }
 
     /**
@@ -1737,12 +1652,7 @@ class CreativeWork extends Thing
     */
     public function GetThumbnailUrl() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('thumbnailUrl');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('thumbnailUrl');
     }
 
     /**

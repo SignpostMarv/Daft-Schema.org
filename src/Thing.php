@@ -140,12 +140,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetAdditionalType() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('additionalType');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('additionalType');
     }
 
     /**
@@ -161,12 +156,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetAlternateName() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('alternateName');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('alternateName');
     }
 
     /**
@@ -182,12 +172,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetDescription() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('description');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('description');
     }
 
     /**
@@ -203,12 +188,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetDisambiguatingDescription() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('disambiguatingDescription');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('disambiguatingDescription');
     }
 
     /**
@@ -287,12 +267,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetName() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('name');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('name');
     }
 
     /**
@@ -329,12 +304,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetSameAs() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('sameAs');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('sameAs');
     }
 
     /**
@@ -371,12 +341,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function GetUrl() : array
     {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('url');
-
-        return $out;
+        return $this->ExpectRetrievedValueIsArrayOfStrings('url');
     }
 
     /**
@@ -706,6 +671,19 @@ class Thing extends AbstractArrayBackedDaftObject implements
             $this->RetrievePropertyValueFromData($property),
             static::class
         );
+    }
+
+    /**
+    * @return array<int, string>
+    */
+    protected function ExpectRetrievedValueIsArrayOfStrings(string $property) : array
+    {
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArrayOfStrings($property);
+
+        return $out;
     }
 
     /**

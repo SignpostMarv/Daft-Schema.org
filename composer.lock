@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c95abb38ceb7dbe31f7507d464d3917",
+    "content-hash": "9c5f758339e9ca102accfd1a43121b73",
     "packages": [
         {
             "name": "signpostmarv/daft-magic-property-analysis",
@@ -4827,6 +4827,7 @@
     "platform": {
         "php": "^7.1",
         "ext-ctype": "*",
+        "ext-hash": "*",
         "ext-json": "*",
         "ext-mbstring": "*"
     },

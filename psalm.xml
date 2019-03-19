@@ -10,6 +10,8 @@
         <file name=".php_cs.dist" />
         <directory name="src" />
         <directory name="Tests" />
+        <directory name="bin" />
+        <directory name="SchemaOrgLookup" />
     </projectFiles>
 
     <issueHandlers>

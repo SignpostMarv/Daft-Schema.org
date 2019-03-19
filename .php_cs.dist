@@ -12,4 +12,6 @@ return ConfigUsedWithStaticAnalysisWithoutNullableReturn::createWithPaths(...[
     __FILE__,
     (__DIR__ . '/src/'),
     (__DIR__ . '/Tests/'),
+    (__DIR__ . '/bin/'),
+    (__DIR__ . '/SchemaOrgLookup/'),
 ]);

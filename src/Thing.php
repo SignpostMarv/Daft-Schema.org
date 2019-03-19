@@ -13,6 +13,7 @@ use SignpostMarv\DaftObject\DaftObjectHasPropertiesWithMultiTypedArraysOfUniqueV
 use SignpostMarv\DaftObject\JsonTypeUtilities;
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MediaObject\ImageObject;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PropertyValue;
+use SignpostMarv\DaftObject\SchemaOrgLookup\LookupInterface;
 
 /**
 * @property array<int, string> $additionalType
@@ -668,11 +669,28 @@ class Thing extends AbstractArrayBackedDaftObject implements
     ) : Thing {
         foreach ($multi_type[$k] as $maybe) {
             if (
-                is_a($maybe, Thing::class, true) &&
-                $val['@context'] === $maybe::SCHEMA_ORG_CONTEXT &&
-                $val['@type'] === $maybe::SCHEMA_ORG_TYPE
+                is_a($maybe, Thing::class, true)
             ) {
-                return $maybe::DaftObjectFromJsonArray($val);
+                $lookup_class =
+                    '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
+                    hash('sha512', $maybe);
+
+                if (is_a($lookup_class, LookupInterface::class, true)) {
+                    /**
+                    * @psalm-var array<int, class-string<Thing>>
+                    */
+                    $maybe_classes = $lookup_class::ObtainClasses();
+
+                    foreach ($maybe_classes as $maybe_class) {
+                        if (
+                            $val['@context'] === $maybe_class::SCHEMA_ORG_CONTEXT &&
+                            $val['@type'] === $maybe_class::SCHEMA_ORG_TYPE
+                        ) {
+                            return $maybe_class::DaftObjectFromJsonArray($val);
+                        }
+                    }
+                }
+
             }
         }
 

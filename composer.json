@@ -10,7 +10,8 @@
     ],
     "autoload": {
         "psr-4": {
-            "SignpostMarv\\DaftObject\\SchemaOrg\\": "./src/"
+            "SignpostMarv\\DaftObject\\SchemaOrg\\": "./src/",
+            "SignpostMarv\\DaftObject\\SchemaOrgLookup\\": "./SchemaOrgLookup/"
         }
     },
     "autoload-dev": {
@@ -20,6 +21,7 @@
                 "./vendor/signpostmarv/daft-object/tests-src/"
             ],
             "SignpostMarv\\DaftObject\\SchemaOrg\\Tests\\": "./Tests/",
+            "SignpostMarv\\DaftObject\\SchemaOrgLookup\\": "./bin/",
             "SignpostMarv\\DaftObject\\Tests\\": [
                 "./vendor/signpostmarv/daft-object/Tests/"
             ]
@@ -38,8 +40,12 @@
             "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-html ./phpunit/",
             "@tests"
         ],
+        "sync-lookup": [
+            "php ./bin/SyncLookup.php",
+            "php-cs-fixer fix --verbose --allow-risky=yes ./SchemaOrgLookup/"
+        ],
         "tests": [
-            "phpstan analyse -c ./phpstan.neon .php_cs.dist ./src/ ./Tests/",
+            "phpstan analyse -c ./phpstan.neon .php_cs.dist ./src/ ./Tests/ ./bin/ ./SchemaOrgLookup/",
             "psalm --find-dead-code --show-info=false",
             "phpcpd ./src/ ./Tests/",
             "phpmnd ./ --exclude=./phpdoc/ --exclude=./phpunit/ --exclude=./vendor/ --non-zero-exit-on-violation --hint",
@@ -50,12 +56,14 @@
     "require": {
         "php": "^7.1",
         "ext-ctype": "*",
+        "ext-hash": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
         "signpostmarv/daft-object": "^2.3,>=2.3.2"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.1",
+        "nikic/php-parser": "^4.2",
         "phpstan/phpstan": "^0.11.4",
         "phpstan/phpstan-phpunit": "^0.11.0",
         "phpstan/phpstan-strict-rules": "^0.11.0",

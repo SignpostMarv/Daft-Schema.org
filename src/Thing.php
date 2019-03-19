@@ -681,7 +681,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         /**
         * @var array<int, string>
         */
-        $out = $this->ExpectRetrievedValueIsArrayOfStrings($property);
+        $out = $this->ExpectRetrievedValueIsArray($property);
 
         return $out;
     }

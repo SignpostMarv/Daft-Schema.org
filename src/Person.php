@@ -106,6 +106,7 @@ class Person extends Thing
     use DaftObjectTraits\HasTaxID;
     use DaftObjectTraits\HasTelephone;
     use DaftObjectTraits\HasVatID;
+    use DaftObjectTraits\Weight;
 
     const SCHEMA_ORG_TYPE = 'Person';
 
@@ -890,27 +891,6 @@ class Person extends Thing
     public function SetSpouse(array $value) : void
     {
         $this->NudgePropertyValue('spouse', $value);
-    }
-
-    /**
-    * @return array<int, QuantitativeValue>
-    */
-    public function GetWeight() : array
-    {
-        /**
-        * @var array<int, QuantitativeValue>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('weight');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, QuantitativeValue> $value
-    */
-    public function SetWeight(array $value) : void
-    {
-        $this->NudgePropertyValue('weight', $value);
     }
 
     /**

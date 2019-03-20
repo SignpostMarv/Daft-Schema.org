@@ -1244,8 +1244,7 @@
     </UnusedClass>
   </file>
   <file src="Tests\DaftObjectSchemaOrg\DaftObjectFuzzingTest.php">
-    <MixedTypeCoercion occurrences="4">
-      <code>Generator</code>
+    <MixedTypeCoercion occurrences="3">
       <code>Generator</code>
       <code>Generator</code>
     </MixedTypeCoercion>
@@ -1286,7 +1285,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\CreativeWork.php">
-    <PossiblyUnusedMethod occurrences="134">
+    <PossiblyUnusedMethod occurrences="126">
       <code>public function GetAccessMode() : array</code>
       <code>public function SetAccessMode(array $value) : void</code>
       <code>public function GetAccessModeSufficient() : array</code>
@@ -1323,8 +1322,6 @@
       <code>public function SetContentRating(array $value) : void</code>
       <code>public function GetContentReferenceTime() : array</code>
       <code>public function SetContentReferenceTime(array $value) : void</code>
-      <code>public function GetContributor() : array</code>
-      <code>public function SetContributor(array $value) : void</code>
       <code>public function GetCopyrightHolder() : array</code>
       <code>public function SetCopyrightHolder(array $value) : void</code>
       <code>public function GetCopyrightYear() : array</code>
@@ -1333,10 +1330,6 @@
       <code>public function SetCorrection(array $value) : void</code>
       <code>public function GetCreator() : array</code>
       <code>public function SetCreator(array $value) : void</code>
-      <code>public function GetDateCreated() : array</code>
-      <code>public function SetDateCreated(array $value) : void</code>
-      <code>public function GetDateModified() : array</code>
-      <code>public function SetDateModified(array $value) : void</code>
       <code>public function GetDatePublished() : array</code>
       <code>public function SetDatePublished(array $value) : void</code>
       <code>public function GetDiscussionUrl() : array</code>
@@ -1377,8 +1370,6 @@
       <code>public function SetMainEntity(array $value) : void</code>
       <code>public function GetMentions() : array</code>
       <code>public function SetMentions(array $value) : void</code>
-      <code>public function GetPosition() : array</code>
-      <code>public function SetPosition(array $value) : void</code>
       <code>public function GetProducer() : array</code>
       <code>public function SetProducer(array $value) : void</code>
       <code>public function GetPublication() : array</code>
@@ -1558,23 +1549,19 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\CreativeWork\MusicPlaylist.php">
-    <PossiblyUnusedMethod occurrences="4">
+    <PossiblyUnusedMethod occurrences="2">
       <code>public function GetNumTracks() : array</code>
       <code>public function SetNumTracks(array $value) : void</code>
-      <code>public function GetTrack() : array</code>
-      <code>public function SetTrack(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\CreativeWork\MusicPlaylist\MusicAlbum.php">
-    <PossiblyUnusedMethod occurrences="8">
+    <PossiblyUnusedMethod occurrences="6">
       <code>public function GetAlbumProductionType() : array</code>
       <code>public function SetAlbumProductionType(array $value) : void</code>
       <code>public function GetAlbumRelease() : array</code>
       <code>public function SetAlbumRelease(array $value) : void</code>
       <code>public function GetAlbumReleaseType() : array</code>
       <code>public function SetAlbumReleaseType(array $value) : void</code>
-      <code>public function GetByArtist() : array</code>
-      <code>public function SetByArtist(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\CreativeWork\MusicPlaylist\MusicRelease.php">
@@ -1592,9 +1579,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\CreativeWork\MusicRecording.php">
-    <PossiblyUnusedMethod occurrences="10">
-      <code>public function GetByArtist() : array</code>
-      <code>public function SetByArtist(array $value) : void</code>
+    <PossiblyUnusedMethod occurrences="8">
       <code>public function GetInAlbum() : array</code>
       <code>public function SetInAlbum(array $value) : void</code>
       <code>public function GetInPlaylist() : array</code>
@@ -1725,10 +1710,22 @@
       <code>public function SetAvailableLanguage(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src\DaftObjectTraits\BroadcastFrequency.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetBroadcastFrequency() : array</code>
+      <code>public function SetBroadcastFrequency(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="src\DaftObjectTraits\BusinessFunction.php">
     <PossiblyUnusedMethod occurrences="2">
       <code>public function GetBusinessFunction() : array</code>
       <code>public function SetBusinessFunction(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\ByArtist.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetByArtist() : array</code>
+      <code>public function SetByArtist(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\DaftObjectTraits\Composer.php">
@@ -1737,10 +1734,24 @@
       <code>public function SetComposer(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src\DaftObjectTraits\Contributor.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetContributor() : array</code>
+      <code>public function SetContributor(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="src\DaftObjectTraits\Currency.php">
     <PossiblyUnusedMethod occurrences="2">
       <code>public function GetCurrency() : array</code>
       <code>public function SetCurrency(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\DateCreatedModified.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetDateCreated() : array</code>
+      <code>public function SetDateCreated(array $value) : void</code>
+      <code>public function GetDateModified() : array</code>
+      <code>public function SetDateModified(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\DaftObjectTraits\DeliveryLeadTime.php">
@@ -2235,10 +2246,42 @@
       <code>public function SetIssn(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src\DaftObjectTraits\Item.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetItem() : array</code>
+      <code>public function SetItem(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\MaximumAttendeeCapacity.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetMaximumAttendeeCapacity() : array</code>
+      <code>public function SetMaximumAttendeeCapacity(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="src\DaftObjectTraits\MeasurementTechnique.php">
     <PossiblyUnusedMethod occurrences="2">
       <code>public function GetMeasurementTechnique() : array</code>
       <code>public function SetMeasurementTechnique(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Position.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetPosition() : array</code>
+      <code>public function SetPosition(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\PricePriceCurrency.php">
+    <PossiblyUnusedMethod occurrences="4">
+      <code>public function GetPrice() : array</code>
+      <code>public function SetPrice(array $value) : void</code>
+      <code>public function GetPriceCurrency() : array</code>
+      <code>public function SetPriceCurrency(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Track.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTrack() : array</code>
+      <code>public function SetTrack(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\DaftObjectTraits\TraitAdditionalProperty.php">
@@ -2253,12 +2296,24 @@
       <code>public function SetValueReference(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
+  <file src="src\DaftObjectTraits\TypeOfGood.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetTypeOfGood() : array</code>
+      <code>public function SetTypeOfGood(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
   <file src="src\DaftObjectTraits\UpDownVoteCount.php">
     <PossiblyUnusedMethod occurrences="4">
       <code>public function GetDownvoteCount() : array</code>
       <code>public function SetDownvoteCount(array $value) : void</code>
       <code>public function GetUpvoteCount() : array</code>
       <code>public function SetUpvoteCount(array $value) : void</code>
+    </PossiblyUnusedMethod>
+  </file>
+  <file src="src\DaftObjectTraits\Weight.php">
+    <PossiblyUnusedMethod occurrences="2">
+      <code>public function GetWeight() : array</code>
+      <code>public function SetWeight(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\DataTypes\DataType\Text\CssSelectorType.php">
@@ -2277,19 +2332,15 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Event.php">
-    <PossiblyUnusedMethod occurrences="32">
+    <PossiblyUnusedMethod occurrences="28">
       <code>public function GetAttendee() : array</code>
       <code>public function SetAttendee(array $value) : void</code>
-      <code>public function GetContributor() : array</code>
-      <code>public function SetContributor(array $value) : void</code>
       <code>public function GetDoorTime() : array</code>
       <code>public function SetDoorTime(array $value) : void</code>
       <code>public function GetEndDate() : array</code>
       <code>public function SetEndDate(array $value) : void</code>
       <code>public function GetEventStatus() : array</code>
       <code>public function SetEventStatus(array $value) : void</code>
-      <code>public function GetMaximumAttendeeCapacity() : array</code>
-      <code>public function SetMaximumAttendeeCapacity(array $value) : void</code>
       <code>public function GetOrganizer() : array</code>
       <code>public function SetOrganizer(array $value) : void</code>
       <code>public function GetPerformer() : array</code>
@@ -2355,11 +2406,9 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\BroadcastChannel.php">
-    <PossiblyUnusedMethod occurrences="10">
+    <PossiblyUnusedMethod occurrences="8">
       <code>public function GetBroadcastChannelId() : array</code>
       <code>public function SetBroadcastChannelId(array $value) : void</code>
-      <code>public function GetBroadcastFrequency() : array</code>
-      <code>public function SetBroadcastFrequency(array $value) : void</code>
       <code>public function GetBroadcastServiceTier() : array</code>
       <code>public function SetBroadcastServiceTier(array $value) : void</code>
       <code>public function GetInBroadcastLineup() : array</code>
@@ -2375,15 +2424,9 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\DataFeedItem.php">
-    <PossiblyUnusedMethod occurrences="8">
-      <code>public function GetDateCreated() : array</code>
-      <code>public function SetDateCreated(array $value) : void</code>
+    <PossiblyUnusedMethod occurrences="2">
       <code>public function GetDateDeleted() : array</code>
       <code>public function SetDateDeleted(array $value) : void</code>
-      <code>public function GetDateModified() : array</code>
-      <code>public function SetDateModified(array $value) : void</code>
-      <code>public function GetItem() : array</code>
-      <code>public function SetItem(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\EntryPoint.php">
@@ -2439,13 +2482,9 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\ListItem.php">
-    <PossiblyUnusedMethod occurrences="8">
-      <code>public function GetItem() : array</code>
-      <code>public function SetItem(array $value) : void</code>
+    <PossiblyUnusedMethod occurrences="4">
       <code>public function GetNextItem() : array</code>
       <code>public function SetNextItem(array $value) : void</code>
-      <code>public function GetPosition() : array</code>
-      <code>public function SetPosition(array $value) : void</code>
       <code>public function GetPreviousItem() : array</code>
       <code>public function SetPreviousItem(array $value) : void</code>
     </PossiblyUnusedMethod>
@@ -2541,13 +2580,11 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\Service\BroadcastService.php">
-    <PossiblyUnusedMethod occurrences="16">
+    <PossiblyUnusedMethod occurrences="14">
       <code>public function GetBroadcastAffiliateOf() : array</code>
       <code>public function SetBroadcastAffiliateOf(array $value) : void</code>
       <code>public function GetBroadcastDisplayName() : array</code>
       <code>public function SetBroadcastDisplayName(array $value) : void</code>
-      <code>public function GetBroadcastFrequency() : array</code>
-      <code>public function SetBroadcastFrequency(array $value) : void</code>
       <code>public function GetBroadcastTimezone() : array</code>
       <code>public function SetBroadcastTimezone(array $value) : void</code>
       <code>public function GetBroadcaster() : array</code>
@@ -2653,7 +2690,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\StructuredValue\PriceSpecification.php">
-    <PossiblyUnusedMethod occurrences="14">
+    <PossiblyUnusedMethod occurrences="10">
       <code>public function GetEligibleQuantity() : array</code>
       <code>public function SetEligibleQuantity(array $value) : void</code>
       <code>public function GetEligibleTransactionVolume() : array</code>
@@ -2662,10 +2699,6 @@
       <code>public function SetMaxPrice(array $value) : void</code>
       <code>public function GetMinPrice() : array</code>
       <code>public function SetMinPrice(array $value) : void</code>
-      <code>public function GetPrice() : array</code>
-      <code>public function SetPrice(array $value) : void</code>
-      <code>public function GetPriceCurrency() : array</code>
-      <code>public function SetPriceCurrency(array $value) : void</code>
       <code>public function GetValueAddedTaxIncluded() : array</code>
       <code>public function SetValueAddedTaxIncluded(array $value) : void</code>
     </PossiblyUnusedMethod>
@@ -2691,13 +2724,11 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\StructuredValue\TypeAndQuantityNode.php">
-    <PossiblyUnusedMethod occurrences="6">
+    <PossiblyUnusedMethod occurrences="4">
       <code>public function GetAmountOfThisGood() : array</code>
       <code>public function SetAmountOfThisGood(array $value) : void</code>
       <code>public function GetBusinessFunction() : array</code>
       <code>public function SetBusinessFunction(array $value) : void</code>
-      <code>public function GetTypeOfGood() : array</code>
-      <code>public function SetTypeOfGood(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Intangible\StructuredValue\WarrantyPromise.php">
@@ -2719,15 +2750,11 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Offer.php">
-    <PossiblyUnusedMethod occurrences="10">
+    <PossiblyUnusedMethod occurrences="6">
       <code>public function GetAddOn() : array</code>
       <code>public function SetAddOn(array $value) : void</code>
       <code>public function GetOfferedBy() : array</code>
       <code>public function SetOfferedBy(array $value) : void</code>
-      <code>public function GetPrice() : array</code>
-      <code>public function SetPrice(array $value) : void</code>
-      <code>public function GetPriceCurrency() : array</code>
-      <code>public function SetPriceCurrency(array $value) : void</code>
       <code>public function GetPriceValidUntil() : array</code>
       <code>public function SetPriceValidUntil(array $value) : void</code>
     </PossiblyUnusedMethod>
@@ -2775,15 +2802,13 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Organization\PerformingGroup\MusicGroup.php">
-    <PossiblyUnusedMethod occurrences="4">
+    <PossiblyUnusedMethod occurrences="2">
       <code>public function GetAlbum() : array</code>
       <code>public function SetAlbum(array $value) : void</code>
-      <code>public function GetTrack() : array</code>
-      <code>public function SetTrack(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Person.php">
-    <PossiblyUnusedMethod occurrences="58">
+    <PossiblyUnusedMethod occurrences="56">
       <code>public function GetAdditionalName() : array</code>
       <code>public function SetAdditionalName(array $value) : void</code>
       <code>public function GetAffiliation() : array</code>
@@ -2836,8 +2861,6 @@
       <code>public function SetSibling(array $value) : void</code>
       <code>public function GetSpouse() : array</code>
       <code>public function SetSpouse(array $value) : void</code>
-      <code>public function GetWeight() : array</code>
-      <code>public function SetWeight(array $value) : void</code>
       <code>public function GetWorkLocation() : array</code>
       <code>public function SetWorkLocation(array $value) : void</code>
       <code>public function GetWorksFor() : array</code>
@@ -2845,7 +2868,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Place.php">
-    <PossiblyUnusedMethod occurrences="24">
+    <PossiblyUnusedMethod occurrences="22">
       <code>public function GetAmenityFeature() : array</code>
       <code>public function SetAmenityFeature(array $value) : void</code>
       <code>public function GetBranchCode() : array</code>
@@ -2858,8 +2881,6 @@
       <code>public function SetGeo(array $value) : void</code>
       <code>public function GetHasMap() : array</code>
       <code>public function SetHasMap(array $value) : void</code>
-      <code>public function GetMaximumAttendeeCapacity() : array</code>
-      <code>public function SetMaximumAttendeeCapacity(array $value) : void</code>
       <code>public function GetOpeningHoursSpecification() : array</code>
       <code>public function SetOpeningHoursSpecification(array $value) : void</code>
       <code>public function GetPhoto() : array</code>
@@ -2873,7 +2894,7 @@
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Product.php">
-    <PossiblyUnusedMethod occurrences="22">
+    <PossiblyUnusedMethod occurrences="20">
       <code>public function GetColor() : array</code>
       <code>public function SetColor(array $value) : void</code>
       <code>public function GetDepth() : array</code>
@@ -2894,8 +2915,6 @@
       <code>public function SetPurchaseDate(array $value) : void</code>
       <code>public function GetReleaseDate() : array</code>
       <code>public function SetReleaseDate(array $value) : void</code>
-      <code>public function GetWeight() : array</code>
-      <code>public function SetWeight(array $value) : void</code>
     </PossiblyUnusedMethod>
   </file>
   <file src="src\Product\ProductModel.php">

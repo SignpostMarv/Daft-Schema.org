@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
@@ -18,6 +19,9 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class ListItem extends Base
 {
+    use DaftObjectTraits\Item;
+    use DaftObjectTraits\Position;
+
     const SCHEMA_ORG_TYPE = 'ListItem';
 
     const PROPERTIES = [
@@ -44,34 +48,6 @@ class ListItem extends Base
     ];
 
     /**
-    * @return array<int, Thing>
-    */
-    public function GetItem() : array
-    {
-        /**
-        * @var array<int, Thing>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'item',
-            $this->RetrievePropertyValueFromData('item'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Thing> $value
-    */
-    public function SetItem(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'item',
-            $value
-        );
-    }
-
-    /**
     * @return array<int, ListItem>
     */
     public function GetNextItem() : array
@@ -95,34 +71,6 @@ class ListItem extends Base
     {
         $this->NudgePropertyValue(
             'nextItem',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, int|string>
-    */
-    public function GetPosition() : array
-    {
-        /**
-        * @var array<int, int|string>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'position',
-            $this->RetrievePropertyValueFromData('position'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, int|string> $value
-    */
-    public function SetPosition(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'position',
             $value
         );
     }

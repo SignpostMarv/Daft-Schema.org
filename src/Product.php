@@ -69,6 +69,7 @@ class Product extends Thing
     use DaftObjectTraits\HasOffers;
     use DaftObjectTraits\HasReview;
     use DaftObjectTraits\HasSku;
+    use DaftObjectTraits\Weight;
     use DaftObjectTraits\HasWidth;
 
     const SCHEMA_ORG_TYPE = 'Product';
@@ -425,26 +426,5 @@ class Product extends Thing
     public function SetReleaseDate(array $value) : void
     {
         $this->NudgePropertyValue('releaseDate', $value);
-    }
-
-    /**
-    * @return array<int, QuantitativeValue>
-    */
-    public function GetWeight() : array
-    {
-        /**
-        * @var array<int, QuantitativeValue>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('weight');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, QuantitativeValue> $value
-    */
-    public function SetWeight(array $value) : void
-    {
-        $this->NudgePropertyValue('weight', $value);
     }
 }

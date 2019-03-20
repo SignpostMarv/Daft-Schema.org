@@ -21,6 +21,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 class MusicGroup extends Base
 {
     use DaftObjectTraits\Genre;
+    use DaftObjectTraits\Track;
 
     const SCHEMA_ORG_TYPE = 'MusicGroup';
 
@@ -67,34 +68,6 @@ class MusicGroup extends Base
     {
         $this->NudgePropertyValue(
             'album',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, ItemList|MusicRecording>
-    */
-    public function GetTrack() : array
-    {
-        /**
-        * @var array<int, ItemList|MusicRecording>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'track',
-            $this->RetrievePropertyValueFromData('track'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, ItemList|MusicRecording> $value
-    */
-    public function SetTrack(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'track',
             $value
         );
     }

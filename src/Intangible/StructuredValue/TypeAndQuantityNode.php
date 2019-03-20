@@ -23,6 +23,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 class TypeAndQuantityNode extends Base
 {
     use DaftObjectTraits\HasUnitCodeText;
+    use DaftObjectTraits\TypeOfGood;
 
     const SCHEMA_ORG_TYPE = 'TypeAndQuantityNode';
 
@@ -106,34 +107,6 @@ class TypeAndQuantityNode extends Base
     {
         $this->NudgePropertyValue(
             'businessFunction',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, Product|Service>
-    */
-    public function GetTypeOfGood() : array
-    {
-        /**
-        * @var array<int, Product|Service>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'typeOfGood',
-            $this->RetrievePropertyValueFromData('typeOfGood'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Product|Service> $value
-    */
-    public function SetTypeOfGood(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'typeOfGood',
             $value
         );
     }

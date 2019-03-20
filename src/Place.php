@@ -64,6 +64,7 @@ class Place extends Thing
     use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasIsicV4;
     use DaftObjectTraits\HasLogo;
+    use DaftObjectTraits\MaximumAttendeeCapacity;
     use DaftObjectTraits\HasReview;
     use DaftObjectTraits\HasTelephone;
 
@@ -315,27 +316,6 @@ class Place extends Thing
     public function SetHasMap(array $value) : void
     {
         $this->NudgePropertyValue('hasMap', $value, true);
-    }
-
-    /**
-    * @return array<int, int>
-    */
-    public function GetMaximumAttendeeCapacity() : array
-    {
-        /**
-        * @var array<int, int>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('maximumAttendeeCapacity');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, int> $value
-    */
-    public function SetMaximumAttendeeCapacity(array $value) : void
-    {
-        $this->NudgePropertyValue('maximumAttendeeCapacity', $value);
     }
 
     /**

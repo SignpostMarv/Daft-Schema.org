@@ -74,6 +74,7 @@ class Offer extends Thing
     use DaftObjectTraits\HasCategory;
     use DaftObjectTraits\HasItemCondition;
     use DaftObjectTraits\HasMpn;
+    use DaftObjectTraits\PricePriceCurrency;
     use DaftObjectTraits\HasReview;
 
     const SCHEMA_ORG_TYPE = 'Offer';
@@ -262,48 +263,6 @@ class Offer extends Thing
     public function SetOfferedBy(array $value) : void
     {
         $this->NudgePropertyValue('offeredBy', $value);
-    }
-
-    /**
-    * @return array<int, string|float|int>
-    */
-    public function GetPrice() : array
-    {
-        /**
-        * @var array<int, string|float|int>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('price');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, string|float|int> $value
-    */
-    public function SetPrice(array $value) : void
-    {
-        $this->NudgePropertyValue('price', $value, true);
-    }
-
-    /**
-    * @return array<int, string>
-    */
-    public function GetPriceCurrency() : array
-    {
-        /**
-        * @var array<int, string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('priceCurrency');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, string> $value
-    */
-    public function SetPriceCurrency(array $value) : void
-    {
-        $this->NudgePropertyValue('priceCurrency', $value, true);
     }
 
     /**

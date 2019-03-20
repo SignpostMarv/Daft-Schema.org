@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\MusicPlaylist as Base;
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicAlbumProductionType;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\MusicAlbumReleaseType;
 use SignpostMarv\DaftObject\SchemaOrg\Organization\PerformingGroup\MusicGroup;
@@ -20,6 +21,8 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class MusicAlbum extends Base
 {
+    use DaftObjectTraits\ByArtist;
+
     const SCHEMA_ORG_TYPE = 'MusicAlbum';
 
     const PROPERTIES = [
@@ -124,34 +127,6 @@ class MusicAlbum extends Base
     {
         $this->NudgePropertyValue(
             'albumReleaseType',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, MusicGroup>
-    */
-    public function GetByArtist() : array
-    {
-        /**
-        * @var array<int, MusicGroup>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'byArtist',
-            $this->RetrievePropertyValueFromData('byArtist'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, MusicGroup> $value
-    */
-    public function SetByArtist(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'byArtist',
             $value
         );
     }

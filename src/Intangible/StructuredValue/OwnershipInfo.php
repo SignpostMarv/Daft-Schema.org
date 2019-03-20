@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue;
 
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
@@ -22,6 +23,8 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class OwnershipInfo extends Base
 {
+    use DaftObjectTraits\TypeOfGood;
+
     const SCHEMA_ORG_TYPE = 'OwnershipInfo';
 
     const PROPERTIES = [

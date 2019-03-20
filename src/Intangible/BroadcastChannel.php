@@ -20,6 +20,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class BroadcastChannel extends Base
 {
+    use DaftObjectTraits\BroadcastFrequency;
     use DaftObjectTraits\Genre;
 
     const SCHEMA_ORG_TYPE = 'BroadcastChannel';
@@ -79,35 +80,6 @@ class BroadcastChannel extends Base
     {
         $this->NudgePropertyValue(
             'broadcastChannelId',
-            $value,
-            true
-        );
-    }
-
-    /**
-    * @return array<int, string|BroadcastFrequencySpecification>
-    */
-    public function GetBroadcastFrequency() : array
-    {
-        /**
-        * @var array<int, string|BroadcastFrequencySpecification>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'broadcastFrequency',
-            $this->RetrievePropertyValueFromData('broadcastFrequency'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, string|BroadcastFrequencySpecification> $value
-    */
-    public function SetBroadcastFrequency(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'broadcastFrequency',
             $value,
             true
         );

@@ -22,6 +22,7 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class MusicRecording extends Base
 {
+    use DaftObjectTraits\ByArtist;
     use DaftObjectTraits\Duration;
 
     const SCHEMA_ORG_TYPE = 'MusicRecording';
@@ -53,34 +54,6 @@ class MusicRecording extends Base
             MusicComposition::class,
         ],
     ];
-
-    /**
-    * @return array<int, MusicGroup>
-    */
-    public function GetByArtist() : array
-    {
-        /**
-        * @var array<int, MusicGroup>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'byArtist',
-            $this->RetrievePropertyValueFromData('byArtist'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, MusicGroup> $value
-    */
-    public function SetByArtist(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'byArtist',
-            $value
-        );
-    }
 
     /**
     * @return array<int, MusicPlaylist\MusicAlbum>

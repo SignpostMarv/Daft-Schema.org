@@ -116,6 +116,8 @@ class CreativeWork extends Thing
     use DaftObjectTraits\HasAudience;
     use DaftObjectTraits\HasAuthor;
     use DaftObjectTraits\HasAward;
+    use DaftObjectTraits\Contributor;
+    use DaftObjectTraits\DateCreatedModified;
     use DaftObjectTraits\HasFunder;
     use DaftObjectTraits\Genre;
     use DaftObjectTraits\HasHasPart;
@@ -123,6 +125,7 @@ class CreativeWork extends Thing
     use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasMaterial;
     use DaftObjectTraits\HasOffers;
+    use DaftObjectTraits\Position;
     use DaftObjectTraits\HasProvider;
     use DaftObjectTraits\HasPublishingPrinciples;
     use DaftObjectTraits\HasReview;
@@ -853,27 +856,6 @@ class CreativeWork extends Thing
     /**
     * @return array<int, Organization|Person>
     */
-    public function GetContributor() : array
-    {
-        /**
-        * @var array<int, Organization|Person>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('contributor');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Organization|Person> $value
-    */
-    public function SetContributor(array $value) : void
-    {
-        $this->NudgePropertyValue('contributor', $value);
-    }
-
-    /**
-    * @return array<int, Organization|Person>
-    */
     public function GetCopyrightHolder() : array
     {
         /**
@@ -953,48 +935,6 @@ class CreativeWork extends Thing
     public function SetCreator(array $value) : void
     {
         $this->NudgePropertyValue('creator', $value);
-    }
-
-    /**
-    * @return array<int, Date|DateTime>
-    */
-    public function GetDateCreated() : array
-    {
-        /**
-        * @var array<int, Date|DateTime>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('dateCreated');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Date|DateTime> $value
-    */
-    public function SetDateCreated(array $value) : void
-    {
-        $this->NudgePropertyValue('dateCreated', $value);
-    }
-
-    /**
-    * @return array<int, Date|DateTime>
-    */
-    public function GetDateModified() : array
-    {
-        /**
-        * @var array<int, Date|DateTime>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('dateModified');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Date|DateTime> $value
-    */
-    public function SetDateModified(array $value) : void
-    {
-        $this->NudgePropertyValue('dateModified', $value);
     }
 
     /**
@@ -1415,27 +1355,6 @@ class CreativeWork extends Thing
     public function SetMentions(array $value) : void
     {
         $this->NudgePropertyValue('mentions', $value);
-    }
-
-    /**
-    * @return array<int, int|string>
-    */
-    public function GetPosition() : array
-    {
-        /**
-        * @var array<int, int|string>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('position');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, int|string> $value
-    */
-    public function SetPosition(array $value) : void
-    {
-        $this->NudgePropertyValue('position', $value, true);
     }
 
     /**

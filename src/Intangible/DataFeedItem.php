@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
+use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Thing;
@@ -19,6 +20,9 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 */
 class DataFeedItem extends Base
 {
+    use DaftObjectTraits\DateCreatedModified;
+    use DaftObjectTraits\Item;
+
     const SCHEMA_ORG_TYPE = 'DataFeedItem';
 
     const PROPERTIES = [
@@ -49,34 +53,6 @@ class DataFeedItem extends Base
     /**
     * @return array<int, DataTypes\Date|DataTypes\DateTime>
     */
-    public function GetDateCreated() : array
-    {
-        /**
-        * @var array<int, DataTypes\Date|DataTypes\DateTime>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'dateCreated',
-            $this->RetrievePropertyValueFromData('dateCreated'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, DataTypes\Date|DataTypes\DateTime> $value
-    */
-    public function SetDateCreated(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'dateCreated',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, DataTypes\Date|DataTypes\DateTime>
-    */
     public function GetDateDeleted() : array
     {
         /**
@@ -98,62 +74,6 @@ class DataFeedItem extends Base
     {
         $this->NudgePropertyValue(
             'dateDeleted',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, DataTypes\Date|DataTypes\DateTime>
-    */
-    public function GetDateModified() : array
-    {
-        /**
-        * @var array<int, DataTypes\Date|DataTypes\DateTime>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'dateModified',
-            $this->RetrievePropertyValueFromData('dateModified'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, DataTypes\Date|DataTypes\DateTime> $value
-    */
-    public function SetDateModified(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'dateModified',
-            $value
-        );
-    }
-
-    /**
-    * @return array<int, Thing>
-    */
-    public function GetItem() : array
-    {
-        /**
-        * @var array<int, Thing>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'item',
-            $this->RetrievePropertyValueFromData('item'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Thing> $value
-    */
-    public function SetItem(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'item',
             $value
         );
     }

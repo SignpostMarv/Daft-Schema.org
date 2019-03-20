@@ -56,12 +56,14 @@ class Event extends Thing
     use DaftObjectTraits\HasAggregateRating;
     use DaftObjectTraits\HasAudience;
     use DaftObjectTraits\Composer;
+    use DaftObjectTraits\Contributor;
     use DaftObjectTraits\HasDirector;
     use DaftObjectTraits\Duration;
     use DaftObjectTraits\HasFunder;
     use DaftObjectTraits\HasInLanguage;
     use DaftObjectTraits\HasIsAccessibleForFree;
     use DaftObjectTraits\HasLocation;
+    use DaftObjectTraits\MaximumAttendeeCapacity;
     use DaftObjectTraits\HasOffers;
     use DaftObjectTraits\HasReview;
     use DaftObjectTraits\HasSponsors;
@@ -239,27 +241,6 @@ class Event extends Thing
     }
 
     /**
-    * @return array<int, Organization|Person>
-    */
-    public function GetContributor() : array
-    {
-        /**
-        * @var array<int, Organization|Person>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('contributor');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Organization|Person> $value
-    */
-    public function SetContributor(array $value) : void
-    {
-        $this->NudgePropertyValue('contributor', $value);
-    }
-
-    /**
     * @return array<int, DateTime>
     */
     public function GetDoorTime() : array
@@ -320,27 +301,6 @@ class Event extends Thing
     public function SetEventStatus(array $value) : void
     {
         $this->NudgePropertyValue('eventStatus', $value);
-    }
-
-    /**
-    * @return array<int, Organization|Person>
-    */
-    public function GetMaximumAttendeeCapacity() : array
-    {
-        /**
-        * @var array<int, Organization|Person>
-        */
-        $out = $this->ExpectRetrievedValueIsArray('maximumAttendeeCapacity');
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, Organization|Person> $value
-    */
-    public function SetMaximumAttendeeCapacity(array $value) : void
-    {
-        $this->NudgePropertyValue('maximumAttendeeCapacity', $value);
     }
 
     /**

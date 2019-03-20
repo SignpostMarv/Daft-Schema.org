@@ -26,7 +26,6 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 * @property array<int, Duration> $duration
 * @property array<int, string> $embedUrl
 * @property array<int, Base> $encodesCreativeWork
-* @property array<int, string> $encodingFormat
 * @property array<int, Distance|QuantitativeValue> $height
 * @property array<int, string> $playerType
 * @property array<int, Organization> $productionCompany
@@ -50,7 +49,6 @@ class MediaObject extends Base
         'duration',
         'embedUrl',
         'encodesCreativeWork',
-        'encodingFormat',
         'height',
         'playerType',
         'productionCompany',
@@ -79,9 +77,6 @@ class MediaObject extends Base
         ],
         'encodesCreativeWork' => [
             Base::class,
-        ],
-        'encodingFormat' => [
-            'string',
         ],
         'height' => TypeUtilities::MULTI_TYPE_DICT__height,
         'playerType' => [
@@ -275,35 +270,6 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'encodesCreativeWork',
             $value
-        );
-    }
-
-    /**
-    * @return array<int, string>
-    */
-    public function GetEncodingFormat() : array
-    {
-        /**
-        * @var array<int, string>
-        */
-        $out = TypeUtilities::ExpectRetrievedValueIsArray(
-            'encodingFormat',
-            $this->RetrievePropertyValueFromData('encodingFormat'),
-            static::class
-        );
-
-        return $out;
-    }
-
-    /**
-    * @param array<int, string> $value
-    */
-    public function SetEncodingFormat(array $value) : void
-    {
-        $this->NudgePropertyValue(
-            'encodingFormat',
-            $value,
-            true
         );
     }
 

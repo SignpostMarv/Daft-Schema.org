@@ -113,7 +113,16 @@ class Dataset extends Base
     */
     public function GetVariableMeasured() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStringsOrPropertyValues('variableMeasured');
+        /**
+        * @var array<int, string|PropertyValue>
+        */
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'variableMeasured',
+            $this->RetrievePropertyValueFromData('variableMeasured'),
+            static::class
+        );
+
+        return $out;
     }
 
     /**

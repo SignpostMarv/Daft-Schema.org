@@ -477,7 +477,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessMode() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessMode');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessMode');
+
+        return $out;
     }
 
     /**
@@ -493,7 +498,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessModeSufficient() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessModeSufficient');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessModeSufficient');
+
+        return $out;
     }
 
     /**
@@ -509,7 +519,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityAPI() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityAPI');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityAPI');
+
+        return $out;
     }
 
     /**
@@ -525,7 +540,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityControl() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityControl');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityControl');
+
+        return $out;
     }
 
     /**
@@ -541,7 +561,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityFeature() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityFeature');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityFeature');
+
+        return $out;
     }
 
     /**
@@ -557,7 +582,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilityHazard() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilityHazard');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessibilityHazard');
+
+        return $out;
     }
 
     /**
@@ -573,7 +603,12 @@ class CreativeWork extends Thing
     */
     public function GetAccessibilitySummary() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('accessibilitySummary');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('accessibilitySummary');
+
+        return $out;
     }
 
     /**
@@ -610,7 +645,12 @@ class CreativeWork extends Thing
     */
     public function GetAlternativeHeadline() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('alternativeHeadline');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('alternativeHeadline');
+
+        return $out;
     }
 
     /**
@@ -689,7 +729,12 @@ class CreativeWork extends Thing
     */
     public function GetCitation() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('citation');
+        /**
+        * @var array<int, string|CreativeWork>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('citation');
+
+        return $out;
     }
 
     /**
@@ -978,7 +1023,12 @@ class CreativeWork extends Thing
     */
     public function GetDiscussionUrl() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('discussionUrl');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('discussionUrl');
+
+        return $out;
     }
 
     /**
@@ -1036,7 +1086,12 @@ class CreativeWork extends Thing
     */
     public function GetEducationalUse() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('educationalUse');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('educationalUse');
+
+        return $out;
     }
 
     /**
@@ -1073,7 +1128,12 @@ class CreativeWork extends Thing
     */
     public function GetEncodingFormat() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('encodingFormat');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('encodingFormat');
+
+        return $out;
     }
 
     /**
@@ -1131,7 +1191,12 @@ class CreativeWork extends Thing
     */
     public function GetHeadline() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('headline');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('headline');
+
+        return $out;
     }
 
     /**
@@ -1168,7 +1233,12 @@ class CreativeWork extends Thing
     */
     public function GetInteractivityType() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('interactivityType');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('interactivityType');
+
+        return $out;
     }
 
     /**
@@ -1226,7 +1296,12 @@ class CreativeWork extends Thing
     */
     public function GetKeywords() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('keywords');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('keywords');
+
+        return $out;
     }
 
     /**
@@ -1242,7 +1317,12 @@ class CreativeWork extends Thing
     */
     public function GetLearningResourceType() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('learningResourceType');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('learningResourceType');
+
+        return $out;
     }
 
     /**
@@ -1258,7 +1338,12 @@ class CreativeWork extends Thing
     */
     public function GetLicense() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('license');
+        /**
+        * @var array<int, string|CreativeWork>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('license');
+
+        return $out;
     }
 
     /**
@@ -1484,7 +1569,12 @@ class CreativeWork extends Thing
     */
     public function GetSchemaVersion() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('schemaVersion');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('schemaVersion');
+
+        return $out;
     }
 
     /**
@@ -1521,7 +1611,12 @@ class CreativeWork extends Thing
     */
     public function GetSdLicense() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStringsOrCreativeWorks('sdLicense');
+        /**
+        * @var array<int, string|CreativeWork>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('sdLicense');
+
+        return $out;
     }
 
     /**
@@ -1621,7 +1716,12 @@ class CreativeWork extends Thing
     */
     public function GetText() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('text');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('text');
+
+        return $out;
     }
 
     /**
@@ -1637,7 +1737,12 @@ class CreativeWork extends Thing
     */
     public function GetThumbnailUrl() : array
     {
-        return $this->ExpectRetrievedValueIsArrayOfStrings('thumbnailUrl');
+        /**
+        * @var array<int, string>
+        */
+        $out = $this->ExpectRetrievedValueIsArray('thumbnailUrl');
+
+        return $out;
     }
 
     /**

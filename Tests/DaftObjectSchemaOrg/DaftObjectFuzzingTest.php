@@ -14,6 +14,7 @@ use RecursiveIteratorIterator;
 use ReflectionClass;
 use ReflectionClassConstant;
 use RuntimeException;
+use SignpostMarv\DaftObject\DefinitionAssistant;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
@@ -58,6 +59,102 @@ class DaftObjectFuzzingTest extends Base
     * @var bool
     */
     private static $last_boolean = false;
+
+    public function test_singular_method_definition() : void
+    {
+        $properties = [];
+
+        $declared_on_traits = [];
+
+        foreach (static::YieldTypeForFuzzing(null) as $thing) {
+            $reflector = new ReflectionClass($thing);
+
+            $class_methods = [];
+
+            $checking = $thing;
+
+            while (is_a($checking, SchemaOrg\Thing::class, true)) {
+                $checking_reflector = new ReflectionClass($checking);
+
+                foreach ($checking_reflector->getTraits() as $trait) {
+                    foreach ($trait->getMethods() as $trait_method) {
+                        if ( ! in_array($trait_method->name, $class_methods, true)) {
+                            $class_methods[] = $trait_method->name;
+                        }
+                    }
+                }
+
+                $checking = get_parent_class($checking);
+            }
+
+            foreach ($thing::DaftObjectProperties() as $property) {
+                $method = DefinitionAssistant::GetterMethodName($thing, $property);
+
+                if ( ! isset($properties[$property])) {
+                    $properties[$property] = [];
+                }
+
+                if (is_string($method) && $reflector->hasMethod($method)) {
+                    $method_reflection = $reflector->getMethod($method);
+
+                    if (
+                        ! in_array($method, $class_methods, true)
+                    ) {
+                        $declared_on = $method_reflection->getDeclaringClass()->name;
+
+                        if ( ! in_array($declared_on, $properties[$property], true)) {
+                            $properties[$property][] = $declared_on;
+                        }
+                    } elseif ( ! in_array($property, $declared_on_traits, true)) {
+                        $declared_on_traits[] = $property;
+                    }
+                }
+            }
+        }
+
+        $empty_definitions = [];
+        $over_defined = [];
+
+        foreach ($properties as $property => $declared_on_classes) {
+            $count = count($declared_on_classes);
+
+            if ($count < 1) {
+                $empty_definitions[] = $property;
+            } elseif ($count > 1) {
+                $over_defined[$property] = $declared_on_classes;
+            }
+        }
+
+        $empty_definitions = array_filter(
+            $empty_definitions,
+            function (string $property) use ($declared_on_traits) : bool {
+                return ! in_array($property, $declared_on_traits, true);
+            }
+        );
+
+        static::assertCount(
+            0,
+            $empty_definitions,
+            (
+                'The follow properties had no definition: ' .
+                implode(', ', $empty_definitions)
+            )
+        );
+        static::assertCount(
+            0,
+            $over_defined,
+            (
+                'The following properties were defined on more than one class:' .
+                array_reduce(
+                    array_keys($over_defined),
+                    function (string $out, string $in) use ($over_defined) : string {
+                        return $out . "\n" . $in . ': ' . implode(', ', $over_defined[$in]);
+                    },
+                    ''
+                )
+            )
+        );
+    }
 
     /**
     * @psalm-param class-string<SchemaOrg\Thing> $type

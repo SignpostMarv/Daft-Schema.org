@@ -380,74 +380,74 @@ class DaftObjectFuzzingTest extends Base
     protected static function YieldTypeForFuzzing(? bool $abstract = false) : Generator
     {
         if (count(self::$YieldTypeForFuzzing) < 1) {
-        /**
-        * @var iterable<string>
-        */
-        $iterator = new CallbackFilterIterator(
-            new RecursiveIteratorIterator(
-                new RecursiveCallbackFilterIterator(
-                    new RecursiveDirectoryIterator(
-                        (__DIR__ . '/../../src/'),
-                        (
-                            RecursiveDirectoryIterator::CURRENT_AS_PATHNAME |
-                            RecursiveDirectoryIterator::SKIP_DOTS |
-                            RecursiveDirectoryIterator::UNIX_PATHS
-                        )
-                    ),
-                    function (string $path_name) : bool {
-                        return
-                            is_dir($path_name) ||
+            /**
+            * @var iterable<string>
+            */
+            $iterator = new CallbackFilterIterator(
+                new RecursiveIteratorIterator(
+                    new RecursiveCallbackFilterIterator(
+                        new RecursiveDirectoryIterator(
+                            (__DIR__ . '/../../src/'),
                             (
-                                is_file($path_name) &&
-                                '.php' === mb_substr($path_name, -4)
-                            );
+                                RecursiveDirectoryIterator::CURRENT_AS_PATHNAME |
+                                RecursiveDirectoryIterator::SKIP_DOTS |
+                                RecursiveDirectoryIterator::UNIX_PATHS
+                            )
+                        ),
+                        function (string $path_name) : bool {
+                            return
+                                is_dir($path_name) ||
+                                (
+                                    is_file($path_name) &&
+                                    '.php' === mb_substr($path_name, -4)
+                                );
+                        }
+                    )
+                ),
+                function (string $path_name) : bool {
+                    return is_file($path_name);
+                }
+            );
+
+            $root_length = mb_strlen(__DIR__ . '/../../src/');
+
+            /**
+            * @var array<string, bool>
+            *
+            * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
+            */
+            $cache = [];
+
+            foreach ($iterator as $pathname) {
+                $class_name =
+                    '\\SignpostMarv\\DaftObject\\SchemaOrg\\' .
+                    str_replace('/', '\\', mb_substr($pathname, $root_length, -4));
+
+                if (is_a($class_name, SchemaOrg\Thing::class, true)) {
+                    $reflector = new ReflectionClassConstant(
+                        $class_name,
+                        'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
+                    );
+
+                    if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
+                        /**
+                        * @psalm-var ReflectionClass<SchemaOrg\Thing>
+                        */
+                        $reflector = new ReflectionClass($class_name);
+
+                        /**
+                        * @var string
+                        *
+                        * @psalm-var class-string<SchemaOrg\Thing>
+                        */
+                        $class_name = $reflector->name;
+
+                        $cache[$class_name] = ! $reflector->isAbstract();
                     }
-                )
-            ),
-            function (string $path_name) : bool {
-                return is_file($path_name);
-            }
-        );
-
-        $root_length = mb_strlen(__DIR__ . '/../../src/');
-
-        /**
-        * @var array<string, bool>
-        *
-        * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
-        */
-        $cache = [];
-
-        foreach ($iterator as $pathname) {
-            $class_name =
-                '\\SignpostMarv\\DaftObject\\SchemaOrg\\' .
-                str_replace('/', '\\', mb_substr($pathname, $root_length, -4));
-
-            if (is_a($class_name, SchemaOrg\Thing::class, true)) {
-                $reflector = new ReflectionClassConstant(
-                    $class_name,
-                    'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
-                );
-
-                if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
-                    /**
-                    * @psalm-var ReflectionClass<SchemaOrg\Thing>
-                    */
-                    $reflector = new ReflectionClass($class_name);
-
-                    /**
-                    * @var string
-                    *
-                    * @psalm-var class-string<SchemaOrg\Thing>
-                    */
-                    $class_name = $reflector->name;
-
-                    $cache[$class_name] = ! $reflector->isAbstract();
                 }
             }
-        }
 
-        self::$YieldTypeForFuzzing = $cache;
+            self::$YieldTypeForFuzzing = $cache;
         }
 
         if (is_null($abstract)) {

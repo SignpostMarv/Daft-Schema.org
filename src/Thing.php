@@ -579,31 +579,72 @@ class Thing extends AbstractArrayBackedDaftObject implements
         return $out;
     }
 
-    /**
-    * @param array<string, array<int, string>> $multi_type
-    */
     protected static function DaftObjectFromJsonArrayFromArray(
         string $k,
         array $multi_type,
         array $arr
     ) : array {
+        /**
+        * @var array<string, array<int, string>>
+        *
+        * @psalm-var array<string, array<int, class-string<LookupInterface>>>
+        */
+        $multi_type_lookup = array_map(
+            /**
+            * @return array<int, string>
+            *
+            * @psalm-return array<int, class-string<LookupInterface>>
+            */
+            function (array $in) : array {
+                return array_map(
+                    function (string $maybe) : string {
+                        return
+                            '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
+                            hash('sha512', $maybe);
+                    },
+                    $in
+                );
+            },
+            array_filter(
+                array_map(
+                    function (array $in) : array {
+                        return array_filter($in, function (string $maybe) : bool {
+                            $lookup_class =
+                                '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
+                                hash('sha512', $maybe);
+
+                            return is_a($lookup_class, LookupInterface::class, true);
+                        });
+                    },
+                    $multi_type
+                ),
+                function (array $maybe) : bool {
+                    return count($maybe) > 0;
+                }
+            )
+        );
+
         return array_map(
             /**
             * @param mixed $val
             *
             * @return mixed
             */
-            function ($val) use ($k, $multi_type) {
+            function ($val) use ($k, $multi_type_lookup) {
                 if (
                     is_array($val) &&
-                    isset($val['@context'], $val['@type'], $multi_type[$k])
+                    isset($val['@context'], $val['@type'])
                 ) {
                     /**
                     * @psalm-var array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null>
                     */
                     $val = $val;
 
-                    return static::DaftObjectFromJsonArrayFromArrayMapVal($val, $multi_type, $k);
+                    return static::DaftObjectFromJsonArrayFromArrayMapVal(
+                        $val,
+                        $multi_type_lookup,
+                        $k
+                    );
                 }
 
                 return $val;
@@ -613,8 +654,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
     }
 
     /**
-    * @param array<string, array<int, string>> $multi_type
-    *
     * @psalm-param array<string, array<array-key, array<array-key, mixed>|scalar|object|null>|scalar|object|null> $val
     */
     protected static function DaftObjectFromJsonArrayFromArrayMapVal(
@@ -622,17 +661,8 @@ class Thing extends AbstractArrayBackedDaftObject implements
         array $multi_type,
         string $k
     ) : Thing {
-        foreach ($multi_type[$k] as $maybe) {
-            $lookup_class =
-                '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
-                hash('sha512', $maybe);
-            if (is_a($lookup_class, LookupInterface::class, true)) {
-                /**
-                * @psalm-var array<int, class-string<Thing>>
-                */
-                $maybe_classes = $lookup_class::ObtainClasses();
-
-                foreach ($maybe_classes as $maybe_class) {
+        foreach (($multi_type[$k] ?? []) as $lookup_class) {
+                foreach ($lookup_class::ObtainClasses() as $maybe_class) {
                     if (
                         $val['@context'] === $maybe_class::SCHEMA_ORG_CONTEXT &&
                         $val['@type'] === $maybe_class::SCHEMA_ORG_TYPE
@@ -640,7 +670,6 @@ class Thing extends AbstractArrayBackedDaftObject implements
                         return $maybe_class::DaftObjectFromJsonArray($val);
                     }
                 }
-            }
         }
 
         throw new InvalidArgumentException(

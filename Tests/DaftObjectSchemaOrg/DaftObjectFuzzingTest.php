@@ -48,7 +48,9 @@ class DaftObjectFuzzingTest extends Base
     private static $fuzzing_cache = [];
 
     /**
-    * @var array
+    * @var array<string, bool>
+    *
+    * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
     */
     private static $YieldTypeForFuzzing = [];
 
@@ -375,14 +377,9 @@ class DaftObjectFuzzingTest extends Base
     /**
     * @psalm-return Generator<int, class-string<SchemaOrg\Thing>, mixed, void>
     */
-    protected static function YieldTypeForFuzzing() : Generator
+    protected static function YieldTypeForFuzzing(? bool $abstract = false) : Generator
     {
-        if (count(self::$YieldTypeForFuzzing) > 0) {
-            yield from self::$YieldTypeForFuzzing;
-
-            return;
-        }
-
+        if (count(self::$YieldTypeForFuzzing) < 1) {
         /**
         * @var iterable<string>
         */
@@ -414,6 +411,11 @@ class DaftObjectFuzzingTest extends Base
 
         $root_length = mb_strlen(__DIR__ . '/../../src/');
 
+        /**
+        * @var array<string, bool>
+        *
+        * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
+        */
         $cache = [];
 
         foreach ($iterator as $pathname) {
@@ -428,25 +430,37 @@ class DaftObjectFuzzingTest extends Base
                 );
 
                 if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
+                    /**
+                    * @psalm-var ReflectionClass<SchemaOrg\Thing>
+                    */
                     $reflector = new ReflectionClass($class_name);
 
-                    if ( ! $reflector->isAbstract()) {
-                        /**
-                        * @psalm-var class-string<SchemaOrg\Thing>
-                        */
-                        $out = $reflector->name;
+                    /**
+                    * @var string
+                    *
+                    * @psalm-var class-string<SchemaOrg\Thing>
+                    */
+                    $class_name = $reflector->name;
 
-                        if ( ! in_array($out, $cache, true)) {
-                            $cache[] = $out;
-                        }
-
-                        yield $out;
-                    }
+                    $cache[$class_name] = ! $reflector->isAbstract();
                 }
             }
         }
 
         self::$YieldTypeForFuzzing = $cache;
+        }
+
+        if (is_null($abstract)) {
+            yield from array_keys(self::$YieldTypeForFuzzing);
+        } elseif ($abstract) {
+            foreach (self::$YieldTypeForFuzzing as $out => $not_abstract) {
+                if ( ! $not_abstract) {
+                        yield $out;
+                }
+            }
+        }
+
+        yield from array_keys(array_filter(self::$YieldTypeForFuzzing));
     }
 
     protected function FuzzingImplementationsViaGenerator() : Generator

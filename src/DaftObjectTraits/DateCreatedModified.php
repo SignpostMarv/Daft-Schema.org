@@ -8,7 +8,6 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
-use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait DateCreatedModified
 {

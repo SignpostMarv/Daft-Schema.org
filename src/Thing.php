@@ -662,14 +662,14 @@ class Thing extends AbstractArrayBackedDaftObject implements
         string $k
     ) : Thing {
         foreach (($multi_type[$k] ?? []) as $lookup_class) {
-                foreach ($lookup_class::ObtainClasses() as $maybe_class) {
-                    if (
-                        $val['@context'] === $maybe_class::SCHEMA_ORG_CONTEXT &&
-                        $val['@type'] === $maybe_class::SCHEMA_ORG_TYPE
-                    ) {
-                        return $maybe_class::DaftObjectFromJsonArray($val);
-                    }
+            foreach ($lookup_class::ObtainClasses() as $maybe_class) {
+                if (
+                    $val['@context'] === $maybe_class::SCHEMA_ORG_CONTEXT &&
+                    $val['@type'] === $maybe_class::SCHEMA_ORG_TYPE
+                ) {
+                    return $maybe_class::DaftObjectFromJsonArray($val);
                 }
+            }
         }
 
         throw new InvalidArgumentException(

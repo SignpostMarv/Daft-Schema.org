@@ -517,7 +517,7 @@ class DaftObjectFuzzingTest extends Base
 
             foreach ($iterator as $pathname) {
                 $class_name =
-                    '\\SignpostMarv\\DaftObject\\SchemaOrg\\' .
+                    'SignpostMarv\\DaftObject\\SchemaOrg\\' .
                     str_replace('/', '\\', mb_substr($pathname, $root_length, -4));
 
                 if (is_a($class_name, SchemaOrg\Thing::class, true)) {
@@ -526,7 +526,7 @@ class DaftObjectFuzzingTest extends Base
                         'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
                     );
 
-                    if ($class_name === '\\' . $reflector->getDeclaringClass()->name) {
+                    if ($class_name === $reflector->getDeclaringClass()->name) {
                         /**
                         * @psalm-var ReflectionClass<SchemaOrg\Thing>
                         */

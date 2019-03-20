@@ -669,7 +669,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     ) : Thing {
         foreach ($multi_type[$k] as $maybe) {
             $lookup_class =
-                '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
+                'SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
                 hash('sha512', $maybe);
             if (is_a($lookup_class, LookupInterface::class, true)) {
                 /**

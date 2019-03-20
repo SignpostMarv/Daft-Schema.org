@@ -455,7 +455,7 @@ class DaftObjectFuzzingTest extends Base
         } elseif ($abstract) {
             foreach (self::$YieldTypeForFuzzing as $out => $not_abstract) {
                 if ( ! $not_abstract) {
-                        yield $out;
+                    yield $out;
                 }
             }
         }

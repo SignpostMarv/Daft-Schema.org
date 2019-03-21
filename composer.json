@@ -59,7 +59,7 @@
         "ext-hash": "*",
         "ext-json": "*",
         "ext-mbstring": "*",
-        "signpostmarv/daft-object": "^2.3,>=2.3.2"
+        "signpostmarv/daft-object": "^2.3,>=2.3.4"
     },
     "require-dev": {
         "maglnet/composer-require-checker": "^1.1",

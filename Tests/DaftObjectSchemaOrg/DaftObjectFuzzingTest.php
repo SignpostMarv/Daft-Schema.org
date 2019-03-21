@@ -526,6 +526,8 @@ class DaftObjectFuzzingTest extends Base
                         'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
                     );
 
+                    DefinitionAssistant::RegisterAbstractDaftObjectType($class_name);
+
                     if ($class_name === $reflector->getDeclaringClass()->name) {
                         /**
                         * @psalm-var ReflectionClass<SchemaOrg\Thing>

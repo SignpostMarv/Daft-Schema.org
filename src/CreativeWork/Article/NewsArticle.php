@@ -71,7 +71,7 @@ class NewsArticle extends Base
         $this->NudgePropertyValue(
             'dateline',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -100,7 +100,7 @@ class NewsArticle extends Base
         $this->NudgePropertyValue(
             'printColumn',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -129,7 +129,7 @@ class NewsArticle extends Base
         $this->NudgePropertyValue(
             'printEdition',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -158,7 +158,7 @@ class NewsArticle extends Base
         $this->NudgePropertyValue(
             'printPage',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -187,7 +187,7 @@ class NewsArticle extends Base
         $this->NudgePropertyValue(
             'printSection',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

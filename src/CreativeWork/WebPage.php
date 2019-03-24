@@ -100,7 +100,7 @@ class WebPage extends Base
         $this->NudgePropertyValue(
             'breadcrumb',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -213,7 +213,7 @@ class WebPage extends Base
         $this->NudgePropertyValue(
             'relatedLink',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -270,7 +270,7 @@ class WebPage extends Base
         $this->NudgePropertyValue(
             'significantLink',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

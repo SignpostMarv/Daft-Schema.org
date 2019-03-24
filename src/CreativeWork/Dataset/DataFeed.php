@@ -55,7 +55,7 @@ class DataFeed extends Base
         $this->NudgePropertyValue(
             'dataFeedElement',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

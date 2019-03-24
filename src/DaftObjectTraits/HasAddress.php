@@ -38,7 +38,7 @@ trait HasAddress
         $this->NudgePropertyValue(
             'address',
             $value,
-            true
+            PostalAddress::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

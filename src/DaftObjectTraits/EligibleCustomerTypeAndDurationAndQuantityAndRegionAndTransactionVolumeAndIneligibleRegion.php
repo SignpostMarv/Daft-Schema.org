@@ -11,6 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\BusinessEntityType;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\PriceSpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAndIneligibleRegion
@@ -126,7 +127,7 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
         $this->NudgePropertyValue(
             'eligibleRegion',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -183,7 +184,7 @@ trait EligibleCustomerTypeAndDurationAndQuantityAndRegionAndTransactionVolumeAnd
         $this->NudgePropertyValue(
             'ineligibleRegion',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

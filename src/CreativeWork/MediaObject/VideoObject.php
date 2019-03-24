@@ -114,7 +114,7 @@ class VideoObject extends Base
         $this->NudgePropertyValue(
             'videoFrameSize',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -143,7 +143,7 @@ class VideoObject extends Base
         $this->NudgePropertyValue(
             'videoQuality',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

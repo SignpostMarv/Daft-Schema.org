@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -77,7 +78,7 @@ class Rating extends Base
         $this->NudgePropertyValue(
             'bestRating',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -106,7 +107,7 @@ class Rating extends Base
         $this->NudgePropertyValue(
             'ratingValue',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -135,7 +136,7 @@ class Rating extends Base
         $this->NudgePropertyValue(
             'worstRating',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

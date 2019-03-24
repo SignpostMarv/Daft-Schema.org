@@ -133,7 +133,7 @@ class Dataset extends Base
         $this->NudgePropertyValue(
             'variableMeasured',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

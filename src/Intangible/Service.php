@@ -242,7 +242,7 @@ class Service extends Base
         $this->NudgePropertyValue(
             'providerMobility',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -271,7 +271,7 @@ class Service extends Base
         $this->NudgePropertyValue(
             'serviceOutput',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -300,7 +300,7 @@ class Service extends Base
         $this->NudgePropertyValue(
             'serviceType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -329,7 +329,7 @@ class Service extends Base
         $this->NudgePropertyValue(
             'termsOfService',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

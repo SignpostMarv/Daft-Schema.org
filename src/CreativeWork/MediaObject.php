@@ -154,7 +154,7 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'bitrate',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -183,7 +183,7 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'contentSize',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -212,7 +212,7 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'contentUrl',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -241,7 +241,7 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'embedUrl',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -298,7 +298,7 @@ class MediaObject extends Base
         $this->NudgePropertyValue(
             'playerType',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

@@ -236,7 +236,7 @@ class Product extends Thing
     */
     public function SetColor(array $value) : void
     {
-        $this->NudgePropertyValue('color', $value, true);
+        $this->NudgePropertyValue('color', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -341,7 +341,7 @@ class Product extends Thing
     */
     public function SetModel(array $value) : void
     {
-        $this->NudgePropertyValue('model', $value, true);
+        $this->NudgePropertyValue('model', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -362,7 +362,7 @@ class Product extends Thing
     */
     public function SetProductID(array $value) : void
     {
-        $this->NudgePropertyValue('productID', $value, true);
+        $this->NudgePropertyValue('productID', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**

@@ -26,4 +26,24 @@ class DaftJsonExceptionTest extends Base
 
         Thing::DaftObjectFromJsonArray(['Foo']);
     }
+
+    public function test_Thing_DaftObjectFromJsonArray_fails_with_unsupported_Thing() : void
+    {
+        static::expectException(InvalidArgumentException::class);
+        static::expectExceptionMessage(
+            'Argument 3 (identifier) passed to ' .
+            Thing::class .
+            '::DaftObjectFromJsonArrayFromArrayMapVal() did not correspond to an instance of ' .
+            Thing::class .
+            ' as defined in argument 2!'
+        );
+        Thing::DaftObjectFromJsonArray([
+            'identifier' => [
+                [
+                    '@context' => 'foo',
+                    '@type' => 'bar',
+                ],
+            ],
+        ]);
+    }
 }

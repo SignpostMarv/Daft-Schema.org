@@ -7,6 +7,7 @@ declare(strict_types=1);
 namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -71,7 +72,7 @@ class AlignmentObject extends Base
         $this->NudgePropertyValue(
             'alignmentType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -100,7 +101,7 @@ class AlignmentObject extends Base
         $this->NudgePropertyValue(
             'educationalFramework',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -129,7 +130,7 @@ class AlignmentObject extends Base
         $this->NudgePropertyValue(
             'targetDescription',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -158,7 +159,7 @@ class AlignmentObject extends Base
         $this->NudgePropertyValue(
             'targetName',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -187,7 +188,7 @@ class AlignmentObject extends Base
         $this->NudgePropertyValue(
             'targetUrl',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

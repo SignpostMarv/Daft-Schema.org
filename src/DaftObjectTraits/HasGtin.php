@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasGtin
@@ -37,7 +38,7 @@ trait HasGtin
         $this->NudgePropertyValue(
             'gtin12',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -66,7 +67,7 @@ trait HasGtin
         $this->NudgePropertyValue(
             'gtin13',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -95,7 +96,7 @@ trait HasGtin
         $this->NudgePropertyValue(
             'gtin14',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -124,7 +125,7 @@ trait HasGtin
         $this->NudgePropertyValue(
             'gtin8',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

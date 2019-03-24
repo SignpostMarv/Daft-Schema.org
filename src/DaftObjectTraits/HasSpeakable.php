@@ -38,7 +38,7 @@ trait HasSpeakable
         $this->NudgePropertyValue(
             'speakable',
             $value,
-            true
+            SpeakableSpecification::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

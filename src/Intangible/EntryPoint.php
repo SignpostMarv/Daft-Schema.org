@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\CreativeWork\SoftwareApplication;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -105,7 +106,7 @@ class EntryPoint extends Intangible
         $this->NudgePropertyValue(
             'actionPlatform',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -134,7 +135,7 @@ class EntryPoint extends Intangible
         $this->NudgePropertyValue(
             'contentType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -163,7 +164,7 @@ class EntryPoint extends Intangible
         $this->NudgePropertyValue(
             'encodingType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -192,7 +193,7 @@ class EntryPoint extends Intangible
         $this->NudgePropertyValue(
             'httpMethod',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -221,7 +222,7 @@ class EntryPoint extends Intangible
         $this->NudgePropertyValue(
             'urlTemplate',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

@@ -365,7 +365,7 @@ class Person extends Thing
     */
     public function SetAdditionalName(array $value) : void
     {
-        $this->NudgePropertyValue('additionalName', $value, true);
+        $this->NudgePropertyValue('additionalName', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -491,7 +491,7 @@ class Person extends Thing
     */
     public function SetColleague(array $value) : void
     {
-        $this->NudgePropertyValue('colleague', $value, true);
+        $this->NudgePropertyValue('colleague', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -554,7 +554,7 @@ class Person extends Thing
     */
     public function SetFamilyName(array $value) : void
     {
-        $this->NudgePropertyValue('familyName', $value, true);
+        $this->NudgePropertyValue('familyName', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -596,7 +596,7 @@ class Person extends Thing
     */
     public function SetGender(array $value) : void
     {
-        $this->NudgePropertyValue('gender', $value, true);
+        $this->NudgePropertyValue('gender', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -617,7 +617,7 @@ class Person extends Thing
     */
     public function SetGivenName(array $value) : void
     {
-        $this->NudgePropertyValue('givenName', $value, true);
+        $this->NudgePropertyValue('givenName', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -680,7 +680,7 @@ class Person extends Thing
     */
     public function SetHonorificPrefix(array $value) : void
     {
-        $this->NudgePropertyValue('honorificPrefix', $value, true);
+        $this->NudgePropertyValue('honorificPrefix', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -701,7 +701,7 @@ class Person extends Thing
     */
     public function SetHonorificSuffix(array $value) : void
     {
-        $this->NudgePropertyValue('honorificSuffix', $value, true);
+        $this->NudgePropertyValue('honorificSuffix', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -722,7 +722,7 @@ class Person extends Thing
     */
     public function SetJobTitle(array $value) : void
     {
-        $this->NudgePropertyValue('jobTitle', $value, true);
+        $this->NudgePropertyValue('jobTitle', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**

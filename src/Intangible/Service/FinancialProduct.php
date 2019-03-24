@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\Service;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -94,7 +95,7 @@ class FinancialProduct extends Base
         $this->NudgePropertyValue(
             'feesAndCommissionsSpecification',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

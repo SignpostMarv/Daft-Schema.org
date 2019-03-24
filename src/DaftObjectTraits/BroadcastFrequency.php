@@ -38,7 +38,7 @@ trait BroadcastFrequency
         $this->NudgePropertyValue(
             'broadcastFrequency',
             $value,
-            true
+            BroadcastFrequencySpecification::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

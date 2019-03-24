@@ -38,7 +38,7 @@ trait HasPublishingPrinciples
         $this->NudgePropertyValue(
             'publishingPrinciples',
             $value,
-            true
+            CreativeWork::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

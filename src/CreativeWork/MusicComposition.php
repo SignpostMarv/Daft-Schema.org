@@ -159,7 +159,7 @@ class MusicComposition extends Base
         $this->NudgePropertyValue(
             'iswcCode',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -272,7 +272,7 @@ class MusicComposition extends Base
         $this->NudgePropertyValue(
             'musicCompositionForm',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -301,7 +301,7 @@ class MusicComposition extends Base
         $this->NudgePropertyValue(
             'musicalKey',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

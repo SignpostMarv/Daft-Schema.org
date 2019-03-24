@@ -72,7 +72,7 @@ class ImageObject extends MediaObject
         $this->NudgePropertyValue(
             'exifData',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

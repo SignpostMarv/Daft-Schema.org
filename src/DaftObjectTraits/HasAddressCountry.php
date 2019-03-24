@@ -38,7 +38,7 @@ trait HasAddressCountry
         $this->NudgePropertyValue(
             'addressCountry',
             $value,
-            true
+            Country::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

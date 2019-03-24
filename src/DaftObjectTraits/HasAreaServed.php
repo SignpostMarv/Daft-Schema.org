@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\GeoShape;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasAreaServed
@@ -40,7 +41,7 @@ trait HasAreaServed
         $this->NudgePropertyValue(
             'areaServed',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

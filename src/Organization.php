@@ -358,7 +358,7 @@ class Organization extends Thing
     */
     public function SetActionableFeedbackPolicy(array $value) : void
     {
-        $this->NudgePropertyValue('actionableFeedbackPolicy', $value, true);
+        $this->NudgePropertyValue('actionableFeedbackPolicy', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -400,7 +400,7 @@ class Organization extends Thing
     */
     public function SetCorrectionsPolicy(array $value) : void
     {
-        $this->NudgePropertyValue('correctionsPolicy', $value, true);
+        $this->NudgePropertyValue('correctionsPolicy', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -463,7 +463,7 @@ class Organization extends Thing
     */
     public function SetDiversityPolicy(array $value) : void
     {
-        $this->NudgePropertyValue('diversityPolicy', $value, true);
+        $this->NudgePropertyValue('diversityPolicy', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -484,7 +484,7 @@ class Organization extends Thing
     */
     public function SetDiversityStaffingReport(array $value) : void
     {
-        $this->NudgePropertyValue('diversityStaffingReport', $value, true);
+        $this->NudgePropertyValue('diversityStaffingReport', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -526,7 +526,7 @@ class Organization extends Thing
     */
     public function SetEthicsPolicy(array $value) : void
     {
-        $this->NudgePropertyValue('ethicsPolicy', $value, true);
+        $this->NudgePropertyValue('ethicsPolicy', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -610,7 +610,7 @@ class Organization extends Thing
     */
     public function SetLegalName(array $value) : void
     {
-        $this->NudgePropertyValue('legalName', $value, true);
+        $this->NudgePropertyValue('legalName', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -631,7 +631,7 @@ class Organization extends Thing
     */
     public function SetLeiCode(array $value) : void
     {
-        $this->NudgePropertyValue('leiCode', $value, true);
+        $this->NudgePropertyValue('leiCode', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -673,7 +673,7 @@ class Organization extends Thing
     */
     public function SetOwnershipFundingInfo(array $value) : void
     {
-        $this->NudgePropertyValue('ownershipFundingInfo', $value, true);
+        $this->NudgePropertyValue('ownershipFundingInfo', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -736,6 +736,6 @@ class Organization extends Thing
     */
     public function SetUnnamedSourcesPolicy(array $value) : void
     {
-        $this->NudgePropertyValue('unnamedSourcesPolicy', $value, true);
+        $this->NudgePropertyValue('unnamedSourcesPolicy', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 }

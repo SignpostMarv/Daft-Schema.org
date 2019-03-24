@@ -10,6 +10,7 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -100,7 +101,7 @@ class ProgramMembership extends Base
         $this->NudgePropertyValue(
             'membershipNumber',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -129,7 +130,7 @@ class ProgramMembership extends Base
         $this->NudgePropertyValue(
             'programName',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

@@ -39,7 +39,7 @@ trait HasCategory
         $this->NudgePropertyValue(
             'category',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

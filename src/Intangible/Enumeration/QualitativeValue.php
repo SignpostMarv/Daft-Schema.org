@@ -87,7 +87,7 @@ class QualitativeValue extends Base
     */
     public function SetEqual(array $value) : void
     {
-        $this->NudgePropertyValue('equal', $value, true);
+        $this->NudgePropertyValue('equal', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -112,7 +112,7 @@ class QualitativeValue extends Base
     */
     public function SetGreater(array $value) : void
     {
-        $this->NudgePropertyValue('greater', $value, true);
+        $this->NudgePropertyValue('greater', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -137,7 +137,7 @@ class QualitativeValue extends Base
     */
     public function SetGreaterOrEqual(array $value) : void
     {
-        $this->NudgePropertyValue('greaterOrEqual', $value, true);
+        $this->NudgePropertyValue('greaterOrEqual', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -162,7 +162,7 @@ class QualitativeValue extends Base
     */
     public function SetLesser(array $value) : void
     {
-        $this->NudgePropertyValue('lesser', $value, true);
+        $this->NudgePropertyValue('lesser', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -187,7 +187,7 @@ class QualitativeValue extends Base
     */
     public function SetLesserOrEqual(array $value) : void
     {
-        $this->NudgePropertyValue('lesserOrEqual', $value, true);
+        $this->NudgePropertyValue('lesserOrEqual', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -212,6 +212,6 @@ class QualitativeValue extends Base
     */
     public function SetNonEqual(array $value) : void
     {
-        $this->NudgePropertyValue('nonEqual', $value, true);
+        $this->NudgePropertyValue('nonEqual', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 }

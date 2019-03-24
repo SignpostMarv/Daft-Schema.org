@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasUnitCodeText
@@ -37,7 +38,7 @@ trait HasUnitCodeText
         $this->NudgePropertyValue(
             'unitCode',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -66,7 +67,7 @@ trait HasUnitCodeText
         $this->NudgePropertyValue(
             'unitText',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPo
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea\Country;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -82,7 +83,7 @@ class PostalAddress extends Base
         $this->NudgePropertyValue(
             'addressLocality',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -111,7 +112,7 @@ class PostalAddress extends Base
         $this->NudgePropertyValue(
             'addressRegion',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -140,7 +141,7 @@ class PostalAddress extends Base
         $this->NudgePropertyValue(
             'postOfficeBoxNumber',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -169,7 +170,7 @@ class PostalAddress extends Base
         $this->NudgePropertyValue(
             'streetAddress',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

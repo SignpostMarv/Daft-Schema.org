@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait Issn
@@ -37,7 +38,7 @@ trait Issn
         $this->NudgePropertyValue(
             'issn',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

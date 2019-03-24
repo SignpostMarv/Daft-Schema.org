@@ -14,6 +14,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -138,7 +139,7 @@ class ContactPoint extends Base
         $this->NudgePropertyValue(
             'contactType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -167,7 +168,7 @@ class ContactPoint extends Base
         $this->NudgePropertyValue(
             'productSupported',
             $value,
-            true
+            Product::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

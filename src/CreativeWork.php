@@ -493,7 +493,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessMode(array $value) : void
     {
-        $this->NudgePropertyValue('accessMode', $value, true);
+        $this->NudgePropertyValue('accessMode', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -514,7 +514,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessModeSufficient(array $value) : void
     {
-        $this->NudgePropertyValue('accessModeSufficient', $value, true);
+        $this->NudgePropertyValue('accessModeSufficient', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -535,7 +535,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityAPI(array $value) : void
     {
-        $this->NudgePropertyValue('accessibilityAPI', $value, true);
+        $this->NudgePropertyValue('accessibilityAPI', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -556,7 +556,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityControl(array $value) : void
     {
-        $this->NudgePropertyValue('accessibilityControl', $value, true);
+        $this->NudgePropertyValue('accessibilityControl', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -577,7 +577,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityFeature(array $value) : void
     {
-        $this->NudgePropertyValue('accessibilityFeature', $value, true);
+        $this->NudgePropertyValue('accessibilityFeature', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -598,7 +598,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilityHazard(array $value) : void
     {
-        $this->NudgePropertyValue('accessibilityHazard', $value, true);
+        $this->NudgePropertyValue('accessibilityHazard', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -619,7 +619,7 @@ class CreativeWork extends Thing
     */
     public function SetAccessibilitySummary(array $value) : void
     {
-        $this->NudgePropertyValue('accessibilitySummary', $value, true);
+        $this->NudgePropertyValue('accessibilitySummary', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -661,7 +661,7 @@ class CreativeWork extends Thing
     */
     public function SetAlternativeHeadline(array $value) : void
     {
-        $this->NudgePropertyValue('alternativeHeadline', $value, true);
+        $this->NudgePropertyValue('alternativeHeadline', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -745,7 +745,7 @@ class CreativeWork extends Thing
     */
     public function SetCitation(array $value) : void
     {
-        $this->NudgePropertyValue('citation', $value, true);
+        $this->NudgePropertyValue('citation', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -913,7 +913,7 @@ class CreativeWork extends Thing
     */
     public function SetCorrection(array $value) : void
     {
-        $this->NudgePropertyValue('correction', $value, true);
+        $this->NudgePropertyValue('correction', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -976,7 +976,7 @@ class CreativeWork extends Thing
     */
     public function SetDiscussionUrl(array $value) : void
     {
-        $this->NudgePropertyValue('discussionUrl', $value, true);
+        $this->NudgePropertyValue('discussionUrl', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1039,7 +1039,7 @@ class CreativeWork extends Thing
     */
     public function SetEducationalUse(array $value) : void
     {
-        $this->NudgePropertyValue('educationalUse', $value, true);
+        $this->NudgePropertyValue('educationalUse', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1081,7 +1081,7 @@ class CreativeWork extends Thing
     */
     public function SetEncodingFormat(array $value) : void
     {
-        $this->NudgePropertyValue('encodingFormat', $value, true);
+        $this->NudgePropertyValue('encodingFormat', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1144,7 +1144,7 @@ class CreativeWork extends Thing
     */
     public function SetHeadline(array $value) : void
     {
-        $this->NudgePropertyValue('headline', $value, true);
+        $this->NudgePropertyValue('headline', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1186,7 +1186,7 @@ class CreativeWork extends Thing
     */
     public function SetInteractivityType(array $value) : void
     {
-        $this->NudgePropertyValue('interactivityType', $value, true);
+        $this->NudgePropertyValue('interactivityType', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1207,7 +1207,7 @@ class CreativeWork extends Thing
     */
     public function SetIsBasedOn(array $value) : void
     {
-        $this->NudgePropertyValue('isBasedOn', $value, true);
+        $this->NudgePropertyValue('isBasedOn', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1249,7 +1249,7 @@ class CreativeWork extends Thing
     */
     public function SetKeywords(array $value) : void
     {
-        $this->NudgePropertyValue('keywords', $value, true);
+        $this->NudgePropertyValue('keywords', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1270,7 +1270,7 @@ class CreativeWork extends Thing
     */
     public function SetLearningResourceType(array $value) : void
     {
-        $this->NudgePropertyValue('learningResourceType', $value, true);
+        $this->NudgePropertyValue('learningResourceType', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1291,7 +1291,7 @@ class CreativeWork extends Thing
     */
     public function SetLicense(array $value) : void
     {
-        $this->NudgePropertyValue('license', $value, true);
+        $this->NudgePropertyValue('license', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1501,7 +1501,7 @@ class CreativeWork extends Thing
     */
     public function SetSchemaVersion(array $value) : void
     {
-        $this->NudgePropertyValue('schemaVersion', $value, true);
+        $this->NudgePropertyValue('schemaVersion', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1543,7 +1543,7 @@ class CreativeWork extends Thing
     */
     public function SetSdLicense(array $value) : void
     {
-        $this->NudgePropertyValue('sdLicense', $value, true);
+        $this->NudgePropertyValue('sdLicense', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1627,7 +1627,7 @@ class CreativeWork extends Thing
     */
     public function SetTemporalCoverage(array $value) : void
     {
-        $this->NudgePropertyValue('temporalCoverage', $value, true);
+        $this->NudgePropertyValue('temporalCoverage', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1648,7 +1648,7 @@ class CreativeWork extends Thing
     */
     public function SetText(array $value) : void
     {
-        $this->NudgePropertyValue('text', $value, true);
+        $this->NudgePropertyValue('text', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1669,7 +1669,7 @@ class CreativeWork extends Thing
     */
     public function SetThumbnailUrl(array $value) : void
     {
-        $this->NudgePropertyValue('thumbnailUrl', $value, true);
+        $this->NudgePropertyValue('thumbnailUrl', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -1732,7 +1732,7 @@ class CreativeWork extends Thing
     */
     public function SetVersion(array $value) : void
     {
-        $this->NudgePropertyValue('version', $value, true);
+        $this->NudgePropertyValue('version', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**

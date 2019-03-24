@@ -157,7 +157,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'applicationCategory',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -186,7 +186,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'applicationSubCategory',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -215,7 +215,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'applicationSuite',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -244,7 +244,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'availableOnDevice',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -273,7 +273,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'countriesNotSupported',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -302,7 +302,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'countriesSupported',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -331,7 +331,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'downloadUrl',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -360,7 +360,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'featureList',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -389,7 +389,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'fileSize',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -418,7 +418,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'installUrl',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -447,7 +447,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'memoryRequirements',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -476,7 +476,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'operatingSystem',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -505,7 +505,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'permissions',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -534,7 +534,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'processorRequirements',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -563,7 +563,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'releaseNotes',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -592,7 +592,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'screenshot',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -677,7 +677,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'softwareRequirements',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -706,7 +706,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'softwareVersion',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -735,7 +735,7 @@ class SoftwareApplication extends Base
         $this->NudgePropertyValue(
             'storageRequirements',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

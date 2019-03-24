@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasReviewAspect
@@ -37,7 +38,7 @@ trait HasReviewAspect
         $this->NudgePropertyValue(
             'reviewAspect',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

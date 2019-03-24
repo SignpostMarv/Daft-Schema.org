@@ -92,7 +92,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'articleBody',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -121,7 +121,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'articleSection',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -150,7 +150,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'backstory',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -179,7 +179,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'pageEnd',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -208,7 +208,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'pageStart',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -237,7 +237,7 @@ class Article extends Base
         $this->NudgePropertyValue(
             'pagination',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

@@ -38,7 +38,7 @@ trait HasMaterial
         $this->NudgePropertyValue(
             'material',
             $value,
-            true
+            Product::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

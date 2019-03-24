@@ -46,7 +46,7 @@ class Audience extends Thing
     */
     public function SetAudienceType(array $value) : void
     {
-        $this->NudgePropertyValue('audienceType', $value, true);
+        $this->NudgePropertyValue('audienceType', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**

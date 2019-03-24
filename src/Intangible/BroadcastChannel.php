@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -81,7 +82,7 @@ class BroadcastChannel extends Base
         $this->NudgePropertyValue(
             'broadcastChannelId',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -110,7 +111,7 @@ class BroadcastChannel extends Base
         $this->NudgePropertyValue(
             'broadcastServiceTier',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

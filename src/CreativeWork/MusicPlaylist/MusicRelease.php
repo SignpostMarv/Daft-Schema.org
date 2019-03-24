@@ -82,7 +82,7 @@ class MusicRelease extends Base
         $this->NudgePropertyValue(
             'catalogNumber',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

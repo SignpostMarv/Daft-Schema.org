@@ -6,6 +6,7 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasIsicV4
@@ -37,7 +38,7 @@ trait HasIsicV4
         $this->NudgePropertyValue(
             'isicV4',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

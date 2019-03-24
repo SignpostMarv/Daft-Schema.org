@@ -68,7 +68,7 @@ class Review extends Base
         $this->NudgePropertyValue(
             'reviewBody',
             $value,
-            true
+            self::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasLocation
@@ -39,7 +40,7 @@ trait HasLocation
         $this->NudgePropertyValue(
             'location',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

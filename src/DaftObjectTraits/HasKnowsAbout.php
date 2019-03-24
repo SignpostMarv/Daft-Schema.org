@@ -38,7 +38,7 @@ trait HasKnowsAbout
         $this->NudgePropertyValue(
             'knowsAbout',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

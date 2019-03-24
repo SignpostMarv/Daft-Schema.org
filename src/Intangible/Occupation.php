@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place\AdministrativeArea;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -91,7 +92,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'educationRequirements',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -148,7 +149,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'experienceRequirements',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -205,7 +206,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'occupationalCategory',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -234,7 +235,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'qualifications',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -263,7 +264,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'responsibilities',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -292,7 +293,7 @@ class Occupation extends Base
         $this->NudgePropertyValue(
             'skills',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

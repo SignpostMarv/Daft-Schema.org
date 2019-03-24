@@ -9,6 +9,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\Intangible;
 use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -259,7 +260,7 @@ class ServiceChannel extends Base
         $this->NudgePropertyValue(
             'serviceUrl',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

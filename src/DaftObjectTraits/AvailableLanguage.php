@@ -38,7 +38,7 @@ trait AvailableLanguage
         $this->NudgePropertyValue(
             'availableLanguage',
             $value,
-            true
+            Language::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

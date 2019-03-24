@@ -12,6 +12,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service\FinancialProduct as Bas
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\MonetaryAmount;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\QuantitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue\RepaymentSpecification;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -209,7 +210,7 @@ class LoanOrCredit extends Base
         $this->NudgePropertyValue(
             'loanType',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -294,7 +295,7 @@ class LoanOrCredit extends Base
         $this->NudgePropertyValue(
             'requiredCollateral',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

@@ -231,7 +231,7 @@ class Place extends Thing
     */
     public function SetBranchCode(array $value) : void
     {
-        $this->NudgePropertyValue('branchCode', $value, true);
+        $this->NudgePropertyValue('branchCode', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -315,7 +315,7 @@ class Place extends Thing
     */
     public function SetHasMap(array $value) : void
     {
-        $this->NudgePropertyValue('hasMap', $value, true);
+        $this->NudgePropertyValue('hasMap', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**

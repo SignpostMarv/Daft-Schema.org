@@ -11,6 +11,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Intangible\BroadcastChannel;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\BroadcastFrequencySpecification;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Service as Base;
 use SignpostMarv\DaftObject\SchemaOrg\Organization;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -121,7 +122,7 @@ class BroadcastService extends Base
         $this->NudgePropertyValue(
             'broadcastDisplayName',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -150,7 +151,7 @@ class BroadcastService extends Base
         $this->NudgePropertyValue(
             'broadcastTimezone',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -263,7 +264,7 @@ class BroadcastService extends Base
         $this->NudgePropertyValue(
             'videoFormat',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

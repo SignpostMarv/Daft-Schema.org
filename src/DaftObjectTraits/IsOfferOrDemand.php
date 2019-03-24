@@ -15,6 +15,7 @@ use SignpostMarv\DaftObject\SchemaOrg\Organization;
 use SignpostMarv\DaftObject\SchemaOrg\Person;
 use SignpostMarv\DaftObject\SchemaOrg\Place;
 use SignpostMarv\DaftObject\SchemaOrg\Product;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait IsOfferOrDemand
@@ -224,7 +225,7 @@ trait IsOfferOrDemand
         $this->NudgePropertyValue(
             'serialNumber',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

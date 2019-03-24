@@ -10,6 +10,7 @@ use SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\Enumeration\QualitativeValue;
 use SignpostMarv\DaftObject\SchemaOrg\Intangible\StructuredValue as Base;
+use SignpostMarv\DaftObject\SchemaOrg\Thing;
 use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 /**
@@ -97,7 +98,7 @@ class PropertyValue extends Base
         $this->NudgePropertyValue(
             'propertyID',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 }

@@ -82,7 +82,7 @@ class GeoCoordinates extends Thing
     */
     public function SetLatitude(array $value) : void
     {
-        $this->NudgePropertyValue('latitude', $value, true);
+        $this->NudgePropertyValue('latitude', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -103,6 +103,6 @@ class GeoCoordinates extends Thing
     */
     public function SetLongitude(array $value) : void
     {
-        $this->NudgePropertyValue('longitude', $value, true);
+        $this->NudgePropertyValue('longitude', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 }

@@ -88,7 +88,7 @@ class GeoShape extends Thing
     */
     public function SetBox(array $value) : void
     {
-        $this->NudgePropertyValue('box', $value, true);
+        $this->NudgePropertyValue('box', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -109,7 +109,7 @@ class GeoShape extends Thing
     */
     public function SetCircle(array $value) : void
     {
-        $this->NudgePropertyValue('circle', $value, true);
+        $this->NudgePropertyValue('circle', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -130,7 +130,7 @@ class GeoShape extends Thing
     */
     public function SetLine(array $value) : void
     {
-        $this->NudgePropertyValue('line', $value, true);
+        $this->NudgePropertyValue('line', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -151,6 +151,6 @@ class GeoShape extends Thing
     */
     public function SetPolygon(array $value) : void
     {
-        $this->NudgePropertyValue('polygon', $value, true);
+        $this->NudgePropertyValue('polygon', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 }

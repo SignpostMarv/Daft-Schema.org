@@ -65,7 +65,7 @@ class ItemList extends Base
         $this->NudgePropertyValue(
             'itemListElement',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 
@@ -94,7 +94,7 @@ class ItemList extends Base
         $this->NudgePropertyValue(
             'itemListOrder',
             $value,
-            true
+            Thing::BOOL_DEFAULT_AUTOTRIMSTRINGS
         );
     }
 

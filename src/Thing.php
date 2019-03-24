@@ -36,6 +36,12 @@ class Thing extends AbstractArrayBackedDaftObject implements
     DaftJson,
     DaftObjectHasPropertiesWithMultiTypedArraysOfUniqueValues
 {
+    const BOOL_DEFAULT_AUTOTRIMSTRINGS = true;
+
+    const INT_FILL_FROM_START = 0;
+
+    const INT_COUNT_NOT_EMPTY = 0;
+
     const SCHEMA_ORG_CONTEXT = 'http://schema.org';
 
     const SCHEMA_ORG_TYPE = 'Thing';
@@ -109,7 +115,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
         */
         $missing = array_combine(
             $missing,
-            array_fill(0, count($missing), [])
+            array_fill(self::INT_FILL_FROM_START, count($missing), [])
         );
 
         /**
@@ -153,7 +159,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAdditionalType(array $value) : void
     {
-        $this->NudgePropertyValue('additionalType', $value, true);
+        $this->NudgePropertyValue('additionalType', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -174,7 +180,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetAlternateName(array $value) : void
     {
-        $this->NudgePropertyValue('alternateName', $value, true);
+        $this->NudgePropertyValue('alternateName', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -195,7 +201,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDescription(array $value) : void
     {
-        $this->NudgePropertyValue('description', $value, true);
+        $this->NudgePropertyValue('description', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -216,7 +222,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetDisambiguatingDescription(array $value) : void
     {
-        $this->NudgePropertyValue('disambiguatingDescription', $value, true);
+        $this->NudgePropertyValue('disambiguatingDescription', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -237,7 +243,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetIdentifier(array $value) : void
     {
-        $this->NudgePropertyValue('identifier', $value, true);
+        $this->NudgePropertyValue('identifier', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -258,7 +264,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetImage(array $value) : void
     {
-        $this->NudgePropertyValue('image', $value, true);
+        $this->NudgePropertyValue('image', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -279,7 +285,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetMainEntityOfPage(array $value) : void
     {
-        $this->NudgePropertyValue('mainEntityOfPage', $value, true);
+        $this->NudgePropertyValue('mainEntityOfPage', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -300,7 +306,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetName(array $value) : void
     {
-        $this->NudgePropertyValue('name', $value, true);
+        $this->NudgePropertyValue('name', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -342,7 +348,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetSameAs(array $value) : void
     {
-        $this->NudgePropertyValue('sameAs', $value, true);
+        $this->NudgePropertyValue('sameAs', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -363,7 +369,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetSubjectOf(array $value) : void
     {
-        $this->NudgePropertyValue('subjectOf', $value, true);
+        $this->NudgePropertyValue('subjectOf', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     /**
@@ -384,7 +390,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
     */
     public function SetUrl(array $value) : void
     {
-        $this->NudgePropertyValue('url', $value, true);
+        $this->NudgePropertyValue('url', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 
     public function jsonSerialize() : array
@@ -395,7 +401,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
             * @param scalar|array|object|null $val
             */
             function ($val) : bool {
-                return ! is_array($val) || count($val) > 0;
+                return ! is_array($val) || count($val) > self::INT_COUNT_NOT_EMPTY;
             }
         );
     }
@@ -695,7 +701,7 @@ class Thing extends AbstractArrayBackedDaftObject implements
             __METHOD__ .
             '() did not correspond to an instance of ' .
             Thing::class .
-            ' as defined in Argument 2!'
+            ' as defined in argument 2!'
         );
     }
 

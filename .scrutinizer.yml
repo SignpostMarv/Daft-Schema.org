@@ -18,7 +18,6 @@ build:
                 coverage:
                     file: 'phpunit.clover'
                     format: 'clover'
-            - ./vendor/bin/infection --min-msi=100
 
 checks:
     php:

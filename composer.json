@@ -33,6 +33,7 @@
     },
     "scripts": {
         "scrutinizer": [
+            "infection --min-msi=100 -j$(nproc)",
             "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover",
             "@tests"
         ],

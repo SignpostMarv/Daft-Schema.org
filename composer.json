@@ -33,7 +33,14 @@
     },
     "scripts": {
         "scrutinizer": [
-            "infection --min-msi=100 -j$(nproc)",
+            "infection --min-msi=100 -j$(nproc) --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\"",
+            "@ci"
+        ],
+        "scrutinizer-local": [
+            "infection --min-msi=100 -j6 --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\"",
+            "@ci"
+        ],
+        "ci": [
             "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover",
             "@tests"
         ],

@@ -1,5 +1,6 @@
 {
     "timeout": 0,
+    "bootstrap": "./phpunit.xdebug.filter.php",
     "source": {
         "directories": [
             "SchemaOrgLookup",

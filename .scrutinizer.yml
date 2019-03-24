@@ -15,6 +15,7 @@ build:
         override:
             -
                 command: 'composer run scrutinizer --timeout=0'
+                idle_timeout: 600
                 coverage:
                     file: 'phpunit.clover'
                     format: 'clover'

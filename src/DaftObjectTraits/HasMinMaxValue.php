@@ -85,6 +85,6 @@ trait HasMinMaxValue
     */
     public function SetValue(array $value) : void
     {
-        $this->NudgePropertyValue('value', $value, self::BOOL_DEFAULT_AUTOTRIMSTRINGS);
+        $this->NudgePropertyValue('value', $value, StructuredValue::BOOL_DEFAULT_AUTOTRIMSTRINGS);
     }
 }

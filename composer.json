@@ -33,15 +33,15 @@
     },
     "scripts": {
         "scrutinizer": [
-            "infection --min-msi=100 -j$(nproc) --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\"",
-            "@ci"
+            "@ci",
+            "infection --min-msi=100 -j$(nproc) --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\""
         ],
         "scrutinizer-local": [
-            "infection --min-msi=100 -j6 --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\"",
-            "@ci"
+            "@ci",
+            "infection --min-msi=100 -j6 --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\" --coverage=./coverage/"
         ],
         "ci": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover --coverage-xml=./coverage/coverage-xml/ --log-junit=./coverage/phpunit.junit.xml --prepend=./phpunit.xdebug.filter.php",
             "@tests"
         ],
         "coverage-html": [

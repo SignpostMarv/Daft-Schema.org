@@ -14,4 +14,9 @@ trait DaftObjectTrait
         bool $autoTrimStrings = false,
         bool $throwIfNotUnique = false
     ) : void;
+
+    /**
+    * @return scalar|array|object|null the property value
+    */
+    abstract protected function RetrievePropertyValueFromData(string $property);
 }

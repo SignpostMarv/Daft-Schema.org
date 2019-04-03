@@ -17,565 +17,320 @@ use RuntimeException;
 use SignpostMarv\DaftObject\DefinitionAssistant;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
+use SignpostMarv\DaftObject\SchemaOrgLookup\Lookup_a2b5f59b072eb4f0e36f78a746b715700e835d2e9c730b70f6a3227ea7e43dbe964c346da3d654c7a5aa9631a79f6c57d702a01474263806629abb2a304f77e1 as SchemaOrgLookupThing;
+use SignpostMarv\DaftObject\SchemaOrgLookup\LookupInterface;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
 
 class DaftObjectFuzzingTest extends Base
 {
     use DataProviderTrait;
 
-    /**
-    * @var array
-    */
-    private static $cache = [];
-
-    /**
-    * @var array
-    */
-    private static $deep_cache = [];
-
-    /**
-    * @var array<string, (SchemaOrg\Thing|SchemaOrg\DataTypes\DataType)[]>
-    */
-    private static $obj_cache = [];
-
-    /**
-    * @var array<string, (SchemaOrg\Thing|SchemaOrg\DataTypes\DataType)[]>
-    */
-    private static $obj_deep_cache = [];
-
-    /**
-    * @var array
-    */
-    private static $fuzzing_cache = [];
-
-    /**
-    * @var array<string, bool>
-    *
-    * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
-    */
-    private static $YieldTypeForFuzzing = [];
-
-    /**
-    * @var bool
-    */
-    private static $last_boolean = false;
-
-    public function test_singular_method_definition() : void
-    {
-        $properties = [];
-
-        $declared_on_traits = [];
-
-        foreach (static::YieldTypeForFuzzing(null) as $thing) {
-            $reflector = new ReflectionClass($thing);
-
-            $class_methods = [];
-
-            $checking = $thing;
-
-            while (is_a($checking, SchemaOrg\Thing::class, true)) {
-                $checking_reflector = new ReflectionClass($checking);
-
-                foreach ($checking_reflector->getTraits() as $trait) {
-                    foreach ($trait->getMethods() as $trait_method) {
-                        if ( ! in_array($trait_method->name, $class_methods, true)) {
-                            $class_methods[] = $trait_method->name;
-                        }
-                    }
-                }
-
-                $checking = get_parent_class($checking);
-            }
-
-            foreach ($thing::DaftObjectProperties() as $property) {
-                $method = DefinitionAssistant::GetterMethodName($thing, $property);
-
-                if ( ! isset($properties[$property])) {
-                    $properties[$property] = [];
-                }
-
-                if (is_string($method) && $reflector->hasMethod($method)) {
-                    $method_reflection = $reflector->getMethod($method);
-
-                    if (
-                        ! in_array($method, $class_methods, true)
-                    ) {
-                        $declared_on = $method_reflection->getDeclaringClass()->name;
-
-                        if ( ! in_array($declared_on, $properties[$property], true)) {
-                            $properties[$property][] = $declared_on;
-                        }
-                    } elseif ( ! in_array($property, $declared_on_traits, true)) {
-                        $declared_on_traits[] = $property;
-                    }
-                }
-            }
-        }
-
-        $empty_definitions = [];
-        $over_defined = [];
-
-        foreach ($properties as $property => $declared_on_classes) {
-            $count = count($declared_on_classes);
-
-            if ($count < 1) {
-                $empty_definitions[] = $property;
-            } elseif ($count > 1) {
-                $over_defined[$property] = $declared_on_classes;
-            }
-        }
-
-        $empty_definitions = array_filter(
-            $empty_definitions,
-            function (string $property) use ($declared_on_traits) : bool {
-                return ! in_array($property, $declared_on_traits, true);
-            }
-        );
-
-        static::assertCount(
-            0,
-            $empty_definitions,
-            (
-                'The follow properties had no definition: ' .
-                implode(', ', $empty_definitions)
-            )
-        );
-        static::assertCount(
-            0,
-            $over_defined,
-            (
-                'The following properties were defined on more than one class:' .
-                array_reduce(
-                    array_keys($over_defined),
-                    function (string $out, string $in) use ($over_defined) : string {
-                        return $out . "\n" . $in . ': ' . implode(', ', $over_defined[$in]);
-                    },
-                    ''
-                )
-            )
-        );
-    }
-
-    /**
-    * @psalm-param class-string<SchemaOrg\Thing> $type
-    *
-    * @psalm-return Generator<int, array<string, scalar|array|object|null>, mixed, void>
-    */
-    protected static function YieldArgsForTypeForFuzzing(string $type, bool $deep = false) : Generator
-    {
-        /**
-        * @var array<string, array<int, scalar|array|object|null>>
-        */
-        $args = $deep ? (self::$deep_cache[$type] ?? []) : (self::$cache[$type] ?? []);
-
-        if ($deep && ! isset(self::$deep_cache[$type])) {
-            foreach (
-                $type::DaftObjectPropertiesWithMultiTypedArraysOfUniqueValues() as $property => $types
-            ) {
-                if ( ! isset($args[$property])) {
-                    $args[$property] = [];
-                }
-                static::assertIsArray(
-                    $types,
-                    (
-                        $type .
-                        '::PROPERTIES_WITH_MULTI_TYPED_ARRAYS[' .
-                        $property .
-                        '] was not an array, ' .
-                        gettype($types) .
-                        ' given!'
-                    )
-                );
-
-                /**
-                * @var string[]
-                *
-                * @psalm-var array<int, class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>>
-                */
-                $sub_types = [];
-
-                foreach ($types as $sub_type) {
-                    if ( ! class_exists($sub_type) && ! interface_exists($sub_type)) {
-                        switch ($sub_type) {
-                            case 'string':
-                                $args[$property][] = 'Foo' . count($args[$property]);
-                                break;
-                            case 'double':
-                                $args[$property][] = (float) count($args[$property]);
-                                break;
-                            case 'integer':
-                                $args[$property][] = count($args[$property]);
-                                break;
-                            case 'boolean':
-                                $args[$property][] = self::$last_boolean;
-                                self::$last_boolean = ! self::$last_boolean;
-                                break;
-                            default:
-                                throw new RuntimeException('Unsupported type: ' . $sub_type);
-                        }
-                    } elseif (
-                        is_a($sub_type, SchemaOrg\Thing::class, true) ||
-                        is_a($sub_type, SchemaOrg\DataTypes\DataType::class, true)
-                    ) {
-                        /**
-                        * @var string
-                        *
-                        * @psalm-var class-string<SchemaOrg\Thing>|class-string<SchemaOrg\DataTypes\DataType>
-                        */
-                        $sub_type = $sub_type;
-
-                        $sub_types[] = $sub_type;
-                    }
-                }
-
-                foreach (static::YieldCachedObjectsOfTypeForFuzzing($sub_types) as $obj) {
-                    if ( ! in_array($obj, $args[$property], true)) {
-                        $args[$property][] = $obj;
-                    }
-                }
-            }
-
-            $const = new ReflectionClassConstant($type, 'PROPERTIES_WITH_MULTI_TYPED_ARRAYS');
-
-            foreach (array_keys($args) as $property) {
-                if (
-                    $type === $const->getDeclaringClass()->name
-                ) {
-                    static::assertGreaterThan(
-                        0,
-                        count($args[$property]),
-                        (
-                            $type .
-                            '[' .
-                            $property .
-                            '] did not have any values when generated data passes were done!'
-                        )
-                    );
-                } elseif (count($args[$property]) < 1) {
-                    unset($args[$property]);
-                }
-            }
-
-            self::$deep_cache[$type] = $args;
-        } elseif ( ! $deep && ! isset(self::$cache[$type])) {
-            self::$cache[$type] = ['name' => ['Foo']];
-
-            $args = self::$cache[$type];
-        }
-
-        yield $args;
-
-        if (SchemaOrg\Intangible\Enumeration\QualitativeValue::class === $type) {
-            yield [
-                'identifier' => [
-                    'M',
-                ],
-                'equal' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'medium',
-                        ],
-                    ]),
-                ],
-                'nonEqual' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'S',
-                        ],
-                    ]),
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'L',
-                        ],
-                    ]),
-                ],
-                'greater' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'S',
-                        ],
-                    ]),
-                ],
-                'greaterOrEqual' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'medium',
-                        ],
-                    ]),
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'S',
-                        ],
-                    ]),
-                ],
-                'lesser' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'L',
-                        ],
-                    ]),
-                ],
-                'lesserOrEqual' => [
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'medium',
-                        ],
-                    ]),
-                    new SchemaOrg\Intangible\Enumeration\QualitativeValue([
-                        'identifier' => [
-                            'L',
-                        ],
-                    ]),
-                ],
-            ];
-        }
-    }
-
-    /**
-    * @param array<int, string> $types
-    */
-    protected static function YieldObjectsOfTypeForFuzzing(
-        array $types
-    ) : Generator {
-        /**
-        * @psalm-var array<int, class-string<SchemaOrg\DataTypes\DataType>>
-        */
-        $data_types = [];
-
-        /**
-        * @psalm-var array<int, class-string<SchemaOrg\Thing>>
-        */
-        $thing_types = [];
-
-        foreach ($types as $type) {
-            if (is_a($type, SchemaOrg\DataTypes\DataType::class, true)) {
-                $data_types[] = $type;
-            } elseif (is_a($type, SchemaOrg\Thing::class, true)) {
-                $thing_types[] = $type;
-            }
-        }
-
-        foreach ($data_types as $gimme) {
-            if (SchemaOrg\DataTypes\Date::class === $gimme) {
-                yield new SchemaOrg\DataTypes\Date('January 1st 1970');
-            } elseif (SchemaOrg\DataTypes\DateTime::class === $gimme) {
-                yield new SchemaOrg\DataTypes\DateTime('January 1st 1970 01:02:03');
-            } elseif (SchemaOrg\DataTypes\Time::class === $gimme) {
-                yield new SchemaOrg\DataTypes\Time('01:02:03');
-            } elseif (SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class === $gimme) {
-                yield SchemaOrg\DataTypes\DataType\Text\CssSelectorType::DataTypeFromString(
-                    '.foo'
-                );
-            } elseif (SchemaOrg\DataTypes\DataType\Text\XPathType::class === $gimme) {
-                yield SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//foo');
-            }
-        }
-
-        foreach ($thing_types as $gimme) {
-            if (
-                ! ($reflector = new ReflectionClass($gimme))->isAbstract()
-            ) {
-                foreach (static::YieldArgsForTypeForFuzzing($gimme) as $args) {
-                    /**
-                    * @var SchemaOrg\Thing
-                    */
-                    $obj = $reflector->newInstance($args);
-
-                    yield $obj;
-                }
-            }
-        }
-    }
-
-    /**
-    * @param string[] $types
-    *
-    * @psalm-return Generator<int, SchemaOrg\Thing|SchemaOrg\DataTypes\DataType, mixed, void>
-    */
-    protected static function YieldCachedObjectsOfTypeForFuzzing(
-        array $types,
-        bool $deep = false,
-        array $skip_these = []
-    ) : Generator {
-        $yield_count = [];
-
-        if ($deep) {
-            foreach ($types as $gimme) {
-                if ( ! isset(self::$obj_deep_cache[$gimme])) {
-                    self::$obj_deep_cache[$gimme] = iterator_to_array(
-                        static::YieldObjectsOfTypeForFuzzing([$gimme])
-                    );
-                }
-
-                yield from self::$obj_deep_cache[$gimme];
-
-                if (count(self::$obj_deep_cache[$gimme]) > 0) {
-                    $yield_count[$gimme] = ($yield_count[$gimme] ?? 0) + 1;
-                } else {
-                    $yield_count[$gimme] = $yield_count[$gimme] ?? 0;
-                }
-            }
-        } else {
-            foreach ($types as $gimme) {
-                if ( ! isset(self::$obj_cache[$gimme])) {
-                    self::$obj_cache[$gimme] = iterator_to_array(
-                        static::YieldObjectsOfTypeForFuzzing([$gimme])
-                    );
-                }
-
-                yield from self::$obj_cache[$gimme];
-
-                if (count(self::$obj_cache[$gimme]) > 0) {
-                    $yield_count[$gimme] = ($yield_count[$gimme] ?? 0) + 1;
-                } else {
-                    $yield_count[$gimme] = $yield_count[$gimme] ?? 0;
-                }
-            }
-        }
-
-        /**
-        * @var array<int, string>
-        *
-        * @psalm-var array<int, class-string<SchemaOrg\Thing>>
-        */
-        $recheck_with_these = [];
-
-        foreach ($yield_count as $gimme => $count) {
-            if ($count < 1) {
-                foreach (static::YieldTypeForFuzzing() as $gimme_again) {
-                    if (
-                        ! in_array($gimme_again, $skip_these, true) &&
-                        is_a($gimme_again, $gimme, true)
-                    ) {
-                        /**
-                        * @var string
-                        *
-                        * @psalm-var class-string<SchemaOrg\Thing>
-                        */
-                        $gimme_again = $gimme_again;
-
-                        $recheck_with_these[] = $gimme_again;
-                    }
-                }
-            } elseif ( ! in_array($gimme, $skip_these, true)) {
-                $skip_these[] = $gimme;
-            }
-        }
-
-        if (count($recheck_with_these) > 0) {
-            yield from static::YieldCachedObjectsOfTypeForFuzzing(
-                $recheck_with_these,
-                $deep,
-                $skip_these
-            );
-        }
-    }
-
-    /**
-    * @psalm-return Generator<int, class-string<SchemaOrg\Thing>, mixed, void>
-    */
-    protected static function YieldTypeForFuzzing(? bool $abstract = false) : Generator
-    {
-        if (count(self::$YieldTypeForFuzzing) < 1) {
-            /**
-            * @var iterable<string>
-            */
-            $iterator = new CallbackFilterIterator(
-                new RecursiveIteratorIterator(
-                    new RecursiveCallbackFilterIterator(
-                        new RecursiveDirectoryIterator(
-                            (__DIR__ . '/../../src/'),
-                            (
-                                RecursiveDirectoryIterator::CURRENT_AS_PATHNAME |
-                                RecursiveDirectoryIterator::SKIP_DOTS |
-                                RecursiveDirectoryIterator::UNIX_PATHS
-                            )
-                        ),
-                        function (string $path_name) : bool {
-                            return
-                                is_dir($path_name) ||
-                                (
-                                    is_file($path_name) &&
-                                    '.php' === mb_substr($path_name, -4)
-                                );
-                        }
-                    )
-                ),
-                function (string $path_name) : bool {
-                    return is_file($path_name);
-                }
-            );
-
-            $root_length = mb_strlen(__DIR__ . '/../../src/');
-
-            /**
-            * @var array<string, bool>
-            *
-            * @psalm-var array<class-string<SchemaOrg\Thing>, bool>
-            */
-            $cache = [];
-
-            foreach ($iterator as $pathname) {
-                $class_name =
-                    'SignpostMarv\\DaftObject\\SchemaOrg\\' .
-                    str_replace('/', '\\', mb_substr($pathname, $root_length, -4));
-
-                if (is_a($class_name, SchemaOrg\Thing::class, true)) {
-                    $reflector = new ReflectionClassConstant(
-                        $class_name,
-                        'PROPERTIES_WITH_MULTI_TYPED_ARRAYS'
-                    );
-
-                    DefinitionAssistant::RegisterAbstractDaftObjectType($class_name);
-
-                    if ($class_name === $reflector->getDeclaringClass()->name) {
-                        /**
-                        * @psalm-var ReflectionClass<SchemaOrg\Thing>
-                        */
-                        $reflector = new ReflectionClass($class_name);
-
-                        /**
-                        * @var string
-                        *
-                        * @psalm-var class-string<SchemaOrg\Thing>
-                        */
-                        $class_name = $reflector->name;
-
-                        $cache[$class_name] = ! $reflector->isAbstract();
-                    }
-                }
-            }
-
-            self::$YieldTypeForFuzzing = $cache;
-        }
-
-        if (is_null($abstract)) {
-            yield from array_keys(self::$YieldTypeForFuzzing);
-        } elseif ($abstract) {
-            foreach (self::$YieldTypeForFuzzing as $out => $not_abstract) {
-                if ( ! $not_abstract) {
-                    yield $out;
-                }
-            }
-        }
-
-        yield from array_keys(array_filter(self::$YieldTypeForFuzzing));
-    }
-
     protected function FuzzingImplementationsViaGenerator() : Generator
     {
-        if (count(self::$fuzzing_cache) < 1) {
-            $cache = [];
+        $boolean = true;
 
-            foreach (static::YieldTypeForFuzzing() as $type) {
-                foreach (static::YieldArgsForTypeForFuzzing($type, true) as $args) {
-                    $cache[] = [$type, $args];
+        foreach (SchemaOrgLookupThing::ObtainClasses() as $class) {
+            $args = [];
+
+            if ((new ReflectionClass($class))->isAbstract()) {
+                continue;
+            }
+
+            foreach ($class::PROPERTIES_WITH_MULTI_TYPED_ARRAYS as $arg => $spec) {
+                $args[$arg] = [];
+
+                foreach ($spec as $type) {
+                    if ('string' === $type) {
+                        $args[$arg][] = static::FuzzFreshStringforSchemaOrg();
+                    } elseif ('integer' === $type) {
+                        $args[$arg][] = random_int(0, 100);
+                    } elseif ('double' === $type) {
+                        $args[$arg][] = (float) random_int(0, 100);
+                    } elseif ('boolean' === $type) {
+                        $boolean = ! $boolean;
+
+                        $args[$arg][] = $boolean;
+                    } elseif (is_a($type, SchemaOrg\Thing::class, true)) {
+                        if ((new ReflectionClass($type))->isAbstract()) {
+                            $lookup =
+                                '\\SignpostMarv\\DaftObject\\SchemaOrgLookup\\Lookup_' .
+                                hash('sha512', $type);
+
+                            if (is_a($lookup, LookupInterface::class, true)) {
+                                foreach ($lookup::ObtainClasses() as $lookup_type) {
+                                    if ((new ReflectionClass($lookup_type))->isAbstract()) {
+                                        continue;
+                                    }
+
+                                    $args[$arg][] = static::FuzzFreshSchemaOrgType($lookup_type);
+                                }
+                            }
+                        } else {
+                            $args[$arg][] = static::FuzzFreshSchemaOrgType($type);
+                        }
+                    } elseif (SchemaOrg\DataTypes\Date::class === $type) {
+                        $args[$arg][] = static::FuzzFreshSchemaOrgDate();
+                    } elseif (SchemaOrg\DataTypes\Time::class === $type) {
+                        $args[$arg][] = static::FuzzFreshSchemaOrgTime();
+                    } elseif (SchemaOrg\DataTypes\DateTime::class === $type) {
+                        $args[$arg][] = static::FuzzFreshSchemaOrgDateTime();
+                    } elseif (SchemaOrg\DataTypes\DataType\Text\CssSelectorType::class === $type) {
+                        $args[$arg][] = SchemaOrg\DataTypes\DataType\Text\CssSelectorType::DataTypeFromString('.foo');
+                    } elseif (SchemaOrg\DataTypes\DataType\Text\XPathType::class === $type) {
+                        $args[$arg][] = SchemaOrg\DataTypes\DataType\Text\XPathType::DataTypeFromString('//bar');
+                    } else {
+                        throw new RuntimeException('Unsupported spec type: ' . $type);
+                    }
                 }
             }
 
-            self::$fuzzing_cache = $cache;
+            yield [$class, $args];
         }
 
-        yield from self::$fuzzing_cache;
+        return;
+
+        yield [
+            SchemaOrg\Thing::class,
+            [
+                'additionalType' => [
+                    SchemaOrg\Action::SCHEMA_ORG_TYPE,
+                ],
+                'alternateName' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'description' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'disambiguatingDescription' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'identifier' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue\PropertyValue::class),
+                ],
+                'image' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\MediaObject\ImageObject::class),
+                ],
+                'mainEntityOfPage' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork::class),
+                ],
+                'name' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'potentialAction' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Action::class),
+                ],
+                'sameAs' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'subjectOf' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Event::class),
+                ],
+                'url' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+            ],
+        ];
+
+        yield [
+            SchemaOrg\Action::class,
+            [
+                'actionStatus' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Enumeration\ActionStatusType::class),
+                ],
+                'agent' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'endTime' => [
+                    static::FuzzFreshSchemaOrgDateTime(),
+                ],
+                'error' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                ],
+                'instrument' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                ],
+                'location' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+                    static::FuzzFreshSchemaOrgType(
+                        SchemaOrg\Intangible\StructuredValue\ContactPoint\PostalAddress::class
+                    ),
+                ],
+                'object' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                ],
+                'participant' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'result' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                ],
+                'startTime' => [
+                    static::FuzzFreshSchemaOrgDateTime(),
+                ],
+                'target' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\EntryPoint::class),
+                ],
+            ],
+        ];
+
+        yield [
+            SchemaOrg\Audience::class,
+            [
+                'audienceType' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'geographicArea' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place\AdministrativeArea::class),
+                ],
+            ],
+        ];
+
+        yield [
+            SchemaOrg\CreativeWork::class,
+            [
+                'about' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                ],
+                'accessMode' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessModeSufficient' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessibilityAPI' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessibilityControl' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessibilityFeature' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessibilityHazard' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accessibilitySummary' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'accountablePerson' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'aggregateRating' => [
+                    static::FuzzFreshSchemaOrgType(
+                        SchemaOrg\Intangible\Rating\AggregateRating::class
+                    ),
+                ],
+                'alternativeHeadline' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'associatedMedia' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\MediaObject::class),
+                ],
+                'audience' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Audience::class),
+                ],
+                'audio' => [
+                    static::FuzzFreshSchemaOrgType(
+                        SchemaOrg\CreativeWork\MediaObject\AudioObject::class
+                    ),
+                ],
+                'author' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'award' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                ],
+                'character' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'citation' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork::class),
+                ],
+                'comment' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\Comment::class),
+                ],
+                'commentCount' => [
+                    random_int(0, 100),
+                ],
+                'contentLocation' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+                ],
+                'contentRating' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Rating::class),
+                ],
+                'contentReferenceTime' => [
+                    static::FuzzFreshSchemaOrgDateTime(),
+                ],
+                'contributor' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'copyrightHolder' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+                'copyrightYear' => [
+                    random_int(1923, 2073),
+                ],
+                'correction' => [
+                    static::FuzzFreshStringforSchemaOrg(),
+                    static::FuzzFreshSchemaOrgType(
+                        SchemaOrg\CreativeWork\Comment\CorrectionComment::class
+                    ),
+                ],
+                'creator' => [
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                ],
+            ],
+        ];
+    }
+
+    protected static function FuzzFreshSchemaOrgDate(
+        string $date = 'January 1st 1970'
+    ) : SchemaOrg\DataTypes\Date {
+        return new SchemaOrg\DataTypes\Date($date);
+    }
+
+    protected static function FuzzFreshSchemaOrgDateTime(
+        string $datetime = 'January 1st 1970 01:02:03'
+    ) : SchemaOrg\DataTypes\DateTime {
+        return new SchemaOrg\DataTypes\DateTime($datetime);
+    }
+
+    protected static function FuzzFreshSchemaOrgTime(
+        string $time = '01:02:03'
+    ) : SchemaOrg\DataTypes\Time {
+        return new SchemaOrg\DataTypes\Time($time);
+    }
+
+    protected static function FuzzFreshStringforSchemaOrg(int $bytes = 4) : string
+    {
+        return bin2hex(random_bytes($bytes));
+    }
+
+    /**
+    * @template T as SchemaOrg\Thing
+    *
+    * @psalm-param class-string<T> $type
+    *
+    * @psalm-return T
+    */
+    protected static function FuzzFreshSchemaOrgType(
+        string $type,
+        array $with_args = []
+    ) : SchemaOrg\Thing {
+        $with_args['identifier'] = [static::FuzzFreshStringforSchemaOrg()];
+
+        return new $type($with_args);
     }
 }

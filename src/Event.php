@@ -108,9 +108,7 @@ class Event extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'about' => [
-            Thing::class,
-        ],
+        'about' => TypeUtilities::MULTI_TYPE_DICT__about,
         'actor' => [
             Person::class,
         ],
@@ -208,9 +206,7 @@ class Event extends Thing
             Organization::class,
             Person::class,
         ],
-        'typicalAgeRange' => [
-            'string',
-        ],
+        'typicalAgeRange' => TypeUtilities::MULTI_TYPE_DICT__typicalAgeRange,
         'workFeatured' => [
             CreativeWork::class,
         ],

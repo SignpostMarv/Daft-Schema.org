@@ -41,6 +41,12 @@ class TypeUtilities extends Base
         Intangible\StructuredValue\QuantitativeValue::class,
     ];
 
+    const MULTI_TYPE_COMMON__string_double_integer = [
+        'string',
+        'double',
+        'integer',
+    ];
+
     const MULTI_TYPE_DICT__about = [
         Thing::class,
     ];
@@ -49,6 +55,16 @@ class TypeUtilities extends Base
 
     const MULTI_TYPE_DICT__additionalProperty = [
         Intangible\StructuredValue\PropertyValue::class,
+    ];
+
+    const MULTI_TYPE_DICT__address = [
+        'string',
+        Intangible\StructuredValue\ContactPoint\PostalAddress::class,
+    ];
+
+    const MULTI_TYPE_DICT__addressCountry = [
+        'string',
+        Place\AdministrativeArea\Country::class,
     ];
 
     const MULTI_TYPE_DICT__aggregateRating = [
@@ -94,6 +110,8 @@ class TypeUtilities extends Base
     const MULTI_TYPE_DICT__eligibleTransactionVolume = [
         Intangible\StructuredValue\PriceSpecification::class,
     ];
+
+    const MULTI_TYPE_DICT__elevation = self::MULTI_TYPE_COMMON__string_double_integer;
 
     const MULTI_TYPE_DICT__funder = self::MULTI_TYPE_COMMON__Organization__or__Person;
 

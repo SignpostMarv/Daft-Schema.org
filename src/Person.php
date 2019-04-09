@@ -171,10 +171,7 @@ class Person extends Thing
         'additionalName' => [
             'string',
         ],
-        'address' => [
-            'string',
-            PostalAddress::class,
-        ],
+        'address' => TypeUtilities::MULTI_TYPE_DICT__address,
         'affiliation' => [
             Organization::class,
         ],

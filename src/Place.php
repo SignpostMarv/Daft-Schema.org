@@ -110,10 +110,7 @@ class Place extends Thing
         'additionalProperty' => [
             PropertyValue::class,
         ],
-        'address' => [
-            'string',
-            PostalAddress::class,
-        ],
+        'address' => TypeUtilities::MULTI_TYPE_DICT__address,
         'aggregateRating' => [
             AggregateRating::class,
         ],

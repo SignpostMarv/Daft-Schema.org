@@ -47,9 +47,7 @@ class PropertyValue extends Base
             'integer',
             'double',
         ],
-        'measurementTechnique' => [
-            'string',
-        ],
+        'measurementTechnique' => TypeUtilities::MULTI_TYPE_DICT__measurementTechnique,
         'minValue' => [
             'integer',
             'double',

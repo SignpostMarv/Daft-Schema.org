@@ -40,25 +40,15 @@ class GeoShape extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'address' => [
-            'string',
-            PostalAddress::class,
-        ],
-        'addressCountry' => [
-            'string',
-            Country::class,
-        ],
+        'address' => TypeUtilities::MULTI_TYPE_DICT__address,
+        'addressCountry' => TypeUtilities::MULTI_TYPE_DICT__addressCountry,
         'box' => [
             'string',
         ],
         'circle' => [
             'string',
         ],
-        'elevation' => [
-            'string',
-            'double',
-            'integer',
-        ],
+        'elevation' => TypeUtilities::MULTI_TYPE_DICT__elevation,
         'line' => [
             'string',
         ],

@@ -37,10 +37,7 @@ class PostalAddress extends Base
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'addressCountry' => [
-            'string',
-            Country::class,
-        ],
+        'addressCountry' => TypeUtilities::MULTI_TYPE_DICT__addressCountry,
         'addressLocality' => [
             'string',
         ],

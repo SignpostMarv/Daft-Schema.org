@@ -36,29 +36,11 @@ class GeoCoordinates extends Thing
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
-        'address' => [
-            'string',
-            PostalAddress::class,
-        ],
-        'addressCountry' => [
-            'string',
-            Country::class,
-        ],
-        'elevation' => [
-            'string',
-            'double',
-            'integer',
-        ],
-        'latitude' => [
-            'string',
-            'double',
-            'integer',
-        ],
-        'longitude' => [
-            'string',
-            'double',
-            'integer',
-        ],
+        'address' => TypeUtilities::MULTI_TYPE_DICT__address,
+        'addressCountry' => TypeUtilities::MULTI_TYPE_DICT__addressCountry,
+        'elevation' => TypeUtilities::MULTI_TYPE_DICT__elevation,
+        'latitude' => TypeUtilities::MULTI_TYPE_COMMON__string_double_integer,
+        'longitude' => TypeUtilities::MULTI_TYPE_COMMON__string_double_integer,
         'postalCode' => [
             'string',
         ],

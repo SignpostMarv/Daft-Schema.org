@@ -633,39 +633,39 @@ class DaftObjectFuzzingTest extends Base
             array_merge(
                 static::FuzzingForDemandOfferCommon(),
                 [
-                'addOn' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Offer::class),
-                ],
-                'aggregateRating' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Rating\AggregateRating::class
-                    ),
-                ],
-                'category' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory::class
-                    ),
-                ],
-                'offeredBy' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
-                ],
-                'price' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    (float) random_int(0, 100),
-                    random_int(0, 100),
-                ],
-                'priceCurrency' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'priceValidUntil' => [
-                    static::FuzzFreshSchemaOrgDate(),
-                ],
-                'review' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\Review::class),
-                ],
+                    'addOn' => [
+                        static::FuzzFreshSchemaOrgType(SchemaOrg\Offer::class),
+                    ],
+                    'aggregateRating' => [
+                        static::FuzzFreshSchemaOrgType(
+                            SchemaOrg\Intangible\Rating\AggregateRating::class
+                        ),
+                    ],
+                    'category' => [
+                        static::FuzzFreshStringforSchemaOrg(),
+                        static::FuzzFreshSchemaOrgType(SchemaOrg\Thing::class),
+                        static::FuzzFreshSchemaOrgType(
+                            SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory::class
+                        ),
+                    ],
+                    'offeredBy' => [
+                        static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                        static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+                    ],
+                    'price' => [
+                        static::FuzzFreshStringforSchemaOrg(),
+                        (float) random_int(0, 100),
+                        random_int(0, 100),
+                    ],
+                    'priceCurrency' => [
+                        static::FuzzFreshStringforSchemaOrg(),
+                    ],
+                    'priceValidUntil' => [
+                        static::FuzzFreshSchemaOrgDate(),
+                    ],
+                    'review' => [
+                        static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\Review::class),
+                    ],
                 ]
             ),
         ];
@@ -2730,22 +2730,22 @@ class DaftObjectFuzzingTest extends Base
         yield [
             SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
             array_merge(
-            [
-                'maxValue' => [
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
+                [
+                    'maxValue' => [
+                        random_int(0, 100),
+                        (float) random_int(0, 100),
+                    ],
+                    'measurementTechnique' => [
+                        static::FuzzFreshStringforSchemaOrg(),
+                    ],
+                    'minValue' => [
+                        random_int(0, 100),
+                        (float) random_int(0, 100),
+                    ],
+                    'propertyID' => [
+                        static::FuzzFreshStringforSchemaOrg(),
+                    ],
                 ],
-                'measurementTechnique' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'minValue' => [
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
-                ],
-                'propertyID' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-            ],
                 static::FuzzingForUnitCodeTextValueReference()
             ),
         ];
@@ -2753,21 +2753,21 @@ class DaftObjectFuzzingTest extends Base
         yield [
             SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
             array_merge(
-            [
-                'additionalProperty' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PropertyValue::class
-                    ),
+                [
+                    'additionalProperty' => [
+                        static::FuzzFreshSchemaOrgType(
+                            SchemaOrg\Intangible\StructuredValue\PropertyValue::class
+                        ),
+                    ],
+                    'maxValue' => [
+                        random_int(0, 100),
+                        (float) random_int(0, 100),
+                    ],
+                    'minValue' => [
+                        random_int(0, 100),
+                        (float) random_int(0, 100),
+                    ],
                 ],
-                'maxValue' => [
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
-                ],
-                'minValue' => [
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
-                ],
-            ],
                 static::FuzzingForUnitCodeTextValueReference()
             ),
         ];

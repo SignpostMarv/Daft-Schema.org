@@ -28,8 +28,14 @@ class Comment extends Base
     ];
 
     const PROPERTIES_WITH_MULTI_TYPED_ARRAYS = [
+        'downvoteCount' => [
+            'integer',
+        ],
         'parentItem' => [
             Question::class,
+        ],
+        'upvoteCount' => [
+            'integer',
         ],
     ];
 

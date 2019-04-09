@@ -630,56 +630,15 @@ class DaftObjectFuzzingTest extends Base
 
         yield [
             SchemaOrg\Offer::class,
-            [
-                'acceptedPaymentMethod' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Service\FinancialProduct\LoanOrCredit::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\PaymentMethod::class
-                    ),
-                ],
+            array_merge(
+                static::FuzzingForDemandOfferCommon(),
+                [
                 'addOn' => [
                     static::FuzzFreshSchemaOrgType(SchemaOrg\Offer::class),
-                ],
-                'advanceBookingRequirement' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
                 ],
                 'aggregateRating' => [
                     static::FuzzFreshSchemaOrgType(
                         SchemaOrg\Intangible\Rating\AggregateRating::class
-                    ),
-                ],
-                'areaServed' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place\AdministrativeArea::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'availability' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\ItemAvailability::class
-                    ),
-                ],
-                'availabilityEnds' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'availabilityStarts' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'availableAtOrFrom' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'availableDeliveryMethod' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\DeliveryMethod::class
-                    ),
-                ],
-                'businessFunction' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\BusinessFunction::class
                     ),
                 ],
                 'category' => [
@@ -688,75 +647,6 @@ class DaftObjectFuzzingTest extends Base
                     static::FuzzFreshSchemaOrgType(
                         SchemaOrg\Intangible\Enumeration\PhysicalActivityCategory::class
                     ),
-                ],
-                'deliveryLeadTime' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleCustomerType' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\BusinessEntityType::class
-                    ),
-                ],
-                'eligibleDuration' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleQuantity' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleRegion' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'eligibleTransactionVolume' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
-                    ),
-                ],
-                'gtin12' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin13' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin14' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin8' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'includesObject' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\TypeAndQuantityNode::class
-                    ),
-                ],
-                'ineligibleRegion' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'inventoryLevel' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'itemCondition' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\OfferItemCondition::class
-                    ),
-                ],
-                'itemOffered' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Product::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Service::class),
-                ],
-                'mpn' => [
-                    static::FuzzFreshStringforSchemaOrg(),
                 ],
                 'offeredBy' => [
                     static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
@@ -770,39 +660,14 @@ class DaftObjectFuzzingTest extends Base
                 'priceCurrency' => [
                     static::FuzzFreshStringforSchemaOrg(),
                 ],
-                'priceSpecification' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
-                    ),
-                ],
                 'priceValidUntil' => [
                     static::FuzzFreshSchemaOrgDate(),
                 ],
                 'review' => [
                     static::FuzzFreshSchemaOrgType(SchemaOrg\CreativeWork\Review::class),
                 ],
-                'seller' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
-                ],
-                'serialNumber' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'sku' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'validFrom' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'validThrough' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'warranty' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\WarrantyPromise::class
-                    ),
-                ],
-            ],
+                ]
+            ),
         ];
 
         yield [
@@ -2154,146 +2019,7 @@ class DaftObjectFuzzingTest extends Base
 
         yield [
             SchemaOrg\Intangible\Demand::class,
-            [
-                'acceptedPaymentMethod' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Service\FinancialProduct\LoanOrCredit::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\PaymentMethod::class
-                    ),
-                ],
-                'advanceBookingRequirement' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'areaServed' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place\AdministrativeArea::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'availability' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\ItemAvailability::class
-                    ),
-                ],
-                'availabilityEnds' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'availabilityStarts' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'availableAtOrFrom' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'availableDeliveryMethod' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\DeliveryMethod::class
-                    ),
-                ],
-                'businessFunction' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\BusinessFunction::class
-                    ),
-                ],
-                'deliveryLeadTime' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleCustomerType' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\BusinessEntityType::class
-                    ),
-                ],
-                'eligibleDuration' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleQuantity' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'eligibleRegion' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'eligibleTransactionVolume' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
-                    ),
-                ],
-                'gtin12' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin13' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin14' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'gtin8' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'includesObject' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\TypeAndQuantityNode::class
-                    ),
-                ],
-                'ineligibleRegion' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
-                ],
-                'inventoryLevel' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                ],
-                'itemCondition' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\OfferItemCondition::class
-                    ),
-                ],
-                'itemOffered' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Product::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Service::class),
-                ],
-                'mpn' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'priceSpecification' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
-                    ),
-                ],
-                'seller' => [
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
-                ],
-                'serialNumber' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'sku' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'validFrom' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'validThrough' => [
-                    static::FuzzFreshSchemaOrgDateTime(),
-                ],
-                'warranty' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\WarrantyPromise::class
-                    ),
-                ],
-            ],
+            static::FuzzingForDemandOfferCommon(),
         ];
 
         yield [
@@ -3003,6 +2729,7 @@ class DaftObjectFuzzingTest extends Base
 
         yield [
             SchemaOrg\Intangible\StructuredValue\PropertyValue::class,
+            array_merge(
             [
                 'maxValue' => [
                     random_int(0, 100),
@@ -3018,37 +2745,14 @@ class DaftObjectFuzzingTest extends Base
                 'propertyID' => [
                     static::FuzzFreshStringforSchemaOrg(),
                 ],
-                'unitCode' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'unitText' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'value' => [
-                    true,
-                    static::FuzzFreshStringforSchemaOrg(),
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
-                ],
-                'valueReference' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\QualitativeValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Enumeration::class),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PropertyValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
-                ],
             ],
+                static::FuzzingForUnitCodeTextValueReference()
+            ),
         ];
 
         yield [
             SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class,
+            array_merge(
             [
                 'additionalProperty' => [
                     static::FuzzFreshSchemaOrgType(
@@ -3063,33 +2767,9 @@ class DaftObjectFuzzingTest extends Base
                     random_int(0, 100),
                     (float) random_int(0, 100),
                 ],
-                'unitCode' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'unitText' => [
-                    static::FuzzFreshStringforSchemaOrg(),
-                ],
-                'value' => [
-                    true,
-                    static::FuzzFreshStringforSchemaOrg(),
-                    random_int(0, 100),
-                    (float) random_int(0, 100),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
-                ],
-                'valueReference' => [
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\Enumeration\QualitativeValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Enumeration::class),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\PropertyValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(
-                        SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
-                    ),
-                    static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
-                ],
             ],
+                static::FuzzingForUnitCodeTextValueReference()
+            ),
         ];
 
         yield [
@@ -3332,5 +3012,187 @@ class DaftObjectFuzzingTest extends Base
         }
 
         return new $type($with_args);
+    }
+
+    /**
+    * @return array<string, array<int, string|SchemaOrg\Thing|SchemaOrg\DataTypes\DataType>>
+    */
+    protected static function FuzzingForDemandOfferCommon() : array
+    {
+        return [
+            'acceptedPaymentMethod' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Service\FinancialProduct\LoanOrCredit::class
+                ),
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\PaymentMethod::class
+                ),
+            ],
+            'advanceBookingRequirement' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+            ],
+            'areaServed' => [
+                static::FuzzFreshStringforSchemaOrg(),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Place\AdministrativeArea::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+            ],
+            'availability' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\ItemAvailability::class
+                ),
+            ],
+            'availabilityEnds' => [
+                static::FuzzFreshSchemaOrgDateTime(),
+            ],
+            'availabilityStarts' => [
+                static::FuzzFreshSchemaOrgDateTime(),
+            ],
+            'availableAtOrFrom' => [
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+            ],
+            'availableDeliveryMethod' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\DeliveryMethod::class
+                ),
+            ],
+            'businessFunction' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\BusinessFunction::class
+                ),
+            ],
+            'deliveryLeadTime' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+            ],
+            'eligibleCustomerType' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\BusinessEntityType::class
+                ),
+            ],
+            'eligibleDuration' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+            ],
+            'eligibleQuantity' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+            ],
+            'eligibleRegion' => [
+                static::FuzzFreshStringforSchemaOrg(),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+            ],
+            'eligibleTransactionVolume' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
+                ),
+            ],
+            'gtin12' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'gtin13' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'gtin14' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'gtin8' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'includesObject' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\TypeAndQuantityNode::class
+                ),
+            ],
+            'ineligibleRegion' => [
+                static::FuzzFreshStringforSchemaOrg(),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\GeoShape::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Place::class),
+            ],
+            'inventoryLevel' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+            ],
+            'itemCondition' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\OfferItemCondition::class
+                ),
+            ],
+            'itemOffered' => [
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Product::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Service::class),
+            ],
+            'mpn' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'priceSpecification' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\PriceSpecification::class
+                ),
+            ],
+            'seller' => [
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Organization::class),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Person::class),
+            ],
+            'serialNumber' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'sku' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'validFrom' => [
+                static::FuzzFreshSchemaOrgDateTime(),
+            ],
+            'validThrough' => [
+                static::FuzzFreshSchemaOrgDateTime(),
+            ],
+            'warranty' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\WarrantyPromise::class
+                ),
+            ],
+        ];
+    }
+
+    /**
+    * @return array<string, array<int, string|int|float|bool|SchemaOrg\Thing|SchemaOrg\DataTypes\DataType>>
+    */
+    protected static function FuzzingForUnitCodeTextValueReference() : array
+    {
+        return [
+            'unitCode' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'unitText' => [
+                static::FuzzFreshStringforSchemaOrg(),
+            ],
+            'value' => [
+                true,
+                static::FuzzFreshStringforSchemaOrg(),
+                random_int(0, 100),
+                (float) random_int(0, 100),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
+            ],
+            'valueReference' => [
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\Enumeration\QualitativeValue::class
+                ),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\Enumeration::class),
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\PropertyValue::class
+                ),
+                static::FuzzFreshSchemaOrgType(
+                    SchemaOrg\Intangible\StructuredValue\QuantitativeValue::class
+                ),
+                static::FuzzFreshSchemaOrgType(SchemaOrg\Intangible\StructuredValue::class),
+            ],
+        ];
     }
 }

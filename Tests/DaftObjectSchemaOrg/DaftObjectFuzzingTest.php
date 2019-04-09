@@ -2996,10 +2996,11 @@ class DaftObjectFuzzingTest extends Base
                     $type
                 ));
             }
+
             throw new InvalidArgumentException(sprintf(
-                    'Cannot lookup implementations of %s',
-                    $type
-                ));
+                'Cannot lookup implementations of %s',
+                $type
+            ));
         }
 
         return new $type($with_args);

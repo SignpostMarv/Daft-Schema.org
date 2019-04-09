@@ -6,19 +6,11 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\Tests\DaftObjectSchemaOrg;
 
-use CallbackFilterIterator;
 use Generator;
 use InvalidArgumentException;
-use RecursiveCallbackFilterIterator;
-use RecursiveDirectoryIterator;
-use RecursiveIteratorIterator;
 use ReflectionClass;
-use ReflectionClassConstant;
-use RuntimeException;
-use SignpostMarv\DaftObject\DefinitionAssistant;
 use SignpostMarv\DaftObject\SchemaOrg;
 use SignpostMarv\DaftObject\SchemaOrg\Tests\DataProviderTrait;
-use SignpostMarv\DaftObject\SchemaOrgLookup\Lookup_a2b5f59b072eb4f0e36f78a746b715700e835d2e9c730b70f6a3227ea7e43dbe964c346da3d654c7a5aa9631a79f6c57d702a01474263806629abb2a304f77e1 as SchemaOrgLookupThing;
 use SignpostMarv\DaftObject\SchemaOrgLookup\LookupInterface;
 use SignpostMarv\DaftObject\Tests\DaftObject\DaftObjectFuzzingTest as Base;
 
@@ -864,7 +856,7 @@ class DaftObjectFuzzingTest extends Base
                 'vatID' => [
                     static::FuzzFreshStringforSchemaOrg(),
                 ],
-            ]
+            ],
         ];
 
         yield [
@@ -3003,12 +2995,11 @@ class DaftObjectFuzzingTest extends Base
                     '%s did not resolve to a non-abstract implementation!',
                     $type
                 ));
-            } else {
-                throw new InvalidArgumentException(sprintf(
+            }
+            throw new InvalidArgumentException(sprintf(
                     'Cannot lookup implementations of %s',
                     $type
                 ));
-            }
         }
 
         return new $type($with_args);

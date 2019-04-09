@@ -41,6 +41,9 @@ class CssSelectorType implements Base
         return $this->DataTypeAsString();
     }
 
+    /**
+    * @psalm-return T
+    */
     public static function DataTypeFromString(string $value) : Upstream
     {
         return new static($value);

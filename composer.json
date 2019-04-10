@@ -33,19 +33,19 @@
     },
     "scripts": {
         "scrutinizer": [
-            "@ci",
-            "infection --min-msi=100 -j$(nproc) --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\""
+            "@ci"
         ],
-        "scrutinizer-local": [
+        "infection-local": [
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-xml=./coverage/coverage-xml/ --log-junit=./coverage/phpunit.junit.xml --prepend=./phpunit.xdebug.filter.php",
             "@ci",
             "infection --min-msi=100 -j6 --test-framework-options=\"--prepend=./phpunit.xdebug.filter.php\" --coverage=./coverage/"
         ],
         "ci": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-clover ./phpunit.clover --coverage-xml=./coverage/coverage-xml/ --log-junit=./coverage/phpunit.junit.xml --prepend=./phpunit.xdebug.filter.php",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --prepend=./phpunit.xdebug.filter.php --coverage-clover ./phpunit.clover",
             "@tests"
         ],
         "coverage-html": [
-            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --coverage-html ./phpunit/",
+            "phpunit -vvvv --order-by=defects --stop-on-defect --stop-on-error --stop-on-failure --stop-on-warning --stop-on-risky --prepend=./phpunit.xdebug.filter.php --coverage-html ./phpunit/",
             "@tests"
         ],
         "sync-lookup": [

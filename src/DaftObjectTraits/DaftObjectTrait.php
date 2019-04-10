@@ -16,6 +16,14 @@ trait DaftObjectTrait
     ) : void;
 
     /**
+    * @param array<int, bool> $value
+    */
+    abstract protected function NudgePropertyWithUniqueBooleans(
+        string $property,
+        array $value
+    ) : void;
+
+    /**
     * @return scalar|array|object|null the property value
     */
     abstract protected function RetrievePropertyValueFromData(string $property);

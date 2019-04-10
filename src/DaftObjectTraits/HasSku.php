@@ -11,6 +11,8 @@ use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait HasSku
 {
+    use DaftObjectTrait;
+
     /**
     * @return array<int, string>
     */

@@ -2,7 +2,7 @@
 <files>
   <file src="SchemaOrgLookup\Lookup_047d271831afa70d5924ad5507dfa012cadcf8547855111b854ae6766e436709e29f9a4d858398db517f1995237f7c07af81d6a626d2541371e5ebef2cdbb474.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -13,7 +13,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_06acec0a6b690c0bd7dbdeb8d210a1a9c5d367df92e355de990d20dacd9549d2a3b0a7ea6349d549cdfbb4992b2a74b2fc5131e5fa08cd69ddc6230a26ae5d40.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -24,7 +24,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_0977e23f9d17c013943f8a1bab503b4b403ffeb5185c074e545f1dded3b23e5eb8be018450b6fb4617d1441c9f42fb05ebde4dc537de5b21db1dab737a45dd5c.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -35,7 +35,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_0afd7dd0011dbc7311ce51c4ecf4c0272108819fa062a690ee46800da8af47d7e2accea6cca33c8ad7998111e3ae16171552797dff908a36ac2ea8cf5f7955a1.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -46,7 +46,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_0eaa663188125560038909e04f55631d805f515ce7db82af1f6e2731013c9e24879f767170c9ae27de493bcdb0f5999720a02c4f1fb9d609b0d21e09b52b867e.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -57,7 +57,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_11cf3ff1cc590b9a64eac68fa9e7bdea390fd6e0b1e51206ac8322eb0d613de899f801519048a189ae1fe21f4344873d52b3ad9b2ea1519ed4fc624e03fc85d0.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -68,7 +68,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_18f4df734d8aca25f7498cae038aed920d0b175ee2790916ebc744b7c1952194f97e6cdc03b540516d324e45591e4838a2b6992c9b56aff0f9e19fd6b948b78e.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -79,7 +79,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_1cd83a63f86362756a34c9687c7ea11413ec02dce0fc04b069c9faa37b0d673f9e06fa366d3021fe74b2129dea41b39c012213ff1e13699eee99d7137a386143.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -90,7 +90,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_1da2b1ce17e7d8e5c8e5f7f694b68fb5cbb6fa460bcd51fa199b264db828abc851fa0ae1ebb4951e4e0e3e5b9665959c5721a1d1312152231c7db0747b187403.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -101,7 +101,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_226668b571b6aaca1568c09452f9745ab8b27240ca7e734849bf8c182f99df5161cfe751c17b3191f89c0d048b27e7b4da4d16d12a652fe354ce2f85b1db9eae.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -112,7 +112,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2486717f9137b7ba055c894a5258a127e8332a5f5c5413b6ec79583b348cc35cce58da53639b08f4d21c038ed8e54d02f119a02b222c5cde83276ea1ad2d64e7.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -123,7 +123,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_26463a6bdd1f672530ed79669b3234b17887745644c7e090473a199f5b225aee3711e4432836bcbe6f49cfc0165b82b02474ecb4c07b5a0ba2489b009acb8973.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -134,7 +134,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_295019d789342160cb130284d8680eb6d2beb807a46858b35b534378dbd1e975d94f37cd56248a9137545e05574b48e5740d8fec77f4841efeebb84c5cbf5f02.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -145,7 +145,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_29ae1e96ac3af5b14d8d9b29b42165be0b90bed987d0108fc6b245d983ff6bf4bc4c77edb04561239d6b77ef7ea94974f9795697ed4d5823736ecca28767833b.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -156,7 +156,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_29cf6ac6d82a12b189e4a6182d72330aea29e861327a6e54302ec813dba6959075e3cd6dba27c3e7575bdb1195df817e21a94691932d9654cfb7c3efa9f29589.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -167,7 +167,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2b425e70342ef9bd936b7390248111a494aac4aadbb371ef935fd6b61b7d8e2b778be7b8856dfd59d3d9c73476c0ac418207f6af8a68e00e4cd2d402fb5c1453.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -178,7 +178,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2b8bd0cf01d3d71830e37f04667dd219c4269d8af25054b3b225c576ec12e5e31f5971dcf2630ba3e422fce3ca7123f42c11382d37b501d53f8a5cadd3b9ffa4.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -189,7 +189,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2c2f47c5b0363b3aa41f4d70f23d9365e6e5adb8fa7de237b956ed997f46da0bbeb0a720889a9bc0181860ba7f6eacf9cb3ea99f7d95900b67fd1b2df50f4c95.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -200,7 +200,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2cf90646d474dfdfde8114cbd9bfbdd5e615daefc461421d2d3a37fd6f1bab729f1513d64e85f599fc17e6e8fc77070473825a252982fb51caf5527349a4e789.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -211,7 +211,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2d510eb067c50e7b2fc09cfc4aa4b7989b3390058ea47ac1c1c8fd39f2c0df48a1fde47cc206478ca52912ede34108b70e4ab0211c4297c944bd309cf09c738c.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -222,7 +222,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_2fa089aed8e3ece4596ab47ecdcc927c0d1838471193372b02fb27a0b4a4be59a7729eb3d76d096d880f70e9f2cc2f56d3f642460a36f202ccbe05702bb73b20.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -233,7 +233,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_31b74c902c6625bde2287ee87a4890cfce1fec4b3d6dae9d0ec8f369a3cbc4ff35340b3335db53f3b4d065077dc541b530d77046d8bebad038357bd0abbd940b.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -244,7 +244,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_325f7170e856d16321e5ad1960d0472e8d9092e43737c6beb11971dfe5752e1e51edb164acc3636b3c2d2b963b788b1bc7d3c4d55dfa05c22314b91bd1114480.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -255,7 +255,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_353be5446e3ca9bbd25cdac1c17b8c0cc272823ab4f9c84a7d5521628514517e32b57e059ec522a36f4c7e9ac2b4d0ae59315dedd15c4e4e04d9d1cf29741b26.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -266,7 +266,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_3541ee27cd7d265007399b9a0bd8226794eb7353cac24a18068232c59344dd29f132105e72c34d746851189983ac7633c6bddff3cf43f33773ff194e372ba905.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Action'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Action']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -277,7 +277,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_3bf39e5d38ce90248fed67069e342b77089eabc2ba94fd4141613b32356b5cdc3f439b6d408fc75e36fcccc791171b53b4f94dc6851fc411e17204f1f01fb1a0.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -288,7 +288,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_3c4353207b9181926f09091289f8f3a366217aa58b024f2164a828bac15ec575e6aad6148829fd9f11ce9b3f7922483cc2b38762325ac43aede08605e7f25a8d.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -299,7 +299,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_3c7a34c2a39a4423408b571156d01279cb48a0d70b898a9d5b971fe5dbdab58bdace4dbee60dc0c465f7579c1f926ed24018a235ab37646344cb63444f10127f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -310,7 +310,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_3eceab71753fb0784b06586c928893feb46d2b570719d8683baffb95be0c9cdef8bf92724cdb11f91d55036fdd3ef05c4b809ab0effff90e3e7b1c3ec2153c8c.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -321,7 +321,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_4028bd0d39013f5c04ec7ba5024022aeee16b854dfea68106fd317775c208a8ce3671d45a00b8d580e18c7e11201a77cf042a6df08bd7f0e6eae7730d0edb719.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -332,7 +332,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_40718511ac5c088775e552ca098fb69b9a58051742295d4588b6f891d826e3b6000130c656ba6e81c21da0db7f55598872c077b8015dd68111e5f5a333da3684.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -343,7 +343,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_459612b91a014c02f801fb9f256f7150e220997deb3a9884d60628d531b86368c69ec921dab7401938113f05a6b6a4f5a468bcd0daabb0df1af3ca6bf9af1751.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -354,7 +354,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_4caa6b63ca32208b205754ef098c2b04b98cce1a554cc5368a4803e5f8f0077cd5363498a4858443cfea85711cb0744827e95dbfcb0c50c7b2b71d6d93728745.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -365,7 +365,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_4eebeddd482f73d59d7136bf50fc97dbe3ce48a9a168407ea8e665a658963f80d2626534e71a15a89a3dc203c31421a644c6bf574c566fa1c53e8fe1c97887ff.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -376,7 +376,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_4f3ed60eb621a167b5b6aa89889cea393e2f7a7d50f7bb0ede96549b22d62301dec101762eda0f8ecab26e0da1a143edc3955cdcc6b63dfab68e501b3b85dc28.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -387,7 +387,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_572b85be512728eb03c6a4a8fb5ba293ef27687f40923320440440c591e00e16becd2c2f932ddf0df5f12d563ddcd216f9cf9140a4940ae0c67dce1afb1f9d98.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -398,7 +398,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_587bb7d0a4eef0c9203773decd8dc49bc610bf8b1914985f18becee78ee967c0ba2c304535d93f9a18b6db82c3a03b2dca8e8a2308a109cafe2c070e5e2ce5e9.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -409,7 +409,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_5a64114f4a70e92b97e381b84400b56cb047e3574392e4fff8cd9177334f830f7d484b78fc46e9fad85d3c25789c0c375c9c963940183e3fa5792f4f475eb24e.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -420,7 +420,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_5f23206b8031318ebdaa0f412e90f30b8dc5863b2f42831211c2002b488bea6260a0e26fbe5bd370393e0d81d38fe12c1c9357c4c9a6c2417166ce34e94fc4ae.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -431,7 +431,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_656344c8489284e423d243c2bff5ce3e67ce719845b131c4996ea82353ea03742d725990f8613b06248b8d3edb3f3d1d6b82178f1c95c30b44f3b45dbf5a2b6d.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -442,7 +442,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_6c7be5033eb07bbce908a69966702e5d0aa05afe948c9239e9f1ed4cba70e2f6c7f8a48563e5348aa15d967b91030146b0a95ea0b19aedc76398b4e9c6c804c8.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -453,7 +453,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_6ff0c4e531453ac85d6b94ee1c0c25ded776bf178996948cff3b54856801fdbc39a05e4f5394fe4007efdb72e56c379728c7c947b6903b10c9542bbc4330a109.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -464,7 +464,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_74e82a641315ae934f31efd19a0279afe25f9313ebf601d8a50a8fae9af135d8e32fc491d84be5c987ce461cd289bb2177c3e4952416bdbeb802dfc06b14865d.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -475,7 +475,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_750b4474085640ead1ede8c5613be476e5ec4099cffeb6ac72deaf3e9d2b5feb9e051dc489b21f2a08b2cfd8c36f33f851736b2e3fdee32959c91aae7ff18f89.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -486,7 +486,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_77e53eea24c42d2f56d6372eb2e2f5f21bacec5f0158659a3e232f58287c9eb7b0657f1b2031ca3f094889907b89706404130e676e8e03ae9eda8c7336f3d13f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -497,7 +497,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_78b4fcba21eee7d0a8f8b97ff89d5d8a1f75a3fb18ed323c10e2ca37334df4835bbccacc111ee390f08ead64c91132b15a33d2e8eecec3f06250740f4eb5521f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -508,7 +508,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_78c1366778df934b0f51815614192d50355e551e2240a08f80f8ae6062a9ab6315d4b2d80fd89859962f6a3fba4fe60a80704d0f6e629f01696a9422aaaadfa0.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -519,7 +519,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_799a29b11779e35f4a2e8b40abf2e737418faf8e505bc06c9c5fa3b4de6d7f27822721c2994dd359212c346a367e92db244d3cf5737b1ae4acd32b8ec088b107.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -530,7 +530,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_7bcbcd3a9f367336a5973bbe6b5776af705e8b0d74068585fb88b44330e1ecfd618d85b0c988eb93dfa068b38334787ee1e90f746d653dd694482f4fe4de6745.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -541,7 +541,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_7cf0bebff3b5f5350781579bb227c2af5b80e2e7af031b698fda400c4fb9b882a0cf2e174fdf0eae21bceff691b0d186b9e717bc5d3d11b0df1bc18f214e6780.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -552,7 +552,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_7d51fb127e3a7c679d98eafe83388888dd5866213115b88041bfcbd14c94bbd3ecd7ab4af47a80d7da023540ba2eed47036716abeec86d04bf18d36bbd368e61.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -563,7 +563,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_7eb758ec070160ec2d7e2cac1521eee7b51878b3e2238b1d30d94408ab567c519a6562b4c33ea0b3ec60276423e658c1285bf4ec265f7d5d9c57f486e9896247.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -574,7 +574,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_82370266b1d2fc215390aa4eb38a6b94ddb71c53657c0e79718dd6377687b521065f43d13781600b71aca9c9a21480c1689ce68e3d7be1e49744edb87c4e1726.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -585,7 +585,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_82c8adbc3c3b41d8cde08ba8a06ab41408b644a7d9af3a195bc1ddb9a65715960fbee0ae9ce7a5122df6b7e386a114888b4ae26b6d8d737f4b267fc1b4863a2a.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -596,7 +596,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_8483fce40e4a840554530554107fcb9b948d3f2d72108ea661eede966a8a45a41dd1dad97ef85787f1c912e5ea0df16375ab743f0f3100a6c24e1bb7ace28045.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -607,7 +607,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_8c381bce270b9ebc541cf5222e423e4a09b7b87e22fc71e9dde004a06f539d712b4e590b74638b68c5d5f6355776bd131ffa6ab0b9a8c7e7ab041ca681255ed5.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -618,7 +618,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_91b4a45f9238fc30541b59b7ac902b1df5c9c71730f7875f16da5aec1a23a44b89869274a0db6189bd7e445f04fad9374b37bfeae98a1b123a27feb121ccabf5.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -629,7 +629,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_92b563274196bd51050f0ee2353e7f5eb3358079779c7bdcdedbd2689fe79990f1b5cbd6408d072c0e003c7cdca626966a320f9c93c8370427bea21ca3634b0f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -640,7 +640,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_936a40cb7acb633d1086707f8beeadd732313ca8aad5801631116f8091412c48231804b1b8060722ddadd601fd434a80b47978eee60576bd557b532de00f12a5.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -651,7 +651,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_95bf77f56f14246956abc62824e055c0ee68cf49451e644b39270ae5d321e744be6b53e583b5000a13c7b388a37c320baf57c9a9e8a8855395739be521ee3959.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -662,7 +662,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_96d03ef881c0a8a79344e14120178383a6c8d11cc8931296484d432559abadbc08b1a0b788cd35b796dfcd37c93ff216cfda75d8e5fddf0eb14d5c8c3a43c2b4.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -673,7 +673,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_97daba83fdeb1b77403221493e8cfbc331fc5bf294e6c908c8733b5c50cde2d6cf3859543c9e6828faff73b4ec7c93e8cb90dfbb20ec21121fec1ab2fb8c73e5.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -684,7 +684,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_989b232182111892b58ede83340402aba6ab0c50836a7bd9f09084f3b4369678d288c73d9d5ad09d86357b1f0dde50d3e6b32639b2ba0a6458a6de070a1a9563.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -695,7 +695,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_9da45289c63ee6ff8f247a65a045f8f610f5514eef9e6c9904624726b9902e733f605c407d4c4774a2cd63e5168f7d7111ab98e7dd46c0497e75c075fd17ca47.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -706,7 +706,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_9e9c987bf9cbd9580520cc5a3ae33e5e48c73f74c4e189a9dfe0bebdc9a9c6af7fcd28eb38d5a23830fba71c2bf4a53f30d750f5b3fe698fda5f9bd59fb04cee.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -717,7 +717,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_9efae42a4a54fe289f71f2504fc76acae6ac3a198ed45b79289de9114cfb56c501671831382b4c415a197f409a922429f1780c2022a5b5eb0984c789be47dea4.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -728,7 +728,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_9f61eae69ad52f9705413f9ff9b1df791fde805411b17e206342f526e5c2f7c0a3de88d95e8cb02523cac259ae25a7a51a70f699a85c132ecd97ebdc1e9f442e.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -739,7 +739,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_a0bec090852dc1e4ef3a20d43a80117c1f5b2289f6dc294949a50005777d559d780f4c100634c2fcb8ddba9b1b50a5e1dc8c7d5b85654cb3472f2d894b5af077.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -750,7 +750,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_a190a96bb295b9cbfea7aec7cef99220f0565b072b8f164d18c0f66fe1dcb129d0fb4797630217358ccad184a4e56b32e878cf464d7463bdfd484c412151db61.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -761,7 +761,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_a2b5f59b072eb4f0e36f78a746b715700e835d2e9c730b70f6a3227ea7e43dbe964c346da3d654c7a5aa9631a79f6c57d702a01474263806629abb2a304f77e1.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip', 'SignpostMarv\\DaftObject\\SchemaOrg\\Person', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place', 'SignpostMarv\\DaftObject\\SchemaOrg\\Action', 'SignpostMarv\\DaftObject\\SchemaOrg\\Offer', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible', 'SignpostMarv\\DaftObject\\SchemaOrg\\GeoShape', 'SignpostMarv\\DaftObject\\SchemaOrg\\GeoCoordinates', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork', 'SignpostMarv\\DaftObject\\SchemaOrg\\Audience', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product', 'SignpostMarv\\DaftObject\\SchemaOrg\\Thing'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage\\AboutPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea\\Country', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicAlbum', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset\\DataFeed', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Map', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Dataset', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place\\AdministrativeArea', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPage', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Question', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Photograph', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip', 'SignpostMarv\\DaftObject\\SchemaOrg\\Person', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization', 'SignpostMarv\\DaftObject\\SchemaOrg\\Place', 'SignpostMarv\\DaftObject\\SchemaOrg\\Action', 'SignpostMarv\\DaftObject\\SchemaOrg\\Offer', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible', 'SignpostMarv\\DaftObject\\SchemaOrg\\GeoShape', 'SignpostMarv\\DaftObject\\SchemaOrg\\GeoCoordinates', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork', 'SignpostMarv\\DaftObject\\SchemaOrg\\Audience', 'SignpostMarv\\DaftObject\\SchemaOrg\\Product', 'SignpostMarv\\DaftObject\\SchemaOrg\\Thing']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -772,7 +772,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_a57b11bf28536f8ab29ea6173c439cc4aed314fb40d562c8e9908c804199e0d2bc9796ddecee71857b97aa249ab560b685dfb8758a74dd34c92e9ff2be270e40.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebSite']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -783,7 +783,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ab548f056241616a5631b2b6eaf46f3ca89d9a4e6d030149d1435f4a1b515142f38445b46547b9deb27c53e39cefbeb74722718bbd709e0c9f6bd76a55a0edfa.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -794,7 +794,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ae6756ebd13f6305587234b97ab6e7e4e053693564f1023511a585e317da2ef2292bb913380428c0680bf36b7d30b264112ac0af4f1ace9871275b940b074b14.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -805,7 +805,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_af2bbadd7f7d769ceb084d92b2fd7e3cc7c7055bd7c1377cb136ccc238c230e6fbbee79acec5502f7f2f7d394c755c088e151aeeff8244f251660580c11bffad.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\GeoCoordinates'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\GeoCoordinates']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -816,7 +816,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_b2985e4492dc0d4d41af6812418c920a5a0a89bdd2cf188772655797c88ee59a9750751c44945623ce2b24eaf111f96c1827f6d29adc7c7bcb926c507220e813.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Product\\ProductModel']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -827,7 +827,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_b97fec9db4d6912cdecd3380c78913c30f988286360072a6d95367fddc01d89cd265c45c1b428734ebabab86c7624c6916abbec78437b4b371778e525720587f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -838,7 +838,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ba077b21841d18120f7d65e736ebd8d691b02c509e5c7b5970bff936963824280c97f4bce08cc44184ed4845dab84aca390e33dc3a7e3c1355a9ade712bdc493.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -849,7 +849,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ba27d1d67040f8009e04ce1c5ba4144364160ee531b07a7e12f70e01f72058e56bf99e9d839e44fff26d0643bab75c59b9370526fd6f1f7b8d499fada4b954e4.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Audience'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Audience']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -860,7 +860,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_bf499f4a5aeef2d6a6229e388198d4dd696fd9cf8d1e497930684b86296050a1436c3d2bba8ed5bbac4331f6a3561c0e214dbcc67d722be319a006b13a8cffe2.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\WebPageElement']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -871,7 +871,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_bfcdf187ab27937b315a68ab2dbf8fe39324e0175d73c9b763f1618d94251438c0309ba4dc6979b93d1adebfb03f964ef6a2c0a358bccf3e7142b5b44bcaa7fa.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -882,7 +882,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c055fc7eb867973f442a9c9af7a48e02dd894c21d77f23f1fe7bf501d421a4974c1d3281c6e7445ce0146b242417138b2f060389e3a35a283e498c2426afc7c7.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -893,7 +893,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c08b800ef512a7168b3313828bc50dad2cfc062d51a3d3b7762cb380782dae0ebd3b0b43609f3726fa9c67ef0916859b865a446e8b870b4b260c719065718efd.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\GeoShape'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\GeoShape']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -904,7 +904,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c1dccafe264cbb317bad3fe8842f227452d82218a72eacb5a69673b44e95216a5b365404bd5e326ae99aaa2222cb49a74d528ed6820f39300d7d052b29221a7f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -915,7 +915,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c270f4f22d9a980f11162e7c6c326fe93417535d6c7f72a69af6d46d95611bef14c9a2b13edcb3ca516cfbd59c7bdb957fd3016822c57313780a814fbfe995eb.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicRecording']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -926,7 +926,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c35ca32a5618547e2925de1b84fe9c6a9e4cf70c6caa2b990cdd936b464a5237434f1e27e738571d58c1a3849e600069f5b976c8f1578dcb807411b14c67b588.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article\\NewsArticle', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Article']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -937,7 +937,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c65c9c2675e0fbf885340667e2fc0e616286dd03426db683c7607ee989abd53338e69c40d01f21977a55f3398fab426e9e59bd589a0cffa9c850f0f474eb8507.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -948,7 +948,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_c992af60989b0b844f1e73fd5602db2f16505294b8f4d8a07244f21dcf467d4e77cedb5c765a046105fe8b1f10b155d0711327d4316756edc8609a7452a44cae.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -959,7 +959,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_cc0a4a7a40b446cd2fa24cb5daa7f1e0ddadcd5572e1b01cc826f8542cf2818378d64bebe11ed27ef848980d3f5b6eb50fc0bc894610fd185eec84243838256e.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -970,7 +970,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ceb21010e59ec3124b6cbddaffaa561fde26ee6a3dab900f6ed9d9825e14791986c89f272e1e7bb7bfe629bb757d4a11364d0abb3828565c52a8927e764979f1.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct\\LoanOrCredit', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue\\LocationFeatureSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\OfferCatalog', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OpeningHoursSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PhysicalActivityCategory', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\QualitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\Specialty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\WarrantyScope', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PriceSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\OwnershipInfo', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\InteractionCounter', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\CableOrSatelliteService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Distance', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\FinancialProduct', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity\\Duration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\PaymentMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\OfferItemCondition', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicReleaseFormatType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumReleaseType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\WarrantyPromise', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\TypeAndQuantityNode', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\RepaymentSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\PropertyValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ActionStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessFunction', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ContactPointOption', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DeliveryMethod', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\EventStatusType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\GenderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemAvailability', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\ItemListOrderType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MapCategoryType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\MusicAlbumProductionType', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service\\BroadcastService', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\SpeakableSpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ServiceChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\AlignmentObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Service', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleClass', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Brand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastFrequencySpecification', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\DataFeedItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Demand', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\IntangibleProperty', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ListItem', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\MediaSubscription', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Occupation', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ProgramMembership', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Quantity', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Trip', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -981,7 +981,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_d1b722da381b542a45899c7656d4b99961c2c584ae2d965cd7f04980682313bcf4c44856d74b9ba1acceea48a4a417f8cd05f841c8731e3f2d6834482186fdcd.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Review']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -992,7 +992,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_d5df08391114567cb377a6edde8b4402dcea2117cbee588915da388efac4b111556c85e3611cba958f9ab89f4d0a03088c8703d3977202bdc35036c2a1c7d918.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Person'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Person']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1003,7 +1003,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_d6d135d982dd478c19b26db490e93a284d740589f0d95f8295fc869b5a1bb0262c9f9d81653f71b8f65d546a022c19e9dd3e9d241c230e20ff4e4014dc1fca90.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint\\PostalAddress', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\ContactPoint']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1014,7 +1014,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_d9475e941b25462d12056be914b819a1b6ca02fe551189397fff3db0dd0e6d25748d666ab19e1c1688c49d69eadaf48a8d9d8e8ae1c4437741b5d02039af38f5.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicComposition']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1025,7 +1025,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_dabe9bab947d65dd1cded108c18a4562720441c9362e58c5138497dd319b4b492de818823eadf5e5a095c0c66557026351cc73957562dbb482d8dfd08b3285cf.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MusicPlaylist\\MusicRelease']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1036,7 +1036,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_dc85c7df358ddf9a127e8c3985b72138cd6fb6dc2ce3b21a2734e4664cd2c31f7b26f1be331c36ad466a500d01fe54c4994c25ac850239e6f89f46b411479375.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\BusinessEntityType']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1047,7 +1047,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_dc96e371ac1dc02cc62bb82f3846bdb68bb293aae754db9c6ab9d135f7547159bd04a3baab9c6bf0505f6b282f396988927869abe48b12dc18386b9b65de46ac.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\MonetaryAmount']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1058,7 +1058,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_defe2266f6b00b041a89713433d133d404456d8acfcab7ef2ad1e657f8212038e6b75be2ffd146d7f1a43903f1f707b48ec3eaa0856dfb6c653009446eed32fe.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\DataCatalog']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1069,7 +1069,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_df220dabb760340bff597292bdd036cab98969d656f9b7bd5c1aeddca4ef04d48127f72d033b0c21bb5a93dda748aea946365eeab9ce114d41e3f535e6a8f513.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Language']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1080,7 +1080,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e06e2293504bc500ed08194a644f8d6a1333bbdf8ba2626dc3b1f8f1ec1818e2dfbfdfa4987fdf5f407438358a5f1ea9148143bd347db4f9448fb95ec64ffd4b.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Event\\PublicationEvent', 'SignpostMarv\\DaftObject\\SchemaOrg\\Event']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1091,7 +1091,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e21f5d8d76eae083289d8bc4f924e348d9889057c452a3e3da4fa01004a7a00ce4fbdedc94095af76d1770c4bcd1c19e20a0168a10817b07f529dba8bbc02d15.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1102,7 +1102,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e437125e50610921b3581e1ea4c85294e7e3c72077fb1b200e166cf43f3ed5b06f865c987fe5e4714e1b58340eb2e21d6101bae3125e81f718cabc0c4802dcde.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\EntryPoint']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1113,7 +1113,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e77ff30d1a68816be246647b6a3c39ea1ac50f73808557db352265a029265d10eafc14ae73c5143cee4242ebaac4fcdb726a0f1975be7e697a00c09487e89f0d.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Enumeration\\DayOfWeek']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1124,7 +1124,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e8125f434c02277ce7df009e1297419b0dd453dde4590fab83166d1a7907579628d3c29c42a1b13f6fb01b496ca6aac93b54d478a732b4322a4b9ed8f2d828b6.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\AudioObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\DataDownload', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\ImageObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject\\VideoObject', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\MediaObject']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1135,7 +1135,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_e85bab0d941f9b042abd198cd3924e1dbaef25f939508f5401358481de1191181868af61379bb8fc587797b74c8c303294decec048ddfff8f5f5b3f5c72422c8.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup\\MusicGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization\\PerformingGroup', 'SignpostMarv\\DaftObject\\SchemaOrg\\Organization']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1146,7 +1146,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_ece506ef438572684c470c192677703068a78d1ef4a6b65e72b0fe643e64145594e70d6e81cc602320501de92e50a510895d61f90114fd2ce3c99bbec0ed4f60.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\SoftwareApplication']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1157,7 +1157,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_edb4be67009a3bdc1eb33ff0b245859a2775f6d2d3fa7ba32d6535f84788abd11079cfc00d7ddca8f5215fe300d85456ffbeaf88c3b0beb92d1cd846e2143cae.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\ItemList\\BreadcrumbList']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1168,7 +1168,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_f3e246f4b3c3bf651b3aa50dfa7313e9e02906c45c97720499d9eb3323ced3ec5dae2e54920a85a64b86ae6434f111b759f710d7641e7a761a15a447435a9149.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\BroadcastChannel']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1179,7 +1179,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_f5830f0a1e897b201e9a31a63218155d1f1f1077f6b362a69395bdd76ac9558ab5783366dbfdd070e1a3826ce1d2a073d710e8297d5423d0e09803c64c2b91af.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Offer'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Offer']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1190,7 +1190,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_f7e45004b4242d12e2bae0ec26dfbd53abea64f4554fac2410a26b562c4c69ffc3265cad7c354faa4447f65abedbf3765b3011715a639aedf47c84b73197248f.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\GeospatialGeometry']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1201,7 +1201,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_fad169ffd4d36232bf4d35fd8df664cb58b6fcfa33829691eb02bf6f6698c6275f7eaa41903a0caaec20b494277642fdf4e9f087a5e6907d1b6620d86405cee8.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue\\MonetaryAmountDistribution', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\StructuredValue\\QuantitativeValue']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1212,7 +1212,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_fc0155a379ec540fd95c45515e942b5bcf22e824b122dec8fac6a4598cccee14e2fe03caf0ef1c9a686627e57cfdb7c17b256202c314aef1de7cc259bae21b2c.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\CorrectionComment', 'SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1223,7 +1223,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_fdd47245ef4dc79c399d20a39e010c3824087666ac7dfd15a8997573b59b03ab52fdeb055692ebaf56e3218b3c7faaec62f527f8244c47367fa87eff5c9a54e9.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating\\AggregateRating', 'SignpostMarv\\DaftObject\\SchemaOrg\\Intangible\\Rating']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1234,7 +1234,7 @@
   </file>
   <file src="SchemaOrgLookup\Lookup_fe07512a5dc006f76ede8a3222f2d0cae4732b91670bc4d0498f15845443dddbebc26ceb0fd40e48461cb57b5f911f7fe1114afd0898db3123c31e47173b08a0.php">
     <LessSpecificReturnStatement occurrences="1">
-      <code>return ['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer'];</code>
+      <code>['SignpostMarv\\DaftObject\\SchemaOrg\\CreativeWork\\Comment\\Answer']</code>
     </LessSpecificReturnStatement>
     <MoreSpecificReturnType occurrences="1">
       <code>array</code>
@@ -1242,12 +1242,6 @@
     <UnusedClass occurrences="1">
       <code>class Lookup_fe07512a5dc006f76ede8a3222f2d0cae4732b91670bc4d0498f15845443dddbebc26ceb0fd40e48461cb57b5f911f7fe1114afd0898db3123c31e47173b08a0 implements LookupInterface</code>
     </UnusedClass>
-  </file>
-  <file src="Tests\DaftObjectSchemaOrg\DaftObjectFuzzingTest.php">
-    <MixedTypeCoercion occurrences="3">
-      <code>Generator</code>
-      <code>Generator</code>
-    </MixedTypeCoercion>
   </file>
   <file src="bin\SyncLookup.php">
     <MixedTypeCoercion occurrences="1"/>

@@ -40,7 +40,10 @@ abstract class DateTimeInterface extends DateTimeImmutable implements DataType
         $out = new static($out->format($format));
 
         if ( ! is_null($tz)) {
-            return $out->setTimezone($tz);
+            /**
+            * @var DateTimeInterface
+            */
+            $out = $out->setTimezone($tz);
         }
 
         return $out;

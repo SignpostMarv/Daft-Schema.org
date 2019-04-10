@@ -8,6 +8,7 @@ namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\Date;
 use SignpostMarv\DaftObject\SchemaOrg\DataTypes\DateTime;
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
 
 trait DateCreatedModified
 {
@@ -21,7 +22,11 @@ trait DateCreatedModified
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray('dateCreated');
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'maximumAttendeeCapacity',
+            $this->RetrievePropertyValueFromData('dateCreated'),
+            static::class
+        );
 
         return $out;
     }
@@ -42,7 +47,11 @@ trait DateCreatedModified
         /**
         * @var array<int, Date|DateTime>
         */
-        $out = $this->ExpectRetrievedValueIsArray('dateModified');
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'maximumAttendeeCapacity',
+            $this->RetrievePropertyValueFromData('dateModified'),
+            static::class
+        );
 
         return $out;
     }

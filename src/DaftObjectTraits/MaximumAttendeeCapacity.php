@@ -6,6 +6,8 @@ declare(strict_types=1);
 
 namespace SignpostMarv\DaftObject\SchemaOrg\DaftObjectTraits;
 
+use SignpostMarv\DaftObject\SchemaOrg\TypeUtilities;
+
 trait MaximumAttendeeCapacity
 {
     use DaftObjectTrait;
@@ -18,7 +20,11 @@ trait MaximumAttendeeCapacity
         /**
         * @var array<int, int>
         */
-        $out = $this->ExpectRetrievedValueIsArray('maximumAttendeeCapacity');
+        $out = TypeUtilities::ExpectRetrievedValueIsArray(
+            'maximumAttendeeCapacity',
+            $this->RetrievePropertyValueFromData('maximumAttendeeCapacity'),
+            static::class
+        );
 
         return $out;
     }
